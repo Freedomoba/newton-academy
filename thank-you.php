@@ -82,7 +82,447 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                 <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-8 sm:h-11 w-auto max-w-[135px] sm:max-w-none object-contain">
             </a>
             <div class="flex items-center gap-2 shrink-0">
-                <h4 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">
+                <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full whitespace-nowrap">
+                    Admissions Desk
+                </span>
+                <span class="text-[10px] sm:text-xs text-slate-500 font-mono font-bold hidden xs:inline sm:inline">
+                    #<?php echo strtoupper(substr(md5($email . "newton"), 0, 8)); ?>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- STEP 1: CONGRATULATIONS & WHATSAPP ACCESS (Centralized Card) -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 pt-8 pb-6">
+        <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-6 sm:p-10 brand-shadow text-center">
+            
+            <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Welcome to the Virtual Conference, <?php echo $name; ?>.
+            </h1>
+            
+            <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed">
+                Your delegate pass for <strong>From Skills to <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Income</span>: Building Your Brand, Growing Your Business &amp; Using <span class="text-amber-600 underline decoration-[#005f5a]/40 decoration-4 underline-offset-8">AI to Get Ahead</span></strong> is officially recorded under <span class="font-bold text-slate-900"><?php echo $email ? $email : 'your email address'; ?></span>.
+            </p>
+
+            <div class="mt-6 p-6 sm:p-8 bg-gradient-to-br from-[#f0f9f8] to-[#e6f4f2] border border-[#005f5a]/25 rounded-2xl max-w-2xl mx-auto text-center">
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">
+                    Access the Private Conference Delegates WhatsApp Room
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed font-sans">
+                    The live stream broadcast links, keynote speaker slides, session replays, and delegate workbooks are delivered exclusively inside the private WhatsApp room. Join immediately to complete your orientation.
+                </p>
+
+                <a 
+                    href="<?php echo WHATSAPP_WAITLIST_LINK; ?>" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-block w-full sm:w-auto bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-sm sm:text-base px-8 py-4 rounded-xl gold-glow transition-all transform active:scale-95 text-center"
+                >
+                    Enter Conference Delegates WhatsApp Room
+                </a>
+
+                <p class="text-[11px] text-slate-500 mt-3">
+                    Encrypted WhatsApp group link. Tap once to join instantly.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION DIVIDER WITH SALES HOOK -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 text-center">
+        <div class="inline-block h-px w-24 bg-slate-300"></div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- THE COMPLETE AIDA FORMULA SALES LETTER                         -->
+    <!-- ============================================================== -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 pb-24">
+
+        <!-- ========================================================== -->
+        <!-- 1. ATTENTION: The 5-Minute Revelation & The Raw Hook       -->
+        <!-- ========================================================== -->
+        <article class="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 brand-shadow mb-12">
+            
+            <div class="text-center max-w-3xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-slate-900 tracking-tight leading-[1.18]">
+                    In the next 5 minutes, we will reveal how a young lady who hawked corn on campus, and a graduate who worked dusty manual POP ceiling labor, escaped the brutal Nigerian dilemma to earn in stable US Dollars and British Pounds...
+                </h2>
+
+                <p class="text-base sm:text-lg text-slate-600 font-sans mt-4 leading-relaxed">
+                    ...and how the Newton Academy Academic Council has fully endowed your <span class="text-[#005f5a] font-bold not-italic">100% Full Tuition Scholarship (₦200,000 value completely covered)</span> so you can duplicate their exact commercial systems.
+                </p>
+            </div>
+
+            <!-- Centralized "What You Will Discover In 5 Minutes" Card -->
+            <div class="bg-gradient-to-br from-[#003d3a] to-[#002d2a] text-white rounded-2xl p-6 sm:p-8 my-8 shadow-xl border border-amber-500/30">
+                <div class="text-center mb-6">
+                    <h3 class="text-xl sm:text-2xl font-extrabold mt-1">Here Is What You Are About To Uncover:</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-teal-100 font-sans">
+                    <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-amber-400 font-black text-base shrink-0">✓</span>
+                        <span><strong>The Post-NYSC Deception:</strong> Why degrees and ₦33k monthly stipends leave brilliant graduates completely stranded at P.O.P.</span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-amber-400 font-black text-base shrink-0">✓</span>
+                        <span><strong>The Corn Seller to US Tech Journey:</strong> How a First Class student moved from hawking food on campus to earning $2,800/month remotely.</span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-amber-400 font-black text-base shrink-0">✓</span>
+                        <span><strong>From Dusty POP Scaffolding to UK AI:</strong> Freedom Obanijesu's verified transition to international technology partnerships.</span>
+                    </div>
+
+                    <div class="flex items-start gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <span class="text-amber-400 font-black text-base shrink-0">✓</span>
+                        <span><strong>100% Full Tuition Scholarship:</strong> How your ₦200,000 fee is covered, and why a ₦20,000 filter is mandatory to protect seats.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hook Statement from Newton Academy -->
+            <div class="border-l-4 border-amber-500 pl-5 py-2 my-8 bg-[#f1f5f9] rounded-r-2xl">
+                <p class="text-sm sm:text-base text-slate-800 font-sans mt-1 leading-relaxed">
+                    "Newton Academy was established on one undeniable principle: Education without commercial leverage in today's Nigeria is slow economic suicide. We do not teach theories from 1995. We teach the high-income systems demanded by global employers in 2026."
+                </p>
+            </div>
+
+            <!-- ====================================================== -->
+            <!-- 2. INTEREST: The Nigerian Dilemma & Proof Case Studies  -->
+            <!-- ====================================================== -->
+            <div class="border-t border-slate-200 pt-10 mt-10">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        The Nigerian Dilemma: Why Brilliant Minds End Up Stranded
+                    </h3>
+                </div>
+
+                <div class="space-y-5 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
+                    <p>
+                        Let us confront the raw, uncomfortable truth about the reality of building a life in Nigeria today.
+                    </p>
+                    <p>
+                        Think about how hard you have worked. Think about the years spent in school: navigating endless strikes, sleepless nights reading for exams, and the exhausting daily hustle. Maybe you had to hawk corn, snacks, or thrift clothes on campus just to pay handouts and hostel fees. Or maybe you had to take on grueling manual labor on dusty construction sites in the scorching heat just to buy books and stay in school.
+                    </p>
+                    <p>
+                        You endured all of it with one single belief: <em>"Once I graduate, my story will change."</em>
+                    </p>
+                    <p>
+                        You graduated with pride - perhaps with a 2:1 or even a First Class. You wore the NYSC khaki, served your country in a distant state, and squeezed every kobo out of a monthly ₦33,000 stipend that barely lasted past the first seven days of the month.
+                    </p>
+                    <p class="font-bold text-slate-900 not-italic">
+                        And then came the cliff: Passing Out Parade (P.O.P).
+                    </p>
+                    <p>
+                        The monthly allowance stopped. The congratulations faded. You submitted 50, 100, 200 job applications. Total silence. You watched the Naira lose value week after week. Living costs exploded. Food prices tripled. And you were left sitting at home, deeply confused - educated on paper, brilliant in character, but completely broke in reality.
+                    </p>
+                </div>
+
+                <!-- Proof Visual: Post-NYSC Dilemma -->
+                <div class="my-8 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                    <img src="assets/images/young_lady_graduate_nysc.jpg" alt="The Nigerian Graduate Dilemma" class="w-full h-64 sm:h-80 object-cover">
+                    <div class="p-4 bg-[#f8fafc] text-xs text-slate-600 border-t border-slate-200 flex items-center justify-between">
+                        <span><strong>The Nigerian Dilemma:</strong> Over 70% of graduates face total joblessness after NYSC P.O.P.</span>
+                        <span class="text-[#005f5a] font-bold">Degrees Don't Guarantee Income</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ------------------------------------------------------ -->
+            <!-- CASE STUDY 1: The Young Lady Who Hawked Corn on Campus -->
+            <!-- ------------------------------------------------------ -->
+            <div class="border-t border-slate-200 pt-10 mt-10">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        From Hawking Corn on Campus to $2,800/Month US Remote Tech
+                    </h3>
+                </div>
+
+                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
+                    <p>
+                        Consider the real journey of a young Nigerian lady who entered university with virtually zero financial backing. Her parents could not afford handouts, textbooks, or hostel rent.
+                    </p>
+                    <p>
+                        Every afternoon between lectures, while other students were resting, she carried a tray of boiled and roasted corn, groundnuts, and snacks around campus hostels to raise money for school fees. Through grit and unyielding discipline, she graduated with a <strong>First Class Degree</strong>.
+                    </p>
+                    <p>
+                        She completed NYSC with high hopes. Yet for 14 grueling months, she could not find a single job paying more than ₦45,000 in Lagos. She was frustrated, broke, and on the verge of total despair.
+                    </p>
+                    <p>
+                        Then she made a defining decision: She enrolled in Newton Academy's digital marketing and AI growth program. She learned how to run high-ROI ad funnels, conduct market research with advanced AI prompting, and position herself for international remote roles.
+                    </p>
+                    <p class="font-bold text-slate-900">
+                        Today, she works as a Remote Growth Marketing Associate for a premier agency in the United States, earning $2,800 every month - earning in stable foreign currency right from her home in Nigeria.
+                    </p>
+                </div>
+
+                <!-- 3-Image Proof Grid: Campus Hawker to US Remote Role -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/young_lady_hawking_corn.jpg" alt="Young Nigerian Student Hawking Corn on Campus" class="w-full h-52 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wider block">The Hard Beginning</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">Hawking Corn on Campus</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Selling boiled and roasted corn between lectures to sponsor tuition and campus handouts.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/young_lady_graduate_nysc.jpg" alt="First Class Degree Convocation" class="w-full h-52 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-[#005f5a] uppercase tracking-wider block">Academic Excellence</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">First Class Graduate</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Beaming with pride at convocation - only to face 14 months of post-NYSC unemployment.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/young_lady_remote_office.jpg" alt="Remote AI Marketer in Lagos" class="w-full h-52 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider block">Global Breakthrough</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">$2,800/Month US Remote Role</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Working comfortably from home with premier US tech teams, paid in stable USD.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ------------------------------------------------------ -->
+            <!-- CASE STUDY 2: Freedom Emmanuel Obanijesu               -->
+            <!-- ------------------------------------------------------ -->
+            <div class="border-t border-slate-200 pt-10 mt-10">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        From Manual POP Ceiling Installation to UK AI Product Marketer
+                    </h3>
+                </div>
+
+                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
+                    <p>
+                        This is the documented journey of our lead growth architect, <strong>Freedom Emmanuel Obanijesu</strong>.
+                    </p>
+                    <p>
+                        At age 16, Freedom had to take on heavy manual construction labor. He learned POP (Plaster of Paris) ceiling installation - mixing heavy white powder, climbing rickety wooden scaffolding in the scorching heat, and working with blistered hands and plaster dust in his lungs just to feed himself and stay in school.
+                    </p>
+                    <p>
+                        Even while studying Building Technology at the Federal University of Technology, Akure (FUTA), he painted residential houses and installed POP ceilings off-campus to survive.
+                    </p>
+                    <p>
+                        During NYSC, he made a radical realization: <em>"Physical trade labor in a crumbling economy will exhaust your body while keeping you poor. Digital leverage is the only true escape."</em>
+                    </p>
+                    <p>
+                        He immersed himself in direct-response marketing, automated customer acquisition funnels, and modern Artificial Intelligence.
+                    </p>
+                </div>
+
+                <!-- 3-Image Grid: Freedom's Real Authentic Proof (NO stock/fake photos) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/freedom_nysc_award.jpg" alt="Freedom Obanijesu winning 1st Place Bayelsa NYSC Corpreneurship Award" class="w-full h-56 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wider block">State Honor &bull; Bayelsa</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">1st Place NYSC Corpreneurship</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Honored on stage for tech-driven innovation and digital enterprise execution during NYSC.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/freedom_speaking.jpg" alt="Freedom Obanijesu Keynote on Youth Entrepreneurship" class="w-full h-56 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-[#005f5a] uppercase tracking-wider block">Keynote Address &bull; Lagos</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">Keynote Speaker & 100 Under 40</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Addressing ambitious builders on digital marketing systems at True Independence Lagos.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 bg-[#f1f5f9]">
+                        <img src="assets/images/freedom_profile.jpg" alt="Freedom Emmanuel Obanijesu AI Product Marketer" class="w-full h-56 object-cover">
+                        <div class="p-4 bg-white border-t border-slate-100">
+                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider block">Global Growth Architect</span>
+                            <h4 class="text-xs font-bold text-slate-900 mt-0.5">Partnering with UK AI Startups</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Leading AI product marketing and growth campaigns for tech firms in the United Kingdom.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl text-xs sm:text-sm text-slate-700 font-sans leading-relaxed text-center">
+                    Freedom and our student alumni were not born into generational wealth. They did not have foreign passports. They simply refused to remain trapped in the Nigerian dilemma. They acquired high-leverage commercial skills and mastered Artificial Intelligence.
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- ========================================================== -->
+        <!-- 3. DESIRE: The 100% Full Tuition Scholarship Endowment     -->
+        <!-- ========================================================== -->
+        <section class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002b28] text-white rounded-3xl p-6 sm:p-12 shadow-2xl mb-12 border-2 border-amber-500/40 relative overflow-hidden">
+            
+            <div class="text-center max-w-2xl mx-auto mb-8 relative z-10">
+                <h3 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+                    The Newton Academy Foundation <span class="text-amber-300 underline decoration-amber-400 decoration-4 underline-offset-8">100% Tuition Endowment</span>
+                </h3>
+
+                <p class="text-sm sm:text-base text-teal-100 font-sans mt-3 leading-relaxed">
+                    How Newton Academy and our alumni foundation completely cover your ₦200,000 tuition fee for the upcoming 3-month diploma session.
+                </p>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- THE ENDOWMENT GRANT & SEAT CONFIRMATION VOUCHER (NEW CONCEPT)  -->
+            <!-- ============================================================== -->
+            <div class="space-y-4 mb-10">
+                
+                <!-- Card 1: 100% Scholarship Endowment Certificate -->
+                <div class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002f2d] text-white rounded-2xl p-6 sm:p-7 shadow-lg border-2 border-emerald-400/40 relative overflow-hidden">
+                    <div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full border-4 border-white/5 pointer-events-none flex items-center justify-center">
+                        <span class="text-white/10 font-mono text-5xl font-black">100%</span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/15 pb-4 mb-5">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="text-xs uppercase tracking-widest font-mono text-emerald-300 font-bold">
+                                Newton Academy Foundation Endowment
+                            </span>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-950 bg-emerald-300 px-3 py-1 rounded-full uppercase tracking-wider self-start sm:self-auto shadow-sm">
+                            Tuition: 100% Fully Covered
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                        <div>
+                            <span class="text-xs text-teal-200 uppercase tracking-wider font-mono block mb-1">Standard 3-Month Tuition</span>
+                            <span class="line-through text-slate-300 text-lg sm:text-xl font-mono font-bold">₦200,000</span>
+                            <span class="block text-xs text-emerald-300 font-semibold mt-1">Paid in full by Academic Foundation Reserve</span>
+                        </div>
+                        <div class="sm:text-right bg-white/5 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-white/10 sm:border-0">
+                            <span class="text-xs text-teal-200 uppercase tracking-wider font-mono block mb-1">Your Remaining Tuition Balance</span>
+                            <span class="text-3xl sm:text-4xl font-black text-emerald-400 font-mono">₦0.00</span>
+                            <span class="block text-[11px] text-teal-100 font-sans mt-0.5">Zero tuition payable throughout your 3 months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Seat Allocation & Application Fee Filter -->
+                <div class="bg-white border-2 border-amber-400/50 rounded-2xl p-6 sm:p-7 shadow-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-1.5 max-w-md">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                <h4 class="text-sm sm:text-base font-bold text-slate-900">
+                                    One-Time Application &amp; Seat Reservation Fee
+                                </h4>
+                            </div>
+                            <p class="text-xs text-slate-600 font-sans leading-relaxed">
+                                Due to extreme applicant volume and strictly capped cohort capacity, this single commitment fee secures your seat, provisions your LMS portal credentials, and assigns your faculty mentors.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 text-[11px] text-slate-500 font-medium">
+                                <span>✓ Guaranteed Cohort Seat</span>
+                                <span>✓ LMS &amp; AI Suite Provisioning</span>
+                                <span>✓ 24h Reservation Window</span>
+                            </div>
+                        </div>
+
+                        <div class="text-left sm:text-right shrink-0 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-100">
+                            <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">Total Payable Now</span>
+                            <span class="text-3xl sm:text-4xl font-extrabold text-[#005f5a] font-mono block">
+                                ₦20,000
+                            </span>
+                            <span class="text-[10px] text-emerald-800 font-bold bg-emerald-50 border border-emerald-300 px-2.5 py-0.5 rounded-full inline-block mt-1">
+                                Saves You ₦200,000
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Global Pedigree Banner -->
+            <div class="bg-black/30 border border-white/15 rounded-2xl p-5 max-w-2xl mx-auto text-center mt-6">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400 block mb-2">
+                    Taught by Global Industry Tutors with Enterprise Backgrounds At:
+                </span>
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-white font-extrabold text-xs sm:text-sm">
+                    <span>Microsoft</span>
+                    <span>Meta (Facebook)</span>
+                    <span>Accenture</span>
+                    <span>7Up Bottling Company</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- The Two Diploma Tracks (Curriculum & Lumenvox AI Suite) -->
+        <section class="space-y-8 mb-12">
+            
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Select Your Specialized 3-Month Diploma Program
+                </h3>
+            </div>
+
+            <!-- Track 1: Digital Entrepreneurship -->
+            <div class="bg-white border-2 border-slate-200/90 rounded-3xl p-6 sm:p-10 brand-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-5 mb-6">
+                    <div>
+                        <span class="text-xs font-bold text-[#005f5a] uppercase tracking-wider">Option One</span>
+                        <h4 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">
+                            Digital Entrepreneurship + Applied AI
+                        </h4>
+                    </div>
+                    <span class="text-xs bg-teal-50 text-[#005f5a] font-bold px-3 py-1 rounded-full border border-teal-200 self-start sm:self-auto">
+                        3-Month Diploma & Certification
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group bg-slate-900">
+            <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="Digital Entrepreneurship Multi-Device Course Mockup" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#005f5a]/90 backdrop-blur-sm text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full border border-white/20">Full LMS & AI Suite Included</div>
+        </div>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-sans">
+                        <div class="p-3 bg-[#f1f5f9] rounded-xl border border-slate-200">
+                            <strong>1. Offer Packaging & High-Ticket Positioning:</strong> How to charge 5x to 10x your current rates by selling business outcomes instead of commodity hours.
+                        </div>
+                        <div class="p-3 bg-[#f1f5f9] rounded-xl border border-slate-200">
+                            <strong>2. Automated Sales Systems:</strong> Building funnels that acquire customers and collect payments internationally without 24/7 manual chats.
+                        </div>
+                        <div class="p-3 bg-[#f1f5f9] rounded-xl border border-slate-200">
+                            <strong>3. Integrated Lumenvox AI Creator Suite:</strong> Creating viral marketing video ads with Runway Gen-3 and Kling AI, plus voice cloning with ElevenLabs.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <a 
+                        href="curriculum-de.php?name=<?php echo urlencode($name); ?>&email=<?php echo urlencode($email); ?>&phone=<?php echo urlencode($phone); ?>" 
+                        class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-[#005f5a] hover:text-[#004d49] underline decoration-2 underline-offset-4"
+                    >
+                        <span>Read Full 15-Module Syllabus & Benefits</span>
+                        <span>→</span>
+                    </a>
+                    <a 
+                        href="#scholarshipApplication" 
+                        class="bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all text-center"
+                    >
+                        Apply for This Track
+                    </a>
+                </div>
+            </div>
+
+            <!-- Track 2: Digital Marketing -->
+            <div class="bg-white border-2 border-slate-200/90 rounded-3xl p-6 sm:p-10 brand-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-5 mb-6">
+                    <div>
+                        <span class="text-xs font-bold text-[#005f5a] uppercase tracking-wider">Option Two</span>
+                        <h4 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">
                             Digital Marketing + Applied AI
                         </h4>
                     </div>
@@ -135,6 +575,9 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             
             <!-- Centralized Transparency Box: The ₦20,000 Filter -->
             <div class="bg-amber-50 border-2 border-amber-300/80 rounded-2xl p-6 sm:p-8 mb-8 text-center max-w-2xl mx-auto">
+                <span class="text-xs font-black text-amber-900 uppercase tracking-widest block mb-1">
+                    Admissions Council Transparency Note
+                </span>
                 <h4 class="text-lg sm:text-xl font-extrabold text-amber-950 mb-2">
                     Why Is There A ₦20,000 Application Fee For A 100% Scholarship?
                 </h4>
@@ -392,7 +835,6 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
     <!-- 100 Verified Testimonials Data & Slider Controller -->
     <script src="assets/js/testimonials.js"></script>
     <script src="assets/js/testimonial-slider.js"></script>
-    <script src="assets/js/application-evaluation.js"></script>
     <script src="assets/js/animations.js"></script>
 </body>
 </html>

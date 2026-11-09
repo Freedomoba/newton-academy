@@ -111,3 +111,4 @@ const path = require('path');
     fs.writeFileSync(fullPath, c, 'utf8');
     console.log(`Cleaned script in ${file}`);
 });
+

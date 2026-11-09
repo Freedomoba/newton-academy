@@ -12,14 +12,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        heading: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'Ubuntu', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -129,11 +129,9 @@
 
         
             <div class="mt-12 max-w-4xl mx-auto px-2">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-950">
-                    <img src="assets/images/mockup_digital_marketing.jpg" alt="Digital Marketing Multi-Device Learning Suite" class="w-full h-auto object-cover">
-                </div>
-                <!-- Clean Separate Info Bar Below Mockup (Never covers image on mobile!) -->
-                <div class="mt-3 bg-slate-900/90 border border-white/10 rounded-2xl p-3.5 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-white">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-950 group">
+                    <img src="assets/images/mockup_digital_marketing.jpg" alt="Digital Marketing Multi-Device Learning Suite" class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-700">
+                    <div class="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-white">
                         <div class="flex items-center gap-3">
                             <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span class="text-xs sm:text-sm font-bold">100% Cross-Platform Access: Desktop, Laptop, Tablet & Mobile</span>
@@ -148,12 +146,362 @@
     </section>
 
     <!-- FACULTY CREDENTIALS BANNER -->
-    <section class="bg-gradient-to-br from-[#002d2a] via-[#00403d] to-[#002624] text-white py-16 border-t border-b border-amber-400/20">
+    <div class="bg-white border-b border-slate-200 py-6">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                Integrated Lumenvox AI Creator Suite (5 Modules)
-            </h3>
-            <p class="text-xs sm:text-sm text-teal-200 font-sans mt-2 max-w-2xl mx-auto">
+            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">
+                Taught by Global Industry Tutors with Enterprise Backgrounds At:
+            </span>
+            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-black text-slate-800 text-xs sm:text-sm">
+                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Microsoft</span>
+                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Meta (Facebook)</span>
+                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Accenture</span>
+                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>7Up Bottling Company</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOUTH-WATERING BENEFITS SECTION -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                Mouth-Watering Benefits: Everything You Receive as a <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Newton Academy Fellow</span>
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 font-sans mt-2">
+                Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
+                    01
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">Globally Verifiable Diploma</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Graduate with an internationally accredited digital diploma verifiable by employers worldwide to elevate your LinkedIn, CV, and consulting portfolio.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
+                    02
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">15 Core Commercial Modules</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Step-by-step masterclasses covering real-world business models, marketing funnels, customer persuasion, and legal/financial frameworks.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 font-black flex items-center justify-center text-base mb-4 border border-amber-200">
+                    03
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">Integrated Lumenvox AI Suite</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Full access to advanced prompt engineering, Runway Gen-3 AI video generation, Kling AI, and ElevenLabs voice cloning tools directly inside your LMS.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
+                    04
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">Multi-Currency Payment Setup</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Hands-on setup of Stripe, Paystack, Geegpay, and foreign merchant accounts so you can seamlessly collect payments in USD, GBP, and EUR from Nigeria.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
+                    05
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">Foreign Client Acquisition</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Battle-tested cold outreach swipe files, proposal decks, and contract templates to pitch and close $1,500 to $4,000 monthly retainers with international firms.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
+                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
+                    06
+                </div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">Weekly Live Faculty Hot-Seats</h4>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Live weekly interactive coaching and review sessions with faculty mentors who dissect your campaigns, funnels, and business models live on Zoom.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FULL 15-MODULE SYLLABUS -->
+    <section id="modules" class="bg-white py-16 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    The 15 Comprehensive Modules of Digital Marketing + Applied AI
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-2">
+                    Direct from our accredited curriculum. Zero fluff. 100% practical market skills.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
+                
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 1
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 1</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Introduction to Modern Digital Marketing & Strategic Advantage
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    The commercial revolution in customer attention. Traditional vs modern direct-response marketing. How top agencies and multinational brands structure customer journeys, analyze competitors, and drive predictable sales.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 2
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 2</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Building a High-Converting Digital Marketing Strategy
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    In-depth market research and competitive intelligence. Developing psychographic customer personas and multi-stage buyer journey maps. Setting SMART commercial metrics and crafting a 90-day actionable marketing masterplan.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 3
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 3</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Website Optimization, Conversion Rate Optimization (CRO) & UX
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Turning casual visitors into buyers. Mobile-first user experience design, rapid page load optimization, layout psychology, heatmap tracking, and conversion-centered design that doubles sales conversion.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 4
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Content Marketing, Copywriting & Brand Storytelling
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    The psychology of persuasion in text. Writing irresistible headlines, high-converting video sales letters (VSLs), email copy, and organic content that commands immediate authority and builds organic demand.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 5
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Social Media Marketing & Algorithmic Growth
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Dominating distribution on Instagram, LinkedIn, TikTok, and X. Designing engagement systems, community building, viral content loops, and converting followers into qualified inbound buyer leads.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 6
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 5</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Pay-Per-Click (PPC) Advertising & Meta Ads Mastery
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Running high-ROI paid traffic on Meta (Facebook & Instagram). Ad account structuring, custom audience segmentation, lookalike modeling, pixel tracking, and scaling daily ad spend profitably.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 7
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 6</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Email Marketing & Advanced Lifecycle Automation
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Building, segmenting, and monetizing responsive email lists. Mastering behavioral automation workflows, cart abandonment sequences, re-engagement campaigns, and lifecycle deliverability.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 8
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 7</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Search Engine Optimization (SEO) & Technical Authority
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Dominating Google organic search. On-page keyword architecture, technical SEO auditing, backlink acquisition strategies, and localized SEO to drive free, high-intent traffic for years.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 9
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Search Engine Marketing (SEM) & Google Ads Mastery
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Capturing bottom-of-the-funnel buyers searching for immediate solutions. Google Search, Display, and Performance Max campaigns. Bidding strategies, quality score optimization, and negative keyword filtering.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 10
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Influencer Marketing, High-ROI Partnerships & Affiliate Systems
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Identifying authentic influencers, negotiating performance-based deals, calculating influencer ROI, and structuring scalable affiliate networks that recruit armies of marketers to promote your offers.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 11
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 9</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Analytics, Data-Driven Decision Making & Attribution
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Google Analytics 4 (GA4), Meta Conversions API (CAPI), and multi-touch attribution modeling. Setting up custom dashboards, A/B split testing protocols, and extracting actionable business intelligence.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 12
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 10</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Social Media Listening & Online Reputation Management (ORM)
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Brand monitoring, sentiment analysis, managing public relations crises, turning negative customer feedback into retention opportunities, and safeguarding corporate brand perception.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 13
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 11</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Mobile & WhatsApp Marketing Automation
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Direct-to-consumer conversational commerce. Building automated WhatsApp broadcast funnels, SMS marketing, chatbot customer support, and closing high-ticket deals inside messaging apps.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 14
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    International Remote Work & Foreign Client Retainers
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    How to pitch, close, and retain international clients in the US, UK, Canada, and Europe paying $1,500 to $4,000 monthly retainers. Positioning, proposals, contracts, and international invoicing.
+                </p>
+            </div>
+  
+
+            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
+                <div class="flex items-center justify-between gap-2 mb-3">
+                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Module 15
+                    </span>
+                    <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
+                </div>
+                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                    Capstone Agency Campaign & Live Commercial Audit
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+                    Comprehensive execution capstone: deploy a full-funnel live marketing campaign, audit a corporate brand, present multi-channel analytics, and receive formal review from international agency directors.
+                </p>
+            </div>
+  
+            </div>
+
+            <!-- INTEGRATED LUMENVOX AI SPECIALIZATION MODULES -->
+            <div class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002b28] rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-amber-500/40">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="inline-block bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                        Included Bonus Suite
+                    </span>
+                    <h3 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
+                        Integrated Lumenvox AI Creator Suite (5 Modules)
+                    </h3>
+                    <p class="text-xs sm:text-sm text-teal-100 font-sans mt-1">
                         Never purchase separate prompt engineering or video editing courses. The full Lumenvox suite is integrated directly into your diploma.
                     </p>
                 </div>
@@ -240,8 +588,9 @@
             </div>
   
                 </div>
+            </div>
+
         </div>
-    </section>
     </section>
 
     <!-- EMBEDDED APPLICATION FORM: APPLY DIRECTLY FROM THIS PAGE -->

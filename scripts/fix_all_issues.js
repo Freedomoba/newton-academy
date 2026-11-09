@@ -348,3 +348,4 @@ curriculumFiles.forEach(file => {
 });
 
 console.log('--- Comprehensive fix finished successfully ---');
+

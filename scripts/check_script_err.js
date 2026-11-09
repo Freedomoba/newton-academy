@@ -7,3 +7,4 @@ if (scriptMatches[1]) {
 } else if (scriptMatches[0]) {
     console.log(scriptMatches[0].slice(scriptMatches[0].length - 600));
 }
+

@@ -34,3 +34,4 @@ files.forEach(file => {
     fs.writeFileSync(fullPath, content, 'utf8');
     console.log(`Replaced text pills with real arrow symbols in ${file}`);
 });
+

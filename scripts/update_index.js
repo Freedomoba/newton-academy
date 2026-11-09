@@ -235,3 +235,4 @@ function updateIndexFile(filename, isPhp) {
 
 updateIndexFile('index.html', false);
 updateIndexFile('index.php', true);
+

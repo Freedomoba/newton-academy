@@ -5,3 +5,4 @@ console.log('Discover index:', idx);
 if (idx !== -1) {
     console.log(c.slice(idx - 200, idx + 400));
 }
+

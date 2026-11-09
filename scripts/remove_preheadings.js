@@ -52,3 +52,4 @@ files.forEach(file => {
     fs.writeFileSync(fullPath, content, 'utf8');
     console.log(`Removed preheadings in ${file}`);
 });
+
