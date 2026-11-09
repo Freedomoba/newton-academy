@@ -48,6 +48,17 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Digital Entrepreneurship + 
         .brand-shadow {
             box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.12);
         }
+    
+        p {
+            line-height: 1.65 !important;
+        }
+        .prose-readable {
+            line-height: 1.65 !important;
+        }
+        .heading-highlight {
+            text-decoration-color: #f59e0b;
+            text-underline-offset: 8px;
+        }
     </style>
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white">

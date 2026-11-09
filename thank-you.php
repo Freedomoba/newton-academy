@@ -51,6 +51,17 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
         .gold-glow {
             box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.35);
         }
+    
+        p {
+            line-height: 1.65 !important;
+        }
+        .prose-readable {
+            line-height: 1.65 !important;
+        }
+        .heading-highlight {
+            text-decoration-color: #f59e0b;
+            text-underline-offset: 8px;
+        }
     </style>
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white pb-20 sm:pb-0">
@@ -89,7 +100,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             </h1>
             
             <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed">
-                Your delegate pass for <strong>From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong> is officially recorded under <span class="font-bold text-slate-900"><?php echo $email ? $email : 'your email address'; ?></span>.
+                Your delegate pass for <strong>From Skills to <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Income</span>: Building Your Brand, Growing Your Business &amp; Using <span class="text-amber-600 underline decoration-[#005f5a]/40 decoration-4 underline-offset-8">AI to Get Ahead</span></strong> is officially recorded under <span class="font-bold text-slate-900"><?php echo $email ? $email : 'your email address'; ?></span>.
             </p>
 
             <div class="mt-6 p-6 sm:p-8 bg-gradient-to-br from-[#f0f9f8] to-[#e6f4f2] border border-[#005f5a]/25 rounded-2xl max-w-2xl mx-auto text-center">
@@ -171,10 +182,10 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                 </div>
             </div>
 
-            <!-- Hook Statement from Dr. Ade Braimoh -->
+            <!-- Hook Statement from Newton Academy -->
             <div class="border-l-4 border-amber-500 pl-5 py-2 my-8 bg-[#f1f5f9] rounded-r-2xl">
                 <p class="text-sm sm:text-base text-slate-800 font-sans mt-1 leading-relaxed">
-                    "Dr. Ade Braimoh established Newton Academy on one undeniable principle: Education without commercial leverage in today's Nigeria is slow economic suicide. We do not teach theories from 1995. We teach the high-income systems demanded by global employers in 2026."
+                    "Newton Academy was established on one undeniable principle: Education without commercial leverage in today's Nigeria is slow economic suicide. We do not teach theories from 1995. We teach the high-income systems demanded by global employers in 2026."
                 </p>
             </div>
 
@@ -199,13 +210,13 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                         You endured all of it with one single belief: <em>"Once I graduate, my story will change."</em>
                     </p>
                     <p>
-                        You graduated with pride—perhaps with a 2:1 or even a First Class. You wore the NYSC khaki, served your country in a distant state, and squeezed every kobo out of a monthly ₦33,000 stipend that barely lasted past the first seven days of the month.
+                        You graduated with pride - perhaps with a 2:1 or even a First Class. You wore the NYSC khaki, served your country in a distant state, and squeezed every kobo out of a monthly ₦33,000 stipend that barely lasted past the first seven days of the month.
                     </p>
                     <p class="font-bold text-slate-900 not-italic">
                         And then came the cliff: Passing Out Parade (P.O.P).
                     </p>
                     <p>
-                        The monthly allowance stopped. The congratulations faded. You submitted 50, 100, 200 job applications. Total silence. You watched the Naira lose value week after week. Living costs exploded. Food prices tripled. And you were left sitting at home, deeply confused—educated on paper, brilliant in character, but completely broke in reality.
+                        The monthly allowance stopped. The congratulations faded. You submitted 50, 100, 200 job applications. Total silence. You watched the Naira lose value week after week. Living costs exploded. Food prices tripled. And you were left sitting at home, deeply confused - educated on paper, brilliant in character, but completely broke in reality.
                     </p>
                 </div>
 
@@ -244,7 +255,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                         Then she made a defining decision: She enrolled in Newton Academy's digital marketing and AI growth program. She learned how to run high-ROI ad funnels, conduct market research with advanced AI prompting, and position herself for international remote roles.
                     </p>
                     <p class="font-bold text-slate-900">
-                        Today, she works as a Remote Growth Marketing Associate for a premier agency in the United States, earning $2,800 every month—earning in stable foreign currency right from her home in Nigeria.
+                        Today, she works as a Remote Growth Marketing Associate for a premier agency in the United States, earning $2,800 every month - earning in stable foreign currency right from her home in Nigeria.
                     </p>
                 </div>
 
@@ -264,7 +275,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                         <div class="p-4 bg-white border-t border-slate-100">
                             <span class="text-[10px] font-bold text-[#005f5a] uppercase tracking-wider block">Academic Excellence</span>
                             <h4 class="text-xs font-bold text-slate-900 mt-0.5">First Class Graduate</h4>
-                            <p class="text-[11px] text-slate-500 mt-1">Beaming with pride at convocation—only to face 14 months of post-NYSC unemployment.</p>
+                            <p class="text-[11px] text-slate-500 mt-1">Beaming with pride at convocation - only to face 14 months of post-NYSC unemployment.</p>
                         </div>
                     </div>
 
@@ -295,7 +306,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                         This is the documented journey of our lead growth architect, <strong>Freedom Emmanuel Obanijesu</strong>.
                     </p>
                     <p>
-                        At age 16, Freedom had to take on heavy manual construction labor. He learned POP (Plaster of Paris) ceiling installation—mixing heavy white powder, climbing rickety wooden scaffolding in the scorching heat, and working with blistered hands and plaster dust in his lungs just to feed himself and stay in school.
+                        At age 16, Freedom had to take on heavy manual construction labor. He learned POP (Plaster of Paris) ceiling installation - mixing heavy white powder, climbing rickety wooden scaffolding in the scorching heat, and working with blistered hands and plaster dust in his lungs just to feed himself and stay in school.
                     </p>
                     <p>
                         Even while studying Building Technology at the Federal University of Technology, Akure (FUTA), he painted residential houses and installed POP ceilings off-campus to survive.
@@ -353,11 +364,11 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             
             <div class="text-center max-w-2xl mx-auto mb-8 relative z-10">
                 <h3 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
-                    The Newton Academy Foundation Endowment
+                    The Newton Academy Foundation <span class="text-amber-300 underline decoration-amber-400 decoration-4 underline-offset-8">100% Tuition Endowment</span>
                 </h3>
 
                 <p class="text-sm sm:text-base text-teal-100 font-sans mt-3 leading-relaxed">
-                    How Dr. Ade Braimoh and our alumni foundation completely cover your ₦200,000 tuition fee for the upcoming 3-month diploma session.
+                    How Newton Academy and our alumni foundation completely cover your ₦200,000 tuition fee for the upcoming 3-month diploma session.
                 </p>
             </div>
 
@@ -523,7 +534,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                     Why Is There A ₦20,000 Application Fee For A 100% Scholarship?
                 </h4>
                 <p class="text-xs sm:text-sm text-amber-900 font-sans leading-relaxed">
-                    Because 100% free programs suffer a 95% dropout rate. When people pay zero, they treat world-class training like a casual PDF download and abandon their seats midway. We receive over 2,000 applications each session and our mentor capacity is strictly limited. The ₦20,000 fee is <strong>not tuition</strong>—it is a mandatory seriousness filter to ensure that only dedicated fellows who will complete the entire 3-month curriculum take up our endowed seats.
+                    Because 100% free programs suffer a 95% dropout rate. When people pay zero, they treat world-class training like a casual PDF download and abandon their seats midway. We receive over 2,000 applications each session and our mentor capacity is strictly limited. The ₦20,000 fee is <strong>not tuition</strong> - it is a mandatory seriousness filter to ensure that only dedicated fellows who will complete the entire 3-month curriculum take up our endowed seats.
                 </p>
             </div>
 
@@ -630,11 +641,101 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
 
     </main>
 
-    <!-- Footer -->
+    
+    <!-- TESTIMONIALS SHOWCASE (100 VERIFIED FELLOW EXPERIENCES) -->
+    <section id="reviews" class="border-t border-slate-200 bg-[#f1f5f9] py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                    Real Experiences from <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Ambitious Women & Founders</span>
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+                    Verified feedback from 100 fellows and alumni across Nigeria, Africa, the UK, and the diaspora who transitioned into high-income digital enterprise.
+                </p>
+            </div>
+
+            <!-- Single Full-Width Card Showcase (Every Word Fully Readable!) -->
+            <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-7 sm:p-10 brand-shadow relative transition-all duration-300" id="testimonialCard">
+                
+                <!-- Card Header: Rating & Badge -->
+                <div class="flex items-center justify-between gap-2 mb-6">
+                    <div class="flex items-center text-amber-500 text-sm tracking-wide">
+                        <span id="tStars">★★★★★</span>
+                        <span id="tRating" class="text-slate-900 text-xs font-bold ml-2">5.0 / 5.0</span>
+                    </div>
+                    <span id="tBadge" class="text-[10px] font-extrabold text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Verified Fellow
+                    </span>
+                </div>
+
+                <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
+                <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
+                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-sans leading-[1.65] italic">
+                        "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
+                    </p>
+                </div>
+
+                <!-- Card Footer: Author Profile & Navigation Controls -->
+                <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    
+                    <div class="flex items-center gap-3.5">
+                        <div id="tAvatar" class="w-11 h-11 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-black text-sm shrink-0">
+                            OO
+                        </div>
+                        <div>
+                            <h4 id="tName" class="text-sm font-bold text-slate-900">Oluwaseun O.</h4>
+                            <p id="tRole" class="text-xs text-slate-500 leading-normal">Brand Strategist & Independent Consultant &bull; Lagos</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide Controls & Review Index Counter -->
+                    <div class="flex items-center gap-3 self-end sm:self-auto">
+                        <span id="tCounter" class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+                            Review 1 of 100
+                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <button 
+                                type="button" 
+                                id="btnPrevT" 
+                                aria-label="Previous review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                ←
+                            </button>
+                            <button 
+                                type="button" 
+                                id="btnNextT" 
+                                aria-label="Next review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Auto-Rotate Progress Bar -->
+                <div class="w-full bg-slate-100 h-1 rounded-full mt-6 overflow-hidden">
+                    <div id="tProgressBar" class="h-full bg-[#005f5a] transition-all duration-100" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Review Notice -->
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+                <span class="font-bold text-[#005f5a]">Average 4.9 / 5.0 Rating Across 100 Documented Graduate Reviews</span>
+                <span>Reviews rotate automatically every 4 seconds. Tap arrows or hover to pause and read.</span>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Footer -->
     <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
         <div class="max-w-4xl mx-auto px-4">
             <p>&copy; <?php echo date('Y'); ?> <?php echo ACADEMY_NAME; ?>. All rights reserved.</p>
-            <p class="mt-1 text-slate-400">Convened by Dr. Ade Braimoh. Professional Diplomas in Technology, Marketing & Business Systems.</p>
+            <p class="mt-1 text-slate-400">Convened by Newton Academy. Professional Diplomas in Technology, Marketing & Business Systems.</p>
         </div>
     </footer>
 
@@ -682,5 +783,9 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             }
         });
     </script>
+
+    <!-- 100 Verified Testimonials Data & Slider Controller -->
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/testimonial-slider.js"></script>
 </body>
 </html>

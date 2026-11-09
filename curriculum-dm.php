@@ -51,6 +51,17 @@ $track = 'dm';
         .gold-glow {
             box-shadow: 0 10px 30px -8px rgba(245, 158, 11, 0.35);
         }
+    
+        p {
+            line-height: 1.65 !important;
+        }
+        .prose-readable {
+            line-height: 1.65 !important;
+        }
+        .heading-highlight {
+            text-decoration-color: #f59e0b;
+            text-underline-offset: 8px;
+        }
     </style>
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white">
@@ -145,7 +156,7 @@ $track = 'dm';
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Mouth-Watering Benefits: Everything You Receive as a Newton Academy Fellow
+                Mouth-Watering Benefits: Everything You Receive as a <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Newton Academy Fellow</span>
             </h2>
             <p class="text-sm sm:text-base text-slate-600 font-sans mt-2">
                 Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
@@ -590,7 +601,7 @@ $track = 'dm';
             <!-- The Transparency Box: The ₦20,000 Filter -->
             <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-sans leading-relaxed">
                 <strong>Why is there a ₦20,000 application fee?</strong>
-                Because free programs suffer a 95% dropout rate. We have thousands of applicants and limited mentor capacity. The ₦20,000 is not tuition—it is a non-refundable commitment filter that ensures every seat goes to a fellow who will finish the full 3-month curriculum.
+                Because free programs suffer a 95% dropout rate. We have thousands of applicants and limited mentor capacity. The ₦20,000 is not tuition - it is a non-refundable commitment filter that ensures every seat goes to a fellow who will finish the full 3-month curriculum.
             </div>
 
             <div id="cAlert" class="hidden mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium"></div>
@@ -671,10 +682,100 @@ $track = 'dm';
     </section>
 
     <!-- FOOTER -->
-    <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+    
+    <!-- TESTIMONIALS SHOWCASE (100 VERIFIED FELLOW EXPERIENCES) -->
+    <section id="reviews" class="border-t border-slate-200 bg-[#f1f5f9] py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
+                    Real Experiences from <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Ambitious Women & Founders</span>
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+                    Verified feedback from 100 fellows and alumni across Nigeria, Africa, the UK, and the diaspora who transitioned into high-income digital enterprise.
+                </p>
+            </div>
+
+            <!-- Single Full-Width Card Showcase (Every Word Fully Readable!) -->
+            <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-7 sm:p-10 brand-shadow relative transition-all duration-300" id="testimonialCard">
+                
+                <!-- Card Header: Rating & Badge -->
+                <div class="flex items-center justify-between gap-2 mb-6">
+                    <div class="flex items-center text-amber-500 text-sm tracking-wide">
+                        <span id="tStars">★★★★★</span>
+                        <span id="tRating" class="text-slate-900 text-xs font-bold ml-2">5.0 / 5.0</span>
+                    </div>
+                    <span id="tBadge" class="text-[10px] font-extrabold text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Verified Fellow
+                    </span>
+                </div>
+
+                <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
+                <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
+                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-sans leading-[1.65] italic">
+                        "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
+                    </p>
+                </div>
+
+                <!-- Card Footer: Author Profile & Navigation Controls -->
+                <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    
+                    <div class="flex items-center gap-3.5">
+                        <div id="tAvatar" class="w-11 h-11 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-black text-sm shrink-0">
+                            OO
+                        </div>
+                        <div>
+                            <h4 id="tName" class="text-sm font-bold text-slate-900">Oluwaseun O.</h4>
+                            <p id="tRole" class="text-xs text-slate-500 leading-normal">Brand Strategist & Independent Consultant &bull; Lagos</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide Controls & Review Index Counter -->
+                    <div class="flex items-center gap-3 self-end sm:self-auto">
+                        <span id="tCounter" class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+                            Review 1 of 100
+                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <button 
+                                type="button" 
+                                id="btnPrevT" 
+                                aria-label="Previous review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                ←
+                            </button>
+                            <button 
+                                type="button" 
+                                id="btnNextT" 
+                                aria-label="Next review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated Auto-Rotate Progress Bar -->
+                <div class="w-full bg-slate-100 h-1 rounded-full mt-6 overflow-hidden">
+                    <div id="tProgressBar" class="h-full bg-[#005f5a] transition-all duration-100" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Review Notice -->
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+                <span class="font-bold text-[#005f5a]">Average 4.9 / 5.0 Rating Across 100 Documented Graduate Reviews</span>
+                <span>Reviews rotate automatically every 4 seconds. Tap arrows or hover to pause and read.</span>
+            </div>
+
+        </div>
+    </section>
+
+<footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
         <div class="max-w-5xl mx-auto px-4">
             <p>&copy; <?php echo date('Y'); ?> <?php echo ACADEMY_NAME; ?>. All rights reserved.</p>
-            <p class="mt-1 text-slate-400">Convened by Dr. Ade Braimoh. Professional Diplomas in Technology, Marketing & Business Systems.</p>
+            <p class="mt-1 text-slate-400">Convened by Newton Academy. Professional Diplomas in Technology, Marketing & Business Systems.</p>
         </div>
     </footer>
 
@@ -722,5 +823,9 @@ $track = 'dm';
             }
         });
     </script>
+
+    <!-- 100 Verified Testimonials Data & Slider Controller -->
+    <script src="assets/js/testimonials.js"></script>
+    <script src="assets/js/testimonial-slider.js"></script>
 </body>
 </html>
