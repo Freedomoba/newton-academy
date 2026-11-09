@@ -23,13 +23,13 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Digital Entrepreneurship + 
     <script src="https://js.paystack.co/v1/inline.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                         serif: ['Newsreader', 'serif'],
                     },
                     colors: {
@@ -80,7 +80,6 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Digital Entrepreneurship + 
             
             <!-- Document Title -->
             <div class="border-b border-slate-200 pb-6 mb-6">
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest block">Office of Academic Admissions</span>
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
                     Official Award of 100% Full Tuition Scholarship
                 </h1>
@@ -88,7 +87,7 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Digital Entrepreneurship + 
             </div>
 
             <!-- Letter Body -->
-            <div class="text-sm sm:text-base text-slate-700 font-serif leading-relaxed space-y-4 mb-8">
+            <div class="text-sm sm:text-base text-slate-700 font-sans leading-relaxed space-y-4 mb-8">
                 <p>
                     Dear <strong><?php echo $name; ?></strong>,
                 </p>

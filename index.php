@@ -17,14 +17,14 @@ require_once __DIR__ . '/config.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Newsreader', 'serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -107,10 +107,6 @@ require_once __DIR__ . '/config.php';
             <!-- Left: Hero Headline & Direct Proposition -->
             <div class="lg:col-span-7 space-y-6 pt-1">
                 
-                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/10 border border-amber-400/40 text-amber-800 font-extrabold text-[11px] px-3.5 py-1.5 rounded-full uppercase tracking-wider">
-                    Official Admissions Council Broadcast
-                </div>
-
                 <h1 class="text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 tracking-tight leading-[1.12]">
                     From Skills to Income: <span class="bg-gradient-to-r from-[#005f5a] via-teal-700 to-[#004d49] text-transparent bg-clip-text">Building Your Brand,</span> Growing Your Business and <span class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 text-transparent bg-clip-text">Using AI to Get Ahead</span>
                 </h1>
@@ -121,7 +117,7 @@ require_once __DIR__ . '/config.php';
 
                 <!-- Inclusivity & Convener Card -->
                 <div class="border-l-4 border-amber-500 pl-4 py-3 bg-white rounded-r-2xl border border-slate-200/80 shadow-sm">
-                    <p class="text-xs sm:text-sm text-slate-700 font-serif italic leading-relaxed">
+                    <p class="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed">
                         Curated primarily for ambitious women navigating today's economic climate, while warmly welcoming all visionary builders ready to upgrade their commercial leverage.
                     </p>
                     <p class="text-[11px] text-slate-500 font-sans mt-1.5 font-bold">
@@ -183,9 +179,6 @@ require_once __DIR__ . '/config.php';
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500"></div>
 
                     <div class="border-b border-slate-100 pb-5 mb-6 pt-1">
-                        <span class="text-[11px] font-extrabold text-[#005f5a] uppercase tracking-widest block mb-1">
-                            Complimentary Virtual Admission
-                        </span>
                         <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
                             Reserve Your Delegate Pass
                         </h2>
@@ -286,7 +279,6 @@ require_once __DIR__ . '/config.php';
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
             <div class="max-w-3xl mb-10">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Expert Faculty & Keynote Lineup</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Convened by Dr. Ade Braimoh. Taught by world-class global tutors.
                 </h2>
@@ -323,9 +315,6 @@ require_once __DIR__ . '/config.php';
             
             <!-- Section Header -->
             <div class="text-center max-w-2xl mx-auto mb-10">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">
-                    Verified Participant Track Records
-                </span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     Real Experiences from Women & Founders Who Made the Transition
                 </h2>
@@ -350,7 +339,7 @@ require_once __DIR__ . '/config.php';
 
                 <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
                 <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
-                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-serif leading-relaxed italic">
+                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-sans leading-relaxed italic">
                         "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
                     </p>
                 </div>
@@ -416,7 +405,7 @@ require_once __DIR__ . '/config.php';
                 Why we convened this conference: Skills without monetization are merely hobbies.
             </h2>
             
-            <div class="mt-6 space-y-4 text-base text-slate-700 leading-relaxed font-serif">
+            <div class="mt-6 space-y-4 text-base text-slate-700 leading-relaxed font-sans">
                 <p>
                     Across Africa and around the world, women possess extraordinary talent, resilience, and creativity. Yet all too often, women find themselves trapped doing the heaviest labor while earning a fraction of what they deserve.
                 </p>

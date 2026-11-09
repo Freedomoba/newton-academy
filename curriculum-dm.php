@@ -19,14 +19,14 @@ $track = 'dm';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Newsreader', 'serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -80,15 +80,11 @@ $track = 'dm';
     <section class="bg-gradient-to-br from-[#003330] via-[#005f5a] to-[#00433f] text-white py-14 sm:py-20 border-b border-amber-500/30">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
             
-            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 border border-amber-400/50 text-amber-300 font-extrabold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                3-Month Accredited Professional Diploma &bull; 100% Full Tuition Scholarship
-            </div>
-
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-4">
                 Digital Marketing + Applied AI
             </h1>
 
-            <p class="text-base sm:text-xl text-teal-100 max-w-3xl mx-auto font-serif leading-relaxed mb-8">
+            <p class="text-base sm:text-xl text-teal-100 max-w-3xl mx-auto font-sans leading-relaxed mb-8">
                 Transform into a globally certified digital marketing specialist commanding high-ticket foreign retainers in USD and scaling multi-channel paid acquisition.
             </p>
 
@@ -148,11 +144,10 @@ $track = 'dm';
     <!-- MOUTH-WATERING BENEFITS SECTION -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Unmatched Academic Value</span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Mouth-Watering Benefits: Everything You Receive as a Newton Academy Fellow
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 font-serif mt-2">
+            <p class="text-sm sm:text-base text-slate-600 font-sans mt-2">
                 Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
             </p>
         </div>
@@ -164,7 +159,7 @@ $track = 'dm';
                     01
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Globally Verifiable Diploma</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Graduate with an internationally accredited digital diploma verifiable by employers worldwide to elevate your LinkedIn, CV, and consulting portfolio.
                 </p>
             </div>
@@ -174,7 +169,7 @@ $track = 'dm';
                     02
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">15 Core Commercial Modules</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Step-by-step masterclasses covering real-world business models, marketing funnels, customer persuasion, and legal/financial frameworks.
                 </p>
             </div>
@@ -184,7 +179,7 @@ $track = 'dm';
                     03
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Integrated Lumenvox AI Suite</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Full access to advanced prompt engineering, Runway Gen-3 AI video generation, Kling AI, and ElevenLabs voice cloning tools directly inside your LMS.
                 </p>
             </div>
@@ -194,7 +189,7 @@ $track = 'dm';
                     04
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Multi-Currency Payment Setup</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Hands-on setup of Stripe, Paystack, Geegpay, and foreign merchant accounts so you can seamlessly collect payments in USD, GBP, and EUR from Nigeria.
                 </p>
             </div>
@@ -204,7 +199,7 @@ $track = 'dm';
                     05
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Foreign Client Acquisition</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Battle-tested cold outreach swipe files, proposal decks, and contract templates to pitch and close $1,500 to $4,000 monthly retainers with international firms.
                 </p>
             </div>
@@ -214,7 +209,7 @@ $track = 'dm';
                     06
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Weekly Live Faculty Hot-Seats</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Live weekly interactive coaching and review sessions with faculty mentors who dissect your campaigns, funnels, and business models live on Zoom.
                 </p>
             </div>
@@ -227,11 +222,10 @@ $track = 'dm';
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Complete Course Breakdown</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     The 15 Comprehensive Modules of Digital Marketing + Applied AI
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif mt-2">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-2">
                     Direct from our accredited curriculum. Zero fluff. 100% practical market skills.
                 </p>
             </div>
@@ -248,7 +242,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Introduction to Modern Digital Marketing & Strategic Advantage
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     The commercial revolution in customer attention. Traditional vs modern direct-response marketing. How top agencies and multinational brands structure customer journeys, analyze competitors, and drive predictable sales.
                 </p>
             </div>
@@ -264,7 +258,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Building a High-Converting Digital Marketing Strategy
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     In-depth market research and competitive intelligence. Developing psychographic customer personas and multi-stage buyer journey maps. Setting SMART commercial metrics and crafting a 90-day actionable marketing masterplan.
                 </p>
             </div>
@@ -280,7 +274,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Website Optimization, Conversion Rate Optimization (CRO) & UX
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Turning casual visitors into buyers. Mobile-first user experience design, rapid page load optimization, layout psychology, heatmap tracking, and conversion-centered design that doubles sales conversion.
                 </p>
             </div>
@@ -296,7 +290,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Content Marketing, Copywriting & Brand Storytelling
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     The psychology of persuasion in text. Writing irresistible headlines, high-converting video sales letters (VSLs), email copy, and organic content that commands immediate authority and builds organic demand.
                 </p>
             </div>
@@ -312,7 +306,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Social Media Marketing & Algorithmic Growth
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Dominating distribution on Instagram, LinkedIn, TikTok, and X. Designing engagement systems, community building, viral content loops, and converting followers into qualified inbound buyer leads.
                 </p>
             </div>
@@ -328,7 +322,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Pay-Per-Click (PPC) Advertising & Meta Ads Mastery
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Running high-ROI paid traffic on Meta (Facebook & Instagram). Ad account structuring, custom audience segmentation, lookalike modeling, pixel tracking, and scaling daily ad spend profitably.
                 </p>
             </div>
@@ -344,7 +338,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Email Marketing & Advanced Lifecycle Automation
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Building, segmenting, and monetizing responsive email lists. Mastering behavioral automation workflows, cart abandonment sequences, re-engagement campaigns, and lifecycle deliverability.
                 </p>
             </div>
@@ -360,7 +354,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Search Engine Optimization (SEO) & Technical Authority
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Dominating Google organic search. On-page keyword architecture, technical SEO auditing, backlink acquisition strategies, and localized SEO to drive free, high-intent traffic for years.
                 </p>
             </div>
@@ -376,7 +370,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Search Engine Marketing (SEM) & Google Ads Mastery
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Capturing bottom-of-the-funnel buyers searching for immediate solutions. Google Search, Display, and Performance Max campaigns. Bidding strategies, quality score optimization, and negative keyword filtering.
                 </p>
             </div>
@@ -392,7 +386,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Influencer Marketing, High-ROI Partnerships & Affiliate Systems
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Identifying authentic influencers, negotiating performance-based deals, calculating influencer ROI, and structuring scalable affiliate networks that recruit armies of marketers to promote your offers.
                 </p>
             </div>
@@ -408,7 +402,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Analytics, Data-Driven Decision Making & Attribution
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Google Analytics 4 (GA4), Meta Conversions API (CAPI), and multi-touch attribution modeling. Setting up custom dashboards, A/B split testing protocols, and extracting actionable business intelligence.
                 </p>
             </div>
@@ -424,7 +418,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Social Media Listening & Online Reputation Management (ORM)
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Brand monitoring, sentiment analysis, managing public relations crises, turning negative customer feedback into retention opportunities, and safeguarding corporate brand perception.
                 </p>
             </div>
@@ -440,7 +434,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Mobile & WhatsApp Marketing Automation
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Direct-to-consumer conversational commerce. Building automated WhatsApp broadcast funnels, SMS marketing, chatbot customer support, and closing high-ticket deals inside messaging apps.
                 </p>
             </div>
@@ -456,7 +450,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     International Remote Work & Foreign Client Retainers
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     How to pitch, close, and retain international clients in the US, UK, Canada, and Europe paying $1,500 to $4,000 monthly retainers. Positioning, proposals, contracts, and international invoicing.
                 </p>
             </div>
@@ -472,7 +466,7 @@ $track = 'dm';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Capstone Agency Campaign & Live Commercial Audit
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Comprehensive execution capstone: deploy a full-funnel live marketing campaign, audit a corporate brand, present multi-channel analytics, and receive formal review from international agency directors.
                 </p>
             </div>
@@ -488,7 +482,7 @@ $track = 'dm';
                     <h3 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                         Integrated Lumenvox AI Creator Suite (5 Modules)
                     </h3>
-                    <p class="text-xs sm:text-sm text-teal-100 font-serif mt-1">
+                    <p class="text-xs sm:text-sm text-teal-100 font-sans mt-1">
                         Never purchase separate prompt engineering or video editing courses. The full Lumenvox suite is integrated directly into your diploma.
                     </p>
                 </div>
@@ -505,7 +499,7 @@ $track = 'dm';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Generative AI Prompt Engineering Architecture
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Master advanced structured prompting with GPT-4o, Claude 3.5 Sonnet, and deep research agents. Automated market research, customer psychographics, and instantaneous commercial copy generation.
                 </p>
             </div>
@@ -521,7 +515,7 @@ $track = 'dm';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Cinematic AI Video Creation (Runway Gen-3 & Kling AI)
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Create broadcast-quality commercial ads, cinematic brand films, and social video ads from text prompts and still imagery without physical camera crews, expensive studios, or studio sets.
                 </p>
             </div>
@@ -537,7 +531,7 @@ $track = 'dm';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Synthetic Voice Cloning & Hyper-Realistic Audio (ElevenLabs)
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Synthesize flawless human narrations in British, American, and native African accents. Voice cloning for international video sales letters, multi-lingual translations, and podcast automation.
                 </p>
             </div>
@@ -553,7 +547,7 @@ $track = 'dm';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Faceless Video Ad Channels & Kinetic VSL Production
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Building automated video ad engines: automated B-roll sourcing, auto-caption kinetic typography in CapCut and Premiere Pro, and producing 30 video ads weekly in under 3 hours.
                 </p>
             </div>
@@ -569,7 +563,7 @@ $track = 'dm';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     AI Service Packaging & Foreign Client Monetization
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Packaging your AI creation skills into high-ticket service retainers. Delivering commercial video ads to international agencies in the US and UK who gladly pay $500 to $1,500 per video.
                 </p>
             </div>
@@ -585,7 +579,6 @@ $track = 'dm';
         <div class="bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-10 brand-shadow">
             
             <div class="text-center mb-8">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-wider block mb-1">Fast-Track Admissions</span>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     Apply for 100% Full Tuition Scholarship
                 </h3>
@@ -595,7 +588,7 @@ $track = 'dm';
             </div>
 
             <!-- The Transparency Box: The ₦20,000 Filter -->
-            <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-serif leading-relaxed">
+            <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-sans leading-relaxed">
                 <strong>Why is there a ₦20,000 application fee?</strong>
                 Because free programs suffer a 95% dropout rate. We have thousands of applicants and limited mentor capacity. The ₦20,000 is not tuition—it is a non-refundable commitment filter that ensures every seat goes to a fellow who will finish the full 3-month curriculum.
             </div>

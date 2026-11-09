@@ -19,14 +19,14 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Newsreader', 'serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -84,10 +84,6 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
     <section class="max-w-4xl mx-auto px-4 sm:px-6 pt-8 pb-6">
         <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-6 sm:p-10 brand-shadow text-center">
             
-            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/10 border border-amber-400/40 text-amber-800 font-extrabold text-[11px] px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                Virtual Delegate Pass Confirmed
-            </div>
-
             <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Welcome to the Virtual Conference, <?php echo $name; ?>.
             </h1>
@@ -97,13 +93,10 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             </p>
 
             <div class="mt-6 p-6 sm:p-8 bg-gradient-to-br from-[#f0f9f8] to-[#e6f4f2] border border-[#005f5a]/25 rounded-2xl max-w-2xl mx-auto text-center">
-                <span class="text-xs font-bold text-[#004d49] uppercase tracking-wider block mb-1">
-                    Mandatory Event Step
-                </span>
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">
                     Access the Private Conference Delegates WhatsApp Room
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed font-serif">
+                <p class="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed font-sans">
                     The live stream broadcast links, keynote speaker slides, session replays, and delegate workbooks are delivered exclusively inside the private WhatsApp room. Join immediately to complete your orientation.
                 </p>
 
@@ -140,15 +133,11 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
         <article class="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 brand-shadow mb-12">
             
             <div class="text-center max-w-3xl mx-auto mb-8">
-                <span class="inline-block bg-[#005f5a] text-white text-[11px] font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                    Admissions Council Special Briefing &bull; 5-Minute Read
-                </span>
-
                 <h2 class="text-2xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-slate-900 tracking-tight leading-[1.18]">
                     In the next 5 minutes, we will reveal how a young lady who hawked corn on campus, and a graduate who worked dusty manual POP ceiling labor, escaped the brutal Nigerian dilemma to earn in stable US Dollars and British Pounds...
                 </h2>
 
-                <p class="text-base sm:text-lg text-slate-600 font-serif italic mt-4 leading-relaxed">
+                <p class="text-base sm:text-lg text-slate-600 font-sans mt-4 leading-relaxed">
                     ...and how the Newton Academy Academic Council has fully endowed your <span class="text-[#005f5a] font-bold not-italic">100% Full Tuition Scholarship (₦200,000 value completely covered)</span> so you can duplicate their exact commercial systems.
                 </p>
             </div>
@@ -156,7 +145,6 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             <!-- Centralized "What You Will Discover In 5 Minutes" Card -->
             <div class="bg-gradient-to-br from-[#003d3a] to-[#002d2a] text-white rounded-2xl p-6 sm:p-8 my-8 shadow-xl border border-amber-500/30">
                 <div class="text-center mb-6">
-                    <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block">Executive Summary</span>
                     <h3 class="text-xl sm:text-2xl font-extrabold mt-1">Here Is What You Are About To Uncover:</h3>
                 </div>
 
@@ -185,8 +173,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
 
             <!-- Hook Statement from Dr. Ade Braimoh -->
             <div class="border-l-4 border-amber-500 pl-5 py-2 my-8 bg-[#f1f5f9] rounded-r-2xl">
-                <p class="text-xs font-bold uppercase tracking-wider text-[#005f5a]">Statement from Convener</p>
-                <p class="text-sm sm:text-base text-slate-800 font-serif italic mt-1 leading-relaxed">
+                <p class="text-sm sm:text-base text-slate-800 font-sans mt-1 leading-relaxed">
                     "Dr. Ade Braimoh established Newton Academy on one undeniable principle: Education without commercial leverage in today's Nigeria is slow economic suicide. We do not teach theories from 1995. We teach the high-income systems demanded by global employers in 2026."
                 </p>
             </div>
@@ -196,13 +183,12 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             <!-- ====================================================== -->
             <div class="border-t border-slate-200 pt-10 mt-10">
                 <div class="text-center max-w-2xl mx-auto mb-8">
-                    <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">The Unfiltered Truth</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                         The Nigerian Dilemma: Why Brilliant Minds End Up Stranded
                     </h3>
                 </div>
 
-                <div class="space-y-5 text-sm sm:text-base text-slate-700 font-serif leading-relaxed">
+                <div class="space-y-5 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
                     <p>
                         Let us confront the raw, uncomfortable truth about the reality of building a life in Nigeria today.
                     </p>
@@ -239,13 +225,12 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             <!-- ------------------------------------------------------ -->
             <div class="border-t border-slate-200 pt-10 mt-10">
                 <div class="text-center max-w-2xl mx-auto mb-8">
-                    <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-1">Documented Evidence: Story 01</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                         From Hawking Corn on Campus to $2,800/Month US Remote Tech
                     </h3>
                 </div>
 
-                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-serif leading-relaxed">
+                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
                     <p>
                         Consider the real journey of a young Nigerian lady who entered university with virtually zero financial backing. Her parents could not afford handouts, textbooks, or hostel rent.
                     </p>
@@ -300,13 +285,12 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
             <!-- ------------------------------------------------------ -->
             <div class="border-t border-slate-200 pt-10 mt-10">
                 <div class="text-center max-w-2xl mx-auto mb-8">
-                    <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Documented Evidence: Story 02</span>
                     <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                         From Manual POP Ceiling Installation to UK AI Product Marketer
                     </h3>
                 </div>
 
-                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-serif leading-relaxed">
+                <div class="space-y-4 text-sm sm:text-base text-slate-700 font-sans leading-relaxed">
                     <p>
                         This is the documented journey of our lead growth architect, <strong>Freedom Emmanuel Obanijesu</strong>.
                     </p>
@@ -354,7 +338,7 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                     </div>
                 </div>
 
-                <div class="p-5 bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl text-xs sm:text-sm text-slate-700 font-serif leading-relaxed text-center">
+                <div class="p-5 bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl text-xs sm:text-sm text-slate-700 font-sans leading-relaxed text-center">
                     Freedom and our student alumni were not born into generational wealth. They did not have foreign passports. They simply refused to remain trapped in the Nigerian dilemma. They acquired high-leverage commercial skills and mastered Artificial Intelligence.
                 </div>
 
@@ -368,15 +352,11 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
         <section class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002b28] text-white rounded-3xl p-6 sm:p-12 shadow-2xl mb-12 border-2 border-amber-500/40 relative overflow-hidden">
             
             <div class="text-center max-w-2xl mx-auto mb-8 relative z-10">
-                <span class="inline-block bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 text-[11px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider mb-3">
-                    100% Full Tuition Scholarship Award
-                </span>
-
                 <h3 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
                     The Newton Academy Foundation Endowment
                 </h3>
 
-                <p class="text-sm sm:text-base text-teal-100 font-serif mt-3 leading-relaxed">
+                <p class="text-sm sm:text-base text-teal-100 font-sans mt-3 leading-relaxed">
                     How Dr. Ade Braimoh and our alumni foundation completely cover your ₦200,000 tuition fee for the upcoming 3-month diploma session.
                 </p>
             </div>
@@ -430,7 +410,6 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
         <section class="space-y-8 mb-12">
             
             <div class="text-center max-w-2xl mx-auto mb-8">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Approved Academic Tracks</span>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     Select Your Specialized 3-Month Diploma Program
                 </h3>
@@ -543,14 +522,13 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                 <h4 class="text-lg sm:text-xl font-extrabold text-amber-950 mb-2">
                     Why Is There A ₦20,000 Application Fee For A 100% Scholarship?
                 </h4>
-                <p class="text-xs sm:text-sm text-amber-900 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-amber-900 font-sans leading-relaxed">
                     Because 100% free programs suffer a 95% dropout rate. When people pay zero, they treat world-class training like a casual PDF download and abandon their seats midway. We receive over 2,000 applications each session and our mentor capacity is strictly limited. The ₦20,000 fee is <strong>not tuition</strong>—it is a mandatory seriousness filter to ensure that only dedicated fellows who will complete the entire 3-month curriculum take up our endowed seats.
                 </p>
             </div>
 
             <!-- Form Header -->
             <div class="text-center max-w-xl mx-auto mb-8">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-wider block">Candidate Admissions Filing</span>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">
                     Submit Candidate File for 100% Scholarship
                 </h3>

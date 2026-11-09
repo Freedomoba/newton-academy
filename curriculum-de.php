@@ -19,14 +19,14 @@ $track = 'de';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Newsreader', 'serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -80,15 +80,11 @@ $track = 'de';
     <section class="bg-gradient-to-br from-[#003330] via-[#005f5a] to-[#00433f] text-white py-14 sm:py-20 border-b border-amber-500/30">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
             
-            <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400/20 to-yellow-400/20 border border-amber-400/50 text-amber-300 font-extrabold text-[11px] px-4 py-1.5 rounded-full uppercase tracking-wider mb-4">
-                3-Month Accredited Professional Diploma &bull; 100% Full Tuition Scholarship
-            </div>
-
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-4">
                 Digital Entrepreneurship + Applied AI
             </h1>
 
-            <p class="text-base sm:text-xl text-teal-100 max-w-3xl mx-auto font-serif leading-relaxed mb-8">
+            <p class="text-base sm:text-xl text-teal-100 max-w-3xl mx-auto font-sans leading-relaxed mb-8">
                 Master the art of building, launching, and scaling profitable digital businesses, automated sales pipelines, and high-margin AI video workflows.
             </p>
 
@@ -148,11 +144,10 @@ $track = 'de';
     <!-- MOUTH-WATERING BENEFITS SECTION -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Unmatched Academic Value</span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Mouth-Watering Benefits: Everything You Receive as a Newton Academy Fellow
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 font-serif mt-2">
+            <p class="text-sm sm:text-base text-slate-600 font-sans mt-2">
                 Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
             </p>
         </div>
@@ -164,7 +159,7 @@ $track = 'de';
                     01
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Globally Verifiable Diploma</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Graduate with an internationally accredited digital diploma verifiable by employers worldwide to elevate your LinkedIn, CV, and consulting portfolio.
                 </p>
             </div>
@@ -174,7 +169,7 @@ $track = 'de';
                     02
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">15 Core Commercial Modules</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Step-by-step masterclasses covering real-world business models, marketing funnels, customer persuasion, and legal/financial frameworks.
                 </p>
             </div>
@@ -184,7 +179,7 @@ $track = 'de';
                     03
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Integrated Lumenvox AI Suite</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Full access to advanced prompt engineering, Runway Gen-3 AI video generation, Kling AI, and ElevenLabs voice cloning tools directly inside your LMS.
                 </p>
             </div>
@@ -194,7 +189,7 @@ $track = 'de';
                     04
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Multi-Currency Payment Setup</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Hands-on setup of Stripe, Paystack, Geegpay, and foreign merchant accounts so you can seamlessly collect payments in USD, GBP, and EUR from Nigeria.
                 </p>
             </div>
@@ -204,7 +199,7 @@ $track = 'de';
                     05
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Foreign Client Acquisition</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Battle-tested cold outreach swipe files, proposal decks, and contract templates to pitch and close $1,500 to $4,000 monthly retainers with international firms.
                 </p>
             </div>
@@ -214,7 +209,7 @@ $track = 'de';
                     06
                 </div>
                 <h4 class="text-base font-bold text-slate-900 mb-1">Weekly Live Faculty Hot-Seats</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Live weekly interactive coaching and review sessions with faculty mentors who dissect your campaigns, funnels, and business models live on Zoom.
                 </p>
             </div>
@@ -227,11 +222,10 @@ $track = 'de';
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Complete Course Breakdown</span>
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     The 15 Comprehensive Modules of Digital Entrepreneurship + Applied AI
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif mt-2">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-2">
                     Direct from our accredited curriculum. Zero fluff. 100% practical market skills.
                 </p>
             </div>
@@ -248,7 +242,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Fundamentals of Digital Entrepreneurship
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     The emergence and core principles of the digital economy. Distinguishing between traditional commerce and digital venture building. Design thinking fundamentals, startup innovation cases of African tech empires, and identifying uncrowded digital market gaps.
                 </p>
             </div>
@@ -264,7 +258,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Digital Entrepreneurship Ecosystems & Global Trends
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Assessing global and African digital market ecosystems. Country trend analyses, venture sustainability, case studies of thriving Nigerian startups, regulatory frameworks, and mastering the standard operational principles of digital economies.
                 </p>
             </div>
@@ -280,7 +274,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Startups, Pain Discovery & Design Thinking
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     The exact definition and life cycle of modern startups. Deep ideation and root-cause customer pain identification. The 3-Merge Framework (Human Desirability, Technical Feasibility, and Economic Viability) to avoid launching products nobody wants.
                 </p>
             </div>
@@ -296,7 +290,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Startup Business Modeling & Monetization Architecture
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Designing sustainable, scalable business models. Pricing psychology, recurring revenue streams, retainer models, and high-margin product bundling. Establishing strategic corporate partnerships for rapid distribution.
                 </p>
             </div>
@@ -312,7 +306,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Minimum Viable Product (MVP) & Innovation Architecture
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Rapid prototyping and MVP development without writing complex code. Utilizing the Value Proposition Canvas and ACE Matrix. Agile sprints, customer feedback loops, and iteration techniques that bring products to market in 14 days.
                 </p>
             </div>
@@ -328,7 +322,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     High-Performance Team Building & Remote Leadership
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Finding complementary co-founders without getting into equity disputes. The dynamic equity split formula based on value contribution. Recruiting, onboarding, and leading high-velocity remote teams across Africa and globally.
                 </p>
             </div>
@@ -344,7 +338,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Business Structuring, Legal Compliance & Intellectual Property
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     CAC registration, corporate structuring, international corporate accounts, contracts, NDAs, and safeguarding your brand assets. Protecting digital IP and structuring founder agreements for long-term venture defense.
                 </p>
             </div>
@@ -360,7 +354,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Financial Modeling, Unit Economics & Cashflow Mastery
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Financial literacy for founders. Understanding CAC (Customer Acquisition Cost), LTV (Customer Lifetime Value), gross margins, and burn rates. Managing multi-currency cash flows and setting up international merchant gateways (Stripe, Geegpay, Paystack).
                 </p>
             </div>
@@ -376,7 +370,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Operations Management & Process Automation
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Operational excellence: streamlining execution, supply chain logistics, risk mitigation, and automated CRM workflows that allow a lean team to operate like a 50-person enterprise.
                 </p>
             </div>
@@ -392,7 +386,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Market Research Focused on Scale & Blitzscaling
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Scaling past your initial market. Sales cycle research, competitor positioning, blitzscaling mechanics, and entering foreign markets across West Africa, the UK, and North America.
                 </p>
             </div>
@@ -408,7 +402,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Digital Sales Systems & High-Converting Funnels
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     The science of customer persuasion. Direct-response sales pages, automated email onboarding funnels, and frictionless checkout architectures that close sales on autopilot 24/7.
                 </p>
             </div>
@@ -424,7 +418,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Valuation of Tech Ventures & Asset Pricing
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     How digital startups and intellectual assets are valued. Pre-revenue and pre-cashflow valuation methodologies. Preparing your capitalization table from day one to maximize equity value.
                 </p>
             </div>
@@ -440,7 +434,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Dynamic Pitching, Elevator Decks & Investor Relations
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Crafting the irresistible 60-second elevator pitch. Designing executive pitch decks and financial projections. Presenting to angel syndicates, grant bodies, and strategic global partners.
                 </p>
             </div>
@@ -456,7 +450,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Funding Models, Bootstrapping & Capital Allocation
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Navigating the funding landscape: when to bootstrap vs when to raise external capital. International grant opportunities, debt financing, and managing investor relations while retaining control.
                 </p>
             </div>
@@ -472,7 +466,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     The Evolving Entrepreneur & Disruptive Technologies
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Integrating generative AI, blockchain, and automated systems directly into business workflows. Continuous market adaptation, pivot strategies, and strategic corporate exits.
                 </p>
             </div>
@@ -488,7 +482,7 @@ $track = 'de';
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Capstone Venture Project & Commercial Launch
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
                     Comprehensive execution capstone: build, test, and launch a real commercial venture or digital offer. Rigorous evaluation and feedback from industry mentors followed by official graduation and global certification.
                 </p>
             </div>
@@ -504,7 +498,7 @@ $track = 'de';
                     <h3 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                         Integrated Lumenvox AI Creator Suite (5 Modules)
                     </h3>
-                    <p class="text-xs sm:text-sm text-teal-100 font-serif mt-1">
+                    <p class="text-xs sm:text-sm text-teal-100 font-sans mt-1">
                         Never purchase separate prompt engineering or video editing courses. The full Lumenvox suite is integrated directly into your diploma.
                     </p>
                 </div>
@@ -521,7 +515,7 @@ $track = 'de';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Generative AI Prompt Engineering Architecture
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Master advanced structured prompting with GPT-4o, Claude 3.5 Sonnet, and deep research agents. Automated market research, customer psychographics, and instantaneous commercial copy generation.
                 </p>
             </div>
@@ -537,7 +531,7 @@ $track = 'de';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Cinematic AI Video Creation (Runway Gen-3 & Kling AI)
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Create broadcast-quality commercial ads, cinematic brand films, and social video ads from text prompts and still imagery without physical camera crews, expensive studios, or studio sets.
                 </p>
             </div>
@@ -553,7 +547,7 @@ $track = 'de';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Synthetic Voice Cloning & Hyper-Realistic Audio (ElevenLabs)
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Synthesize flawless human narrations in British, American, and native African accents. Voice cloning for international video sales letters, multi-lingual translations, and podcast automation.
                 </p>
             </div>
@@ -569,7 +563,7 @@ $track = 'de';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     Faceless Video Ad Channels & Kinetic VSL Production
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Building automated video ad engines: automated B-roll sourcing, auto-caption kinetic typography in CapCut and Premiere Pro, and producing 30 video ads weekly in under 3 hours.
                 </p>
             </div>
@@ -585,7 +579,7 @@ $track = 'de';
                 <h4 class="text-base font-bold text-white tracking-tight mb-2">
                     AI Service Packaging & Foreign Client Monetization
                 </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-serif leading-relaxed">
+                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
                     Packaging your AI creation skills into high-ticket service retainers. Delivering commercial video ads to international agencies in the US and UK who gladly pay $500 to $1,500 per video.
                 </p>
             </div>
@@ -601,7 +595,6 @@ $track = 'de';
         <div class="bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-10 brand-shadow">
             
             <div class="text-center mb-8">
-                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-wider block mb-1">Fast-Track Admissions</span>
                 <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                     Apply for 100% Full Tuition Scholarship
                 </h3>
@@ -611,7 +604,7 @@ $track = 'de';
             </div>
 
             <!-- The Transparency Box: The ₦20,000 Filter -->
-            <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-serif leading-relaxed">
+            <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-sans leading-relaxed">
                 <strong>Why is there a ₦20,000 application fee?</strong>
                 Because free programs suffer a 95% dropout rate. We have thousands of applicants and limited mentor capacity. The ₦20,000 is not tuition—it is a non-refundable commitment filter that ensures every seat goes to a fellow who will finish the full 3-month curriculum.
             </div>
