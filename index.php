@@ -1,0 +1,605 @@
+<?php
+require_once __DIR__ . '/config.php';
+?>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>From Skills to Income | Virtual Conference by <?php echo ACADEMY_NAME; ?></title>
+    <!-- Favicon & Social Meta -->
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/favicon.jpg">
+    <meta property="og:title" content="From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead">
+    <meta property="og:description" content="A premier virtual conference curated for ambitious women ready to transform their skills into sustainable income, powerful brands, and AI-driven growth.">
+    <meta property="og:image" content="assets/favicon.jpg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#f1f5f9',
+                            50: '#f0f9f8',
+                            100: '#d9f0ee',
+                            200: '#b6e2de',
+                            300: '#86cec8',
+                            400: '#4fb2ab',
+                            500: '#007771',
+                            600: '#005f5a',
+                            700: '#004d49',
+                            800: '#003e3b',
+                            900: '#002f2d',
+                            950: '#001a19',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brand-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.15);
+        }
+        .gold-glow {
+            box-shadow: 0 10px 30px -8px rgba(245, 158, 11, 0.35);
+        }
+        .app-touch-tap {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white pb-24 sm:pb-0">
+
+    <!-- Top Announcement Bar (Deep Pine + Gold Pulse) -->
+    <div class="bg-gradient-to-r from-[#003330] via-[#005f5a] to-[#00433f] text-white text-[11px] sm:text-xs py-2.5 px-4 text-center font-semibold tracking-wide border-b border-amber-500/25">
+        <span class="inline-flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Official Virtual Broadcast &bull; Registrations Free For Ambitious Women & Visionary Builders</span>
+        </span>
+    </div>
+
+    <!-- Header Navigation (App-style glassmorphism) -->
+    <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+            <a href="index.php" class="flex items-center gap-2.5">
+                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-9 sm:h-11 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Nav Items -->
+            <div class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-700">
+                <a href="#about" class="hover:text-[#005f5a] transition-colors">About</a>
+                <a href="#faculty" class="hover:text-[#005f5a] transition-colors">Global Faculty</a>
+                <a href="#reviews" class="hover:text-[#005f5a] transition-colors">33 Reviews</a>
+            </div>
+
+            <!-- Quick Action Button -->
+            <div class="flex items-center gap-3">
+                <a href="#register" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-xs px-4 sm:px-5 py-2.5 rounded-full gold-glow transition-all transform active:scale-95 text-center">
+                    Reserve Delegate Pass
+                </a>
+            </div>
+        </div>
+
+        <!-- Phone Mode App Segmented Tabs (Visible on Mobile) -->
+        <div class="flex md:hidden overflow-x-auto no-scrollbar py-2 px-4 gap-2 border-t border-slate-100 bg-[#f8fafc] text-[11px] font-bold text-slate-600">
+            <a href="#register" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full text-[#005f5a]">Claim Pass</a>
+            <a href="#tracks" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">3 Keynote Tracks</a>
+            <a href="#faculty" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">Global Tutors</a>
+            <a href="#reviews" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">33 Reviews</a>
+            <a href="#convener" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">Dr. Ade Braimoh</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: High-Converting AIDA Layout -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- Left: Hero Headline & Direct Proposition -->
+            <div class="lg:col-span-7 space-y-6 pt-1">
+                
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/10 border border-amber-400/40 text-amber-800 font-extrabold text-[11px] px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                    Official Admissions Council Broadcast
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 tracking-tight leading-[1.12]">
+                    From Skills to Income: <span class="bg-gradient-to-r from-[#005f5a] via-teal-700 to-[#004d49] text-transparent bg-clip-text">Building Your Brand,</span> Growing Your Business and <span class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 text-transparent bg-clip-text">Using AI to Get Ahead</span>
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                    A premier virtual gathering curated for ambitious women who are done being undervalued in this economy. Join leading female founders, growth architects, and AI practitioners to learn how to turn your expertise into consistent revenue, build an authoritative brand, and execute at 5x speed using modern Artificial Intelligence.
+                </p>
+
+                <!-- Inclusivity & Convener Card -->
+                <div class="border-l-4 border-amber-500 pl-4 py-3 bg-white rounded-r-2xl border border-slate-200/80 shadow-sm">
+                    <p class="text-xs sm:text-sm text-slate-700 font-serif italic leading-relaxed">
+                        Curated primarily for ambitious women navigating today's economic climate, while warmly welcoming all visionary builders ready to upgrade their commercial leverage.
+                    </p>
+                    <p class="text-[11px] text-slate-500 font-sans mt-1.5 font-bold">
+                        Hosted by Newton Academy &bull; Convened by Dr. Ade Braimoh
+                    </p>
+                </div>
+
+                <!-- Three Transformational Tracks (App-style Cards) -->
+                <div id="tracks" class="space-y-3 pt-2">
+                    <div class="flex items-start gap-3.5 bg-white p-4 rounded-2xl border border-slate-200/90 brand-shadow">
+                        <div class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] border border-teal-200 flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                            ✓
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Personal & Commercial Brand Authority</h4>
+                            <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Move from being invisible to being sought after. Learn how leading women package their brilliance, position themselves on social platforms, and command high-ticket client fees.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5 bg-white p-4 rounded-2xl border border-slate-200/90 brand-shadow">
+                        <div class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] border border-teal-200 flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                            ✓
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Sustainable Business Growth & Pricing Power</h4>
+                            <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Stop undercharging. Master customer acquisition systems and automated marketing funnels that turn casual social media scrollers into high-paying, repeat clients.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3.5 bg-white p-4 rounded-2xl border border-slate-200/90 brand-shadow">
+                        <div class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] border border-teal-200 flex items-center justify-center font-bold text-xs mt-0.5 shrink-0">
+                            ✓
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Using Artificial Intelligence to Get Ahead</h4>
+                            <p class="text-xs text-slate-600 mt-0.5 leading-relaxed">Demystify AI. Watch live demonstrations on prompt engineering, viral AI video generation (Runway Gen-3 & Kling AI), and automated content workflows to reclaim 15 hours weekly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Feature Card -->
+                <div class="pt-2">
+                    <div class="rounded-3xl overflow-hidden border border-slate-200 bg-white brand-shadow">
+                        <img src="assets/images/conference_women.jpg" alt="Ambitious Women in Business and Technology" class="w-full h-60 sm:h-72 object-cover">
+                        <div class="p-4 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-slate-100 bg-[#f8fafc]">
+                            <span class="font-medium">Live Keynotes &bull; Interactive Q&A &bull; Delegate Workbook</span>
+                            <span class="text-[#005f5a] font-extrabold uppercase tracking-wider text-[11px] bg-teal-50 px-3 py-1 rounded-full border border-teal-200">100% Free Virtual Admission</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Registration Form (Sticky App-like Card) -->
+            <div id="register" class="lg:col-span-5 sticky top-24">
+                <div class="bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-8 brand-shadow relative overflow-hidden">
+                    
+                    <!-- Decorative Gold Accent -->
+                    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500"></div>
+
+                    <div class="border-b border-slate-100 pb-5 mb-6 pt-1">
+                        <span class="text-[11px] font-extrabold text-[#005f5a] uppercase tracking-widest block mb-1">
+                            Complimentary Virtual Admission
+                        </span>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                            Reserve Your Delegate Pass
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1.5 leading-relaxed">
+                            Virtual access is 100% complimentary, but room bandwidth is strictly capped. Complete your details below to receive your private broadcast link.
+                        </p>
+                    </div>
+
+                    <div id="formAlert" class="hidden mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium"></div>
+
+                    <form id="optinForm" class="space-y-4">
+                        <!-- Full Legal Name -->
+                        <div>
+                            <label for="fullName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                                Full Legal Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                required 
+                                placeholder="e.g. Amina Bello"
+                                class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
+                            >
+                        </div>
+
+                        <!-- Email Address -->
+                        <div>
+                            <label for="email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                                Primary Email Address
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="e.g. amina@example.com"
+                                class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
+                            >
+                            <span class="text-[11px] text-slate-500 mt-1 block">Your conference login pass and schedule will be delivered here.</span>
+                        </div>
+
+                        <!-- WhatsApp Phone Number -->
+                        <div>
+                            <label for="phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                                WhatsApp Contact Number
+                            </label>
+                            <div class="flex gap-2">
+                                <select 
+                                    name="countryCode" 
+                                    id="countryCode" 
+                                    class="bg-[#f1f5f9] border border-slate-300 rounded-xl px-3 py-3 text-xs sm:text-sm text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#005f5a]"
+                                >
+                                    <option value="+234" selected>+234 (NG)</option>
+                                    <option value="+233">+233 (GH)</option>
+                                    <option value="+254">+254 (KE)</option>
+                                    <option value="+27">+27 (ZA)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+1">+1 (US/CA)</option>
+                                    <option value="+971">+971 (UAE)</option>
+                                </select>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required 
+                                    placeholder="801 234 5678"
+                                    class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
+                                >
+                            </div>
+                            <span class="text-[11px] text-slate-500 mt-1 block">For instant WhatsApp broadcast access and delegate slides.</span>
+                        </div>
+
+                        <!-- Big High-Impact Gold Button -->
+                        <div class="pt-2">
+                            <button 
+                                type="submit" 
+                                id="submitBtn"
+                                class="w-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black py-4 px-6 rounded-xl text-base gold-glow transform active:scale-95 transition-all cursor-pointer text-center"
+                            >
+                                Secure My Free Conference Delegate Pass
+                            </button>
+                        </div>
+
+                        <p class="text-[11px] text-slate-500 text-center pt-1">
+                            Newton Academy guarantees zero spam and complete confidentiality.
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- GLOBAL FACULTY & TUTORS SECTION -->
+    <section id="faculty" class="border-t border-slate-200 bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="max-w-3xl mb-10">
+                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">Expert Faculty & Keynote Lineup</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Convened by Dr. Ade Braimoh. Taught by world-class global tutors.
+                </h2>
+                <p class="text-base text-slate-600 mt-2">
+                    Dr. Ade Braimoh is the convener and patron behind Newton Academy. You will not be taught by academic theorists—our faculty consists of different seasoned global tutors and practitioners who have worked with and led initiatives at <strong>Microsoft</strong>, <strong>Meta (Facebook)</strong>, <strong>Accenture</strong>, and <strong>7Up Bottling Company</strong>.
+                </p>
+            </div>
+
+            <!-- Pedigree Credential Bar -->
+            <div class="bg-gradient-to-r from-[#003330] via-[#005f5a] to-[#00433f] text-white rounded-2xl p-6 mb-12 shadow-md border border-amber-500/30">
+                <span class="text-[11px] font-bold text-amber-400 uppercase tracking-widest block text-center mb-3">
+                    Teaching Faculty & Tutors with Direct Operational Experience At:
+                </span>
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-black text-sm sm:text-base tracking-wide">
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Microsoft</span>
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Meta (Facebook)</span>
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Accenture</span>
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>7Up Bottling Company</span>
+                </div>
+            </div>
+
+            <!-- Panel Feature Visual -->
+            <div class="rounded-3xl overflow-hidden border border-slate-200 shadow-md">
+                <img src="assets/images/speaker_panel.jpg" alt="Newton Academy Virtual Conference Panel" class="w-full h-64 sm:h-80 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- TESTIMONIALS SHOWCASE (FULL CARD VISIBLE - NO CUTOFF / NO SCROLL) -->
+    <!-- ============================================================== -->
+    <section id="reviews" class="border-t border-slate-200 bg-[#f1f5f9] py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">
+                    Verified Participant Track Records
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Real Experiences from Women & Founders Who Made the Transition
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                    Verified ratings and feedback from 1,200+ past delegates across Nigeria, Africa, the UK, and the diaspora.
+                </p>
+            </div>
+
+            <!-- Single Full-Width Card Showcase (Every Word Fully Readable!) -->
+            <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-7 sm:p-10 brand-shadow relative transition-all duration-300" id="testimonialCard">
+                
+                <!-- Card Header: Rating & Badge -->
+                <div class="flex items-center justify-between gap-2 mb-6">
+                    <div class="flex items-center text-amber-500 text-sm tracking-wide">
+                        <span id="tStars">★★★★★</span>
+                        <span id="tRating" class="text-slate-900 text-xs font-bold ml-2">5.0 / 5.0</span>
+                    </div>
+                    <span id="tBadge" class="text-[10px] font-extrabold text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
+                        Verified Fellow
+                    </span>
+                </div>
+
+                <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
+                <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
+                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-serif leading-relaxed italic">
+                        "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
+                    </p>
+                </div>
+
+                <!-- Card Footer: Author Profile & Navigation Controls -->
+                <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    
+                    <div class="flex items-center gap-3.5">
+                        <div id="tAvatar" class="w-11 h-11 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-black text-sm shrink-0">
+                            OO
+                        </div>
+                        <div>
+                            <h4 id="tName" class="text-sm font-bold text-slate-900">Oluwaseun O.</h4>
+                            <p id="tRole" class="text-xs text-slate-500">Brand Strategist & Independent Consultant &bull; Lagos</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide Controls & Review Index Counter -->
+                    <div class="flex items-center gap-3 self-end sm:self-auto">
+                        <span id="tCounter" class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
+                            Review 1 of 32
+                        </span>
+                        <div class="flex items-center gap-1.5">
+                            <button 
+                                type="button" 
+                                id="btnPrevT" 
+                                aria-label="Previous review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                ←
+                            </button>
+                            <button 
+                                type="button" 
+                                id="btnNextT" 
+                                aria-label="Next review"
+                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
+                            >
+                                →
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Animated Progress Bar (Auto-advances every 4 seconds) -->
+                <div class="w-full bg-slate-100 h-1 rounded-full mt-6 overflow-hidden">
+                    <div id="tProgressBar" class="h-full bg-gradient-to-r from-amber-400 to-[#005f5a] transition-all duration-100" style="width: 0%;"></div>
+                </div>
+
+            </div>
+
+            <div class="text-center text-xs text-slate-500 mt-4">
+                <span>Reviews rotate automatically every 4 seconds. Tap arrows or hover to pause and read.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NARRATIVE SECTION: DR. ADE BRAIMOH -->
+    <section id="convener" class="border-t border-slate-200 bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                Why we convened this conference: Skills without monetization are merely hobbies.
+            </h2>
+            
+            <div class="mt-6 space-y-4 text-base text-slate-700 leading-relaxed font-serif">
+                <p>
+                    Across Africa and around the world, women possess extraordinary talent, resilience, and creativity. Yet all too often, women find themselves trapped doing the heaviest labor while earning a fraction of what they deserve.
+                </p>
+                <p>
+                    The problem is rarely competence. The problem is a lack of commercial infrastructure: knowing how to price, how to build an unmistakable brand, how to run automated sales systems, and how to command the new tools of Artificial Intelligence.
+                </p>
+                <p>
+                    <em>From Skills to Income</em> is not an event where you come to feel motivated and leave with empty hands. It is an intensive operational blueprint. You will leave with actionable strategies, live swipe files, and direct clarity on how to build an independent, resilient digital business in 2026.
+                </p>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-slate-200 flex items-center justify-between">
+                <div>
+                    <h5 class="text-sm font-bold text-slate-900">Dr. Ade Braimoh</h5>
+                    <p class="text-xs text-slate-500">Founder & Convener, Newton Academy</p>
+                </div>
+                <img src="assets/logo.png" alt="Newton Academy" class="h-9 w-auto opacity-80">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; <?php echo date('Y'); ?> <?php echo ACADEMY_NAME; ?>. All rights reserved.</p>
+            <p class="mt-1 text-slate-400">Convened by Dr. Ade Braimoh. From Skills to Income Virtual Conference.</p>
+        </div>
+    </footer>
+
+    <!-- MOBILE STICKY APP DOCK (Visible on Phone Screens) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-2xl flex items-center justify-between md:hidden">
+        <div>
+            <span class="text-[10px] font-extrabold text-[#005f5a] uppercase tracking-wider block">Free Delegate Pass</span>
+            <span class="text-xs font-bold text-slate-900">From Skills to Income</span>
+        </div>
+        <a 
+            href="#register" 
+            class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-slate-950 font-black text-xs px-5 py-2.5 rounded-full gold-glow transform active:scale-95 transition-all"
+        >
+            Claim Seat
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Form Submission
+        const form = document.getElementById('optinForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const alertBox = document.getElementById('formAlert');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Registering Delegate Pass...';
+            alertBox.classList.add('hidden');
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('api/optin.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alertBox.className = 'mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
+                    alertBox.textContent = 'Conference Pass Confirmed. Directing to your event briefing...';
+                    alertBox.classList.remove('hidden');
+
+                    setTimeout(() => {
+                        window.location.href = data.redirect;
+                    }, 600);
+                } else {
+                    throw new Error(data.message || 'An error occurred during registration. Please try again.');
+                }
+            } catch (err) {
+                alertBox.className = 'mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-rose-50 text-rose-800 border border-rose-200';
+                alertBox.textContent = err.message;
+                alertBox.classList.remove('hidden');
+
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Secure My Free Conference Delegate Pass';
+            }
+        });
+
+        // FULL-CARD TESTIMONIAL SHOWCASE CONTROLLER (No cut-offs, 100% visible reading!)
+        const testimonialsData = [{"initials":"OO","name":"Oluwaseun O.","role":"Brand Strategist & Independent Consultant","location":"Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."},{"initials":"NK","name":"Nneka K.","role":"E-Commerce Brand Founder","location":"Abuja","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-800","quote":"The sessions on commercial growth and customer acquisition changed my business. One tutor who managed marketing at 7Up broke down direct distribution and repeat sales psychology. I went from burning money on boosted posts to a predictable, profitable sales funnel."},{"initials":"BA","name":"Dr. Bukola A.","role":"Consultant & Wellness Founder","location":"London / Lagos","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-[#004d49]","quote":"As a healthcare professional building a digital wellness advisory, I used to spend entire weekends manually drafting content. Learning structured prompt engineering and AI toolkits from industry veterans cut my production time by 80%. My practice now serves clients across the UK seamlessly."},{"initials":"TA","name":"Tolulope A.","role":"Digital Marketing Specialist","location":"Ibadan","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"I was exhausted relying on stipends that vanished into transport and food. The tutors taught us how to run data-backed media buying campaigns and AI video ads. I secured two high-paying client contracts in my second month of the fellowship."},{"initials":"FA","name":"Fatima A.","role":"Copywriter & Media Buyer","location":"Kano","rating":"4.5 / 5.0","stars":"★★★★☆","badge":"Verified Fellow","avatarBg":"bg-slate-700","quote":"What stood out to me was the total absence of fluff. They showed live ad manager dashboards, real conversion benchmarks, and automated video workflows with Runway and Kling. I now deliver commercial video ads in 2 hours that used to take external studios 2 weeks."},{"initials":"EM","name":"Eunice M.","role":"Agency Director","location":"Nairobi","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"The global perspective of the tutors makes a world of difference. When someone with an enterprise background from Microsoft teaches you operational systems, you stop thinking like a struggling freelancer and start building scalable infrastructure. Landed our first UK retainer within 30 days."},{"initials":"CN","name":"Chidinma N.","role":"Content Lead & Growth Operator","location":"Port Harcourt","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-[#004d49]","quote":"I used to think AI was just asking ChatGPT for generic paragraphs. Seeing how multinational enterprise marketers build multi-step automated content engines opened my eyes. This is non-negotiable education for any woman serious about commanding respect in 2026."},{"initials":"AO","name":"Abiodun O.","role":"Creative Director","location":"Accra / Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"The conference convened by Dr. Ade Braimoh and led by these international tutors tells you the unvarnished truth about commercial enterprise: cash flow, offer psychology, and automated pipelines. If you are serious about building an independent income, do not miss this."},{"initials":"ZE","name":"Zainab E.","role":"Digital Product Designer","location":"Kaduna","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-800","quote":"Learning how former Accenture consultants present proposals and conduct discovery calls helped me double my consulting fee on the spot. Clients stopped asking for discounts because the deliverables are framed with corporate rigor."},{"initials":"FO","name":"Folashade O.","role":"Organic Skincare Brand Owner","location":"Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Executive Alum","avatarBg":"bg-[#005f5a]","quote":"I had good products but sales were inconsistent. The 7Up consumer FMCG case studies shared by our tutor helped me re-engineer our product bundling and retail distribution. Our month-on-month sales shot up by 240%."},{"initials":"GA","name":"Grace A.","role":"Virtual Assistant & Remote Operations","location":"Enugu","rating":"4.7 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#004d49]","quote":"I transitioned from being an underpaid administrative assistant earning ₦70,000 to an AI-equipped Operations Specialist handling US client workflows. I now invoice $1,400 monthly from my laptop in Enugu."},{"initials":"HD","name":"Halima D.","role":"EdTech Content Strategist","location":"Abuja","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-[#005f5a]","quote":"The AI video creation sessions completely blew my mind. Creating studio-quality interactive lessons without high-end camera gear allowed us to roll out our digital courses in record time. Truly world-class instruction."},{"initials":"IO","name":"Ifeoma O.","role":"Fashion Brand Director","location":"Asaba","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-700","quote":"Before Newton Academy, my fashion brand was stuck in word-of-mouth. The Meta marketing tutor showed us how to target high-net-worth diaspora buyers in London and the US. We now ship international orders weekly."},{"initials":"JD","name":"Joy D.","role":"Corporate Communications Lead","location":"Manchester, UK","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"Even residing in the UK, finding practical, high-velocity training on applied AI and brand growth of this standard is rare. The tutors have real multinational credentials and they teach with deep passion and empathy."},{"initials":"KE","name":"Khadijah E.","role":"Media Buyer & Ads Strategist","location":"Ilorin","rating":"4.6 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#004d49]","quote":"The analytical breakdown of paid traffic metrics was superior to any online course I had taken. We learned how to analyze ROAS, reduce cost per acquisition, and build resilient ad accounts that do not get randomly disabled."},{"initials":"MA","name":"Mary A.","role":"B2B Sales Development Rep","location":"Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Executive Alum","avatarBg":"bg-slate-800","quote":"The frameworks taught by tutors with Microsoft backgrounds transformed how I approach outbound prospecting. Using AI to personalize cold outreach increased my meeting booking rate by 300%."},{"initials":"NI","name":"Ngozi I.","role":"Independent Legal Consultant","location":"Benin City","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-[#005f5a]","quote":"I wanted to launch a legal compliance advisory for tech startups across West Africa. The curriculum showed me how to package my legal expertise into productized service tiers. I landed three recurring startup clients."},{"initials":"PE","name":"Precious E.","role":"Social Media Manager","location":"Warri","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#004d49]","quote":"I was managing four accounts for peanuts and burning out. Once I learned AI-driven content repurposing and short-form video scripting, I pitched an international retainer and landed a $900/month contract."},{"initials":"RO","name":"Ronke O.","role":"Human Resources Consultant","location":"Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Executive Alum","avatarBg":"bg-[#005f5a]","quote":"The level of practical mentorship provided by the tutors is unmatched. They do not just lecture; they look at your assets, review your positioning, and give you immediate constructive guidance."},{"initials":"SM","name":"Stella M.","role":"Digital Course Creator","location":"Johannesburg","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-700","quote":"The curriculum bridges the gap between African ingenuity and global market standards. Hearing tutors with Accenture experience detail operational frameworks gave me the confidence to launch across southern Africa."},{"initials":"TO","name":"Titilayo O.","role":"Performance Marketer","location":"Abeokuta","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"I used to struggle with the rising cost of living in Nigeria. Building digital marketing skills mentored by practitioners who have managed multi-million naira budgets at 7Up gave me real commercial mastery."},{"initials":"VO","name":"Victoria O.","role":"Brand Identity Designer","location":"Calabar","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-[#004d49]","quote":"Learning how to combine graphic design with AI generative tooling like Midjourney and Runway set me miles ahead of competitors. My client turnaround time dropped from two weeks to three days with higher quality."},{"initials":"WA","name":"Wunmi A.","role":"Food Processing Entrepreneur","location":"Ondo","rating":"4.7 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-800","quote":"I thought digital marketing was only for tech geeks. The tutors explained funnel building in such simple, practical terms that I set up a direct-to-consumer delivery system for our packaged foods in two weeks."},{"initials":"YA","name":"Yetunde A.","role":"Fintech Product Marketer","location":"Lagos","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"Having worked in Nigerian tech, I can honestly say the frameworks shared by the tutors from Meta and Microsoft match what the world top product marketing teams use every single day. Priceless value."},{"initials":"AI","name":"Amaka I.","role":"Real Estate Marketing Consultant","location":"Lekki, Lagos","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Executive Alum","avatarBg":"bg-[#004d49]","quote":"Applying AI video walkthroughs and targeted lead generation funnels helped our real estate brokerage close two high-value diaspora property sales within six weeks of applying the lessons."},{"initials":"BB","name":"Blessing B.","role":"Accounting Professional & Freelancer","location":"Uyo","rating":"4.6 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-700","quote":"I had an accounting degree but local jobs were offering ₦50,000. Through the digital marketing and client acquisition track, I transitioned into remote bookkeeping for US e-commerce brands, earning in dollars."},{"initials":"CO","name":"Chioma O.","role":"Creative Copywriter","location":"Enugu","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"The prompt engineering modules are the best in the market. They teach you advanced reasoning models, system prompts, and brand voice calibration. My freelance income tripled within three months."},{"initials":"DA","name":"Deborah A.","role":"Project Coordinator","location":"Toronto, Canada","rating":"4.8 / 5.0","stars":"★★★★★","badge":"Masterclass Attendee","avatarBg":"bg-slate-800","quote":"Connecting with ambitious African women globally and receiving instruction from tutors with Microsoft and Accenture credentials provided both tactical tools and unmatched inspiration."},{"initials":"EE","name":"Esther E.","role":"Fashion Retailer & Influencer","location":"Port Harcourt","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#005f5a]","quote":"The sessions on paid advertising and conversion tracking showed me why my previous campaigns were bleeding money. Today every single naira I put into ads generates at least 3.8x in verifiable revenue."},{"initials":"FM","name":"Funmilayo M.","role":"Consulting Associate","location":"Ibadan","rating":"4.7 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-[#004d49]","quote":"The scholarship structure and seriousness filter are genuine. You are surrounded by people who are deeply committed to doing the work. The community alone has generated multiple partnership opportunities for me."},{"initials":"GA","name":"Gloria A.","role":"Corporate Trainer","location":"Accra, Ghana","rating":"5.0 / 5.0","stars":"★★★★★","badge":"Executive Alum","avatarBg":"bg-[#005f5a]","quote":"The curriculum was structured with exceptional professionalism. The tutors who worked at Microsoft and 7Up brought real boardroom case studies that challenged us to scale our ambition across West Africa."},{"initials":"HA","name":"Hauwa A.","role":"Digital Communications Specialist","location":"Abuja","rating":"4.9 / 5.0","stars":"★★★★★","badge":"Verified Fellow","avatarBg":"bg-slate-800","quote":"Learning from global tutors while anchored by Dr. Ade Braimoh convener vision gave us the perfect combination of inspiring leadership and practical, high-income digital execution skills."}];
+
+        let currentIndex = 0;
+        let progressPercent = 0;
+        let timer = null;
+        let progressTimer = null;
+        const ROTATE_INTERVAL = 4000; // 4 seconds
+
+        const card = document.getElementById('testimonialCard');
+        const tStars = document.getElementById('tStars');
+        const tRating = document.getElementById('tRating');
+        const tBadge = document.getElementById('tBadge');
+        const tQuote = document.getElementById('tQuote');
+        const tAvatar = document.getElementById('tAvatar');
+        const tName = document.getElementById('tName');
+        const tRole = document.getElementById('tRole');
+        const tCounter = document.getElementById('tCounter');
+        const tProgressBar = document.getElementById('tProgressBar');
+        const btnPrev = document.getElementById('btnPrevT');
+        const btnNext = document.getElementById('btnNextT');
+
+        function renderTestimonial(idx) {
+            const t = testimonialsData[idx];
+            if (!t) return;
+
+            // Fade transition
+            card.style.opacity = '0.5';
+            setTimeout(() => {
+                tStars.textContent = t.stars;
+                tRating.textContent = t.rating;
+                tBadge.textContent = t.badge;
+                tQuote.textContent = '"' + t.quote + '"';
+                tAvatar.textContent = t.initials;
+                tAvatar.className = 'w-11 h-11 rounded-full text-white flex items-center justify-center font-black text-sm shrink-0 ' + t.avatarBg;
+                tName.textContent = t.name;
+                tRole.innerHTML = t.role + ' &bull; ' + t.location;
+                tCounter.textContent = 'Review ' + (idx + 1) + ' of ' + testimonialsData.length;
+                card.style.opacity = '1';
+            }, 120);
+
+            progressPercent = 0;
+            if (tProgressBar) tProgressBar.style.width = '0%';
+        }
+
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonialsData.length;
+            renderTestimonial(currentIndex);
+        }
+
+        function prevTestimonial() {
+            currentIndex = (currentIndex - 1 + testimonialsData.length) % testimonialsData.length;
+            renderTestimonial(currentIndex);
+        }
+
+        function startAutoRotation() {
+            stopAutoRotation();
+            progressPercent = 0;
+            
+            // Progress bar updates every 50ms
+            progressTimer = setInterval(() => {
+                progressPercent += (50 / ROTATE_INTERVAL) * 100;
+                if (progressPercent > 100) progressPercent = 100;
+                if (tProgressBar) tProgressBar.style.width = progressPercent + '%';
+            }, 50);
+
+            timer = setInterval(() => {
+                nextTestimonial();
+            }, ROTATE_INTERVAL);
+        }
+
+        function stopAutoRotation() {
+            if (timer) clearInterval(timer);
+            if (progressTimer) clearInterval(progressTimer);
+        }
+
+        btnNext.addEventListener('click', () => {
+            nextTestimonial();
+            startAutoRotation();
+        });
+
+        btnPrev.addEventListener('click', () => {
+            prevTestimonial();
+            startAutoRotation();
+        });
+
+        // Pause on hover
+        card.addEventListener('mouseenter', stopAutoRotation);
+        card.addEventListener('mouseleave', startAutoRotation);
+        card.addEventListener('touchstart', stopAutoRotation, { passive: true });
+        card.addEventListener('touchend', startAutoRotation, { passive: true });
+
+        // Initialize
+        renderTestimonial(0);
+        startAutoRotation();
+    </script>
+</body>
+</html>
