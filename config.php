@@ -21,6 +21,12 @@ define('CURRENCY_SYMBOL', '₦');
 define('ORIGINAL_PRICE', 200000);
 define('SCHOLARSHIP_APPLICATION_FEE', 20000); // ₦20,000 application fee
 
+// Nigerian Bank Accounts for Manual Transfer
+define('BANK_ACCOUNT_NAME', 'Newton OS Limited');
+define('BANK_UBA_ACCOUNT', '1027518730');
+define('BANK_ZENITH_ACCOUNT', '1229109189');
+define('BANK_UNION_ACCOUNT', '0204007446');
+
 // cPanel SMTP Email Configuration
 define('SMTP_HOST', 'mail.newtonacademy.co');      // e.g. mail.yourdomain.com
 define('SMTP_PORT', 465);                         // Usually 465 (SSL) or 587 (TLS)

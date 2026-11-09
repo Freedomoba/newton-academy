@@ -164,24 +164,88 @@
                 </div>
             </div>
 
-            <!-- Bank Transfer Alternative -->
+                        <!-- Bank Transfer Alternative -->
             <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-sans">
-                <details class="cursor-pointer group">
-                    <summary class="font-bold text-slate-700 hover:text-slate-900 flex items-center justify-between">
-                        <span>Prefer Direct Nigerian Bank Transfer? Click here</span>
-                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                <details class="cursor-pointer group" open>
+                    <summary class="font-bold text-slate-800 hover:text-[#005f5a] flex items-center justify-between py-2 text-sm">
+                        <span class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span>Prefer Direct Nigerian Bank Transfer? (Instant Activation)</span>
+                        </span>
+                        <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
                     </summary>
-                    <div class="mt-4 p-5 bg-[#f1f5f9] rounded-2xl border border-slate-200 space-y-2 text-slate-700">
-                        <p class="text-xs">You can make a direct bank transfer of <strong>₦20,000</strong> to the official Newton Academy account:</p>
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 font-mono text-xs space-y-1 text-slate-900">
-                            <div>Bank Name: <strong>To Be Configured in config.php</strong></div>
-                            <div>Account Name: <strong>Newton Academy</strong></div>
-                            <div>Account Number: <strong>0000000000</strong></div>
+                    <div class="mt-4 p-5 bg-[#f8fafc] rounded-2xl border border-slate-200 space-y-4 text-slate-700">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+                            <div>
+                                <span class="text-[10px] font-extrabold uppercase tracking-wider text-[#005f5a] block">Manual Transfer Step 1</span>
+                                <p class="text-sm font-bold text-slate-900">Make Payment of ₦20,000 to Any Account Below</p>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-full self-start sm:self-auto">
+                                Beneficiary: <strong>Newton OS Limited</strong>
+                            </span>
                         </div>
-                        <p class="text-[11px] text-slate-600">
-                            After transfer, please send your transaction proof to our WhatsApp Admissions Office: 
-                            <a href="https://wa.me/2348000000000" target="_blank" class="underline text-[#005f5a] font-bold">+2348000000000</a>
-                        </p>
+
+                        <!-- 3 Bank Cards with 1-Click Copy -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <!-- UBA -->
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Bank</span>
+                                    <strong class="text-xs font-extrabold text-slate-900 block">UBA</strong>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-1">Account Number</span>
+                                    <span class="text-base font-black font-mono text-slate-900 tracking-wider block">1027518730</span>
+                                </div>
+                                <button type="button" onclick="copyAccount('1027518730', this)" class="mt-3 w-full bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 text-[11px] font-bold py-1.5 px-3 rounded-lg transition-colors cursor-pointer">
+                                    Copy Number
+                                </button>
+                            </div>
+
+                            <!-- ZENITH -->
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Bank</span>
+                                    <strong class="text-xs font-extrabold text-slate-900 block">Zenith Bank</strong>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-1">Account Number</span>
+                                    <span class="text-base font-black font-mono text-slate-900 tracking-wider block">1229109189</span>
+                                </div>
+                                <button type="button" onclick="copyAccount('1229109189', this)" class="mt-3 w-full bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 text-[11px] font-bold py-1.5 px-3 rounded-lg transition-colors cursor-pointer">
+                                    Copy Number
+                                </button>
+                            </div>
+
+                            <!-- UNION BANK -->
+                            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Bank</span>
+                                    <strong class="text-xs font-extrabold text-slate-900 block">Union Bank</strong>
+                                    <span class="text-[10px] font-mono text-slate-500 block mt-1">Account Number</span>
+                                    <span class="text-base font-black font-mono text-slate-900 tracking-wider block">0204007446</span>
+                                </div>
+                                <button type="button" onclick="copyAccount('0204007446', this)" class="mt-3 w-full bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 text-[11px] font-bold py-1.5 px-3 rounded-lg transition-colors cursor-pointer">
+                                    Copy Number
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Account Name Confirmation -->
+                        <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span>Account Name for all banks: <strong>Newton OS Limited</strong></span>
+                            <span class="font-bold text-[#005f5a]">Amount: ₦20,000</span>
+                        </div>
+
+                        <!-- Step 2 Confirmation Button -->
+                        <div class="pt-2">
+                            <button 
+                                type="button" 
+                                onclick="confirmBankTransfer()"
+                                class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-extrabold py-3.5 px-6 rounded-xl text-xs sm:text-sm shadow-md transition-all cursor-pointer text-center"
+                            >
+                                I Have Paid ₦20,000 via Transfer &bull; Confirm My Enrollment
+                            </button>
+                            <p class="text-[11px] text-slate-500 text-center mt-2">
+                                Click immediately after transferring. You will be directed to the WhatsApp orientation desk to receive your LMS activation.
+                            </p>
+                        </div>
                     </div>
                 </details>
             </div>
