@@ -1101,3 +1101,6 @@ const testimonialsData = [
     "quote": "Newton Academy stands as a premier educational institution across Africa. The faculty credentials, rigorous curriculum, and insistence on real economic outcomes make it the undisputed leader in applied digital education."
   }
 ];
+
+window.testimonialsData = testimonialsData;
+window.NEWTON_TESTIMONIALS = testimonialsData;

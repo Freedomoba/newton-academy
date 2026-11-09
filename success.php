@@ -19,13 +19,13 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                         serif: ['Newsreader', 'serif'],
                     },
                     colors: {
@@ -74,10 +74,6 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
 
     <main class="max-w-3xl mx-auto px-4 sm:px-6 py-12 flex-grow flex items-center w-full">
         <div class="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-12 brand-shadow w-full">
-            
-            <span class="text-xs font-bold text-[#005f5a] uppercase tracking-widest block mb-1">
-                Office of Fellow Onboarding
-            </span>
             
             <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Welcome to Newton Academy, <?php echo $name; ?>.

@@ -33,20 +33,51 @@ if (empty($fullName) || !$email || empty($phone)) {
 $fullPhone = $countryCode . preg_replace('/[^0-9]/', '', $phone);
 $createdAt = date('Y-m-d H:i:s');
 
-// 1. Store Lead in Local CSV / JSON Storage
+// 1. Store Lead in Local CSV / JSON Storage (De-duplicated by Email)
 $leadsDir = __DIR__ . '/../data';
 if (!is_dir($leadsDir)) {
     @mkdir($leadsDir, 0755, true);
 }
 
 $csvFile = $leadsDir . '/optin_leads.csv';
-$isNewFile = !file_exists($csvFile);
-$fp = @fopen($csvFile, 'a');
-if ($fp) {
-    if ($isNewFile) {
-        fputcsv($fp, ['Timestamp', 'Full Name', 'Email', 'WhatsApp Phone', 'IP Address']);
+$normalizedEmail = strtolower($email);
+$header = ['Timestamp', 'Full Name', 'Email', 'WhatsApp Phone', 'IP Address'];
+$rows = [];
+$found = false;
+
+if (file_exists($csvFile)) {
+    if (($handle = @fopen($csvFile, 'r')) !== false) {
+        $first = fgetcsv($handle);
+        if ($first && count($first) >= 5) {
+            $header = $first;
+        }
+        while (($data = fgetcsv($handle)) !== false) {
+            if (empty($data) || count($data) < 3) continue;
+            // Check email column (index 2)
+            $existingEmail = strtolower(trim($data[2] ?? ''));
+            if ($existingEmail === $normalizedEmail) {
+                // Update existing record with latest timestamp, name, phone, IP
+                $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? ''];
+                $found = true;
+            } else {
+                $rows[] = $data;
+            }
+        }
+        fclose($handle);
     }
-    fputcsv($fp, [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? '']);
+}
+
+if (!$found) {
+    // Append as new unique lead
+    $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? ''];
+}
+
+// Write back deduplicated data
+if (($fp = @fopen($csvFile, 'w')) !== false) {
+    fputcsv($fp, $header);
+    foreach ($rows as $row) {
+        fputcsv($fp, $row);
+    }
     fclose($fp);
 }
 

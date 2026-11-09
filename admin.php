@@ -51,7 +51,7 @@ if ($isAuthenticated && isset($_GET['export'])) {
     }
 }
 
-// Helper to read CSV rows
+// Helper to read raw CSV rows (used for payments where every transaction is recorded)
 function readCsvData($filePath) {
     if (!file_exists($filePath)) {
         return [];
@@ -60,6 +60,7 @@ function readCsvData($filePath) {
     if (($handle = fopen($filePath, 'r')) !== false) {
         $header = fgetcsv($handle);
         while (($data = fgetcsv($handle)) !== false) {
+            if (empty($data)) continue;
             if ($header && count($header) === count($data)) {
                 $rows[] = array_combine($header, $data);
             } else {
@@ -71,15 +72,54 @@ function readCsvData($filePath) {
     return array_reverse($rows); // Newest first
 }
 
+// Helper to read and deduplicate CSV rows by email (latest entry retained)
+function readDeduplicatedCsvData($filePath, $emailKey = 'Email', $defaultCol = 2) {
+    if (!file_exists($filePath)) {
+        return [];
+    }
+    $rows = [];
+    if (($handle = fopen($filePath, 'r')) !== false) {
+        $header = fgetcsv($handle);
+        while (($data = fgetcsv($handle)) !== false) {
+            if (empty($data)) continue;
+            if ($header && count($header) === count($data)) {
+                $rows[] = array_combine($header, $data);
+            } else {
+                $rows[] = $data;
+            }
+        }
+        fclose($handle);
+    }
+    // Deduplicate by normalized email
+    $unique = [];
+    foreach ($rows as $item) {
+        $email = '';
+        if (is_array($item)) {
+            if (isset($item[$emailKey])) {
+                $email = strtolower(trim($item[$emailKey]));
+            } elseif (isset($item[$defaultCol])) {
+                $email = strtolower(trim($item[$defaultCol]));
+            }
+        }
+        if (!empty($email)) {
+            $unique[$email] = $item; // Overwrite with newest
+        } else {
+            $unique[] = $item;
+        }
+    }
+    return array_reverse(array_values($unique)); // Newest first
+}
+
 $leadsDir = __DIR__ . '/data';
-$optinLeads = $isAuthenticated ? readCsvData($leadsDir . '/optin_leads.csv') : [];
-$scholarshipApps = $isAuthenticated ? readCsvData($leadsDir . '/scholarship_applications.csv') : [];
+// De-duplicate leads and applicants by email; NEVER de-duplicate payments
+$optinLeads = $isAuthenticated ? readDeduplicatedCsvData($leadsDir . '/optin_leads.csv', 'Email', 2) : [];
+$scholarshipApps = $isAuthenticated ? readDeduplicatedCsvData($leadsDir . '/scholarship_applications.csv', 'Email', 3) : [];
 $enrolledStudents = $isAuthenticated ? readCsvData($leadsDir . '/enrolled_students.csv') : [];
 
 // Compute statistics
 $totalDelegates = count($optinLeads);
 $totalScholarships = count($scholarshipApps);
-$totalPaid = count($enrolledStudents);
+$totalPaid = count($enrolledStudents); // Every payment transaction counts
 $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
 
 $trackDeCount = 0;
@@ -102,13 +142,14 @@ foreach ($scholarshipApps as $app) {
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
                     },
                     colors: {
                         teal: {

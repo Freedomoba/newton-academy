@@ -39,20 +39,54 @@ if (empty($fullName) || !$email || empty($phone) || !in_array($programme, $valid
 $createdAt = date('Y-m-d H:i:s');
 $applicationId = 'NA-SCH-' . strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8));
 
-// 1. Record Application in CSV storage
+// 1. Record Application in CSV storage (De-duplicated by Email)
 $leadsDir = __DIR__ . '/../data';
 if (!is_dir($leadsDir)) {
     @mkdir($leadsDir, 0755, true);
 }
 
 $csvFile = $leadsDir . '/scholarship_applications.csv';
-$isNewFile = !file_exists($csvFile);
-$fp = @fopen($csvFile, 'a');
-if ($fp) {
-    if ($isNewFile) {
-        fputcsv($fp, ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Programme', 'Motivation', 'Payment Status']);
+$normalizedEmail = strtolower($email);
+$header = ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Programme', 'Motivation', 'Payment Status'];
+$rows = [];
+$found = false;
+
+if (file_exists($csvFile)) {
+    if (($handle = @fopen($csvFile, 'r')) !== false) {
+        $first = fgetcsv($handle);
+        if ($first && count($first) >= 7) {
+            $header = $first;
+        }
+        while (($data = fgetcsv($handle)) !== false) {
+            if (empty($data) || count($data) < 4) continue;
+            // Check email column (index 3)
+            $existingEmail = strtolower(trim($data[3] ?? ''));
+            if ($existingEmail === $normalizedEmail) {
+                // Keep original application ID if already assigned, or update with latest
+                $existingAppId = !empty($data[1]) ? $data[1] : $applicationId;
+                $applicationId = $existingAppId;
+                $existingPaymentStatus = !empty($data[7]) ? $data[7] : 'Pending Payment';
+                $rows[] = [$createdAt, $existingAppId, $fullName, $email, $phone, $programme, $motivation, $existingPaymentStatus];
+                $found = true;
+            } else {
+                $rows[] = $data;
+            }
+        }
+        fclose($handle);
     }
-    fputcsv($fp, [$createdAt, $applicationId, $fullName, $email, $phone, $programme, $motivation, 'Pending Payment']);
+}
+
+if (!$found) {
+    // Append as new unique application
+    $rows[] = [$createdAt, $applicationId, $fullName, $email, $phone, $programme, $motivation, 'Pending Payment'];
+}
+
+// Write back deduplicated data
+if (($fp = @fopen($csvFile, 'w')) !== false) {
+    fputcsv($fp, $header);
+    foreach ($rows as $row) {
+        fputcsv($fp, $row);
+    }
     fclose($fp);
 }
 

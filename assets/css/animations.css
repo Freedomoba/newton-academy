@@ -100,3 +100,122 @@
     box-shadow: 0 20px 35px -10px rgba(0, 95, 90, 0.12);
 }
 
+
+/* ============================================================== */
+/* 6. TYPOGRAPHY ENHANCEMENTS: POPPINS + INTER                     */
+/* ============================================================== */
+body, p, li, label, input, textarea, select {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.625;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading, button, .font-poppins {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.015em;
+}
+
+/* ============================================================== */
+/* 7. CINEMATIC 3D DOOR UNVEILING & CELEBRATION MODAL              */
+/* ============================================================== */
+.door-perspective-wrapper {
+    perspective: 1400px;
+    perspective-origin: center center;
+    overflow: hidden;
+}
+
+.door-panel-left {
+    transform-origin: left center;
+    transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+.door-panel-right {
+    transform-origin: right center;
+    transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+.doors-open .door-panel-left {
+    transform: rotateY(-110deg);
+}
+
+.doors-open .door-panel-right {
+    transform: rotateY(110deg);
+}
+
+.portal-light-beam {
+    opacity: 0;
+    transition: opacity 1.2s ease-in, transform 1.5s ease-out;
+    transform: scale(0.6);
+}
+
+.doors-open .portal-light-beam {
+    opacity: 1;
+    transform: scale(2.2);
+}
+
+/* Confetti particles */
+@keyframes confettiFall {
+    0% { transform: translateY(-100px) rotate(0deg) scale(1); opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(105vh) rotate(720deg) scale(0.6); opacity: 0; }
+}
+
+.confetti-particle {
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    animation: confettiFall 3.8s ease-in forwards;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Circular countdown ring */
+.timer-ring-circle {
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* ============================================================== */
+/* 8. INTERACTIVE 3D SCHOLARSHIP ENVELOPE                          */
+/* ============================================================== */
+.envelope-wrapper {
+    perspective: 1000px;
+}
+
+.envelope-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.envelope-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px -12px rgba(0, 95, 90, 0.25);
+}
+
+.envelope-flap {
+    transform-origin: top center;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.envelope-card.is-open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.wax-seal-pulse {
+    animation: sealPulse 2s infinite ease-in-out;
+}
+
+@keyframes sealPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4); }
+    50% { transform: scale(1.06); box-shadow: 0 8px 25px rgba(217, 119, 6, 0.7); }
+}
+
+/* 3 Pulsing Attention Arrows */
+@keyframes arrowBounceVertical {
+    0%, 100% { transform: translateY(0); opacity: 0.85; }
+    50% { transform: translateY(7px); opacity: 1; }
+}
+
+.arrow-pulse-1 { animation: arrowBounceVertical 1.3s infinite ease-in-out; }
+.arrow-pulse-2 { animation: arrowBounceVertical 1.3s infinite ease-in-out 0.22s; }
+.arrow-pulse-3 { animation: arrowBounceVertical 1.3s infinite ease-in-out 0.44s; }
