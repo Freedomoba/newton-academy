@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Award of Scholarship | Newton Academy</title>
+    <!-- Favicon & Social Meta -->
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/favicon.jpg">
+    <meta property="og:image" content="assets/favicon.jpg">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Paystack Inline JS -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        serif: ['Newsreader', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#f1f5f9',
+                            500: '#007771',
+                            600: '#005f5a',     // Official Dark Pine Teal
+                            700: '#004d49',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .brand-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.12);
+        }
+    </style>
+</head>
+<body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white">
+
+    <!-- Header -->
+    <header class="border-b border-slate-200 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-10 sm:h-12 w-auto object-contain">
+            </a>
+            <span class="text-xs font-bold text-[#005f5a] bg-teal-50 border border-[#005f5a]/30 px-3.5 py-1.5 rounded-full">
+                Admission Granted
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+        
+        <!-- Urgency Alert -->
+        <div class="bg-amber-50 border border-amber-200 text-amber-900 rounded-2xl p-4 mb-8 flex items-center justify-between text-xs sm:text-sm">
+            <span>
+                <strong>Important Notice:</strong> Your scholarship seat reservation is held for <strong>24 hours</strong>. Please finalize your enrollment to secure your place.
+            </span>
+            <span class="font-mono font-bold bg-amber-100 px-3 py-1 rounded-lg text-amber-900 shrink-0 ml-3" id="timer">
+                23:59:45
+            </span>
+        </div>
+
+        <div class="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 brand-shadow">
+            
+            <!-- Document Title -->
+            <div class="border-b border-slate-200 pb-6 mb-6">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+                    Official Award of 100% Full Tuition Scholarship
+                </h1>
+                <p class="text-xs text-slate-500 font-mono mt-1">Reference ID: NA-SCH-8429184</p>
+            </div>
+
+            <!-- Letter Body -->
+            <div class="text-sm sm:text-base text-slate-700 font-sans leading-relaxed space-y-4 mb-8">
+                <p>
+                    Dear <strong>Freedom Obanijesu</strong>,
+                </p>
+                <p>
+                    We are pleased to inform you that upon evaluation of your candidate file, the Admissions Committee of Newton Academy has awarded you a <strong>100% Full Tuition Scholarship</strong> for the upcoming session.
+                </p>
+                <p>
+                    This endowment award completely covers your tuition fee (valued at ₦200,000), granting you full, unhindered access to our international faculty and tutors (with enterprise track records at Microsoft, Meta, Accenture, and 7Up Bottling Company), our comprehensive 3-month curriculum, hands-on masterclasses, and all supplementary artificial intelligence tool modules.
+                </p>
+            </div>
+
+            <!-- Candidate Record Card -->
+            <div class="bg-[#f1f5f9] border border-slate-200 rounded-2xl p-5 mb-8 text-xs font-sans">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <span class="text-slate-500 block uppercase font-semibold text-[10px]">Candidate Name</span>
+                        <strong class="text-slate-900 text-sm">Freedom Obanijesu</strong>
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block uppercase font-semibold text-[10px]">Registered Contact</span>
+                        <strong class="text-slate-900 text-sm">freedom@lumenvoxai.com</strong>
+                    </div>
+                    <div class="sm:col-span-2 pt-2 border-t border-slate-200">
+                        <span class="text-slate-500 block uppercase font-semibold text-[10px]">Admitted Program Track</span>
+                        <strong class="text-[#005f5a] text-base">Digital Entrepreneurship + Applied AI</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Grant Ledger -->
+            <div class="bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl p-6 mb-8 text-xs sm:text-sm font-sans space-y-3">
+                <h4 class="font-bold text-[#004d49] uppercase tracking-wider text-xs">Financial Award Summary</h4>
+                
+                <div class="flex justify-between text-slate-600">
+                    <span>Standard Program Tuition:</span>
+                    <span class="line-through">₦200,000</span>
+                </div>
+                <div class="flex justify-between text-[#005f5a] font-semibold">
+                    <span>Newton Academy Foundation Endowment:</span>
+                    <span>-₦200,000 (100% Full Tuition Covered)</span>
+                </div>
+                <div class="flex justify-between text-slate-700 font-medium text-xs">
+                    <span>Remaining Tuition Payable:</span>
+                    <span class="font-bold text-emerald-700">₦0.00 (FREE)</span>
+                </div>
+                <div class="border-t border-[#005f5a]/20 pt-3 flex justify-between items-center text-slate-900">
+                    <div>
+                        <strong class="text-sm sm:text-base block">One-Time Application & Commitment Fee:</strong>
+                        <span class="text-[11px] text-slate-500 block">Due to high applicant volume, this non-refundable fee filters for fellows committed to completing the 3-month programme.</span>
+                    </div>
+                    <span class="text-2xl sm:text-3xl font-extrabold text-[#005f5a]">
+                        ₦20,000
+                    </span>
+                </div>
+            </div>
+
+            <!-- Paystack Action -->
+            <div class="space-y-4 font-sans">
+                <button 
+                    type="button" 
+                    id="payNowBtn"
+                    class="w-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black py-4 px-6 rounded-xl text-base shadow-xl shadow-amber-500/25 transform active:scale-[0.99] transition-all cursor-pointer text-center"
+                >
+                    Pay ₦20,000 Fee & Finalize Admission
+                </button>
+
+                <div class="text-center text-xs text-slate-500 space-y-1">
+                    <p>Secured with 256-bit SSL encryption via Paystack.</p>
+                    <p>You will be immediately redirected to the enrolled fellows orientation group.</p>
+                </div>
+            </div>
+
+            <!-- Bank Transfer Alternative -->
+            <div class="mt-8 pt-6 border-t border-slate-200 text-xs font-sans">
+                <details class="cursor-pointer group">
+                    <summary class="font-bold text-slate-700 hover:text-slate-900 flex items-center justify-between">
+                        <span>Prefer Direct Nigerian Bank Transfer? Click here</span>
+                        <span class="group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <div class="mt-4 p-5 bg-[#f1f5f9] rounded-2xl border border-slate-200 space-y-2 text-slate-700">
+                        <p class="text-xs">You can make a direct bank transfer of <strong>₦20,000</strong> to the official Newton Academy account:</p>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 font-mono text-xs space-y-1 text-slate-900">
+                            <div>Bank Name: <strong>To Be Configured in config.php</strong></div>
+                            <div>Account Name: <strong>Newton Academy</strong></div>
+                            <div>Account Number: <strong>0000000000</strong></div>
+                        </div>
+                        <p class="text-[11px] text-slate-600">
+                            After transfer, please send your transaction proof to our WhatsApp Admissions Office: 
+                            <a href="https://wa.me/2348000000000" target="_blank" class="underline text-[#005f5a] font-bold">+2348000000000</a>
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Newton Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Paystack Integration Script -->
+    <script>
+        const payBtn = document.getElementById('payNowBtn');
+        const paystackPublicKey = 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+        const userEmail = 'freedom@lumenvoxai.com';
+        const userName = 'Freedom Obanijesu';
+        const userPhone = '+2348012345678';
+        const programme = 'Digital Entrepreneurship + Applied AI';
+        const appId = 'NA-SCH-8429184';
+        const amountKobo = ;
+
+        payBtn.addEventListener('click', function() {
+            if (!paystackPublicKey || paystackPublicKey.includes('xxxxxxxx')) {
+                const demoRef = 'DEMO_' + Math.floor(Math.random() * 1000000000);
+                verifyAndRedirect(demoRef);
+                return;
+            }
+
+            let handler = PaystackPop.setup({
+                key: paystackPublicKey,
+                email: userEmail,
+                amount: amountKobo,
+                currency: 'NGN',
+                ref: 'NA_' + Math.floor((Math.random() * 1000000000) + 1),
+                metadata: {
+                    custom_fields: [
+                        { display_name: "Applicant Name", variable_name: "applicant_name", value: userName },
+                        { display_name: "Application ID", variable_name: "app_id", value: appId },
+                        { display_name: "Programme", variable_name: "programme", value: programme }
+                    ]
+                },
+                callback: function(response) {
+                    verifyAndRedirect(response.reference);
+                },
+                onClose: function() {
+                    alert('Your transaction was cancelled. Your scholarship seat will remain held for 24 hours.');
+                }
+            });
+            handler.openIframe();
+        });
+
+        async function verifyAndRedirect(reference) {
+            payBtn.disabled = true;
+            payBtn.textContent = 'Verifying Payment & Activating Admission...';
+
+            try {
+                const res = await fetch(`api/verify_payment.php?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&email=${encodeURIComponent(userEmail)}&programme=${encodeURIComponent(programme)}&app_id=${encodeURIComponent(appId)}`);
+                const data = await res.json();
+                
+                if (data.success && data.redirect) {
+                    window.location.href = data.redirect;
+                } else {
+                    window.location.href = `success.html?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
+                }
+            } catch (e) {
+                window.location.href = `success.html?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
+            }
+        }
+
+        // Timer
+        let timeRemaining = 23 * 3600 + 59 * 60 + 45;
+        const timerEl = document.getElementById('timer');
+        setInterval(() => {
+            if (timeRemaining <= 0) return;
+            timeRemaining--;
+            const hours = String(Math.floor(timeRemaining / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(2, '0');
+            const seconds = String(timeRemaining % 60).padStart(2, '0');
+            timerEl.textContent = `${hours}:${minutes}:${seconds}`;
+        }, 1000);
+    </script>
+</body>
+</html>
