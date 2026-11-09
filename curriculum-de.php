@@ -63,6 +63,7 @@ $track = 'de';
             text-underline-offset: 8px;
         }
     </style>
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white">
 
@@ -842,5 +843,6 @@ $track = 'de';
     <!-- 100 Verified Testimonials Data & Slider Controller -->
     <script src="assets/js/testimonials.js"></script>
     <script src="assets/js/testimonial-slider.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

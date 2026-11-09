@@ -56,6 +56,7 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
             text-underline-offset: 8px;
         }
     </style>
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white min-h-screen flex flex-col justify-between">
 
@@ -139,5 +140,6 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
         <p>&copy; <?php echo date('Y'); ?> <?php echo ACADEMY_NAME; ?>. All rights reserved.</p>
     </footer>
 
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>
