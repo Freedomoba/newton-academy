@@ -81,22 +81,19 @@ require_once __DIR__ . '/config.php';
 
     <!-- Header Navigation (App-style glassmorphism) -->
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-            <a href="index.php" class="flex items-center gap-2.5">
-                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-9 sm:h-11 w-auto object-contain">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-3">
+            <a href="index.php" class="flex items-center shrink-0">
+                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-8 sm:h-11 w-auto max-w-[135px] sm:max-w-none object-contain">
             </a>
 
-            
-
             <!-- Quick Action Button -->
-            <div class="flex items-center gap-3">
-                <a href="#register" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-xs px-4 sm:px-5 py-2.5 rounded-full gold-glow transition-all transform active:scale-95 text-center">
-                    Reserve Delegate Pass
+            <div class="flex items-center shrink-0">
+                <a href="#register" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black text-[11px] sm:text-xs px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full gold-glow transition-all transform active:scale-95 text-center whitespace-nowrap">
+                    Reserve Pass
                 </a>
             </div>
         </div>
-
-        </header>
+    </header>
 
     <!-- HERO SECTION: High-Converting AIDA Layout -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-16">

@@ -68,20 +68,19 @@ $track = 'de';
 
     <!-- Top Navigation Bar -->
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <a href="thank-you.php?name=<?php echo urlencode($name); ?>&email=<?php echo urlencode($email); ?>&phone=<?php echo urlencode($phone); ?>" class="text-xs font-bold text-[#005f5a] hover:text-[#004d49] flex items-center gap-1.5 transition-colors">
-                    ← <span>Back to Admissions Briefing</span>
-                </a>
-            </div>
-            
-            <a href="index.php">
-                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-9 sm:h-11 w-auto object-contain">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+            <!-- Left: Logo -->
+            <a href="index.php" class="flex items-center shrink-0">
+                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-8 sm:h-11 w-auto max-w-[130px] sm:max-w-none object-contain">
             </a>
 
-            <div>
-                <a href="#applyForm" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-xs px-4 py-2 rounded-full gold-glow transition-all">
-                    Apply for 100% Scholarship
+            <!-- Right: Back to Briefing Link & Apply Action -->
+            <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                <a id="backToBriefingLink" href="thank-you.php?name=<?php echo urlencode($name); ?>&email=<?php echo urlencode($email); ?>&phone=<?php echo urlencode($phone); ?>" class="text-[11px] sm:text-xs font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1 transition-colors whitespace-nowrap">
+                    ← <span class="hidden sm:inline">Back to</span> <span>Briefing</span>
+                </a>
+                <a href="#applyForm" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full gold-glow transition-all whitespace-nowrap">
+                    Apply Now
                 </a>
             </div>
         </div>

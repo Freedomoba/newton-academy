@@ -76,17 +76,17 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
 
     <!-- Header Navigation -->
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
-            <a href="index.php" class="flex items-center gap-2.5">
-                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-9 sm:h-11 w-auto object-contain">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+            <a href="index.php" class="flex items-center shrink-0">
+                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-8 sm:h-11 w-auto max-w-[135px] sm:max-w-none object-contain">
             </a>
-            <div class="flex items-center gap-3">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full hidden sm:inline-block">
-                    Official Admissions Desk
+            <div class="flex items-center gap-2 shrink-0">
+                <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full whitespace-nowrap">
+                    Admissions Desk
                 </span>
-                <div class="text-xs text-slate-500 font-mono">
-                    ID: <strong class="text-slate-800">#<?php echo strtoupper(substr(md5($email . 'newton'), 0, 8)); ?></strong>
-                </div>
+                <span class="text-[10px] sm:text-xs text-slate-500 font-mono font-bold hidden xs:inline sm:inline">
+                    #<?php echo strtoupper(substr(md5($email . "newton"), 0, 8)); ?>
+                </span>
             </div>
         </div>
     </header>
