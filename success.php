@@ -19,13 +19,13 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
                         serif: ['Newsreader', 'serif'],
                     },
                     colors: {
@@ -71,7 +71,7 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
                 Welcome to Newton Academy, <?php echo $name; ?>.
             </h1>
 
-            <p class="text-sm sm:text-base text-slate-600 mt-2 font-serif leading-relaxed">
+            <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
                 Your admission fee has been verified and your fellowship record is officially active for <strong class="text-slate-900"><?php echo $programme; ?></strong>.
             </p>
             <p class="text-xs text-slate-400 font-mono mt-1">Receipt Reference: <?php echo $reference; ?></p>
@@ -82,7 +82,7 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
                     Required Final Step: Student LMS Account Activation
                 </h3>
                 
-                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-serif">
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-sans">
                     To have your learning portal provisioned and access your cohort syllabus, please complete the following steps immediately:
                 </p>
 

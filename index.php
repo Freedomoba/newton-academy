@@ -17,14 +17,14 @@ require_once __DIR__ . '/config.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        heading: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'Ubuntu', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -75,12 +75,7 @@ require_once __DIR__ . '/config.php';
                 <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-9 sm:h-11 w-auto object-contain">
             </a>
 
-            <!-- Desktop Nav Items -->
-            <div class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-700">
-                <a href="#about" class="hover:text-[#005f5a] transition-colors">About</a>
-                <a href="#faculty" class="hover:text-[#005f5a] transition-colors">Global Faculty</a>
-                <a href="#reviews" class="hover:text-[#005f5a] transition-colors">33 Reviews</a>
-            </div>
+            
 
             <!-- Quick Action Button -->
             <div class="flex items-center gap-3">
@@ -90,15 +85,7 @@ require_once __DIR__ . '/config.php';
             </div>
         </div>
 
-        <!-- Phone Mode App Segmented Tabs (Visible on Mobile) -->
-        <div class="flex md:hidden overflow-x-auto no-scrollbar py-2 px-4 gap-2 border-t border-slate-100 bg-[#f8fafc] text-[11px] font-bold text-slate-600">
-            <a href="#register" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full text-[#005f5a]">Claim Pass</a>
-            <a href="#tracks" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">3 Keynote Tracks</a>
-            <a href="#faculty" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">Global Tutors</a>
-            <a href="#reviews" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">33 Reviews</a>
-            <a href="#convener" class="shrink-0 bg-white border border-slate-200 px-3 py-1.5 rounded-full">Dr. Ade Braimoh</a>
-        </div>
-    </header>
+        </header>
 
     <!-- HERO SECTION: High-Converting AIDA Layout -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-16">
