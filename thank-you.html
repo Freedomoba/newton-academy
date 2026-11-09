@@ -79,11 +79,11 @@
         <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-6 sm:p-10 brand-shadow text-center">
             
             <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Welcome to the Virtual Conference, Freedom Obanijesu.
+                Welcome to the Virtual Conference, <span id="userGreeting">Freedom Obanijesu</span>.
             </h1>
             
             <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto leading-relaxed">
-                Your delegate pass for <strong>From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong> is officially recorded under <span class="font-bold text-slate-900">freedom@lumenvoxai.com</span>.
+                Your delegate pass for <strong>From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong> is officially recorded under <span id="passEmail" class="font-bold text-slate-900">freedom@lumenvoxai.com</span>.
             </p>
 
             <div class="mt-6 p-6 sm:p-8 bg-gradient-to-br from-[#f0f9f8] to-[#e6f4f2] border border-[#005f5a]/25 rounded-2xl max-w-2xl mx-auto text-center">
@@ -440,7 +440,7 @@
 
                 <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <a 
-                        href="curriculum-de.html?name=&email=&phone=" 
+                        id="deCurriculumLink" href="curriculum-de.html" 
                         class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-[#005f5a] hover:text-[#004d49] underline decoration-2 underline-offset-4"
                     >
                         <span>Read Full 15-Module Syllabus & Benefits</span>
@@ -486,7 +486,7 @@
 
                 <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <a 
-                        href="curriculum-dm.html?name=&email=&phone=" 
+                        id="dmCurriculumLink" href="curriculum-dm.html" 
                         class="inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold text-[#005f5a] hover:text-[#004d49] underline decoration-2 underline-offset-4"
                     >
                         <span>Read Full 15-Module Syllabus & Benefits</span>
@@ -555,10 +555,7 @@
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         Primary Email Address
                     </label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        value="freedom@lumenvoxai.com" 
+                    <input type="email" id="sEmail" name="email" value="freedom@lumenvoxai.com" 
                         required 
                         placeholder="e.g. samuel@example.com"
                         class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
@@ -570,10 +567,7 @@
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         WhatsApp Contact Number
                     </label>
-                    <input 
-                        type="tel" 
-                        name="phone" 
-                        value="+2348012345678" 
+                    <input type="tel" id="sPhone" name="phone" value="+2348012345678" 
                         required 
                         placeholder="e.g. 08012345678"
                         class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
@@ -632,43 +626,86 @@
         </div>
     </footer>
 
-    <!-- Form Script -->
+        <!-- Form Script & Dynamic Funnel Connector -->
     <script>
+        // Read URL query parameters or fallback to localStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name') || localStorage.getItem('newton_name') || 'Freedom Obanijesu';
+        const userEmail = urlParams.get('email') || localStorage.getItem('newton_email') || 'freedom@lumenvoxai.com';
+        const userPhone = urlParams.get('phone') || localStorage.getItem('newton_phone') || '+2348012345678';
+
+        // Personalize Header & Pass
+        const greetingEl = document.getElementById('userGreeting');
+        if (greetingEl) greetingEl.textContent = userName;
+        const passEmailEl = document.getElementById('passEmail');
+        if (passEmailEl) passEmailEl.textContent = userEmail;
+
+        // Personalize form fields
+        const sNameInput = document.getElementById('sName');
+        if (sNameInput) sNameInput.value = userName;
+        const sEmailInput = document.getElementById('sEmail');
+        if (sEmailInput) sEmailInput.value = userEmail;
+        const sPhoneInput = document.getElementById('sPhone');
+        if (sPhoneInput) sPhoneInput.value = userPhone;
+
+        // Wire curriculum buttons to carry forward parameters
+        const queryParams = '?name=' + encodeURIComponent(userName) + 
+                            '&email=' + encodeURIComponent(userEmail) + 
+                            '&phone=' + encodeURIComponent(userPhone);
+
+        const deLink = document.getElementById('deCurriculumLink');
+        if (deLink) deLink.href = 'curriculum-de.html' + queryParams;
+        const dmLink = document.getElementById('dmCurriculumLink');
+        if (dmLink) dmLink.href = 'curriculum-dm.html' + queryParams;
+
+        // Handle Scholarship Form Submission
         const sForm = document.getElementById('scholarshipForm');
         const sBtn = document.getElementById('scholarshipSubmitBtn');
         const sAlert = document.getElementById('scholarshipAlert');
 
-        sForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+        if (sForm) {
+            sForm.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-            sBtn.disabled = true;
-            sBtn.textContent = 'Filing Candidate File...';
-            sAlert.classList.add('hidden');
+                sBtn.disabled = true;
+                sBtn.textContent = 'Filing Candidate File & Generating Award...';
+                sAlert.classList.add('hidden');
 
-            const formData = new FormData(sForm);
+                const nameVal = (document.getElementById('sName') ? document.getElementById('sName').value : userName).trim();
+                const emailVal = (document.getElementById('sEmail') ? document.getElementById('sEmail').value : userEmail).trim();
+                const phoneVal = (document.getElementById('sPhone') ? document.getElementById('sPhone').value : userPhone).trim();
+                const selectEl = sForm.querySelector('select[name="programme"]');
+                const trackVal = selectEl ? selectEl.value : 'Digital Entrepreneurship + Applied AI';
+                const appId = 'NA-SCH-' + Math.floor(1000000 + Math.random() * 9000000);
 
-            try {
-                const alertBox = document.getElementById('scholarshipAlert') || document.getElementById('cAlert');
-            if (alertBox) {
-                alertBox.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
-                alertBox.textContent = 'Scholarship Verified! Directing to your award document...';
-                alertBox.classList.remove('hidden');
-            }
-            setTimeout(() => {
-                window.location.href = 'checkout.html?app_id=NA-SCH-8429184&name=Freedom+Obanijesu';
-            }, 500);, 500);
-                } else {
-                    throw new Error(data.message || 'An error occurred during submission.');
-                }
-            } catch (err) {
-                sAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-rose-50 text-rose-800 border border-rose-200';
-                sAlert.textContent = err.message;
+                try {
+                    localStorage.setItem('newton_name', nameVal);
+                    localStorage.setItem('newton_email', emailVal);
+                    localStorage.setItem('newton_phone', phoneVal);
+                    localStorage.setItem('newton_track', trackVal);
+                    localStorage.setItem('newton_app_id', appId);
+                } catch (err) {}
+
+                sAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
+                sAlert.textContent = 'Scholarship Verified! Directing to your Official Award Letter & Ledger...';
                 sAlert.classList.remove('hidden');
 
-                sBtn.disabled = false;
-                sBtn.textContent = 'Submit Application & Access Award Document';
-            }
-        });
+                try {
+                    const formData = new FormData(sForm);
+                    formData.append('app_id', appId);
+                    fetch('api/scholarship.php', { method: 'POST', body: formData }).catch(function() {});
+                } catch (e) {}
+
+                setTimeout(function() {
+                    const chkQuery = '?app_id=' + encodeURIComponent(appId) + 
+                                     '&name=' + encodeURIComponent(nameVal) + 
+                                     '&email=' + encodeURIComponent(emailVal) + 
+                                     '&phone=' + encodeURIComponent(phoneVal) + 
+                                     '&track=' + encodeURIComponent(trackVal);
+                    window.location.href = 'checkout.html' + chkQuery;
+                }, 600);
+            });
+        }
     </script>
 </body>
 </html>

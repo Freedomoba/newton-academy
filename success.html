@@ -62,13 +62,13 @@
             </span>
             
             <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Welcome to Newton Academy, Freedom Obanijesu.
+                Welcome to Newton Academy, <span id="sNameDisplay">Freedom Obanijesu</span>.
             </h1>
 
             <p class="text-sm sm:text-base text-slate-600 mt-2 font-sans leading-relaxed">
-                Your admission fee has been verified and your fellowship record is officially active for <strong class="text-slate-900">Digital Entrepreneurship + Applied AI</strong>.
+                Your admission fee has been verified and your fellowship record is officially active for <strong id="sTrackDisplay" class="text-slate-900">Digital Entrepreneurship + Applied AI</strong>.
             </p>
-            <p class="text-xs text-slate-400 font-mono mt-1">Receipt Reference: NA-PAY-7291840</p>
+            <p class="text-xs text-slate-400 font-mono mt-1">Receipt Reference: <span id="sRefDisplay">NA-PAY-7291840</span></p>
 
             <!-- Action Card for LMS Activation -->
             <div class="my-8 bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl p-6 sm:p-8">
@@ -122,5 +122,20 @@
         <p>&copy; 2026 Newton Academy. All rights reserved.</p>
     </footer>
 
+
+    <!-- Success Personalizer -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || localStorage.getItem('newton_name') || 'Enrolled Fellow';
+        const programme = urlParams.get('programme') || localStorage.getItem('newton_track') || 'Digital Entrepreneurship + Applied AI';
+        const reference = urlParams.get('reference') || 'NA-PAY-' + Math.floor(1000000 + Math.random() * 9000000);
+
+        const nameEl = document.getElementById('sNameDisplay');
+        if (nameEl) nameEl.textContent = name;
+        const trackEl = document.getElementById('sTrackDisplay');
+        if (trackEl) trackEl.textContent = programme;
+        const refEl = document.getElementById('sRefDisplay');
+        if (refEl) refEl.textContent = reference;
+    </script>
 </body>
 </html>

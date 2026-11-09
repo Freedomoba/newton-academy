@@ -441,34 +441,43 @@
         const submitBtn = document.getElementById('submitBtn');
         const alertBox = document.getElementById('formAlert');
 
-        form.addEventListener('submit', async function(e) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
 
             submitBtn.disabled = true;
             submitBtn.textContent = 'Registering Delegate Pass...';
             alertBox.classList.add('hidden');
 
-            const formData = new FormData(form);
+            const fullName = (document.getElementById('fullName').value || '').trim() || 'Delegate';
+            const email = (document.getElementById('email').value || '').trim();
+            const phone = (document.getElementById('phone').value || '').trim();
+            const expEl = document.getElementById('experienceLevel');
+            const experience = expEl ? expEl.value : '';
 
+            // Persist to localStorage for seamless cross-page continuity
             try {
-                alertBox.className = 'mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
-            alertBox.textContent = 'Conference Pass Confirmed. Directing to your event briefing...';
-            alertBox.classList.remove('hidden');
-            setTimeout(() => {
-                const name = encodeURIComponent(document.getElementById('fullName').value || 'Delegate');
-                window.location.href = 'thank-you.html?name=' + name;
-            }, 600);, 600);
-                } else {
-                    throw new Error(data.message || 'An error occurred during registration. Please try again.');
-                }
-            } catch (err) {
-                alertBox.className = 'mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-rose-50 text-rose-800 border border-rose-200';
-                alertBox.textContent = err.message;
-                alertBox.classList.remove('hidden');
+                localStorage.setItem('newton_name', fullName);
+                localStorage.setItem('newton_email', email);
+                localStorage.setItem('newton_phone', phone);
+                localStorage.setItem('newton_experience', experience);
+            } catch (err) {}
 
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Secure My Free Conference Delegate Pass';
-            }
+            alertBox.className = 'mb-4 p-3.5 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
+            alertBox.textContent = 'Conference Pass Confirmed! Loading your event briefing...';
+            alertBox.classList.remove('hidden');
+
+            // Send to PHP backend in background if running on PHP server
+            try {
+                const formData = new FormData(form);
+                fetch('api/optin.php', { method: 'POST', body: formData }).catch(function() {});
+            } catch (e) {}
+
+            setTimeout(function() {
+                const query = '?name=' + encodeURIComponent(fullName) + 
+                              '&email=' + encodeURIComponent(email) + 
+                              '&phone=' + encodeURIComponent(phone);
+                window.location.href = 'thank-you.html' + query;
+            }, 600);
         });
 
         // FULL-CARD TESTIMONIAL SHOWCASE CONTROLLER (No cut-offs, 100% visible reading!)

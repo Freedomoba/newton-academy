@@ -450,6 +450,15 @@ require_once __DIR__ . '/config.php';
             submitBtn.textContent = 'Registering Delegate Pass...';
             alertBox.classList.add('hidden');
 
+            const fullName = (document.getElementById('fullName').value || '').trim();
+            const email = (document.getElementById('email').value || '').trim();
+            const phone = (document.getElementById('phone').value || '').trim();
+            try {
+                localStorage.setItem('newton_name', fullName);
+                localStorage.setItem('newton_email', email);
+                localStorage.setItem('newton_phone', phone);
+            } catch (err) {}
+
             const formData = new FormData(form);
 
             try {

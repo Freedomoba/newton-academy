@@ -75,13 +75,13 @@
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
                     Official Award of 100% Full Tuition Scholarship
                 </h1>
-                <p class="text-xs text-slate-500 font-mono mt-1">Reference ID: NA-SCH-8429184</p>
+                <p class="text-xs text-slate-500 font-mono mt-1">Reference ID: <span id="awardeeAppId">NA-SCH-8429184</span></p>
             </div>
 
             <!-- Letter Body -->
             <div class="text-sm sm:text-base text-slate-700 font-sans leading-relaxed space-y-4 mb-8">
                 <p>
-                    Dear <strong>Freedom Obanijesu</strong>,
+                    Dear <strong id="greetingRecipient">Freedom Obanijesu</strong>,
                 </p>
                 <p>
                     We are pleased to inform you that upon evaluation of your candidate file, the Admissions Committee of Newton Academy has awarded you a <strong>100% Full Tuition Scholarship</strong> for the upcoming session.
@@ -96,15 +96,15 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <span class="text-slate-500 block uppercase font-semibold text-[10px]">Candidate Name</span>
-                        <strong class="text-slate-900 text-sm">Freedom Obanijesu</strong>
+                        <strong class="text-slate-900 text-sm" id="awardeeName">Freedom Obanijesu</strong>
                     </div>
                     <div>
                         <span class="text-slate-500 block uppercase font-semibold text-[10px]">Registered Contact</span>
-                        <strong class="text-slate-900 text-sm">freedom@lumenvoxai.com</strong>
+                        <strong class="text-slate-900 text-sm" id="awardeeEmail">freedom@lumenvoxai.com</strong>
                     </div>
                     <div class="sm:col-span-2 pt-2 border-t border-slate-200">
                         <span class="text-slate-500 block uppercase font-semibold text-[10px]">Admitted Program Track</span>
-                        <strong class="text-[#005f5a] text-base">Digital Entrepreneurship + Applied AI</strong>
+                        <strong class="text-[#005f5a] text-base" id="awardeeTrack">Digital Entrepreneurship + Applied AI</strong>
                     </div>
                 </div>
             </div>
@@ -184,48 +184,72 @@
 
     <!-- Paystack Integration Script -->
     <script>
-        const payBtn = document.getElementById('payNowBtn');
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name') || localStorage.getItem('newton_name') || 'Freedom Obanijesu';
+        const userEmail = urlParams.get('email') || localStorage.getItem('newton_email') || 'freedom@lumenvoxai.com';
+        const userPhone = urlParams.get('phone') || localStorage.getItem('newton_phone') || '+2348012345678';
+        const programme = urlParams.get('track') || urlParams.get('programme') || localStorage.getItem('newton_track') || 'Digital Entrepreneurship + Applied AI';
+        const appId = urlParams.get('app_id') || localStorage.getItem('newton_app_id') || 'NA-SCH-' + Math.floor(1000000 + Math.random() * 9000000);
+        const amountKobo = 2000000;
         const paystackPublicKey = 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
-        const userEmail = 'freedom@lumenvoxai.com';
-        const userName = 'Freedom Obanijesu';
-        const userPhone = '+2348012345678';
-        const programme = 'Digital Entrepreneurship + Applied AI';
-        const appId = 'NA-SCH-8429184';
-        const amountKobo = ;
 
-        payBtn.addEventListener('click', function() {
-            if (!paystackPublicKey || paystackPublicKey.includes('xxxxxxxx')) {
-                const demoRef = 'DEMO_' + Math.floor(Math.random() * 1000000000);
-                verifyAndRedirect(demoRef);
-                return;
-            }
+        // Update Award Document DOM dynamically
+        const elGreeting = document.getElementById('greetingRecipient');
+        if (elGreeting) elGreeting.textContent = userName;
+        const elName = document.getElementById('awardeeName');
+        if (elName) elName.textContent = userName;
+        const elEmail = document.getElementById('awardeeEmail');
+        if (elEmail) elEmail.textContent = userEmail;
+        const elAppId = document.getElementById('awardeeAppId');
+        if (elAppId) elAppId.textContent = appId;
+        const elTrack = document.getElementById('awardeeTrack');
+        if (elTrack) elTrack.textContent = programme;
 
-            let handler = PaystackPop.setup({
-                key: paystackPublicKey,
-                email: userEmail,
-                amount: amountKobo,
-                currency: 'NGN',
-                ref: 'NA_' + Math.floor((Math.random() * 1000000000) + 1),
-                metadata: {
-                    custom_fields: [
-                        { display_name: "Applicant Name", variable_name: "applicant_name", value: userName },
-                        { display_name: "Application ID", variable_name: "app_id", value: appId },
-                        { display_name: "Programme", variable_name: "programme", value: programme }
-                    ]
-                },
-                callback: function(response) {
-                    verifyAndRedirect(response.reference);
-                },
-                onClose: function() {
-                    alert('Your transaction was cancelled. Your scholarship seat will remain held for 24 hours.');
+        const payBtn = document.getElementById('payNowBtn');
+
+        if (payBtn) {
+            payBtn.addEventListener('click', function() {
+                // If in demo or test key without live configuration
+                if (!paystackPublicKey || paystackPublicKey.includes('xxxxxxxx')) {
+                    const demoRef = 'DEMO_NA_' + Math.floor(Math.random() * 1000000000);
+                    verifyAndRedirect(demoRef);
+                    return;
+                }
+
+                if (typeof PaystackPop !== 'undefined') {
+                    let handler = PaystackPop.setup({
+                        key: paystackPublicKey,
+                        email: userEmail,
+                        amount: amountKobo,
+                        currency: 'NGN',
+                        ref: 'NA_' + Math.floor((Math.random() * 1000000000) + 1),
+                        metadata: {
+                            custom_fields: [
+                                { display_name: "Applicant Name", variable_name: "applicant_name", value: userName },
+                                { display_name: "Application ID", variable_name: "app_id", value: appId },
+                                { display_name: "Programme", variable_name: "programme", value: programme }
+                            ]
+                        },
+                        callback: function(response) {
+                            verifyAndRedirect(response.reference);
+                        },
+                        onClose: function() {
+                            alert('Your transaction was cancelled. Your scholarship seat will remain held for 24 hours.');
+                        }
+                    });
+                    handler.openIframe();
+                } else {
+                    const demoRef = 'DEMO_NA_' + Math.floor(Math.random() * 1000000000);
+                    verifyAndRedirect(demoRef);
                 }
             });
-            handler.openIframe();
-        });
+        }
 
         async function verifyAndRedirect(reference) {
-            payBtn.disabled = true;
-            payBtn.textContent = 'Verifying Payment & Activating Admission...';
+            if (payBtn) {
+                payBtn.disabled = true;
+                payBtn.textContent = 'Verifying Payment & Activating Admission...';
+            }
 
             try {
                 const res = await fetch(`api/verify_payment.php?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&email=${encodeURIComponent(userEmail)}&programme=${encodeURIComponent(programme)}&app_id=${encodeURIComponent(appId)}`);
@@ -233,25 +257,26 @@
                 
                 if (data.success && data.redirect) {
                     window.location.href = data.redirect;
-                } else {
-                    window.location.href = `success.html?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
+                    return;
                 }
-            } catch (e) {
-                window.location.href = `success.html?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
-            }
+            } catch (e) {}
+
+            window.location.href = `success.html?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
         }
 
-        // Timer
+        // 24-Hour Urgency Timer
         let timeRemaining = 23 * 3600 + 59 * 60 + 45;
         const timerEl = document.getElementById('timer');
-        setInterval(() => {
-            if (timeRemaining <= 0) return;
-            timeRemaining--;
-            const hours = String(Math.floor(timeRemaining / 3600)).padStart(2, '0');
-            const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(2, '0');
-            const seconds = String(timeRemaining % 60).padStart(2, '0');
-            timerEl.textContent = `${hours}:${minutes}:${seconds}`;
-        }, 1000);
+        if (timerEl) {
+            setInterval(() => {
+                if (timeRemaining <= 0) return;
+                timeRemaining--;
+                const hours = String(Math.floor(timeRemaining / 3600)).padStart(2, '0');
+                const minutes = String(Math.floor((timeRemaining % 3600) / 60)).padStart(2, '0');
+                const seconds = String(timeRemaining % 60).padStart(2, '0');
+                timerEl.textContent = `${hours}:${minutes}:${seconds}`;
+            }, 1000);
+        }
     </script>
 </body>
 </html>
