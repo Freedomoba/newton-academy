@@ -442,7 +442,10 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
-                    <img src="assets/images/entrepreneurship.jpg" alt="Digital Entrepreneurship Track" class="w-full h-56 rounded-2xl object-cover border border-slate-200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group bg-slate-900">
+            <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="Digital Entrepreneurship Multi-Device Course Mockup" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#005f5a]/90 backdrop-blur-sm text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full border border-white/20">Full LMS & AI Suite Included</div>
+        </div>
                     <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-sans">
                         <div class="p-3 bg-[#f1f5f9] rounded-xl border border-slate-200">
                             <strong>1. Offer Packaging & High-Ticket Positioning:</strong> How to charge 5x to 10x your current rates by selling business outcomes instead of commodity hours.
@@ -488,7 +491,10 @@ $phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
-                    <img src="assets/images/marketing_analytics.jpg" alt="Digital Marketing & AI Track" class="w-full h-56 rounded-2xl object-cover border border-slate-200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 group bg-slate-900">
+            <img src="assets/images/mockup_digital_marketing.jpg" alt="Digital Marketing Multi-Device Course Mockup" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-[#005f5a]/90 backdrop-blur-sm text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full border border-white/20">Full LMS & AI Suite Included</div>
+        </div>
                     <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-sans">
                         <div class="p-3 bg-[#f1f5f9] rounded-xl border border-slate-200">
                             <strong>1. Multi-Platform Paid Advertising:</strong> Meta Ads, Google PPC, and TikTok advertising with positive ROAS and zero wasted ad spend.
