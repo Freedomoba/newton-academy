@@ -16,28 +16,37 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+$firstName = trim($_POST['first_name'] ?? '');
+$lastName = trim($_POST['last_name'] ?? '');
 $fullName = trim($_POST['fullName'] ?? '');
+if (empty($fullName) && (!empty($firstName) || !empty($lastName))) {
+    $fullName = trim($firstName . ' ' . $lastName);
+}
+
 $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
 $phone = trim($_POST['phone'] ?? '');
-$programme = trim($_POST['programme'] ?? '');
-$motivation = trim($_POST['motivation'] ?? '');
+$course = trim($_POST['course'] ?? ($_POST['programme'] ?? 'Digital Marketing + Applied AI'));
+$scholarshipScheme = trim($_POST['scholarship_scheme'] ?? 'Newton Core Scholarship Scheme');
+$gender = trim($_POST['gender'] ?? 'Not specified');
+$country = trim($_POST['country'] ?? 'Nigeria');
+$stateCity = trim($_POST['state_city'] ?? 'Lagos');
+$employmentStatus = trim($_POST['employment_status'] ?? 'Graduate');
+$educationalLevel = trim($_POST['educational_level'] ?? 'Degree');
+$learningMode = trim($_POST['learning_mode'] ?? 'Online');
+$priorExperience = trim($_POST['prior_experience'] ?? 'None');
+$jobPlacement = trim($_POST['job_placement'] ?? 'Yes');
 
-$validProgrammes = [
-    'Digital Entrepreneurship + AI',
-    'Digital Marketing + AI'
-];
-
-if (empty($fullName) || !$email || empty($phone) || !in_array($programme, $validProgrammes)) {
+if (empty($fullName) || !$email || empty($phone)) {
     http_response_code(400);
     echo json_encode([
         'success' => false,
-        'message' => 'Please fill in all required fields and select a valid programme.'
+        'message' => 'Please fill in all required fields (Name, Email, Phone).'
     ]);
     exit;
 }
 
 $createdAt = date('Y-m-d H:i:s');
-$applicationId = 'NA-SCH-' . strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8));
+$applicationId = !empty($_POST['app_id']) ? trim($_POST['app_id']) : ('NA-SCH-' . strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8)));
 
 // 1. Record Application in CSV storage (De-duplicated by Email)
 $leadsDir = __DIR__ . '/../data';
@@ -47,14 +56,14 @@ if (!is_dir($leadsDir)) {
 
 $csvFile = $leadsDir . '/scholarship_applications.csv';
 $normalizedEmail = strtolower($email);
-$header = ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Programme', 'Motivation', 'Payment Status'];
+$header = ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Course', 'Scholarship Scheme', 'Country', 'State', 'Employment', 'Education', 'Payment Status'];
 $rows = [];
 $found = false;
 
 if (file_exists($csvFile)) {
     if (($handle = @fopen($csvFile, 'r')) !== false) {
         $first = fgetcsv($handle);
-        if ($first && count($first) >= 7) {
+        if ($first && count($first) >= 4) {
             $header = $first;
         }
         while (($data = fgetcsv($handle)) !== false) {
@@ -62,11 +71,10 @@ if (file_exists($csvFile)) {
             // Check email column (index 3)
             $existingEmail = strtolower(trim($data[3] ?? ''));
             if ($existingEmail === $normalizedEmail) {
-                // Keep original application ID if already assigned, or update with latest
                 $existingAppId = !empty($data[1]) ? $data[1] : $applicationId;
                 $applicationId = $existingAppId;
-                $existingPaymentStatus = !empty($data[7]) ? $data[7] : 'Pending Payment';
-                $rows[] = [$createdAt, $existingAppId, $fullName, $email, $phone, $programme, $motivation, $existingPaymentStatus];
+                $existingPaymentStatus = !empty($data[11]) ? $data[11] : (!empty($data[7]) ? $data[7] : 'Pending Payment');
+                $rows[] = [$createdAt, $existingAppId, $fullName, $email, $phone, $course, $scholarshipScheme, $country, $stateCity, $employmentStatus, $educationalLevel, $existingPaymentStatus];
                 $found = true;
             } else {
                 $rows[] = $data;
@@ -77,8 +85,7 @@ if (file_exists($csvFile)) {
 }
 
 if (!$found) {
-    // Append as new unique application
-    $rows[] = [$createdAt, $applicationId, $fullName, $email, $phone, $programme, $motivation, 'Pending Payment'];
+    $rows[] = [$createdAt, $applicationId, $fullName, $email, $phone, $course, $scholarshipScheme, $country, $stateCity, $employmentStatus, $educationalLevel, 'Pending Payment'];
 }
 
 // Write back deduplicated data
@@ -96,7 +103,8 @@ $checkoutParams = [
     'name' => $fullName,
     'email' => $email,
     'phone' => $phone,
-    'programme' => $programme
+    'track' => $course,
+    'scheme' => $scholarshipScheme
 ];
 
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
@@ -104,10 +112,12 @@ $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
 $dir = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/\\');
 $checkoutUrl = $scheme . '://' . $host . $dir . '/checkout.php?' . http_build_query($checkoutParams);
 
-// 3. Dispatch Instant Scholarship Award / Acceptance Email via cPanel SMTP
-$emailHtml = NewtonMailer::getScholarshipApprovalTemplate($fullName, $programme, $checkoutUrl);
-$subject = "CONGRATULATIONS: Your Scholarship at Newton Academy Has Been Granted!";
-NewtonMailer::send($email, $fullName, $subject, $emailHtml);
+// 3. Dispatch Instant Scholarship Award Email
+try {
+    $emailHtml = NewtonMailer::getScholarshipApprovalTemplate($fullName, $course, $checkoutUrl);
+    $subject = "CONGRATULATIONS: Your Scholarship at Newton Academy Has Been Granted!";
+    NewtonMailer::send($email, $fullName, $subject, $emailHtml);
+} catch (Exception $e) {}
 
 // 4. Return response with redirect to checkout page
 echo json_encode([
@@ -116,4 +126,3 @@ echo json_encode([
     'redirect' => 'checkout.php?' . http_build_query($checkoutParams)
 ]);
 exit;
-

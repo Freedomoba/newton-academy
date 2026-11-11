@@ -138,7 +138,7 @@ $track = 'de';
             <div class="mt-12 max-w-4xl mx-auto px-2">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-950 group">
                     <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="Digital Entrepreneurship Multi-Device Learning Suite" class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-700">
-                    <div class="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-md border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-white">
+                    <div class="bg-slate-900 border-t border-white/10 p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-white">
                         <div class="flex items-center gap-3">
                             <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
                             <span class="text-xs sm:text-sm font-bold">100% Cross-Platform Access: Desktop, Laptop, Tablet & Mobile</span>

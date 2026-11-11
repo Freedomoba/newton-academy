@@ -283,3 +283,4 @@ updateCurriculum('curriculum-de.html');
 updateCurriculum('curriculum-de.php');
 updateCurriculum('curriculum-dm.html');
 updateCurriculum('curriculum-dm.php');
+

@@ -18,3 +18,4 @@ const path = require('path');
     fs.writeFileSync(fullPath, c, 'utf8');
     console.log(`Cleaned meta tag and removed announcement bar from ${file}`);
 });
+

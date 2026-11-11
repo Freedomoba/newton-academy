@@ -35,3 +35,4 @@ const path = require('path');
     fs.writeFileSync(fullPath, newLines.join('\r\n'), 'utf8');
     console.log(`Successfully updated ${file}`);
 });
+

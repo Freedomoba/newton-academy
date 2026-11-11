@@ -481,6 +481,43 @@ const server = http.createServer((req, res) => {
     }
 
     // Step 2: thank-you.php
+    
+    if (pathname === '/scholarship.php' || pathname === '/scholarship' || pathname === '/scholarship.html' || pathname === '/special-offer.html' || pathname === '/special-offer.php' || pathname === '/special-offer' || pathname === '/upsell.html' || pathname === '/upsell.php' || pathname === '/upsell') {
+        const filePath = path.join(__dirname, 'scholarship.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderPhpFile(filePath, parsedUrl.query));
+        }
+    }
+    if (pathname === '/thank-you.html') {
+        const filePath = path.join(__dirname, 'thank-you.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderPhpFile(filePath, parsedUrl.query));
+        }
+    }
+    if (pathname === '/checkout.html') {
+        const filePath = path.join(__dirname, 'checkout.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderPhpFile(filePath, parsedUrl.query));
+        }
+    }
+    if (pathname === '/curriculum-dm.html') {
+        const filePath = path.join(__dirname, 'curriculum-dm.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderPhpFile(filePath, parsedUrl.query));
+        }
+    }
+    if (pathname === '/curriculum-de.html') {
+        const filePath = path.join(__dirname, 'curriculum-de.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return res.end(renderPhpFile(filePath, parsedUrl.query));
+        }
+    }
+
     if (pathname === '/thank-you.php' || pathname === '/thank-you') {
         const rendered = renderPhpFile(path.join(__dirname, 'thank-you.php'), parsedUrl.query);
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
