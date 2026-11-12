@@ -1,7 +1,110 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('--- Generating High-Converting Newton Funnel Pages ---');
+console.log('--- Generating High-Converting Newton Funnel Pages (with Logo & Vimeo Portrait Videos) ---');
+
+// 7 Verified Vimeo Testimonials
+const VIMEO_VIDEOS = [
+  {
+    id: "1245537104",
+    name: "Chukwunonso",
+    role: "Verified Fellow",
+    duration: "1m 25s",
+    hash: "cfef4b1fb4",
+    quote: "Practical hands-on tech training experience & cohort mentorship.",
+    isEducator: false
+  },
+  {
+    id: "1245537113",
+    name: "Clemson",
+    role: "Verified Fellow",
+    duration: "2m 44s",
+    hash: "1e8bb3076b",
+    quote: "From zero experience to building live client-ready projects.",
+    isEducator: false
+  },
+  {
+    id: "1245537116",
+    name: "Emmanuel",
+    role: "Verified Fellow",
+    duration: "2m 40s",
+    hash: "52775ed3e6",
+    quote: "Why this curriculum is completely different from traditional school.",
+    isEducator: false
+  },
+  {
+    id: "1245537093",
+    name: "Fernanda",
+    role: "Verified Fellow",
+    duration: "2m 06s",
+    hash: "fdaaca5d75",
+    quote: "The quality of direct mentorship and personal growth gained.",
+    isEducator: false
+  },
+  {
+    id: "1245537098",
+    name: "Mercy",
+    role: "Verified Fellow",
+    duration: "1m 40s",
+    hash: "845f352b05",
+    quote: "Empowered with skills that compete and earn internationally.",
+    isEducator: false
+  },
+  {
+    id: "1245537121",
+    name: "Teacher Mr. Adedokun",
+    role: "DLHS Faculty Educator",
+    duration: "4m 38s",
+    hash: "8a0c5f7baf",
+    quote: "Educator's perspective on student transformation and impact.",
+    isEducator: true
+  },
+  {
+    id: "1245537096",
+    name: "Paul",
+    role: "Verified Fellow",
+    duration: "1m 56s",
+    hash: "3c42521ef7",
+    quote: "Mastering practical applications and real career readiness.",
+    isEducator: false
+  }
+];
+
+function renderVimeoCardsHtml() {
+  return VIMEO_VIDEOS.map(v => `
+                        <!-- Video: ${v.name} -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 ${v.isEducator ? 'border-amber-400/90' : 'border-slate-200 hover:border-[#005f5a]'} rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold ${v.isEducator ? 'text-amber-800' : 'text-slate-700'}">
+                                    <span class="w-2 h-2 rounded-full ${v.isEducator ? 'bg-amber-500' : 'bg-emerald-500'}"></span>
+                                    <span>${v.role}</span>
+                                </div>
+                                <span class="font-mono text-[10px] ${v.isEducator ? 'bg-amber-50 text-amber-800' : 'bg-slate-100'} px-2 py-0.5 rounded-full">${v.duration}</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/${v.id}?h=${v.hash}&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - ${v.name}">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">${v.name}</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    ${v.quote}
+                                </p>
+                            </div>
+                        </div>
+  `).join('\n');
+}
 
 // ============================================================================
 // 1. DEDICATED THANK-YOU PAGE (Conference Pass Confirmation + 15s Urgency Gift)
@@ -86,17 +189,11 @@ $phone = trim($_GET['phone'] ?? '+2348000000000');
         </div>
     </div>
 
-    <!-- Main Navigation / Header -->
-    <header class="bg-white border-b border-slate-200 py-4 px-4 sm:px-6">
+    <!-- Main Navigation / Header (Using Official Logo) -->
+    <header class="bg-white border-b border-slate-200 py-3 sm:py-4 px-4 sm:px-6">
         <div class="max-w-5xl mx-auto flex items-center justify-between">
-            <a href="${isPhp ? 'index.php' : 'index.html'}" class="flex items-center gap-2.5">
-                <div class="w-10 h-10 rounded-xl bg-[#005f5a] text-white flex items-center justify-center font-heading font-black text-lg shadow-md">
-                    NA
-                </div>
-                <div>
-                    <span class="block text-lg font-extrabold text-[#005f5a] tracking-tight font-heading leading-tight">Newton Academy</span>
-                    <span class="block text-[11px] text-slate-500 font-medium tracking-wide">Empowering African Innovators & Leaders</span>
-                </div>
+            <a href="${isPhp ? 'index.php' : 'index.html'}" class="flex items-center">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto object-contain">
             </a>
             <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold">
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -127,7 +224,7 @@ $phone = trim($_GET['phone'] ?? '+2348000000000');
 
         <!-- Confirmed Delegate VIP Pass Card -->
         <div class="relative bg-gradient-to-br from-[#003e3b] via-[#005f5a] to-[#002f2d] rounded-3xl p-6 sm:p-8 text-white pass-shadow border-2 border-amber-400/60 overflow-hidden">
-            <!-- Background Decorative Watermark -->
+            <!-- Background Watermark -->
             <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl font-black select-none pointer-events-none font-heading">
                 NEWTON
             </div>
@@ -181,128 +278,131 @@ $phone = trim($_GET['phone'] ?? '+2348000000000');
             <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 mb-1">
                 <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+            </div>
+            
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 font-heading">
+                Step 1: Join the Official Delegates WhatsApp Room
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base max-w-lg mx-auto">
+                All live broadcast links, speaker slide decks, fast-action bonus materials (₦390,000 value), and session reminders are posted directly inside this private WhatsApp room.
+            </p>
+
+            <div class="pt-2">
+                <a href="https://chat.whatsapp.com/GzF68x50l6Z7a3gq2o2FqX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5 font-heading">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
                     </svg>
-                </div>
-                
-                <h2 class="text-xl sm:text-2xl font-black text-slate-900 font-heading">
-                    Step 1: Join the Official Delegates WhatsApp Room
+                    <span>Enter Conference Delegates WhatsApp Room</span>
+                </a>
+            </div>
+
+            <p class="text-xs text-slate-500">
+                Encrypted &bull; Strictly for verified delegates &bull; Zero spam tolerated
+            </p>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- URGENT SPECIAL ENDOWMENT GIFT BANNER (15-SECOND AUTO BRIDGE) -->
+        <!-- ========================================================== -->
+        <div id="urgentGiftBox" class="relative bg-gradient-to-r from-amber-950 via-slate-900 to-[#002f2d] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 text-white text-center space-y-5 urgent-glow">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
+                <span>Confidential Academic Gift &bull; Only Available Now</span>
+            </div>
+
+            <div class="space-y-2 max-w-2xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-300 font-heading leading-tight">
+                    We Have A ₦200,000 Scholarship Endowment Gift For You!
                 </h2>
-                <p class="text-slate-600 text-sm sm:text-base max-w-lg mx-auto">
-                    All live broadcast links, speaker slide decks, fast-action bonus materials (₦390,000 value), and session reminders are posted directly inside this private WhatsApp room.
-                </p>
-
-                <div class="pt-2">
-                    <a href="https://chat.whatsapp.com/GzF68x50l6Z7a3gq2o2FqX" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-base sm:text-lg shadow-xl shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5 font-heading">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                        <span>Enter Conference Delegates WhatsApp Room</span>
-                    </a>
-                </div>
-
-                <p class="text-xs text-slate-500">
-                    Encrypted &bull; Strictly for verified delegates &bull; Zero spam tolerated
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    The Academic Admissions Council has pre-qualified your registration for a <strong class="text-white">100% Full Tuition Endowment Grant</strong>. This exclusive opportunity disappears when the timer reaches zero:
                 </p>
             </div>
 
-            <!-- ========================================================== -->
-            <!-- URGENT SPECIAL ENDOWMENT GIFT BANNER (15-SECOND AUTO BRIDGE) -->
-            <!-- ========================================================== -->
-            <div id="urgentGiftBox" class="relative bg-gradient-to-r from-amber-950 via-slate-900 to-[#002f2d] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 text-white text-center space-y-5 urgent-glow">
-                
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md">
-                    <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-                    <span>Confidential Academic Gift &bull; Only Available Now</span>
+            <!-- Animated 15-Second Progress Countdown -->
+            <div class="max-w-md mx-auto space-y-2">
+                <div class="flex items-center justify-between text-xs font-bold text-amber-200">
+                    <span>Private Reservation Active</span>
+                    <span>Disappearing in <span id="countdownTimer" class="text-amber-400 font-mono text-lg font-black">15</span>s</span>
                 </div>
-
-                <div class="space-y-2 max-w-2xl mx-auto">
-                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-amber-300 font-heading leading-tight">
-                        We Have A ₦200,000 Scholarship Endowment Gift For You!
-                    </h2>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        The Academic Admissions Council has pre-qualified your registration for a <strong class="text-white">100% Full Tuition Endowment Grant</strong>. This exclusive opportunity disappears when the timer reaches zero:
-                    </p>
+                <div class="w-full bg-slate-800 rounded-full h-3 p-0.5 overflow-hidden border border-amber-400/40">
+                    <div id="timerProgressBar" class="h-full bg-gradient-to-r from-amber-400 to-amber-500 rounded-full transition-all duration-1000 w-full"></div>
                 </div>
-
-                <!-- Animated 15-Second Progress Countdown -->
-                <div class="max-w-md mx-auto space-y-2">
-                    <div class="flex items-center justify-between text-xs font-bold text-amber-200">
-                        <span>Private Reservation Active</span>
-                        <span>Disappearing in <span id="countdownTimer" class="text-amber-400 font-mono text-lg font-black">15</span>s</span>
-                    </div>
-                    <div class="w-full bg-slate-800 rounded-full h-3 p-0.5 overflow-hidden border border-amber-400/40">
-                        <div id="timerProgressBar" class="h-full bg-gradient-to-r from-amber-400 to-amber-500 rounded-full transition-all duration-1000 w-full"></div>
-                    </div>
-                </div>
-
-                <!-- Claim Button -->
-                <div class="pt-2">
-                    <a id="claimGiftBtn" href="${scholarshipTarget}" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-base sm:text-lg shadow-xl shadow-amber-500/30 transition-all transform hover:scale-105 font-heading">
-                        <span>Claim Your ₦200,000 Scholarship Endowment Gift Now</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </a>
-                </div>
-
-                <p class="text-xs text-amber-200/70 font-mono">
-                    Auto-redirecting you to your scholarship briefing in <span id="timerSmall">15</span> seconds...
-                </p>
             </div>
 
-        </main>
+            <!-- Claim Button -->
+            <div class="pt-2">
+                <a id="claimGiftBtn" href="${scholarshipTarget}" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-base sm:text-lg shadow-xl shadow-amber-500/30 transition-all transform hover:scale-105 font-heading">
+                    <span>Claim Your ₦200,000 Scholarship Endowment Gift Now</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
+            </div>
 
-        <!-- Footer -->
-        <footer class="bg-white border-t border-slate-200 py-6 px-4 text-center text-xs text-slate-500">
-            <p>&copy; 2026 Newton Academy. All rights reserved. Convened strictly by Newton Academy.</p>
-            <p class="mt-1">Dr. Ade Braimoh is an Advisory Trustee & Keynote Speaker.</p>
-        </footer>
+            <p class="text-xs text-amber-200/70 font-mono">
+                Auto-redirecting you to your scholarship briefing in <span id="timerSmall">15</span> seconds...
+            </p>
+        </div>
 
-        <!-- Client-Side Script: Preserves query parameters and runs 15s auto-redirect -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const params = new URLSearchParams(window.location.search);
-                const name = params.get('name') || '${isPhp ? '<?php echo addslashes($name); ?>' : 'Conference Delegate'}';
-                const email = params.get('email') || '${isPhp ? '<?php echo addslashes($email); ?>' : 'delegate@newton.ng'}';
-                const phone = params.get('phone') || '${isPhp ? '<?php echo addslashes($phone); ?>' : '+2348000000000'}';
+    </main>
 
-                const nameEl = document.getElementById('delegateNameDisplay');
-                const passNameEl = document.getElementById('passName');
-                const passEmailEl = document.getElementById('passEmail');
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 px-4 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Newton Academy. All rights reserved. Convened strictly by Newton Academy.</p>
+        <p class="text-[10px] text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC; Newton Academy provides professional educational training only, and all individual results depend completely on your personal dedication, skill mastery, and commercial execution.
+        </p>
+        <p class="mt-1">Dr. Ade Braimoh is an Advisory Trustee & Keynote Speaker.</p>
+    </footer>
 
-                if (nameEl && name) nameEl.textContent = name;
-                if (passNameEl && name) passNameEl.textContent = name;
-                if (passEmailEl && email) passEmailEl.textContent = email;
+    <!-- Client-Side Script: Preserves query parameters and runs 15s auto-redirect -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name') || '${isPhp ? '<?php echo addslashes($name); ?>' : 'Conference Delegate'}';
+            const email = params.get('email') || '${isPhp ? '<?php echo addslashes($email); ?>' : 'delegate@newton.ng'}';
+            const phone = params.get('phone') || '${isPhp ? '<?php echo addslashes($phone); ?>' : '+2348000000000'}';
 
-                // Target URL for upsell page with preserved query parameters
-                const targetUrl = '${scholarshipTarget}?' + params.toString();
-                const claimBtn = document.getElementById('claimGiftBtn');
-                if (claimBtn) {
-                    claimBtn.href = targetUrl;
+            const nameEl = document.getElementById('delegateNameDisplay');
+            const passNameEl = document.getElementById('passName');
+            const passEmailEl = document.getElementById('passEmail');
+
+            if (nameEl && name) nameEl.textContent = name;
+            if (passNameEl && name) passNameEl.textContent = name;
+            if (passEmailEl && email) passEmailEl.textContent = email;
+
+            // Target URL for upsell page with preserved query parameters
+            const targetUrl = '${scholarshipTarget}?' + params.toString();
+            const claimBtn = document.getElementById('claimGiftBtn');
+            if (claimBtn) {
+                claimBtn.href = targetUrl;
+            }
+
+            // 15-Second Urgent Countdown & Auto-Redirect
+            let secondsRemaining = 15;
+            const timerEl = document.getElementById('countdownTimer');
+            const timerSmall = document.getElementById('timerSmall');
+            const barEl = document.getElementById('timerProgressBar');
+
+            const countdownInterval = setInterval(function() {
+                secondsRemaining--;
+                if (timerEl) timerEl.textContent = secondsRemaining;
+                if (timerSmall) timerSmall.textContent = secondsRemaining;
+                if (barEl) {
+                    const pct = Math.max(0, (secondsRemaining / 15) * 100);
+                    barEl.style.width = pct + '%';
                 }
 
-                // 15-Second Urgent Countdown & Auto-Redirect
-                let secondsRemaining = 15;
-                const timerEl = document.getElementById('countdownTimer');
-                const timerSmall = document.getElementById('timerSmall');
-                const barEl = document.getElementById('timerProgressBar');
-
-                const countdownInterval = setInterval(function() {
-                    secondsRemaining--;
-                    if (timerEl) timerEl.textContent = secondsRemaining;
-                    if (timerSmall) timerSmall.textContent = secondsRemaining;
-                    if (barEl) {
-                        const pct = Math.max(0, (secondsRemaining / 15) * 100);
-                        barEl.style.width = pct + '%';
-                    }
-
-                    if (secondsRemaining <= 0) {
-                        clearInterval(countdownInterval);
-                        window.location.href = targetUrl;
-                    }
-                }, 1000);
-            });
-        </script>
+                if (secondsRemaining <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = targetUrl;
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>`;
 }
@@ -397,17 +497,11 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
         </div>
     </div>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Header (Using Official Logo) -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="${indexTarget}" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-[#005f5a] text-white flex items-center justify-center font-heading font-black text-lg shadow-md">
-                    NA
-                </div>
-                <div>
-                    <span class="block text-lg font-extrabold text-[#005f5a] tracking-tight font-heading leading-tight">Newton Academy</span>
-                    <span class="block text-[11px] text-slate-500 font-medium tracking-wide">Scholarship Endowment Admissions Portal</span>
-                </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between">
+            <a href="${indexTarget}" class="flex items-center">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto object-contain">
             </a>
             <div class="flex items-center gap-2">
                 <span class="hidden md:inline-block px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">
@@ -442,16 +536,16 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                 </svg>
             </div>
 
-            <!-- Wax Seal & Title -->
+            <!-- Official Seal & Title (Using Official Brand Logo Inside Badge) -->
             <div class="space-y-3">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black text-2xl shadow-xl border-2 border-amber-200 transform group-hover:scale-110 transition-transform">
-                    NA
+                <div class="inline-flex items-center justify-center w-36 h-16 sm:w-44 sm:h-20 rounded-2xl bg-white p-2.5 shadow-2xl border-2 border-amber-400 transform group-hover:scale-105 transition-transform">
+                    <img src="assets/logo.png" alt="Newton Academy Official Crest" class="w-full h-full object-contain">
                 </div>
                 <h3 class="text-xl sm:text-2xl font-black text-white font-heading tracking-tight">
                     CONFIDENTIAL ADMISSIONS DISPATCH &bull; ACADEMIC COUNCIL
                 </h3>
                 <p class="text-xs sm:text-sm text-teal-100 max-w-lg mx-auto font-sans leading-relaxed">
-                    Strictly for pre-screened delegates. Click the wax seal to break the tamper-proof academic ribbon and unroll the full direct-response scholarship dispatch.
+                    Strictly for pre-screened delegates. Click the official dispatch seal to break the tamper-proof ribbon and unroll the full direct-response scholarship briefing.
                 </p>
                 <div class="pt-2">
                     <button type="button" class="px-6 py-2.5 rounded-full bg-amber-400 group-hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all">
@@ -607,7 +701,6 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                             <!-- Clean Mockup Presentation: Never covers design on mobile -->
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
                                 <img src="assets/images/mockup_digital_marketing.jpg" alt="3D Multi-Device Digital Marketing Mockup" class="w-full h-auto object-cover">
-                                <!-- Safe compact badge placed below image without covering screen -->
                                 <div class="bg-slate-900/90 text-white px-3 py-1.5 text-xs flex items-center justify-between border-t border-slate-800">
                                     <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
                                         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -658,7 +751,6 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                     <!-- Track 2: Digital Entrepreneurship + Applied AI -->
                     <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all brand-shadow">
                         <div class="space-y-4">
-                            <!-- Clean Mockup Presentation -->
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
                                 <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="3D Multi-Device Digital Entrepreneurship Mockup" class="w-full h-auto object-cover">
                                 <div class="bg-slate-900/90 text-white px-3 py-1.5 text-xs flex items-center justify-between border-t border-slate-800">
@@ -861,6 +953,37 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- ========================================================== -->
+            <!-- REAL STUDENT & FACULTY VIDEO INTERVIEWS (PORTRAIT FRAMES)   -->
+            <!-- ========================================================== -->
+            <div class="border-t border-slate-200 pt-10 space-y-6">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300">
+                        Real Student & Faculty Video Reviews
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                        Watch Real Students & Educators Speak
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600">
+                        Direct video feedback from verified fellows and educators who experienced Newton Academy:
+                    </p>
+                </div>
+
+                <!-- Horizontal scroll on mobile, responsive grid on tablet/desktop -->
+                <div class="overflow-x-auto pb-6 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin">
+                    <div class="flex sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 min-w-[280px]">
+${renderVimeoCardsHtml()}
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        <span>Click any video above to play directly inside the frame &bull; 100% Unedited Authentic Feedback</span>
+                    </p>
                 </div>
             </div>
 
@@ -1237,7 +1360,10 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
             <a href="disclaimer.html" class="hover:underline">Earnings Disclaimer</a>
         </div>
         <p>&copy; 2026 Newton Academy. All rights reserved. Convened strictly by Newton Academy.</p>
-        <p>Newton OS Limited &bull; UBA, Zenith & Union Bank Corporate Accounts</p>
+        <p class="text-[10px] text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC; Newton Academy provides professional educational training only, and all individual results depend completely on your personal dedication, skill mastery, and commercial execution.
+        </p>
+        
     </footer>
 
     <!-- Scripts -->
@@ -1331,7 +1457,7 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                         const fd = new FormData(form);
                         fd.append('app_id', appId);
                         fetch('api/scholarship.php', { method: 'POST', body: fd }).catch(function() {});
-                    } catch (err) {}
+                    } catch (e) {}
 
                     // Target checkout URL
                     const chkParams = new URLSearchParams({
@@ -1374,17 +1500,16 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
 // Write thank-you.html & thank-you.php
 fs.writeFileSync(path.join(__dirname, '..', 'thank-you.html'), generateThankYou(false), 'utf8');
 fs.writeFileSync(path.join(__dirname, '..', 'thank-you.php'), generateThankYou(true), 'utf8');
-console.log('Successfully written streamlined thank-you.html and thank-you.php');
+console.log('Successfully written streamlined thank-you.html and thank-you.php with official logo');
 
 // Write scholarship.html & scholarship.php
 fs.writeFileSync(path.join(__dirname, '..', 'scholarship.html'), generateScholarship(false), 'utf8');
 fs.writeFileSync(path.join(__dirname, '..', 'scholarship.php'), generateScholarship(true), 'utf8');
-console.log('Successfully written standalone scholarship.html and scholarship.php');
+console.log('Successfully written standalone scholarship.html and scholarship.php with logo & vimeo videos');
 
-// Also write aliases special-offer.html, special-offer.php, upsell.html, upsell.php
+// Write aliases special-offer and upsell
 fs.writeFileSync(path.join(__dirname, '..', 'special-offer.html'), generateScholarship(false), 'utf8');
 fs.writeFileSync(path.join(__dirname, '..', 'special-offer.php'), generateScholarship(true), 'utf8');
 fs.writeFileSync(path.join(__dirname, '..', 'upsell.html'), generateScholarship(false), 'utf8');
 fs.writeFileSync(path.join(__dirname, '..', 'upsell.php'), generateScholarship(true), 'utf8');
 console.log('Successfully written aliases special-offer and upsell');
-

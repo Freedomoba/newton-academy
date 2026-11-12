@@ -73,17 +73,11 @@
         </div>
     </div>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Header (Using Official Logo) -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-[#005f5a] text-white flex items-center justify-center font-heading font-black text-lg shadow-md">
-                    NA
-                </div>
-                <div>
-                    <span class="block text-lg font-extrabold text-[#005f5a] tracking-tight font-heading leading-tight">Newton Academy</span>
-                    <span class="block text-[11px] text-slate-500 font-medium tracking-wide">Scholarship Endowment Admissions Portal</span>
-                </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-3.5 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto object-contain">
             </a>
             <div class="flex items-center gap-2">
                 <span class="hidden md:inline-block px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">
@@ -118,21 +112,22 @@
                 </svg>
             </div>
 
-            <!-- Wax Seal & Title -->
+            <!-- Official Seal & Title (Using Official Brand Logo Inside Badge) -->
             <div class="space-y-3">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 font-black text-2xl shadow-xl border-2 border-amber-200 transform group-hover:scale-110 transition-transform">
-                    NA
+                <div class="inline-flex items-center justify-center w-36 h-16 sm:w-44 sm:h-20 rounded-2xl bg-white p-2.5 shadow-2xl border-2 border-amber-400 transform group-hover:scale-105 transition-transform">
+                    <img src="assets/logo.png" alt="Newton Academy Official Crest" class="w-full h-full object-contain">
                 </div>
                 <h3 class="text-xl sm:text-2xl font-black text-white font-heading tracking-tight">
                     CONFIDENTIAL ADMISSIONS DISPATCH &bull; ACADEMIC COUNCIL
                 </h3>
                 <p class="text-xs sm:text-sm text-teal-100 max-w-lg mx-auto font-sans leading-relaxed">
-                    Strictly for pre-screened delegates. Click the wax seal to break the tamper-proof academic ribbon and unroll the full direct-response scholarship dispatch.
+                    Strictly for pre-screened delegates. Click the official dispatch seal to break the tamper-proof ribbon and unroll the full direct-response scholarship briefing.
                 </p>
                 <div class="pt-2">
-                    <button type="button" class="px-6 py-2.5 rounded-full bg-amber-400 group-hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all">
-                        Click Here To Open Dispatch &darr;
-                    </button>
+                    <a href="#officialSalesLetter" onclick="openDispatchLetter(event)" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all transform hover:scale-105">
+                        <span>Click Here To Open Dispatch</span>
+                        <span>&darr;</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -283,7 +278,6 @@
                             <!-- Clean Mockup Presentation: Never covers design on mobile -->
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
                                 <img src="assets/images/mockup_digital_marketing.jpg" alt="3D Multi-Device Digital Marketing Mockup" class="w-full h-auto object-cover">
-                                <!-- Safe compact badge placed below image without covering screen -->
                                 <div class="bg-slate-900/90 text-white px-3 py-1.5 text-xs flex items-center justify-between border-t border-slate-800">
                                     <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
                                         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -334,7 +328,6 @@
                     <!-- Track 2: Digital Entrepreneurship + Applied AI -->
                     <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all brand-shadow">
                         <div class="space-y-4">
-                            <!-- Clean Mockup Presentation -->
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
                                 <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="3D Multi-Device Digital Entrepreneurship Mockup" class="w-full h-auto object-cover">
                                 <div class="bg-slate-900/90 text-white px-3 py-1.5 text-xs flex items-center justify-between border-t border-slate-800">
@@ -537,6 +530,267 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- ========================================================== -->
+            <!-- REAL STUDENT & FACULTY VIDEO INTERVIEWS (PORTRAIT FRAMES)   -->
+            <!-- ========================================================== -->
+            <div class="border-t border-slate-200 pt-10 space-y-6">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300">
+                        Real Student & Faculty Video Reviews
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                        Watch Real Students & Educators Speak
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600">
+                        Direct video feedback from verified fellows and educators who experienced Newton Academy:
+                    </p>
+                </div>
+
+                <!-- Horizontal scroll on mobile, responsive grid on tablet/desktop -->
+                <div class="overflow-x-auto pb-6 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin">
+                    <div class="flex sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 min-w-[280px]">
+
+                        <!-- Video: Chukwunonso -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">1m 25s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537104?h=cfef4b1fb4&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Chukwunonso">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Chukwunonso</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    Practical hands-on tech training experience & cohort mentorship.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Clemson -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 44s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537113?h=1e8bb3076b&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Clemson">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Clemson</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    From zero experience to building live client-ready projects.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Emmanuel -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 40s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537116?h=52775ed3e6&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Emmanuel">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Emmanuel</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    Why this curriculum is completely different from traditional school.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Fernanda -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 06s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537093?h=fdaaca5d75&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Fernanda">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Fernanda</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    The quality of direct mentorship and personal growth gained.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Mercy -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">1m 40s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537098?h=845f352b05&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Mercy">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Mercy</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    Empowered with skills that compete and earn internationally.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Teacher Mr. Adedokun -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-amber-400/90 rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-amber-800">
+                                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                                    <span>DLHS Faculty Educator</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-amber-50 text-amber-800 px-2 py-0.5 rounded-full">4m 38s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537121?h=8a0c5f7baf&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Teacher Mr. Adedokun">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Teacher Mr. Adedokun</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    Educator's perspective on student transformation and impact.
+                                </p>
+                            </div>
+                        </div>
+  
+
+                        <!-- Video: Paul -->
+                        <div class="w-[270px] sm:w-auto shrink-0 bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-3 sm:p-4 shadow-lg transition-all group flex flex-col justify-between">
+                            <div class="flex items-center justify-between px-1.5 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
+                                <div class="flex items-center gap-1.5 font-bold text-slate-700">
+                                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span>Verified Fellow</span>
+                                </div>
+                                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">1m 56s</span>
+                            </div>
+                            
+                            <!-- 9:16 Portrait Phone Video Frame -->
+                            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
+                                <iframe 
+                                    src="https://player.vimeo.com/video/1245537096?h=3c42521ef7&badge=0&autopause=0&player_id=0&app_id=58479" 
+                                    class="absolute inset-0 w-full h-full" 
+                                    frameborder="0" 
+                                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+                                    title="Newton Academy Interview - Paul">
+                                </iframe>
+                            </div>
+                            
+                            <div class="pt-3 px-1 space-y-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-bold text-slate-900 font-heading">Paul</h4>
+                                    <div class="text-amber-400 text-xs">★★★★★</div>
+                                </div>
+                                <p class="text-[11px] text-slate-500 font-sans leading-normal">
+                                    Mastering practical applications and real career readiness.
+                                </p>
+                            </div>
+                        </div>
+  
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        <span>Click any video above to play directly inside the frame &bull; 100% Unedited Authentic Feedback</span>
+                    </p>
                 </div>
             </div>
 
@@ -913,7 +1167,10 @@
             <a href="disclaimer.html" class="hover:underline">Earnings Disclaimer</a>
         </div>
         <p>&copy; 2026 Newton Academy. All rights reserved. Convened strictly by Newton Academy.</p>
-        <p>Newton OS Limited &bull; UBA, Zenith & Union Bank Corporate Accounts</p>
+        <p class="text-[10px] text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC; Newton Academy provides professional educational training only, and all individual results depend completely on your personal dedication, skill mastery, and commercial execution.
+        </p>
+        
     </footer>
 
     <!-- Scripts -->
@@ -923,6 +1180,22 @@
     <script src="assets/js/animations.js"></script>
 
     <script>
+        
+        function openDispatchLetter(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const letter = document.getElementById('officialSalesLetter');
+            const envelope = document.getElementById('confidentialEnvelope');
+            if (envelope) {
+                envelope.classList.add('ring-4', 'ring-amber-400', 'ring-opacity-80');
+            }
+            if (letter) {
+                letter.classList.remove('hidden');
+                const yOffset = -20;
+                const y = letter.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+        }
+    
         // Envelope unroll interaction
         document.addEventListener('DOMContentLoaded', function() {
             const envelope = document.getElementById('confidentialEnvelope');
@@ -1007,7 +1280,7 @@
                         const fd = new FormData(form);
                         fd.append('app_id', appId);
                         fetch('api/scholarship.php', { method: 'POST', body: fd }).catch(function() {});
-                    } catch (err) {}
+                    } catch (e) {}
 
                     // Target checkout URL
                     const chkParams = new URLSearchParams({

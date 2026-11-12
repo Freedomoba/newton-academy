@@ -20,8 +20,8 @@
                 <!-- Left Door -->
                 <div id="doorLeft" class="w-1/2 h-full bg-gradient-to-r from-[#002d2a] via-[#00403c] to-[#004d49] border-r-2 border-amber-400/50 door-panel-left relative flex items-center justify-end pr-6 sm:pr-12 shadow-2xl">
                     <div class="text-right space-y-3 opacity-90 select-none">
-                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-amber-400/40 mx-auto sm:ml-auto sm:mr-0 flex items-center justify-center bg-slate-900/60 shadow-inner">
-                            <span class="text-amber-300 font-mono text-xl sm:text-2xl font-black">NA</span>
+                        <div class="w-24 sm:w-28 h-12 sm:h-14 rounded-xl border border-amber-400/50 mx-auto sm:ml-auto sm:mr-0 flex items-center justify-center bg-white p-1.5 shadow-lg">
+                            <img src="assets/logo.png" alt="Newton Academy" class="w-full h-full object-contain">
                         </div>
                         <h4 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-amber-200">Newton Academy</h4>
                         <div class="w-4 h-16 bg-gradient-to-b from-amber-300 to-amber-600 rounded-full shadow-lg border border-amber-200 ml-auto my-4"></div>
@@ -53,6 +53,7 @@
                 
                 <!-- State 1: 30-Second Review In Progress -->
                 <div id="evalReviewState">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 mx-auto mb-3 object-contain">
                     <!-- Academic Crest & Tag -->
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-[#005f5a] border border-[#005f5a]/30 mb-4">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
