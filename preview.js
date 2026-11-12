@@ -467,6 +467,25 @@ const server = http.createServer((req, res) => {
     }
 
     // Admin GET Page
+    
+    // Static admin.html route (same as GitHub Pages)
+    if (pathname === '/admin.html') {
+        const filePath = path.join(__dirname, 'admin.html');
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+            return fs.createReadStream(filePath).pipe(res);
+        }
+    }
+
+    // Static data directory access for CSV files
+    if (pathname.startsWith('/data/')) {
+        const filePath = path.join(__dirname, pathname);
+        if (fs.existsSync(filePath)) {
+            res.writeHead(200, { 'Content-Type': 'text/csv; charset=utf-8' });
+            return fs.createReadStream(filePath).pipe(res);
+        }
+    }
+
     if (pathname === '/admin.php' || pathname === '/admin') {
         const html = renderAdminDashboard(isAuthenticated);
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
