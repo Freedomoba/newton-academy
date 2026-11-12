@@ -146,9 +146,9 @@
                 <!-- Visual Feature Card -->
                 <div class="pt-2">
                     <div class="rounded-3xl overflow-hidden border border-slate-200 bg-white brand-shadow">
-                        <img src="assets/images/conference_women.jpg" alt="Ambitious Women in Business and Technology" class="w-full h-60 sm:h-72 object-cover">
+                        <img src="assets/images/virtual_fellows_laptops.jpg" alt="Ambitious Fellows with Laptops in Digital Learning" class="w-full h-60 sm:h-72 object-cover">
                         <div class="p-4 text-xs text-slate-600 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-slate-100 bg-[#f8fafc]">
-                            <span class="font-medium">Live Keynotes &bull; Interactive Q&A &bull; Delegate Workbook</span>
+                            <span class="font-medium">Live Virtual Keynotes &bull; Interactive Q&A &bull; Digital Delegate Workbook</span>
                             <span class="text-[#005f5a] font-extrabold uppercase tracking-wider text-[11px] bg-teal-50 px-3 py-1 rounded-full border border-teal-200">100% Free Virtual Admission</span>
                         </div>
                     </div>
@@ -158,7 +158,9 @@
 
             <!-- Right: Registration Form (Sticky App-like Card) -->
             <div id="register" class="lg:col-span-5 sticky top-24">
-                <div class="bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-8 brand-shadow relative overflow-hidden">
+                <!-- Looped Ambient Glow Aura Behind Registration Card -->
+                <div class="absolute -inset-1.5 bg-gradient-to-r from-[#005f5a] via-amber-400 to-[#005f5a] rounded-[2rem] opacity-75 blur-lg animate-pulse pointer-events-none"></div>
+                <div class="relative bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden">
                     
                     <!-- Decorative Gold Accent -->
                     <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500"></div>
@@ -312,11 +314,17 @@
                 </div>
 
             </div>
+</div>
+    </section>
 
-            <!-- EXCLUSIVE FAST-ACTION BONUSES CONTAINER -->
-            <div class="bg-gradient-to-br from-[#003330] via-[#004d49] to-[#002f2d] text-white rounded-3xl p-6 sm:p-10 border-2 border-amber-400/50 shadow-2xl relative overflow-hidden">
-                
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-6 mb-8">
+    <!-- FULL BLEED EXCLUSIVE FAST-ACTION BONUSES SECTION (NOT BOXED) -->
+    <section id="bonuses" class="py-16 sm:py-20 bg-gradient-to-br from-[#003330] via-[#004d49] to-[#002f2d] text-white border-y border-emerald-900/60 relative overflow-hidden">
+        <!-- Ambient Background Glow Accents -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-6 mb-8">
                     <div>
                         <h3 class="text-xl sm:text-3xl font-black text-white tracking-tight">
                             Included Attendee Fast-Action Bonuses
@@ -408,12 +416,10 @@
                     </a>
                 </div>
 
-            </div>
-
+            
         </div>
     </section>
-
-    <!-- GLOBAL FACULTY & TUTORS SECTION -->
+<!-- GLOBAL FACULTY & TUTORS SECTION -->
     <section id="faculty" class="border-t border-slate-200 bg-white py-16">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             
@@ -995,13 +1001,7 @@
                 </p>
             </div>
 
-            <div class="mt-10 pt-8 border-t border-slate-200 flex items-center justify-between">
-                <div>
-                    <h5 class="text-sm font-bold text-slate-900">Newton Academy</h5>
-                    <p class="text-xs text-slate-500">Academic Advisory Council, Newton Academy</p>
-                </div>
-                <img src="assets/logo.png" alt="Newton Academy" class="h-9 w-auto opacity-80">
-            </div>
+            
         </div>
     </section>
 

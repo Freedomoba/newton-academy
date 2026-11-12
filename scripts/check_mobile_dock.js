@@ -7,3 +7,4 @@ if (p !== -1) {
 } else {
     console.log('No MOBILE STICKY APP DOCK found');
 }
+

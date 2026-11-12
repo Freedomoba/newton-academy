@@ -55,3 +55,4 @@ files.forEach(file => {
 });
 
 console.log('Successfully simplified footer contents across all pages!');
+
