@@ -558,7 +558,7 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
         <!-- ========================================================== -->
         <!-- DIRECT-RESPONSE HEADLINE & SALES LETTER                   -->
         <!-- ========================================================== -->
-        <article id="officialSalesLetter" class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-12 brand-shadow space-y-10">
+        <article id="officialSalesLetter" style="opacity: 1 !important; visibility: visible !important;" class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-12 brand-shadow space-y-10">
             
             <!-- Headline: No preheadings, pure high-converting copy -->
             <div class="text-center max-w-3xl mx-auto space-y-4">
@@ -961,9 +961,6 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
             <!-- ========================================================== -->
             <div class="border-t border-slate-200 pt-10 space-y-6">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300">
-                        Real Student & Faculty Video Reviews
-                    </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
                         Watch Real Students & Educators Speak
                     </h2>

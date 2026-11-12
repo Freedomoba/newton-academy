@@ -131,10 +131,9 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
                     Strictly for pre-screened delegates. Click the official dispatch seal to break the tamper-proof ribbon and unroll the full direct-response scholarship briefing.
                 </p>
                 <div class="pt-2">
-                    <a href="#officialSalesLetter" onclick="openDispatchLetter(event)" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition-all transform hover:scale-105">
-                        <span>Click Here To Open Dispatch</span>
-                        <span>&darr;</span>
-                    </a>
+                    <button type="button" class="px-6 py-2.5 rounded-full bg-amber-400 group-hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition-all">
+                        Click Here To Open Dispatch &darr;
+                    </button>
                 </div>
             </div>
         </div>
@@ -142,7 +141,7 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
         <!-- ========================================================== -->
         <!-- DIRECT-RESPONSE HEADLINE & SALES LETTER                   -->
         <!-- ========================================================== -->
-        <article id="officialSalesLetter" class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-12 brand-shadow space-y-10">
+        <article id="officialSalesLetter" style="opacity: 1 !important; visibility: visible !important;" class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-12 brand-shadow space-y-10">
             
             <!-- Headline: No preheadings, pure high-converting copy -->
             <div class="text-center max-w-3xl mx-auto space-y-4">
@@ -545,9 +544,6 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
             <!-- ========================================================== -->
             <div class="border-t border-slate-200 pt-10 space-y-6">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300">
-                        Real Student & Faculty Video Reviews
-                    </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
                         Watch Real Students & Educators Speak
                     </h2>
@@ -1187,22 +1183,6 @@ $phone = trim($_GET['phone'] ?? '+2348012345678');
     <script src="assets/js/animations.js"></script>
 
     <script>
-        
-        function openDispatchLetter(e) {
-            if (e && e.preventDefault) e.preventDefault();
-            const letter = document.getElementById('officialSalesLetter');
-            const envelope = document.getElementById('confidentialEnvelope');
-            if (envelope) {
-                envelope.classList.add('ring-4', 'ring-amber-400', 'ring-opacity-80');
-            }
-            if (letter) {
-                letter.classList.remove('hidden');
-                const yOffset = -20;
-                const y = letter.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }
-        }
-    
         // Envelope unroll interaction
         document.addEventListener('DOMContentLoaded', function() {
             const envelope = document.getElementById('confidentialEnvelope');
