@@ -119,10 +119,10 @@
             </div>
 
             <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#applyForm" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-sm sm:text-base px-8 py-4 rounded-xl gold-glow transition-all transform active:scale-95 text-center">
+                <a href="#applyForm" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl gold-glow transition-all transform active:scale-95 text-center">
                     Claim 100% Scholarship & Fill Application Form
                 </a>
-                <a href="#modules" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl border border-white/25 transition-all text-center">
+                <a href="#modules" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl border border-white/25 transition-all text-center">
                     Explore All 15 Modules Below ↓
                 </a>
             </div>
@@ -189,7 +189,7 @@
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
                         Judith Imanai: Seasoned Digital Entrepreneur & FinTech Leader
                     </h2>
-                    <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+                    <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans">
                         Judith Imanai is a seasoned Digital Entrepreneur with deep domain expertise in FinTech, specializing in digital financial products that address real consumer problems in Africa's financial ecosystems.
                     </p>
                     <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
@@ -224,7 +224,7 @@
             <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                 Mouth-Watering Benefits: Everything You Receive as a <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Newton Academy Fellow</span>
             </h2>
-            <p class="text-sm sm:text-base text-slate-600 font-sans mt-2">
+            <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans mt-2">
                 Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
             </p>
         </div>
@@ -316,7 +316,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 1</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Fundamentals of Digital Entrepreneurship
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -332,7 +332,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 2</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Digital Entrepreneurship Ecosystems & Global Trends
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -348,7 +348,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 3</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Startups, Pain Discovery & Design Thinking
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -364,7 +364,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Startup Business Modeling & Monetization Architecture
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -380,7 +380,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Minimum Viable Product (MVP) & Innovation Architecture
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -396,7 +396,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 5</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     High-Performance Team Building & Remote Leadership
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -412,7 +412,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 6</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Business Structuring, Legal Compliance & Intellectual Property
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -428,7 +428,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 7</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Financial Modeling, Unit Economics & Cashflow Mastery
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -444,7 +444,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Operations Management & Process Automation
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -460,7 +460,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Market Research Focused on Scale & Blitzscaling
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -476,7 +476,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 9</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Digital Sales Systems & High-Converting Funnels
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -492,7 +492,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 10</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Valuation of Tech Ventures & Asset Pricing
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -508,7 +508,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 11</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Dynamic Pitching, Elevator Decks & Investor Relations
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -524,7 +524,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Funding Models, Bootstrapping & Capital Allocation
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -540,7 +540,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     The Evolving Entrepreneur & Disruptive Technologies
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -556,7 +556,7 @@
                     </span>
                     <span class="text-xs font-mono text-slate-400 font-bold">Week 13</span>
                 </div>
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
                     Capstone Venture Project & Commercial Launch
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -789,7 +789,7 @@
 
                 <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
                 <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
-                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-sans leading-[1.65] italic">
+                    <p id="tQuote" class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-800 font-sans leading-[1.65] italic">
                         "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
                     </p>
                 </div>
@@ -850,62 +850,35 @@
 
 
     <!-- Newton Official Dark Brand Footer (Not Black) -->
-    <footer class="bg-[#003835] text-slate-300 py-14 border-t border-emerald-900/50">
+    
+    <!-- Clean Minimal Brand Footer -->
+    <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/40">
-                <div class="md:col-span-2 space-y-4">
-                    <a href="index.html" class="inline-block">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
-                    </a>
-                    <p class="text-sm text-slate-300/90 leading-relaxed max-w-lg">
-                        Newton Academy is Africa's premier institution for executive digital skills, applied artificial intelligence, and wealth-generative careers. Convening the From Skills to Income Virtual Conference.
-                    </p>
-                    <div class="pt-2 text-xs text-slate-300 space-y-2.5">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <span><strong class="text-white">Inquiries:</strong> na@newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                            <span><strong class="text-white">Portal:</strong> academy.newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span><strong class="text-white">Admissions:</strong> +234 - 810 555 8593</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
+                <!-- Logo -->
+                <a href="index.html" class="inline-block">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                </a>
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Official Programs</h4>
-                    <ul class="text-xs space-y-2.5 text-slate-300">
-                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">Digital Marketing + Applied AI</a></li>
-                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">Digital Entrepreneurship + Applied AI</a></li>
-                        <li><a href="scholarship.html" class="hover:text-white transition-colors">70% Scholarship Matriculation</a></li>
-                        <li><a href="index.html" class="hover:text-white transition-colors">Main Conference Registration</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Accreditation &amp; Standards</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        All diploma programs are overseen by Newton Academic Advisory Council with strict practical project defenses, verified mentor access, and lifetime resource updates.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-[11px] text-emerald-300">
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>Accredited 2026 Cohort</span>
-                    </div>
+                <!-- Quick Links & Contact -->
+                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs text-slate-300 font-medium">
+                    <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
+                    <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
+                    <a href="scholarship.html" class="hover:text-amber-400 transition-colors">Scholarship</a>
+                    <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
                 </div>
             </div>
 
-            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center md:text-left">
-                <p>&copy; 2026 Newton Academy. All rights reserved. Convened by Newton Academy. From Skills to Income Virtual Conference.</p>
-                <p class="text-[11px] text-slate-400 max-w-xl">
-                    This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC. Newton Academy provides professional educational training only, and all individual results depend completely on personal dedication, skill mastery, and commercial execution.
+            <!-- Copyright & Minimal Disclaimer -->
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] text-slate-400">
+                <p>&copy; 2026 Newton Academy. All rights reserved.</p>
+                <p class="text-slate-400/80">
+                    Professional education only. Not affiliated with Meta Platforms, Inc. or Google LLC.
                 </p>
             </div>
         </div>
     </footer>
+
 
 
         <!-- Form Script & Connector -->

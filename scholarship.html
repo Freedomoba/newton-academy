@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="pt-2">
-                    <button type="button" class="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-amber-500/30 transition-all font-heading">
+                    <button type="button" class="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-[11px] sm:text-xs md:text-sm uppercase tracking-wider shadow-lg shadow-amber-500/30 transition-all font-heading">
                         Click Here To Open Dispatch &darr;
                     </button>
                 </div>
@@ -103,7 +103,7 @@
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
                     Why We Are Awarding 100% Full Tuition Endowments (Worth ₦200,000) To Exactly 50 Ambitious Delegates
                 </h2>
-                <p class="text-sm sm:text-base text-slate-600 font-sans leading-relaxed">
+                <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans leading-relaxed">
                     Dear <span id="storyRecipientName" class="font-bold text-slate-900">Delegate</span>, if you are tired of theoretical university certificates that produce zero income in the real world, this briefing will change the trajectory of your entire commercial life.
                 </p>
             </div>
@@ -120,7 +120,7 @@
                         <img src="assets/images/young_lady_hawking_corn.jpg" alt="Aminat hawking corn on campus" class="w-full h-56 object-cover">
                         <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Phase 1: Hawking corn on campus to survive university</span>
                     </div>
-                    <div class="md:col-span-8 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p>
                             Meet Aminat. In her university days, she had zero wealthy uncles or political godfathers. To buy semester handouts, photocopies, and feed herself, she stood by the campus main gate every evening hawking boiled and roasted corn with a heavy tray balanced on her head.
                         </p>
@@ -129,7 +129,7 @@
 
                 <!-- Beat 2 -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-8 order-2 md:order-1 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 order-2 md:order-1 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p>
                             Despite bone-crushing fatigue, she gave her studies everything she had &mdash; graduating with a coveted <strong>First-Class Honours degree in Economics</strong>. She finished NYSC full of hope, believing the corporate world would celebrate her brilliance. Instead, after submitting over 80 CVs across Lagos and Abuja, the only job offer she received was an ₦85,000/month administrative role where third-party bus fares alone would gobble up ₦50,000 every 30 days!
                         </p>
@@ -146,7 +146,7 @@
                         <img src="assets/images/young_lady_remote_office.jpg" alt="Working remotely in USD" class="w-full h-56 object-cover">
                         <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Phase 3: Now working remotely in USD for a global firm</span>
                     </div>
-                    <div class="md:col-span-8 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p class="font-medium text-slate-900 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
                             Everything changed when Aminat secured a Newton Academy scholarship seat. Within 90 days of mastering high-converting Digital Marketing and Generative AI workflows, she landed her first international contract. Today, she works as a remote Digital Growth Specialist for a US-based health-tech company, earning over <strong>$1,200 monthly</strong> from the comfort of her bedroom in Nigeria!
                         </p>
@@ -166,7 +166,7 @@
                         <img src="assets/images/freedom_profile.jpg" alt="Freedom Obanijesu professional profile" class="w-full h-56 object-cover">
                         <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Freedom Obanijesu &bull; Academic Director</span>
                     </div>
-                    <div class="md:col-span-8 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p>
                             This is not theory. Freedom Obanijesu spent years mixing plaster of Paris under scorching heat on dusty Nigerian construction sites, inhaling gypsum powder, and installing POP ceilings just to put food on the table. He knew that physical sweat without leverage leads to poverty. He spent late nights in cybercafes studying direct-response customer acquisition, copywriting, and practical applied AI tools.
                         </p>
@@ -175,7 +175,7 @@
 
                 <!-- Beat 2 (Using New Corpreneurship Winner Check Photo) -->
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-8 order-2 md:order-1 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 order-2 md:order-1 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p>
                             His deep dedication to tech-driven enterprise bore fruit during his National Youth Service Corps year. Competing against thousands of corps members, his digital venture was awarded <strong>1st Place in the NYSC Corpreneurship Challenge</strong> &mdash; earning state recognition, an official grant, and proof that digital leverage beats manual labor every time.
                         </p>
@@ -192,7 +192,7 @@
                         <img src="assets/images/freedom_honoree_award.jpg" alt="Freedom Obanijesu Honoree 100 Under 40 Award" class="w-full h-56 object-cover">
                         <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Honoree &bull; 100 Under 40 Young Builders Award</span>
                     </div>
-                    <div class="md:col-span-8 text-sm sm:text-base text-slate-700 leading-relaxed font-sans">
+                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
                         <p class="font-medium text-slate-900 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
                             Today, Freedom learned practical high-income skills, is doing exceptionally well in the digital economy, was recognized among the Top 100 Under 40 Young Builders by Jamie Pajoel International, and has architected the exact practical blueprints taught inside Newton Academy.
                         </p>
@@ -216,7 +216,7 @@
                 Empowering Women & Girls In Tech To Lead The Global AI Economy
             </h2>
 
-            <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+            <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans">
                 In alignment with UNICEF's global vision for female education, digital inclusion, and economic emancipation, Newton Academy champions the education and elevation of women, ladies, and the girl child. We equip females across Africa and the diaspora with practical commercial skills in digital marketing, enterprise automation, and applied artificial intelligence.
             </p>
 
@@ -246,7 +246,7 @@
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
                         Two Industry-Accredited 3-Month Diploma Programs
                     </h2>
-                    <p class="text-slate-600 text-sm sm:text-base">
+                    <p class="text-slate-600 text-xs sm:text-sm md:text-base">
                         Select the track that matches your professional career goals and earning aspirations:
                     </p>
                 </div>
@@ -488,7 +488,7 @@
                                 <img src="assets/images/alumni_fakorede_pauline.jpg" alt="Fakorede Pauline" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Fakorede Pauline</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Fakorede Pauline</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
                             </div>
                         </div>
@@ -506,7 +506,7 @@
                                 <img src="assets/images/alumni_bryan_bot.jpg" alt="Bryan Bot" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bryan Bot</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Bryan Bot</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
                             </div>
                         </div>
@@ -524,7 +524,7 @@
                                 <img src="assets/images/alumni_bukola_ilori.jpg" alt="Bukola Ilori" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bukola Ilori</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Bukola Ilori</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Executive Professional</p>
                             </div>
                         </div>
@@ -715,7 +715,7 @@
                     </div>
 
                     <div class="min-h-[120px] flex items-center">
-                        <p id="tQuote" class="text-sm sm:text-base text-slate-800 font-sans leading-relaxed italic">
+                        <p id="tQuote" class="text-xs sm:text-sm md:text-base text-slate-800 font-sans leading-relaxed italic">
                             "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
                         </p>
                     </div>
@@ -860,7 +860,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" id="submitAppBtn" class="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-base sm:text-lg shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
+                        <button type="submit" id="submitAppBtn" class="w-full py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm md:text-xs sm:text-sm md:text-base lg:text-xs sm:text-sm md:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
                             <span>Submit Application & Start Live Evaluation</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -882,62 +882,35 @@
     <!-- OFFICIAL BRAND FOOTER (Newton Academy Dark Brand Colour #003835) -->
     
     <!-- Newton Official Dark Brand Footer (Not Black) -->
-    <footer class="bg-[#003835] text-slate-300 py-14 border-t border-emerald-900/50">
+    
+    <!-- Clean Minimal Brand Footer -->
+    <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/40">
-                <div class="md:col-span-2 space-y-4">
-                    <a href="index.html" class="inline-block">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
-                    </a>
-                    <p class="text-sm text-slate-300/90 leading-relaxed max-w-lg">
-                        Newton Academy is Africa's premier institution for executive digital skills, applied artificial intelligence, and wealth-generative careers. Convening the From Skills to Income Virtual Conference.
-                    </p>
-                    <div class="pt-2 text-xs text-slate-300 space-y-2.5">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <span><strong class="text-white">Inquiries:</strong> na@newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                            <span><strong class="text-white">Portal:</strong> academy.newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span><strong class="text-white">Admissions:</strong> +234 - 810 555 8593</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
+                <!-- Logo -->
+                <a href="index.html" class="inline-block">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                </a>
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Official Programs</h4>
-                    <ul class="text-xs space-y-2.5 text-slate-300">
-                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">Digital Marketing + Applied AI</a></li>
-                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">Digital Entrepreneurship + Applied AI</a></li>
-                        <li><a href="scholarship.html" class="hover:text-white transition-colors">70% Scholarship Matriculation</a></li>
-                        <li><a href="index.html" class="hover:text-white transition-colors">Main Conference Registration</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Accreditation &amp; Standards</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        All diploma programs are overseen by Newton Academic Advisory Council with strict practical project defenses, verified mentor access, and lifetime resource updates.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-[11px] text-emerald-300">
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>Accredited 2026 Cohort</span>
-                    </div>
+                <!-- Quick Links & Contact -->
+                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs text-slate-300 font-medium">
+                    <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
+                    <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
+                    <a href="scholarship.html" class="hover:text-amber-400 transition-colors">Scholarship</a>
+                    <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
                 </div>
             </div>
 
-            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center md:text-left">
-                <p>&copy; 2026 Newton Academy. All rights reserved. Convened by Newton Academy. From Skills to Income Virtual Conference.</p>
-                <p class="text-[11px] text-slate-400 max-w-xl">
-                    This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC. Newton Academy provides professional educational training only, and all individual results depend completely on personal dedication, skill mastery, and commercial execution.
+            <!-- Copyright & Minimal Disclaimer -->
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] text-slate-400">
+                <p>&copy; 2026 Newton Academy. All rights reserved.</p>
+                <p class="text-slate-400/80">
+                    Professional education only. Not affiliated with Meta Platforms, Inc. or Google LLC.
                 </p>
             </div>
         </div>
     </footer>
+
 
 
 

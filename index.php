@@ -98,7 +98,7 @@ require_once __DIR__ . '/config.php';
                     From Skills to Income: <span class="bg-gradient-to-r from-[#005f5a] via-teal-700 to-[#004d49] text-transparent bg-clip-text">Building Your Brand,</span> Growing Your Business and <span class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600 text-transparent bg-clip-text">Using AI to Get Ahead</span>
                 </h1>
 
-                <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+                <p class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-600 leading-relaxed font-normal">
                     A premier virtual gathering curated for ambitious women who are done being undervalued in this economy. Join leading female founders, growth architects, and AI practitioners to learn how to turn your expertise into consistent revenue, build an authoritative brand, and execute at 5x speed using modern Artificial Intelligence.
                 </p>
 
@@ -275,7 +275,7 @@ require_once __DIR__ . '/config.php';
                 <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-snug">
                     Conference Features &amp; Exclusive Attendee Bonuses
                 </h2>
-                <p class="text-sm sm:text-base text-slate-600 mt-3 font-sans leading-relaxed">
+                <p class="text-xs sm:text-sm md:text-base text-slate-600 mt-3 font-sans leading-relaxed">
                     Every registered delegate receives full virtual access to our live masterclasses, plus fast-action bonuses valued at over <strong>₦390,000</strong> completely free.
                 </p>
             </div>
@@ -336,7 +336,7 @@ require_once __DIR__ . '/config.php';
                         <span class="text-amber-400 font-black text-lg shrink-0">★</span>
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-1">
-                                <h4 class="font-bold text-white text-sm sm:text-base">100% Full Tuition Scholarship Access</h4>
+                                <h4 class="font-bold text-white text-xs sm:text-sm md:text-base">100% Full Tuition Scholarship Access</h4>
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦200,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
@@ -350,7 +350,7 @@ require_once __DIR__ . '/config.php';
                         <span class="text-amber-400 font-black text-lg shrink-0">★</span>
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-1">
-                                <h4 class="font-bold text-white text-sm sm:text-base">Globally Recognized Certification</h4>
+                                <h4 class="font-bold text-white text-xs sm:text-sm md:text-base">Globally Recognized Certification</h4>
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦50,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
@@ -364,7 +364,7 @@ require_once __DIR__ . '/config.php';
                         <span class="text-amber-400 font-black text-lg shrink-0">★</span>
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-1">
-                                <h4 class="font-bold text-white text-sm sm:text-base">Direct Access to Global Tutors</h4>
+                                <h4 class="font-bold text-white text-xs sm:text-sm md:text-base">Direct Access to Global Tutors</h4>
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦75,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
@@ -378,7 +378,7 @@ require_once __DIR__ . '/config.php';
                         <span class="text-amber-400 font-black text-lg shrink-0">★</span>
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-1">
-                                <h4 class="font-bold text-white text-sm sm:text-base">2026 AI Prompt Vault &amp; Toolkit</h4>
+                                <h4 class="font-bold text-white text-xs sm:text-sm md:text-base">2026 AI Prompt Vault &amp; Toolkit</h4>
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦35,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
@@ -392,7 +392,7 @@ require_once __DIR__ . '/config.php';
                         <span class="text-amber-400 font-black text-lg shrink-0">★</span>
                         <div>
                             <div class="flex items-center justify-between gap-2 mb-1">
-                                <h4 class="font-bold text-white text-sm sm:text-base">Private Delegate WhatsApp Community Room</h4>
+                                <h4 class="font-bold text-white text-xs sm:text-sm md:text-base">Private Delegate WhatsApp Community Room</h4>
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦30,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
@@ -404,7 +404,7 @@ require_once __DIR__ . '/config.php';
                 </div>
 
                 <div class="mt-8 pt-6 border-t border-white/15 text-center">
-                    <a href="#register" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 font-black text-sm sm:text-base px-8 py-4 rounded-xl shadow-xl hover:from-amber-300 hover:to-amber-400 transform active:scale-95 transition-all">
+                    <a href="#register" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 font-black text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl shadow-xl hover:from-amber-300 hover:to-amber-400 transform active:scale-95 transition-all">
                         <span>Reserve Your Free Delegate Pass &amp; Claim All Bonuses</span>
                         <span>→</span>
                     </a>
@@ -433,7 +433,7 @@ require_once __DIR__ . '/config.php';
                 <span class="text-[11px] font-bold text-amber-400 uppercase tracking-widest block text-center mb-3">
                     Teaching Faculty & Tutors with Direct Operational Experience At:
                 </span>
-                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-black text-sm sm:text-base tracking-wide">
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-black text-xs sm:text-sm md:text-base tracking-wide">
                     <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Microsoft</span>
                     <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Meta (Facebook)</span>
                     <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>Accenture</span>
@@ -481,7 +481,7 @@ require_once __DIR__ . '/config.php';
 
                 <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
                 <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
-                    <p id="tQuote" class="text-base sm:text-lg text-slate-800 font-sans leading-[1.65] italic">
+                    <p id="tQuote" class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-800 font-sans leading-[1.65] italic">
                         "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
                     </p>
                 </div>
@@ -585,7 +585,7 @@ require_once __DIR__ . '/config.php';
                                 <img src="assets/images/alumni_fakorede_pauline.jpg" alt="Fakorede Pauline" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Fakorede Pauline</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Fakorede Pauline</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
                             </div>
                         </div>
@@ -603,7 +603,7 @@ require_once __DIR__ . '/config.php';
                                 <img src="assets/images/alumni_bryan_bot.jpg" alt="Bryan Bot" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bryan Bot</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Bryan Bot</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
                             </div>
                         </div>
@@ -621,7 +621,7 @@ require_once __DIR__ . '/config.php';
                                 <img src="assets/images/alumni_bukola_ilori.jpg" alt="Bukola Ilori" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
                             </div>
                             <div>
-                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bukola Ilori</h3>
+                                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-teal-400 font-heading">Bukola Ilori</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">Executive Professional</p>
                             </div>
                         </div>
@@ -649,7 +649,7 @@ require_once __DIR__ . '/config.php';
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight">
                     Student &amp; Faculty Video Interviews
                 </h2>
-                <p class="text-sm sm:text-base text-slate-600 font-sans">
+                <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans">
                     Authentic, unedited feedback from verified fellows and educators. Click play on any video below:
                 </p>
             </div>
@@ -927,7 +927,7 @@ require_once __DIR__ . '/config.php';
                         Championing Women, Girls &amp; Inclusive Digital Leadership
                     </h2>
                     
-                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed font-sans">
+                    <p class="text-slate-200 text-xs sm:text-sm md:text-base leading-relaxed font-sans">
                         In alignment with <strong class="text-amber-300 font-semibold">UNICEF’s global mandate for adolescent girls and young women in technology</strong>, Newton Academy prioritizes intentional pathways for female secondary school graduates, university scholars, and working professionals to achieve high-income digital sovereignty.
                     </p>
                     
@@ -1012,62 +1012,35 @@ require_once __DIR__ . '/config.php';
     <!-- Newton Official Dark Brand Footer (Not Black) -->
     
     <!-- Newton Official Dark Brand Footer (Not Black) -->
-    <footer class="bg-[#003835] text-slate-300 py-14 border-t border-emerald-900/50">
+    
+    <!-- Clean Minimal Brand Footer -->
+    <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/40">
-                <div class="md:col-span-2 space-y-4">
-                    <a href="index.html" class="inline-block">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
-                    </a>
-                    <p class="text-sm text-slate-300/90 leading-relaxed max-w-lg">
-                        Newton Academy is Africa's premier institution for executive digital skills, applied artificial intelligence, and wealth-generative careers. Convening the From Skills to Income Virtual Conference.
-                    </p>
-                    <div class="pt-2 text-xs text-slate-300 space-y-2.5">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <span><strong class="text-white">Inquiries:</strong> na@newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                            <span><strong class="text-white">Portal:</strong> academy.newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span><strong class="text-white">Admissions:</strong> +234 - 810 555 8593</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
+                <!-- Logo -->
+                <a href="index.html" class="inline-block">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                </a>
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Official Programs</h4>
-                    <ul class="text-xs space-y-2.5 text-slate-300">
-                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">Digital Marketing + Applied AI</a></li>
-                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">Digital Entrepreneurship + Applied AI</a></li>
-                        <li><a href="scholarship.html" class="hover:text-white transition-colors">70% Scholarship Matriculation</a></li>
-                        <li><a href="index.html" class="hover:text-white transition-colors">Main Conference Registration</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Accreditation &amp; Standards</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        All diploma programs are overseen by Newton Academic Advisory Council with strict practical project defenses, verified mentor access, and lifetime resource updates.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-[11px] text-emerald-300">
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>Accredited 2026 Cohort</span>
-                    </div>
+                <!-- Quick Links & Contact -->
+                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs text-slate-300 font-medium">
+                    <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
+                    <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
+                    <a href="scholarship.html" class="hover:text-amber-400 transition-colors">Scholarship</a>
+                    <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
                 </div>
             </div>
 
-            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center md:text-left">
-                <p>&copy; 2026 Newton Academy. All rights reserved. Convened by Newton Academy. From Skills to Income Virtual Conference.</p>
-                <p class="text-[11px] text-slate-400 max-w-xl">
-                    This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC. Newton Academy provides professional educational training only, and all individual results depend completely on personal dedication, skill mastery, and commercial execution.
+            <!-- Copyright & Minimal Disclaimer -->
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] text-slate-400">
+                <p>&copy; 2026 Newton Academy. All rights reserved.</p>
+                <p class="text-slate-400/80">
+                    Professional education only. Not affiliated with Meta Platforms, Inc. or Google LLC.
                 </p>
             </div>
         </div>
     </footer>
+
 
 
 
@@ -1079,7 +1052,7 @@ require_once __DIR__ . '/config.php';
         </div>
         <a 
             href="#register" 
-            class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-slate-950 font-black text-xs px-5 py-2.5 rounded-full gold-glow transform active:scale-95 transition-all"
+            class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 text-slate-950 font-bold text-[11px] px-3.5 py-1.5 rounded-full gold-glow transform active:scale-95 transition-all"
         >
             Claim Seat
         </a>

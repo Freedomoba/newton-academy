@@ -121,7 +121,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
             </div>
 
             <!-- Letter Body -->
-            <div class="text-sm sm:text-base text-slate-700 font-sans leading-[1.75] space-y-4 mb-8">
+            <div class="text-xs sm:text-sm md:text-base text-slate-700 font-sans leading-[1.75] space-y-4 mb-8">
                 <p>
                     Dear <strong id="greetingRecipient" class="text-slate-900 font-bold"><?php echo htmlspecialchars($name); ?></strong>,
                 </p>
@@ -138,15 +138,15 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <span class="text-slate-400 block uppercase font-bold text-[10px] tracking-wider mb-0.5">Candidate Full Name</span>
-                        <strong class="text-slate-900 text-sm sm:text-base font-bold" id="awardeeName"><?php echo htmlspecialchars($name); ?></strong>
+                        <strong class="text-slate-900 text-xs sm:text-sm md:text-base font-bold" id="awardeeName"><?php echo htmlspecialchars($name); ?></strong>
                     </div>
                     <div>
                         <span class="text-slate-400 block uppercase font-bold text-[10px] tracking-wider mb-0.5">Registered Contact</span>
-                        <strong class="text-slate-900 text-sm sm:text-base font-bold font-mono" id="awardeeEmail"><?php echo htmlspecialchars($email); ?></strong>
+                        <strong class="text-slate-900 text-xs sm:text-sm md:text-base font-bold font-mono" id="awardeeEmail"><?php echo htmlspecialchars($email); ?></strong>
                     </div>
                     <div class="sm:col-span-2 pt-3 border-t border-slate-200">
                         <span class="text-slate-400 block uppercase font-bold text-[10px] tracking-wider mb-0.5">Admitted Program Track</span>
-                        <strong class="text-[#005f5a] text-sm sm:text-base font-bold" id="awardeeTrack"><?php echo htmlspecialchars($programme); ?></strong>
+                        <strong class="text-[#005f5a] text-xs sm:text-sm md:text-base font-bold" id="awardeeTrack"><?php echo htmlspecialchars($programme); ?></strong>
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
                         <div>
                             <span class="text-xs text-teal-200 uppercase tracking-wider font-mono block mb-1">Standard 3-Month Tuition</span>
-                            <span class="line-through text-slate-300 text-lg sm:text-xl font-mono font-bold">₦200,000</span>
+                            <span class="line-through text-slate-300 text-xs sm:text-base md:text-lg font-mono font-bold">₦200,000</span>
                             <span class="block text-xs text-emerald-300 font-semibold mt-1">Paid in full by Academic Foundation Reserve</span>
                         </div>
                         <div class="sm:text-right bg-white/5 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-white/10 sm:border-0">
@@ -194,7 +194,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
                         <div class="space-y-1.5 max-w-md">
                             <div class="flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-                                <h4 class="text-sm sm:text-base font-bold text-slate-900">
+                                <h4 class="text-xs sm:text-sm md:text-base font-bold text-slate-900">
                                     One-Time Application &amp; Seat Reservation Fee
                                 </h4>
                             </div>
@@ -228,7 +228,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
             <div class="space-y-6">
                 
                 <div class="text-center max-w-md mx-auto mb-2">
-                    <h3 class="text-base sm:text-lg font-bold text-slate-900">
+                    <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900">
                         Finalize Your Enrollment &bull; Select Payment Method
                     </h3>
                     <p class="text-xs text-slate-500 mt-1">
@@ -342,62 +342,35 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
     <!-- Footer -->
     
     <!-- Newton Official Dark Brand Footer (Not Black) -->
-    <footer class="bg-[#003835] text-slate-300 py-14 border-t border-emerald-900/50">
+    
+    <!-- Clean Minimal Brand Footer -->
+    <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/40">
-                <div class="md:col-span-2 space-y-4">
-                    <a href="index.html" class="inline-block">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
-                    </a>
-                    <p class="text-sm text-slate-300/90 leading-relaxed max-w-lg">
-                        Newton Academy is Africa's premier institution for executive digital skills, applied artificial intelligence, and wealth-generative careers. Convening the From Skills to Income Virtual Conference.
-                    </p>
-                    <div class="pt-2 text-xs text-slate-300 space-y-2.5">
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            <span><strong class="text-white">Inquiries:</strong> na@newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                            <span><strong class="text-white">Portal:</strong> academy.newtoncore.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <span><strong class="text-white">Admissions:</strong> +234 - 810 555 8593</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
+                <!-- Logo -->
+                <a href="index.html" class="inline-block">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                </a>
 
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Official Programs</h4>
-                    <ul class="text-xs space-y-2.5 text-slate-300">
-                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">Digital Marketing + Applied AI</a></li>
-                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">Digital Entrepreneurship + Applied AI</a></li>
-                        <li><a href="scholarship.html" class="hover:text-white transition-colors">70% Scholarship Matriculation</a></li>
-                        <li><a href="index.html" class="hover:text-white transition-colors">Main Conference Registration</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Accreditation &amp; Standards</h4>
-                    <p class="text-xs text-slate-300 leading-relaxed">
-                        All diploma programs are overseen by Newton Academic Advisory Council with strict practical project defenses, verified mentor access, and lifetime resource updates.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-[11px] text-emerald-300">
-                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>Accredited 2026 Cohort</span>
-                    </div>
+                <!-- Quick Links & Contact -->
+                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs text-slate-300 font-medium">
+                    <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
+                    <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
+                    <a href="scholarship.html" class="hover:text-amber-400 transition-colors">Scholarship</a>
+                    <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
                 </div>
             </div>
 
-            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center md:text-left">
-                <p>&copy; 2026 Newton Academy. All rights reserved. Convened by Newton Academy. From Skills to Income Virtual Conference.</p>
-                <p class="text-[11px] text-slate-400 max-w-xl">
-                    This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC. Newton Academy provides professional educational training only, and all individual results depend completely on personal dedication, skill mastery, and commercial execution.
+            <!-- Copyright & Minimal Disclaimer -->
+            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] text-slate-400">
+                <p>&copy; 2026 Newton Academy. All rights reserved.</p>
+                <p class="text-slate-400/80">
+                    Professional education only. Not affiliated with Meta Platforms, Inc. or Google LLC.
                 </p>
             </div>
         </div>
     </footer>
+
 
 
     <!-- Paystack Integration & Dynamic Funnel Connector -->

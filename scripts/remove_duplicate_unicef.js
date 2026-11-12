@@ -18,3 +18,4 @@ if (matches.length > 1) {
     fs.writeFileSync('index.html', cleaned, 'utf8');
     console.log('Removed duplicate UNICEF section from index.html!');
 }
+
