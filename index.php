@@ -550,7 +550,100 @@ require_once __DIR__ . '/config.php';
     <!-- Student & Faculty Video Testimonials Section (Clean Responsive Grid: 1 col on mobile, 2 cols on tablet, 4 cols on desktop) -->
     
     <!-- Student & Faculty Video Testimonials Section (Clean Responsive Grid: 1 col on mobile, 2 cols on tablet, 4 cols on desktop) -->
-    <section id="video-interviews" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
+    
+    <!-- Curvy Organic Background Wave Transition (Matches User Sample) -->
+    <div class="w-full overflow-hidden leading-none -mb-px block pointer-events-none select-none">
+        <svg class="w-full h-8 sm:h-14 lg:h-20 block" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,50 C320,38 780,15 1200,8 L1200,120 L0,120 Z" fill="#4d9b96" opacity="0.65"></path>
+            <path d="M0,78 C380,72 820,82 1200,76 L1200,120 L0,120 Z" fill="#0b1320"></path>
+        </svg>
+    </div>
+
+    <!-- AMAZING ALUMNI TESTIMONIALS (Exact Visual Recreation from User Asset) -->
+    <!-- STRICTLY NO PREHEADINGS ABOVE HEADING -->
+    <section id="alumni-showcase" class="py-16 sm:py-20 relative overflow-hidden bg-[#0b1320] text-white">
+        <!-- Subtle dark curved watermark background -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity pointer-events-none" style="background-image: url('assets/images/dark_curved_bg.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#0b1320]/90 via-[#0b1320]/95 to-[#0b1320] pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <!-- Section Header (NO PREHEADING) -->
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
+                    Here's what people are saying about the program
+                </h2>
+            </div>
+
+            <!-- 3 Alumni Cards Grid (1 col on mobile, 3 cols on desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Card 1: Fakorede Pauline -->
+                <div class="relative bg-slate-900/80 backdrop-blur-md border border-white/10 hover:border-teal-400/40 rounded-3xl p-6 sm:p-7 shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-teal-400/60 shadow-lg shrink-0">
+                                <img src="assets/images/alumni_fakorede_pauline.jpg" alt="Fakorede Pauline" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Fakorede Pauline</h3>
+                                <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
+                            </div>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                            &ldquo;The foundation I gained from Newton Academy helped me get selected to work on a gig with Data Science Nigeria. I have also tutored undergraduates in machine learning, Python programming, and more.&rdquo;
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bryan Bot -->
+                <div class="relative bg-slate-900/80 backdrop-blur-md border border-white/10 hover:border-teal-400/40 rounded-3xl p-6 sm:p-7 shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-teal-400/60 shadow-lg shrink-0">
+                                <img src="assets/images/alumni_bryan_bot.jpg" alt="Bryan Bot" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bryan Bot</h3>
+                                <p class="text-[11px] text-slate-400 font-medium">Newton Academy Fellow</p>
+                            </div>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                            &ldquo;After joining Newton Academy program as a newbie, I got my first internship and applied all I learnt.&rdquo;
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bukola Ilori -->
+                <div class="relative bg-slate-900/80 backdrop-blur-md border border-white/10 hover:border-teal-400/40 rounded-3xl p-6 sm:p-7 shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-teal-400/60 shadow-lg shrink-0">
+                                <img src="assets/images/alumni_bukola_ilori.jpg" alt="Bukola Ilori" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                            </div>
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-teal-400 font-heading">Bukola Ilori</h3>
+                                <p class="text-[11px] text-slate-400 font-medium">Executive Professional</p>
+                            </div>
+                        </div>
+                        <div class="bg-black/40 border border-white/5 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                            &ldquo;As an experienced executive professional, I chose Newton Academy to break into tech and become a global professional. Learning from one of their tutors has inspired me to pursue my career in tech further.&rdquo;
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Curvy Bottom Wave Transition back to content -->
+    <div class="w-full overflow-hidden leading-none -mt-px block pointer-events-none select-none">
+        <svg class="w-full h-8 sm:h-14 lg:h-20 block rotate-180" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,50 C320,38 780,15 1200,8 L1200,120 L0,120 Z" fill="#4d9b96" opacity="0.65"></path>
+            <path d="M0,78 C380,72 820,82 1200,76 L1200,120 L0,120 Z" fill="#0b1320"></path>
+        </svg>
+    </div>
+
+<section id="video-interviews" class="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div class="text-center max-w-3xl mx-auto space-y-2">
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight">
@@ -882,66 +975,7 @@ require_once __DIR__ . '/config.php';
 
 
     <!-- UNICEF Female Tech Empowerment & Inclusive Future Section -->
-    <section class="py-16 relative overflow-hidden bg-[#002624] text-white border-y border-emerald-900/60">
-        <div class="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-luminosity" style="background-image: url('assets/images/unicef_girls_coding_classroom.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#001e1c] via-[#002e2b]/95 to-[#001e1c]/90"></div>
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div class="lg:col-span-7 space-y-5">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-semibold uppercase tracking-wider">
-                        <span>Global Impact Initiative</span>
-                        <span class="text-slate-400">&bull;</span>
-                        <span>UNICEF 2026 Aligned</span>
-                    </div>
-                    
-                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white font-heading leading-tight">
-                        Championing Women, Girls &amp; Inclusive Digital Leadership
-                    </h2>
-                    
-                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed font-sans">
-                        In alignment with <strong class="text-amber-300 font-semibold">UNICEF’s global mandate for adolescent girls and young women in technology</strong>, Newton Academy prioritizes intentional pathways for female secondary school graduates, university scholars, and working professionals to achieve high-income digital sovereignty.
-                    </p>
-                    
-                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2">
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            <strong class="text-white font-semibold">Inclusive Excellence:</strong> While we deliberately create scholarships, dedicated mentorship pods, and safe learning circles for women and the girl child, <strong class="text-amber-300 font-semibold">forward-thinking male students and professionals are fully embraced and warmly welcomed</strong> across all tracks. We build a collaborative future together.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 text-center">
-                            <div class="text-xl font-black text-amber-400 font-mono">60%+</div>
-                            <div class="text-[11px] text-slate-300 mt-0.5">Female Fellowship Target</div>
-                        </div>
-                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 text-center">
-                            <div class="text-xl font-black text-emerald-400 font-mono">1-on-1</div>
-                            <div class="text-[11px] text-slate-300 mt-0.5">Executive Mentorship</div>
-                        </div>
-                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 text-center col-span-2 sm:col-span-1">
-                            <div class="text-xl font-black text-white font-mono">100%</div>
-                            <div class="text-[11px] text-slate-300 mt-0.5">Gender-Inclusive Faculty</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-5 grid grid-cols-2 gap-3.5">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15 aspect-[4/5] group">
-                        <img src="assets/images/unicef_women_laptops_joy.jpg" alt="African Women in Tech" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3.5">
-                            <p class="text-[11px] font-medium text-white leading-tight">Joyful Tech Mastery &amp; Applied Innovation</p>
-                        </div>
-                    </div>
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15 aspect-[4/5] group mt-6">
-                        <img src="assets/images/unicef_girl_child_laptop.jpg" alt="Girl Child Digital Education" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-3.5">
-                            <p class="text-[11px] font-medium text-white leading-tight">From Grassroots Potential to Global Skill</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
 
 

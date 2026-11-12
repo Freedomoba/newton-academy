@@ -2,32 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Admissions & Leads Portal | Newton Academy</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cabinet+Grotesk:wght@800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         .font-heading { font-family: 'Cabinet Grotesk', sans-serif; }
     </style>
 </head>
-<body class="bg-[#f1f5f9] text-[#1e293b] min-h-screen flex flex-col">
+<body class="bg-[#f1f5f9] text-[#1e293b] min-h-screen flex flex-col antialiased">
 
     <!-- LOGIN SCREEN -->
     <div id="loginSection" class="flex-1 flex items-center justify-center p-4">
-        <div class="w-full max-w-md bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+        <div class="w-full max-w-sm sm:max-w-md bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
             <div class="bg-[#003835] p-6 text-center text-white">
                 <a href="index.html" class="inline-block mb-3">
-                    <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto mx-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                    <img src="assets/logo.png" alt="Newton Academy" class="h-9 w-auto mx-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
                 </a>
-                <h1 class="text-xl font-bold font-heading">Admissions &amp; Leads Portal</h1>
+                <h1 class="text-lg sm:text-xl font-bold font-heading">Admissions &amp; Leads Portal</h1>
                 <p class="text-xs text-emerald-200/90 mt-1">Authorized Executive Access &bull; GitHub Pages Mirror</p>
             </div>
             
-            <form id="loginForm" onsubmit="handleLogin(event)" class="p-6 sm:p-8 space-y-4">
+            <form id="loginForm" onsubmit="handleLogin(event)" class="p-5 sm:p-8 space-y-4">
                 <div id="loginError" class="hidden bg-rose-50 border border-rose-200 text-rose-700 text-xs p-3.5 rounded-xl font-medium">
                     Invalid administrator password. Please try again.
                 </div>
@@ -37,7 +35,7 @@
                     <input type="password" id="adminPassword" required autofocus placeholder="Enter password" class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-[#005f5a] focus:border-[#005f5a] outline-none text-sm transition-all">
                 </div>
 
-                <button type="submit" class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition-all text-sm tracking-wide">
+                <button type="submit" class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition-all text-sm tracking-wide active:scale-95">
                     Authenticate &amp; Access Portal
                 </button>
             </form>
@@ -47,175 +45,176 @@
         </div>
     </div>
 
-    <!-- AUTHENTICATED DASHBOARD -->
+    <!-- AUTHENTICATED DASHBOARD (Mobile App-First UI/UX) -->
     <div id="dashboardSection" class="hidden min-h-screen flex flex-col">
         <header class="bg-[#003835] text-white border-b border-emerald-900/50 sticky top-0 z-40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
-                <div class="flex items-center gap-3">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-2">
                     <a href="index.html" class="flex items-center">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
+                        <img src="assets/logo.png" alt="Newton Academy" class="h-7 sm:h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
                     </a>
-                    <span class="text-xs uppercase tracking-widest text-emerald-300 font-bold bg-white/10 px-2.5 py-1 rounded-full">
-                        Executive Portal
+                    <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-300 font-bold bg-white/10 px-2 py-0.5 rounded-full">
+                        Admin
                     </span>
                 </div>
-                <div class="flex items-center gap-3">
-                    <a href="index.html" target="_blank" class="text-xs text-slate-300 hover:text-white px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors">
-                        View Live Site &rarr;
+                <div class="flex items-center gap-2">
+                    <a href="index.html" target="_blank" class="text-[11px] sm:text-xs text-slate-300 hover:text-white px-2 py-1 rounded hover:bg-white/10">
+                        Live Site
                     </a>
-                    <button onclick="handleLogout()" class="text-xs text-rose-300 hover:text-rose-100 bg-rose-500/20 hover:bg-rose-500/30 px-3.5 py-1.5 rounded-lg font-bold border border-rose-500/30 transition-colors">
+                    <button onclick="handleLogout()" class="text-[11px] sm:text-xs text-rose-300 hover:text-rose-100 bg-rose-500/20 px-2.5 py-1 rounded font-bold border border-rose-500/30">
                         Logout
                     </button>
                 </div>
             </div>
         </header>
 
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 space-y-6">
+        <main class="max-w-7xl mx-auto px-3 sm:px-6 py-4 sm:py-8 flex-1 space-y-4 sm:space-y-6">
 
             <!-- HOSTING NOTICE BANNER -->
-            <div class="bg-amber-50 border border-amber-200/80 rounded-2xl p-4 text-xs text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
-                <div class="flex items-center gap-2.5">
+            <div class="bg-amber-50 border border-amber-200/80 rounded-2xl p-3.5 sm:p-4 text-xs text-amber-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-sm">
+                <div class="flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0"></span>
-                    <span><strong>GitHub Pages Online Mirror:</strong> Real-time viewer &amp; client-side email deduplication engine. For server-side CSV disk operations, run via PHP on your local server (<code class="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-amber-950 font-bold">http://localhost:3000/admin.php</code>).</span>
+                    <span><strong>GitHub Mirror:</strong> Real-time viewer &amp; client-side clean deduplication engine. For server-side disk writes, run <code class="bg-amber-100 px-1 py-0.5 rounded font-mono font-bold">http://localhost:3000/admin.php</code>.</span>
                 </div>
-                <button onclick="refreshData()" class="shrink-0 bg-amber-200/70 hover:bg-amber-200 px-3 py-1.5 rounded-lg font-bold text-amber-950 transition-colors">
+                <button onclick="refreshData()" class="shrink-0 bg-amber-200/70 hover:bg-amber-200 px-3 py-1.5 rounded-lg font-bold text-amber-950 transition-colors self-end sm:self-auto">
                     ↻ Refresh Data
                 </button>
             </div>
 
-            <!-- METRICS ROW -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-xl">👥</div>
-                    <div>
-                        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Conference Delegates</div>
-                        <div id="statDelegates" class="text-2xl font-black text-slate-900 font-heading">0</div>
-                        <div id="statDelegatesDupes" class="text-[10px] text-slate-500">0 duplicate(s)</div>
-                    </div>
+            <!-- STATS CARDS (2 cols on mobile, 4 on desktop) -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm">
+                    <div class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">Delegates</div>
+                    <div id="statDelegates" class="text-xl sm:text-2xl font-black text-slate-900 font-heading mt-0.5">0</div>
+                    <div id="statDelegatesDupes" class="text-[10px] text-slate-500">0 dupes</div>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xl">🎓</div>
-                    <div>
-                        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Scholarship Applicants</div>
-                        <div id="statScholarships" class="text-2xl font-black text-slate-900 font-heading">0</div>
-                        <div id="statScholarshipsDupes" class="text-[10px] text-slate-500">0 duplicate(s)</div>
-                    </div>
+                <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm">
+                    <div class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">Scholarships</div>
+                    <div id="statScholarships" class="text-xl sm:text-2xl font-black text-slate-900 font-heading mt-0.5">0</div>
+                    <div id="statScholarshipsDupes" class="text-[10px] text-slate-500">0 dupes</div>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl">💳</div>
-                    <div>
-                        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Unique Delegate Emails</div>
-                        <div id="statUniqueEmails" class="text-2xl font-black text-slate-900 font-heading">0</div>
-                        <div class="text-[10px] text-emerald-600 font-bold">100% Unique Reach</div>
-                    </div>
+                <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm">
+                    <div class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">Unique Emails</div>
+                    <div id="statUniqueEmails" class="text-xl sm:text-2xl font-black text-slate-900 font-heading mt-0.5">0</div>
+                    <div class="text-[10px] text-emerald-600 font-bold">100% Unique Reach</div>
                 </div>
 
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xl">₦</div>
-                    <div>
-                        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Scholarship Track Fee</div>
-                        <div class="text-2xl font-black text-slate-900 font-heading">₦15,000</div>
-                        <div class="text-[10px] text-slate-500">Per candidate portal matriculation</div>
-                    </div>
+                <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm">
+                    <div class="text-[10px] sm:text-[11px] font-bold text-slate-400 uppercase tracking-wider">Scholarship Fee</div>
+                    <div class="text-xl sm:text-2xl font-black text-slate-900 font-heading mt-0.5">₦15,000</div>
+                    <div class="text-[10px] text-slate-500">Per candidate portal seat</div>
                 </div>
             </div>
 
-            <!-- DEDUPLICATION MANAGEMENT BAR -->
-            <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="space-y-1 text-center sm:text-left">
-                    <div class="flex items-center gap-2 justify-center sm:justify-start">
+            <!-- DEDUPLICATION CLEAN ACTION BAR -->
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-2">
                         <span id="dedupeStatusDot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                        <h3 class="text-sm font-bold text-slate-900 font-heading">Email Deduplication Engine</h3>
+                        <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading">Clean Duplicates by Email</h3>
                     </div>
-                    <p id="dedupeStatusText" class="text-xs text-slate-500">
+                    <p id="dedupeStatusText" class="text-[11px] sm:text-xs text-slate-500">
                         Analyzing database for duplicate email addresses...
                     </p>
                 </div>
 
-                <div class="flex items-center gap-2 shrink-0">
-                    <button onclick="toggleDuplicateFilter()" id="btnFilterDupes" class="inline-flex items-center gap-2 text-xs font-bold px-3.5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 transition-all shadow-sm">
-                        <span>Show Duplicates Only</span>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleDuplicateFilter()" id="btnFilterDupes" class="flex-1 sm:flex-none text-center text-xs font-bold px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 transition-all shadow-sm">
+                        <span>Show Dupes</span>
                     </button>
-                    <button onclick="exportCleanDeduplicatedCsv()" class="inline-flex items-center gap-2 text-xs font-bold px-4 py-2.5 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white transition-all shadow-sm">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        <span>Download Clean (Deduplicated) CSV</span>
+                    <button onclick="cleanDuplicatesInMemory()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 text-xs font-bold px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white transition-all shadow-sm active:scale-95">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                        <span>Clean Duplicates</span>
+                    </button>
+                    <button onclick="exportCleanDeduplicatedCsv()" class="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 text-xs font-bold px-4 py-2.5 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white transition-all shadow-sm active:scale-95">
+                        <span>Export Clean CSV</span>
                     </button>
                 </div>
             </div>
 
-            <!-- MAIN DATA TABLE CONTAINER -->
-            <div class="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
+            <!-- MAIN DATA CONTAINER -->
+            <div class="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
                 
-                <!-- Controls & Tab Nav -->
-                <div class="p-4 sm:p-6 border-b border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    
-                    <!-- Tab Buttons -->
-                    <div class="flex items-center gap-1.5 p-1 bg-slate-100 rounded-xl w-full sm:w-auto">
-                        <button onclick="switchTab('delegates')" id="tabBtn-delegates" class="flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg bg-white text-[#005f5a] shadow-sm transition-all">
-                            Conference Delegates
+                <!-- Controls Bar -->
+                <div class="p-3 sm:p-5 border-b border-slate-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-1 p-1 bg-slate-100 rounded-xl text-[11px] sm:text-xs">
+                        <button onclick="switchTab('delegates')" id="tabBtn-delegates" class="flex-1 py-1.5 px-3 rounded-lg font-bold bg-white text-[#005f5a] shadow-sm transition-all whitespace-nowrap">
+                            Delegates
                         </button>
-                        <button onclick="switchTab('scholarships')" id="tabBtn-scholarships" class="flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg text-slate-500 hover:text-slate-800 transition-all">
-                            Scholarship Applicants
+                        <button onclick="switchTab('scholarships')" id="tabBtn-scholarships" class="flex-1 py-1.5 px-3 rounded-lg font-bold text-slate-500 hover:text-slate-800 transition-all whitespace-nowrap">
+                            Scholarships
                         </button>
                     </div>
 
-                    <!-- Search Input -->
                     <div class="w-full sm:w-72">
                         <input type="text" id="tableSearch" oninput="filterTable()" placeholder="Search by name, email, or phone..." class="w-full px-3.5 py-2 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-[#005f5a] focus:border-[#005f5a] outline-none">
                     </div>
                 </div>
 
-                <!-- Content Panel 1: Conference Delegates -->
-                <div id="tab-delegates" class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse text-xs">
-                        <thead>
-                            <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
-                                <th class="p-4">Timestamp</th>
-                                <th class="p-4">Full Name</th>
-                                <th class="p-4">Email</th>
-                                <th class="p-4">WhatsApp Phone</th>
-                                <th class="p-4 text-center">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="delegatesTbody" class="divide-y divide-slate-100">
-                            <tr><td colspan="5" class="p-8 text-center text-slate-400">Loading conference delegate records...</td></tr>
-                        </tbody>
-                    </table>
+                <!-- TAB 1: DELEGATES -->
+                <div id="tab-delegates">
+                    <!-- Phone App Cards (Mobile) -->
+                    <div id="delegatesCards" class="block sm:hidden divide-y divide-slate-100">
+                        <div class="p-6 text-center text-xs text-slate-400">Loading delegate records...</div>
+                    </div>
+                    <!-- Desktop Table (Tablet/Desktop) -->
+                    <div class="hidden sm:block overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
+                                    <th class="p-4">Timestamp</th>
+                                    <th class="p-4">Full Name</th>
+                                    <th class="p-4">Email</th>
+                                    <th class="p-4">WhatsApp Phone</th>
+                                    <th class="p-4 text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="delegatesTbody" class="divide-y divide-slate-100">
+                                <tr><td colspan="5" class="p-8 text-center text-slate-400">Loading delegate records...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
-                <!-- Content Panel 2: Scholarship Applicants -->
-                <div id="tab-scholarships" class="overflow-x-auto hidden">
-                    <table class="w-full text-left border-collapse text-xs">
-                        <thead>
-                            <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
-                                <th class="p-4">Timestamp</th>
-                                <th class="p-4">App ID</th>
-                                <th class="p-4">Candidate</th>
-                                <th class="p-4">Email</th>
-                                <th class="p-4">Phone</th>
-                                <th class="p-4">Track</th>
-                                <th class="p-4">Status</th>
-                                <th class="p-4 text-center">Duplicate</th>
-                            </tr>
-                        </thead>
-                        <tbody id="scholarshipsTbody" class="divide-y divide-slate-100">
-                            <tr><td colspan="8" class="p-8 text-center text-slate-400">Loading scholarship application records...</td></tr>
-                        </tbody>
-                    </table>
+                <!-- TAB 2: SCHOLARSHIPS -->
+                <div id="tab-scholarships" class="hidden">
+                    <!-- Phone App Cards (Mobile) -->
+                    <div id="scholarshipsCards" class="block sm:hidden divide-y divide-slate-100">
+                        <div class="p-6 text-center text-xs text-slate-400">Loading scholarship records...</div>
+                    </div>
+                    <!-- Desktop Table (Tablet/Desktop) -->
+                    <div class="hidden sm:block overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
+                                    <th class="p-4">Timestamp</th>
+                                    <th class="p-4">App ID</th>
+                                    <th class="p-4">Candidate</th>
+                                    <th class="p-4">Email</th>
+                                    <th class="p-4">Phone</th>
+                                    <th class="p-4">Track</th>
+                                    <th class="p-4">Status</th>
+                                    <th class="p-4 text-center">Duplicate</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scholarshipsTbody" class="divide-y divide-slate-100">
+                                <tr><td colspan="8" class="p-8 text-center text-slate-400">Loading scholarship records...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
             </div>
 
         </main>
 
-        <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-            <p>&copy; 2026 Newton Academy &bull; Admissions &amp; Enterprise Operations</p>
+        <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+            <p>&copy; 2026 Newton Academy &bull; Admissions Operations</p>
         </footer>
     </div>
 
-    <!-- Client-Side Admin Application Logic -->
     <script>
         const AUTH_KEY = 'newton_admin_authed';
         let delegatesData = [];
@@ -245,7 +244,6 @@
             loadAllData();
         }
 
-        // CSV parsing helper
         function parseCSV(text) {
             const lines = text.trim().split(/\r?\n/);
             if (lines.length < 2) return [];
@@ -253,7 +251,6 @@
             for (let i = 1; i < lines.length; i++) {
                 const line = lines[i];
                 if (!line.trim()) continue;
-                // Handle comma separated with quotes
                 const regex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g;
                 const matches = [];
                 let match;
@@ -272,20 +269,16 @@
 
         async function loadAllData() {
             try {
-                // Fetch Delegates
                 const delRes = await fetch('data/optin_leads.csv?' + Date.now());
                 if (delRes.ok) {
                     const text = await delRes.text();
                     delegatesData = parseCSV(text).reverse();
                 }
-
-                // Fetch Scholarships
                 const schRes = await fetch('data/scholarship_applications.csv?' + Date.now());
                 if (schRes.ok) {
                     const text = await schRes.text();
                     scholarshipsData = parseCSV(text).reverse();
                 }
-
                 renderStatsAndTables();
             } catch (err) {
                 console.error('Error fetching CSVs:', err);
@@ -314,9 +307,9 @@
             const schDupes = getDuplicateInfo(scholarshipsData, 3);
 
             document.getElementById('statDelegates').textContent = delegatesData.length;
-            document.getElementById('statDelegatesDupes').textContent = `${delDupes.dupesCount} duplicate(s) detected`;
+            document.getElementById('statDelegatesDupes').textContent = `${delDupes.dupesCount} duplicate(s)`;
             document.getElementById('statScholarships').textContent = scholarshipsData.length;
-            document.getElementById('statScholarshipsDupes').textContent = `${schDupes.dupesCount} duplicate(s) detected`;
+            document.getElementById('statScholarshipsDupes').textContent = `${schDupes.dupesCount} duplicate(s)`;
 
             const uniqueEmails = new Set();
             delegatesData.forEach(r => { if (r[2]) uniqueEmails.add(r[2].toLowerCase().trim()); });
@@ -328,57 +321,95 @@
             const statusText = document.getElementById('dedupeStatusText');
             if (totalDupes > 0) {
                 statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse';
-                statusText.innerHTML = `<strong class="text-amber-600">${totalDupes} duplicate email record(s)</strong> detected across databases. Click "Download Clean (Deduplicated) CSV" to get unique records.`;
+                statusText.innerHTML = `<strong class="text-amber-600">${totalDupes} duplicate email(s) found.</strong> Click "Clean Duplicates" to keep the newest and delete all duplicate entries.`;
             } else {
                 statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-500';
-                statusText.innerHTML = `<span class="text-emerald-700 font-semibold">Zero duplicate emails found.</span> All records are unique.`;
+                statusText.innerHTML = `<span class="text-emerald-700 font-semibold">Zero duplicate emails.</span> All records unique.`;
             }
 
-            renderDelegatesTable(delDupes.counts);
-            renderScholarshipsTable(schDupes.counts);
+            renderDelegatesUI(delDupes.counts);
+            renderScholarshipsUI(schDupes.counts);
         }
 
-        function renderDelegatesTable(emailCounts) {
+        function renderDelegatesUI(emailCounts) {
+            const cards = document.getElementById('delegatesCards');
             const tbody = document.getElementById('delegatesTbody');
             if (delegatesData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-slate-400">No conference delegates found.</td></tr>';
+                cards.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">No delegates found.</div>';
+                tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-slate-400">No delegates found.</td></tr>';
                 return;
             }
 
-            let html = '';
+            let cardsHtml = '';
+            let tableHtml = '';
             delegatesData.forEach(row => {
                 const email = (row[2] || '').toLowerCase().trim();
                 const isDupe = emailCounts[email] > 1;
                 if (filterDuplicatesOnly && !isDupe) return;
 
-                html += `<tr class="hover:bg-slate-50/70 transition-colors ${isDupe ? 'bg-amber-50/40' : ''}">
+                // Mobile Card
+                cardsHtml += `<div class="p-3.5 space-y-1.5 ${isDupe ? 'bg-amber-50/50' : ''}">
+                    <div class="flex items-start justify-between gap-2">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(row[1] || '-')}</h4>
+                            <div class="text-xs text-slate-600 font-mono break-all">${escapeHtml(row[2] || '-')}</div>
+                        </div>
+                        ${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 shrink-0">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 shrink-0">Unique</span>'}
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono pt-1 border-t border-slate-100">
+                        <span>${escapeHtml(row[3] || '-')}</span>
+                        <span>${escapeHtml(row[0] || '-')}</span>
+                    </div>
+                </div>`;
+
+                // Desktop Row
+                tableHtml += `<tr class="hover:bg-slate-50/70 ${isDupe ? 'bg-amber-50/40' : ''}">
                     <td class="p-4 font-mono text-slate-500">${escapeHtml(row[0] || '-')}</td>
                     <td class="p-4 font-bold text-slate-900">${escapeHtml(row[1] || '-')}</td>
                     <td class="p-4 font-mono text-slate-700">${escapeHtml(row[2] || '-')}</td>
                     <td class="p-4 font-mono text-slate-600">${escapeHtml(row[3] || '-')}</td>
-                    <td class="p-4 text-center">
-                        ${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Unique</span>'}
-                    </td>
+                    <td class="p-4 text-center">${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Unique</span>'}</td>
                 </tr>`;
             });
 
-            tbody.innerHTML = html || '<tr><td colspan="5" class="p-8 text-center text-slate-400">No records match the current filter.</td></tr>';
+            cards.innerHTML = cardsHtml || '<div class="p-6 text-center text-xs text-slate-400">No records match filter.</div>';
+            tbody.innerHTML = tableHtml || '<tr><td colspan="5" class="p-8 text-center text-slate-400">No records match filter.</td></tr>';
         }
 
-        function renderScholarshipsTable(emailCounts) {
+        function renderScholarshipsUI(emailCounts) {
+            const cards = document.getElementById('scholarshipsCards');
             const tbody = document.getElementById('scholarshipsTbody');
             if (scholarshipsData.length === 0) {
+                cards.innerHTML = '<div class="p-6 text-center text-xs text-slate-400">No scholarship applicants found.</div>';
                 tbody.innerHTML = '<tr><td colspan="8" class="p-8 text-center text-slate-400">No scholarship applicants found.</td></tr>';
                 return;
             }
 
-            let html = '';
+            let cardsHtml = '';
+            let tableHtml = '';
             scholarshipsData.forEach(row => {
                 const email = (row[3] || '').toLowerCase().trim();
                 const isDupe = emailCounts[email] > 1;
                 if (filterDuplicatesOnly && !isDupe) return;
 
-                html += `<tr class="hover:bg-slate-50/70 transition-colors ${isDupe ? 'bg-amber-50/40' : ''}">
+                // Mobile Card
+                cardsHtml += `<div class="p-3.5 space-y-1.5 ${isDupe ? 'bg-amber-50/50' : ''}">
+                    <div class="flex items-start justify-between gap-2">
+                        <div>
+                            <div class="text-[10px] font-mono font-bold text-[#005f5a]">${escapeHtml(row[1] || '-')}</div>
+                            <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(row[2] || '-')}</h4>
+                            <div class="text-xs text-slate-600 font-mono break-all">${escapeHtml(row[3] || '-')}</div>
+                        </div>
+                        ${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 shrink-0">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 shrink-0">Unique</span>'}
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] pt-1 border-t border-slate-100">
+                        <span class="px-2 py-0.5 rounded font-bold bg-teal-100 text-teal-800">${escapeHtml(row[5] || '-')}</span>
+                        <span class="font-mono text-slate-500">${escapeHtml(row[4] || '-')}</span>
+                    </div>
+                </div>`;
+
+                // Desktop Row
+                tableHtml += `<tr class="hover:bg-slate-50/70 ${isDupe ? 'bg-amber-50/40' : ''}">
                     <td class="p-4 font-mono text-slate-500">${escapeHtml(row[0] || '-')}</td>
                     <td class="p-4 font-mono font-bold text-[#005f5a]">${escapeHtml(row[1] || '-')}</td>
                     <td class="p-4 font-bold text-slate-900">${escapeHtml(row[2] || '-')}</td>
@@ -386,24 +417,55 @@
                     <td class="p-4 font-mono text-slate-600">${escapeHtml(row[4] || '-')}</td>
                     <td class="p-4"><span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-teal-100 text-teal-800">${escapeHtml(row[5] || '-')}</span></td>
                     <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">${escapeHtml(row[7] || 'Pending')}</span></td>
-                    <td class="p-4 text-center">
-                        ${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Unique</span>'}
-                    </td>
+                    <td class="p-4 text-center">${isDupe ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Duplicate</span>' : '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800">Unique</span>'}</td>
                 </tr>`;
             });
 
-            tbody.innerHTML = html || '<tr><td colspan="8" class="p-8 text-center text-slate-400">No records match the current filter.</td></tr>';
+            cards.innerHTML = cardsHtml || '<div class="p-6 text-center text-xs text-slate-400">No records match filter.</div>';
+            tbody.innerHTML = tableHtml || '<tr><td colspan="8" class="p-8 text-center text-slate-400">No records match filter.</td></tr>';
+        }
+
+        // Automatic "Clean Duplicates" function: retains exactly ONE newest record per email
+        function cleanDuplicatesInMemory() {
+            if (!confirm('Clean all duplicates by email? Exactly ONE unique record (the latest) will be retained.')) return;
+
+            const dedupeList = (data, emailIdx) => {
+                const seen = new Set();
+                const unique = [];
+                // data is newest-first
+                data.forEach(r => {
+                    const email = (r[emailIdx] || '').toLowerCase().trim();
+                    if (email) {
+                        if (!seen.has(email)) {
+                            seen.add(email);
+                            unique.push(r);
+                        }
+                    } else {
+                        unique.push(r);
+                    }
+                });
+                return unique;
+            };
+
+            const origDel = delegatesData.length;
+            const origSch = scholarshipsData.length;
+            delegatesData = dedupeList(delegatesData, 2);
+            scholarshipsData = dedupeList(scholarshipsData, 3);
+            const totalRemoved = (origDel - delegatesData.length) + (origSch - scholarshipsData.length);
+
+            renderStatsAndTables();
+            alert(`Cleaned ${totalRemoved} duplicate email(s)! Exactly 1 record per email remains on screen. You can now click "Export Clean CSV" to download the cleaned database.`);
         }
 
         function toggleDuplicateFilter() {
             filterDuplicatesOnly = !filterDuplicatesOnly;
             const btn = document.getElementById('btnFilterDupes');
             if (filterDuplicatesOnly) {
-                btn.className = 'inline-flex items-center gap-2 text-xs font-bold px-3.5 py-2.5 rounded-xl bg-amber-100 text-amber-900 border border-amber-300 shadow-sm transition-all';
-                btn.textContent = 'Showing Duplicates (Reset)';
+                btn.className = 'flex-1 sm:flex-none text-xs font-bold px-3 py-2 rounded-xl bg-amber-100 text-amber-900 border border-amber-300 shadow-sm';
+                btn.textContent = 'Showing Dupes (Reset)';
             } else {
-                btn.className = 'inline-flex items-center gap-2 text-xs font-bold px-3.5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 transition-all shadow-sm';
-                btn.textContent = 'Show Duplicates Only';
+                btn.className = 'flex-1 sm:flex-none text-xs font-bold px-3 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 shadow-sm';
+                btn.textContent = 'Show Dupes';
             }
             renderStatsAndTables();
         }
@@ -438,7 +500,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `clean_deduplicated_${currentTab}_${new Date().toISOString().slice(0,10)}.csv`;
+            a.download = `clean_unique_${currentTab}_${new Date().toISOString().slice(0,10)}.csv`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -458,35 +520,34 @@
             if (tabName === 'delegates') {
                 tabDel.classList.remove('hidden');
                 tabSch.classList.add('hidden');
-                btnDel.className = 'flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg transition-all ' + activeClass;
-                btnSch.className = 'flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg transition-all ' + inactiveClass;
+                btnDel.className = 'flex-1 py-1.5 px-3 rounded-lg font-bold transition-all whitespace-nowrap ' + activeClass;
+                btnSch.className = 'flex-1 py-1.5 px-3 rounded-lg font-bold transition-all whitespace-nowrap ' + inactiveClass;
             } else {
                 tabDel.classList.add('hidden');
                 tabSch.classList.remove('hidden');
-                btnDel.className = 'flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg transition-all ' + inactiveClass;
-                btnSch.className = 'flex-1 sm:flex-none text-xs font-bold px-4 py-2 rounded-lg transition-all ' + activeClass;
+                btnDel.className = 'flex-1 py-1.5 px-3 rounded-lg font-bold transition-all whitespace-nowrap ' + inactiveClass;
+                btnSch.className = 'flex-1 py-1.5 px-3 rounded-lg font-bold transition-all whitespace-nowrap ' + activeClass;
             }
         }
 
         function filterTable() {
             const query = (document.getElementById('tableSearch').value || '').toLowerCase().trim();
-            const tbodyId = currentTab === 'delegates' ? 'delegatesTbody' : 'scholarshipsTbody';
-            const rows = document.getElementById(tbodyId).getElementsByTagName('tr');
-            for (let row of rows) {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(query) ? '' : 'none';
+            // Filter mobile cards
+            const cardsContainer = currentTab === 'delegates' ? document.getElementById('delegatesCards') : document.getElementById('scholarshipsCards');
+            for (let card of cardsContainer.children) {
+                card.style.display = card.textContent.toLowerCase().includes(query) ? '' : 'none';
+            }
+            // Filter desktop table
+            const tbody = currentTab === 'delegates' ? document.getElementById('delegatesTbody') : document.getElementById('scholarshipsTbody');
+            for (let row of tbody.getElementsByTagName('tr')) {
+                row.style.display = row.textContent.toLowerCase().includes(query) ? '' : 'none';
             }
         }
 
         function escapeHtml(str) {
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;');
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         }
 
-        // Auto-login if previously authenticated in this session
         if (sessionStorage.getItem(AUTH_KEY) === 'true') {
             showDashboard();
         }
