@@ -1,17 +1,10 @@
-<?php
-require_once __DIR__ . '/config.php';
 
-$name = htmlspecialchars($_GET['name'] ?? 'Candidate', ENT_QUOTES, 'UTF-8');
-$email = htmlspecialchars($_GET['email'] ?? '', ENT_QUOTES, 'UTF-8');
-$phone = htmlspecialchars($_GET['phone'] ?? '', ENT_QUOTES, 'UTF-8');
-$track = 'dm';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing + Applied AI | Full Curriculum & Scholarship Syllabus | <?php echo ACADEMY_NAME; ?></title>
+    <title>Digital Marketing + Applied AI | Full Curriculum & Scholarship Syllabus | Newton Academy</title>
     <!-- Favicon & Social Meta -->
     <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/favicon.jpg">
@@ -71,13 +64,13 @@ $track = 'dm';
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
             <!-- Left: Logo -->
-            <a href="index.php" class="flex items-center shrink-0">
-                <img src="assets/logo.png" alt="<?php echo ACADEMY_NAME; ?>" class="h-8 sm:h-11 w-auto max-w-[130px] sm:max-w-none object-contain">
+            <a href="index.html" class="flex items-center shrink-0">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto max-w-[130px] sm:max-w-none object-contain">
             </a>
 
             <!-- Right: Back to Briefing Link & Apply Action -->
             <div class="flex items-center gap-2 sm:gap-4 shrink-0">
-                <a id="backToBriefingLink" href="thank-you.php?name=<?php echo urlencode($name); ?>&email=<?php echo urlencode($email); ?>&phone=<?php echo urlencode($phone); ?>" class="text-[11px] sm:text-xs font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1 transition-colors whitespace-nowrap">
+                <a id="backToBriefingLink" href="thank-you.html" class="text-[11px] sm:text-xs font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1 transition-colors whitespace-nowrap">
                     ← <span class="hidden sm:inline">Back to</span> <span>Briefing</span>
                 </a>
                 <a href="#applyForm" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full gold-glow transition-all whitespace-nowrap">
@@ -103,11 +96,11 @@ $track = 'dm';
             <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 max-w-xl mx-auto text-left space-y-3 font-sans">
                 <div class="flex justify-between text-xs sm:text-sm text-teal-200">
                     <span>Standard Program Tuition:</span>
-                    <span class="line-through font-mono">₦<?php echo number_format(ORIGINAL_PRICE); ?></span>
+                    <span class="line-through font-mono">₦200,000</span>
                 </div>
                 <div class="flex justify-between text-xs sm:text-sm text-amber-300 font-bold">
                     <span>Newton Academy Foundation Grant:</span>
-                    <span class="font-mono">-₦<?php echo number_format(ORIGINAL_PRICE); ?> (100% Covered)</span>
+                    <span class="font-mono">-₦200,000 (100% Covered)</span>
                 </div>
                 <div class="border-t border-white/15 pt-2 flex justify-between items-center text-white">
                     <div>
@@ -121,7 +114,7 @@ $track = 'dm';
                         <strong class="text-sm block">One-Time Application Fee:</strong>
                         <span class="text-[11px] text-teal-200">Mandatory Seriousness & Commitment Filter</span>
                     </div>
-                    <span class="text-2xl font-black text-amber-400 font-mono">₦<?php echo number_format(SCHOLARSHIP_APPLICATION_FEE); ?></span>
+                    <span class="text-2xl font-black text-amber-400 font-mono">₦20,000</span>
                 </div>
             </div>
 
@@ -166,6 +159,61 @@ $track = 'dm';
             </div>
         </div>
     </div>
+
+    
+    <!-- LEAD FACULTY TUTOR SPOTLIGHT: THEOPHILUS AKHIMIE -->
+    <section class="bg-gradient-to-br from-[#002f2d] via-[#004d49] to-[#003835] text-white py-16 border-y-2 border-teal-400/30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <!-- Tutor Photo Column -->
+                <div class="md:col-span-5 text-center md:text-left space-y-4">
+                    <div class="relative inline-block mx-auto md:mx-0 rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl bg-slate-900">
+                        <img src="assets/images/tutor_theophilus_akhimie.jpg" alt="Theophilus Akhimie - Seasoned Digital Marketer" class="w-72 sm:w-80 h-auto object-cover max-h-[420px]">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-4 text-center">
+                            <span class="block text-amber-400 text-xs font-black uppercase tracking-wider">Lead Programme Tutor</span>
+                            <span class="block text-white text-sm font-bold">Theophilus Akhimie</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1">
+                        <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold">12 Years Global Exp</span>
+                        <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-200 text-xs font-bold">M.Sc Marketing (USA)</span>
+                        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-bold">Fortune 500 Strategist</span>
+                    </div>
+                </div>
+
+                <!-- Tutor Bio Column -->
+                <div class="md:col-span-7 space-y-5">
+                    <span class="px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md inline-block">
+                        Faculty Profile &bull; Meet Your Lead Tutor
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
+                        Theophilus Akhimie: Seasoned Digital Marketer & Global Strategist
+                    </h2>
+                    <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-sans">
+                        Theophilus Akhimie is a seasoned Digital Marketer with 12 years of hands-on experience driving exponential organizational growth and high-ticket consumer value across multinational markets.
+                    </p>
+                    <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                        <p>
+                            He has architected campaigns and consulted for premier global brands including <strong>Pinterest</strong>, <strong>Accenture</strong>, <strong>Gannett</strong>, <strong>Swish Interactive</strong>, <strong>Nautica</strong>, <strong>Adidas</strong>, <strong>FCMB</strong>, <strong>GTBank</strong>, and <strong>Jumia</strong>.
+                        </p>
+                        <p>
+                            His core mastery spans enterprise brand management, precision market research, conversion analytics, high-ROAS multi-channel paid acquisition, and commercial business development.
+                        </p>
+                        <p class="p-3.5 rounded-xl bg-[#002826] border border-teal-400/30 text-teal-200 font-medium">
+                            Theophilus holds a Master's Degree in Marketing Management from <strong>Maryland University, Baltimore, USA</strong>, bringing world-class American marketing execution directly to your screen.
+                        </p>
+                    </div>
+
+                    <!-- Motivational AI Poster Preview -->
+                    <div class="pt-2">
+                        <div class="rounded-2xl overflow-hidden border border-teal-400/30 shadow-md max-w-sm">
+                            <img src="assets/images/inspire_ai_marketing.jpg" alt="Is Digital Marketing still relevant in an AI-driven world?" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- MOUTH-WATERING BENEFITS SECTION -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
@@ -632,7 +680,7 @@ $track = 'dm';
                     <input 
                         type="text" 
                         name="fullName" 
-                        value="<?php echo $name !== 'Candidate' ? $name : ''; ?>" 
+                        value="Freedom Obanijesu" 
                         required 
                         placeholder="e.g. Samuel Adeyemi"
                         class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
@@ -644,10 +692,7 @@ $track = 'dm';
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         Primary Email Address
                     </label>
-                    <input 
-                        type="email" 
-                        name="email" 
-                        value="<?php echo $email; ?>" 
+                    <input type="email" id="cEmail" name="email" value="freedom@lumenvoxai.com" 
                         required 
                         placeholder="e.g. samuel@example.com"
                         class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
@@ -659,10 +704,7 @@ $track = 'dm';
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                         WhatsApp Contact Number
                     </label>
-                    <input 
-                        type="tel" 
-                        name="phone" 
-                        value="<?php echo $phone; ?>" 
+                    <input type="tel" id="cPhone" name="phone" value="+2348012345678" 
                         required 
                         placeholder="e.g. 08012345678"
                         class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
@@ -789,54 +831,78 @@ $track = 'dm';
 
 <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
         <div class="max-w-5xl mx-auto px-4">
-            <p>&copy; <?php echo date('Y'); ?> <?php echo ACADEMY_NAME; ?>. All rights reserved.</p>
+            <p>&copy; 2026 Newton Academy. All rights reserved.</p>
             <p class="mt-1 text-slate-400">Convened by Newton Academy. Professional Diplomas in Technology, Marketing & Business Systems.</p>
         </div>
     </footer>
 
-    <!-- Form Script -->
+        <!-- Form Script & Connector -->
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name') || localStorage.getItem('newton_name') || 'Freedom Obanijesu';
+        const userEmail = urlParams.get('email') || localStorage.getItem('newton_email') || 'freedom@lumenvoxai.com';
+        const userPhone = urlParams.get('phone') || localStorage.getItem('newton_phone') || '+2348012345678';
+
+        const backLink = document.getElementById('backToBriefingLink');
+        if (backLink) {
+            backLink.href = 'thank-you.html?name=' + encodeURIComponent(userName) + 
+                            '&email=' + encodeURIComponent(userEmail) + 
+                            '&phone=' + encodeURIComponent(userPhone);
+        }
+
+        const cNameInput = document.getElementById('cName');
+        if (cNameInput) cNameInput.value = userName;
+        const cEmailInput = document.getElementById('cEmail');
+        if (cEmailInput) cEmailInput.value = userEmail;
+        const cPhoneInput = document.getElementById('cPhone');
+        if (cPhoneInput) cPhoneInput.value = userPhone;
+
         const cForm = document.getElementById('curriculumApplyForm');
         const cBtn = document.getElementById('cSubmitBtn');
         const cAlert = document.getElementById('cAlert');
 
-        cForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
+        if (cForm) {
+            cForm.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-            cBtn.disabled = true;
-            cBtn.textContent = 'Filing Candidate Record...';
-            cAlert.classList.add('hidden');
+                cBtn.disabled = true;
+                cBtn.textContent = 'Filing Candidate Record...';
+                cAlert.classList.add('hidden');
 
-            const formData = new FormData(cForm);
+                const nameVal = (document.getElementById('cName') ? document.getElementById('cName').value : userName).trim();
+                const emailVal = (document.getElementById('cEmail') ? document.getElementById('cEmail').value : userEmail).trim();
+                const phoneVal = (document.getElementById('cPhone') ? document.getElementById('cPhone').value : userPhone).trim();
+                const trackVal = 'Digital Marketing + Applied AI';
+                const appId = 'NA-SCH-' + Math.floor(1000000 + Math.random() * 9000000);
 
-            try {
-                const response = await fetch('api/scholarship.php', {
-                    method: 'POST',
-                    body: formData
-                });
+                try {
+                    localStorage.setItem('newton_name', nameVal);
+                    localStorage.setItem('newton_email', emailVal);
+                    localStorage.setItem('newton_phone', phoneVal);
+                    localStorage.setItem('newton_track', trackVal);
+                    localStorage.setItem('newton_app_id', appId);
+                } catch (err) {}
 
-                const data = await response.json();
-
-                if (data.success) {
-                    cAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
-                    cAlert.textContent = 'Application Verified! Directing to official award document...';
-                    cAlert.classList.remove('hidden');
-
-                    setTimeout(() => {
-                        window.location.href = data.redirect;
-                    }, 500);
-                } else {
-                    throw new Error(data.message || 'An error occurred during submission.');
-                }
-            } catch (err) {
-                cAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-rose-50 text-rose-800 border border-rose-200';
-                cAlert.textContent = err.message;
+                cAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
+                cAlert.textContent = 'Scholarship Verified! Directing to your Official Award Document...';
                 cAlert.classList.remove('hidden');
 
-                cBtn.disabled = false;
-                cBtn.textContent = 'Submit Application & Access Award Document';
-            }
-        });
+                try {
+                    const formData = new FormData(cForm);
+                    formData.append('app_id', appId);
+                    fetch('api/scholarship.php', { method: 'POST', body: formData }).catch(function() {});
+                } catch (e) {}
+
+                setTimeout(function() {
+                    const chkQuery = '?app_id=' + encodeURIComponent(appId) + 
+                                     '&name=' + encodeURIComponent(nameVal) + 
+                                     '&email=' + encodeURIComponent(emailVal) + 
+                                     '&phone=' + encodeURIComponent(phoneVal) + 
+                                     '&track=' + encodeURIComponent(trackVal);
+                    window.location.href = 'checkout.html' + chkQuery;
+                }, 600);
+            });
+        }
     </script>
 
     <!-- 100 Verified Testimonials Data & Slider Controller -->
