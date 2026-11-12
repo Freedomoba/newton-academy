@@ -102,70 +102,65 @@
 
     
     <!-- OFFICIAL BRAND FOOTER (Newton Academy Dark Brand Colour #003835) -->
-    <footer class="bg-[#003835] text-white border-t border-teal-800/80 pt-12 pb-8 mt-16">
+    
+    <!-- Newton Official Dark Brand Footer (Not Black) -->
+    <footer class="bg-[#003835] text-slate-300 py-14 border-t border-emerald-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-teal-700/50">
-                <!-- Col 1: Brand & Tagline -->
-                <div class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-emerald-800/40">
+                <div class="md:col-span-2 space-y-4">
                     <a href="index.html" class="inline-block">
-                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert">
+                        <img src="assets/logo.png" alt="Newton Academy" class="h-10 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
                     </a>
-                    <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed max-w-sm">
-                        Empowering women and girls with digital skills for a brighter future. Bridging the digital divide across Africa and the diaspora through high-income skills and applied artificial intelligence.
+                    <p class="text-sm text-slate-300/90 leading-relaxed max-w-lg">
+                        Newton Academy is Africa's premier institution for executive digital skills, applied artificial intelligence, and wealth-generative careers. Convening the From Skills to Income Virtual Conference.
                     </p>
-                    <div class="pt-1 flex items-center gap-2 text-xs text-amber-300 font-medium">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                        <span>UNICEF-Aligned Female Tech Empowerment Initiative</span>
+                    <div class="pt-2 text-xs text-slate-300 space-y-2.5">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span><strong class="text-white">Inquiries:</strong> na@newtoncore.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            <span><strong class="text-white">Portal:</strong> academy.newtoncore.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-amber-400 shrink-0 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span><strong class="text-white">Admissions:</strong> +234 - 810 555 8593</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Col 2: Expression of Interest -->
-                <div class="space-y-3">
-                    <h4 class="text-sm sm:text-base font-bold text-white font-heading uppercase tracking-wider">
-                        Expression of Interest
-                    </h4>
-                    <ul class="space-y-2.5 text-xs sm:text-sm text-teal-100">
-                        <li class="flex items-center gap-2.5">
-                            <span class="text-amber-400 font-bold">&#9993;</span>
-                            <a href="mailto:na@newtoncore.com" class="hover:text-white transition-colors">na@newtoncore.com</a>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <span class="text-amber-400 font-bold">&#127760;</span>
-                            <a href="https://academy.newtoncore.com" target="_blank" class="hover:text-white transition-colors">academy.newtoncore.com</a>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                            <span class="text-amber-400 font-bold">&#9742;</span>
-                            <a href="tel:+2348105558593" class="hover:text-white transition-colors">+234 - 810 555 8593</a>
-                        </li>
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Official Programs</h4>
+                    <ul class="text-xs space-y-2.5 text-slate-300">
+                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">Digital Marketing + Applied AI</a></li>
+                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">Digital Entrepreneurship + Applied AI</a></li>
+                        <li><a href="scholarship.html" class="hover:text-white transition-colors">70% Scholarship Matriculation</a></li>
+                        <li><a href="index.html" class="hover:text-white transition-colors">Main Conference Registration</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Quick Links -->
-                <div class="space-y-3">
-                    <h4 class="text-sm sm:text-base font-bold text-white font-heading uppercase tracking-wider">
-                        Quick Links
-                    </h4>
-                    <ul class="space-y-2 text-xs sm:text-sm text-teal-100">
-                        <li><a href="index.html#solution" class="hover:text-white transition-colors">&rarr; Our Solution</a></li>
-                        <li><a href="index.html#tracks" class="hover:text-white transition-colors">&rarr; What We Offer</a></li>
-                        <li><a href="curriculum-dm.html" class="hover:text-white transition-colors">&rarr; Digital Marketing + Applied AI</a></li>
-                        <li><a href="curriculum-de.html" class="hover:text-white transition-colors">&rarr; Why Digital Entrepreneurship</a></li>
-                        <li><a href="scholarship.html" class="hover:text-white transition-colors">&rarr; 100% Tuition Scholarship Endowment</a></li>
-                    </ul>
+                <div>
+                    <h4 class="text-xs uppercase tracking-widest text-amber-400 font-bold mb-4">Accreditation &amp; Standards</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        All diploma programs are overseen by Newton Academic Advisory Council with strict practical project defenses, verified mentor access, and lifetime resource updates.
+                    </p>
+                    <div class="mt-4 flex items-center gap-2 text-[11px] text-emerald-300">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+                        <span>Accredited 2026 Cohort</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Bottom Bar: Copyright & Single-Sentence Legal Disclaimer -->
-            <div class="pt-6 space-y-3 text-center">
-                <p class="text-xs text-teal-200">
-                    &copy; 2026 Newton Academy. All rights reserved. Convened strictly by Newton Academy.
-                </p>
-                <p class="text-[11px] text-teal-300/80 max-w-4xl mx-auto leading-relaxed">
-                    This site is not a part of or endorsed by Facebook, Google, Meta Platforms, Inc., or Alphabet Inc., and Newton Academy makes no income guarantees as earnings depend entirely on individual dedication, skills, and commercial execution.
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center md:text-left">
+                <p>&copy; 2026 Newton Academy. All rights reserved. Convened by Newton Academy. From Skills to Income Virtual Conference.</p>
+                <p class="text-[11px] text-slate-400 max-w-xl">
+                    This site is not affiliated with or endorsed by Meta Platforms, Inc. or Google LLC. Newton Academy provides professional educational training only, and all individual results depend completely on personal dedication, skill mastery, and commercial execution.
                 </p>
             </div>
         </div>
     </footer>
+
 
 
     <script>
