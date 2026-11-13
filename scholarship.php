@@ -170,8 +170,9 @@
                             <a href="curriculum-dm.html" target="_blank" class="block text-center text-xs font-bold text-[#005f5a] hover:underline">
                                 Read Full 14-Module Syllabus & Benefits &rarr;
                             </a>
-                            <a href="#scholarshipForm" onclick="selectTrack('Digital Marketing + Applied AI')" class="block w-full py-3.5 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-center text-sm shadow-md transition-all font-heading">
-                                Apply For Digital Marketing Track
+                            <a href="#scholarshipForm" onclick="selectTrack('Digital Marketing + Applied AI')" class="w-full min-h-[58px] py-3 px-4 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white shadow-md transition-all font-heading flex flex-col items-center justify-center text-center">
+                                <span class="block text-sm sm:text-base font-extrabold leading-snug">Apply For Digital Marketing Track</span>
+                                <span class="block text-[11px] font-bold text-emerald-200 uppercase tracking-wider mt-0.5">100% Fully Funded Scholarship</span>
                             </a>
                         </div>
                     </div>
@@ -234,8 +235,9 @@
                             <a href="curriculum-de.html" target="_blank" class="block text-center text-xs font-bold text-amber-300 hover:text-amber-200 underline">
                                 Read Full 15-Module Syllabus & Benefits &rarr;
                             </a>
-                            <a href="#scholarshipForm" onclick="selectTrack('Digital Entrepreneurship & Business Innovation + Applied AI')" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-center text-sm shadow-xl shadow-amber-500/25 transition-all font-heading uppercase tracking-wide">
-                                Apply For Entrepreneurship Track
+                            <a href="#scholarshipForm" onclick="selectTrack('Digital Entrepreneurship & Business Innovation + Applied AI')" class="w-full min-h-[58px] py-3 px-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 shadow-xl shadow-amber-500/25 transition-all font-heading flex flex-col items-center justify-center text-center">
+                                <span class="block text-sm sm:text-base font-black leading-snug uppercase tracking-wide">Apply For Entrepreneurship Track</span>
+                                <span class="block text-[11px] font-black text-slate-900/80 uppercase tracking-wider mt-0.5">100% Fully Funded Scholarship</span>
                             </a>
                         </div>
                     </div>
@@ -243,153 +245,8 @@
                 </div>
             </div>
 
-            <div class="border-t border-slate-200 pt-10 pb-4 space-y-3">
-                
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
-                    Why We Are Awarding 100% Full Tuition Endowments (Worth ₦200,000) To Exactly 50 Ambitious Delegates
-                </h2>
-                <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans leading-relaxed">
-                    Dear <span id="storyRecipientName" class="font-bold text-slate-900">Delegate</span>, if you are tired of theoretical university certificates that produce zero income in the real world, this briefing will change the trajectory of your entire commercial life.
-                </p>
-            </div>
-
-            
-            <!-- UNICEF FEMALE TECH EMPOWERMENT & INCLUSIVITY SECTION (UNBOXED) -->
-            <div class="py-10 border-b border-slate-200 space-y-6">
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003835] font-heading tracking-tight leading-tight">
-                    Empowering Women &amp; Girls In Tech To Lead The Global AI Economy
-                </h2>
-
-                <p class="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                    In alignment with UNICEF's global vision for female education, digital inclusion, and economic emancipation, Newton Academy champions the education and elevation of women, ladies, and the girl child. We equip females across Africa and the diaspora with practical commercial skills in digital marketing, enterprise automation, and applied artificial intelligence.
-                </p>
-
-                <div class="p-4 rounded-2xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-slate-800 font-sans">
-                    <span class="font-bold text-[#005f5a] block mb-1">Inclusivity Commitment:</span>
-                    While our primary institutional focus is closing the digital gender divide and uplifting female builders, <strong class="text-slate-900">ambitious male delegates are warmly welcome</strong> to apply and learn side by side in our transformative cohorts.
-                </div>
-
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
-                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                        <img src="assets/images/unicef_women_laptops_joy.jpg" alt="Joyful Female Fellows with Laptops" class="w-full h-32 sm:h-44 object-cover">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                        <img src="assets/images/unicef_girl_child_laptop.jpg" alt="Girl Child Learning on Laptop" class="w-full h-32 sm:h-44 object-cover">
-                    </div>
-                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md col-span-2 sm:col-span-1">
-                        <img src="assets/images/unicef_women_tech_collaboration.jpg" alt="Women Collaborating on Tech Projects" class="w-full h-32 sm:h-44 object-cover">
-                    </div>
-                </div>
-            </div>
-            
-
-            <!-- INLINE NARRATIVE 1: AMINAT'S JOURNEY -->
-            <div class="py-8 border-y border-slate-200 space-y-6">
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                    From Hawking Boiled Corn On Campus To Earning $1,200/Month From Her Living Room
-                </h3>
-
-                <!-- Beat 1 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-4 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                        <img src="assets/images/young_lady_hawking_corn.jpg" alt="Aminat hawking corn on campus" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Phase 1: Hawking corn on campus to survive university</span>
-                    </div>
-                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p>
-                            Meet Aminat. In her university days, she had zero wealthy uncles or political godfathers. To buy semester handouts, photocopies, and feed herself, she stood by the campus main gate every evening hawking boiled and roasted corn with a heavy tray balanced on her head.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Beat 2 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-8 order-2 md:order-1 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p>
-                            Despite bone-crushing fatigue, she gave her studies everything she had &mdash; graduating with a coveted <strong>First-Class Honours degree in Economics</strong>. She finished NYSC full of hope, believing the corporate world would celebrate her brilliance. Instead, after submitting over 80 CVs across Lagos and Abuja, the only job offer she received was an ₦85,000/month administrative role where third-party bus fares alone would gobble up ₦50,000 every 30 days!
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 order-1 md:order-2 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                        <img src="assets/images/young_lady_graduate_nysc.jpg" alt="First Class graduate jobless" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Phase 2: First-Class & NYSC complete &mdash; but stranded</span>
-                    </div>
-                </div>
-
-                <!-- Beat 3 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-4 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
-                        <img src="assets/images/young_lady_remote_office.jpg" alt="Working remotely in USD" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Phase 3: Now working remotely in USD for a global firm</span>
-                    </div>
-                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p class="font-medium text-slate-900 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                            Everything changed when Aminat secured a Newton Academy scholarship seat. Within 90 days of mastering high-converting Digital Marketing and Generative AI workflows, she landed her first international contract. Today, she works as a remote Digital Growth Specialist for a US-based health-tech company, earning over <strong>$1,200 monthly</strong> from the comfort of her bedroom in Nigeria!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- INLINE NARRATIVE 2: FREEDOM OBANIJESU -->
-            <div class="bg-teal-50/50 border-2 border-[#005f5a]/30 rounded-2xl p-6 sm:p-8 space-y-6">
-                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                    From Manual POP Ceiling Laborer Inhaling Dust To Thriving Digital Strategist & Academic Director
-                </h3>
-
-                <!-- Beat 1 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-4 rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900">
-                        <img src="assets/images/freedom_profile.jpg" alt="Freedom Obanijesu professional profile" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Freedom Obanijesu &bull; Academic Director</span>
-                    </div>
-                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p>
-                            This is not theory. Freedom Obanijesu spent years mixing plaster of Paris under scorching heat on dusty Nigerian construction sites, inhaling gypsum powder, and installing POP ceilings just to put food on the table. He knew that physical sweat without leverage leads to poverty. He spent late nights in cybercafes studying direct-response customer acquisition, copywriting, and practical applied AI tools.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Beat 2 (Using New Corpreneurship Winner Check Photo) -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-8 order-2 md:order-1 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p>
-                            His deep dedication to tech-driven enterprise bore fruit during his National Youth Service Corps year. Competing against thousands of corps members, his digital venture was awarded <strong>1st Place in the NYSC Corpreneurship Challenge</strong> &mdash; earning state recognition, an official grant, and proof that digital leverage beats manual labor every time.
-                        </p>
-                    </div>
-                    <div class="md:col-span-4 order-1 md:order-2 rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900">
-                        <img src="assets/images/freedom_nysc_award.jpg" alt="Freedom Obanijesu 1st Place NYSC Corpreneurship Award Winner Check" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Service Honor &bull; 1st Place NYSC Corpreneurship Award</span>
-                    </div>
-                </div>
-
-                <!-- Beat 3 -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div class="md:col-span-4 rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-900">
-                        <img src="assets/images/freedom_honoree_award.jpg" alt="Freedom Obanijesu Honoree 100 Under 40 Award" class="w-full h-56 object-cover">
-                        <span class="block bg-slate-900 text-white text-[11px] p-2 text-center italic">Honoree &bull; 100 Under 40 Young Builders Award</span>
-                    </div>
-                    <div class="md:col-span-8 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p class="font-medium text-slate-900 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
-                            Today, Freedom learned practical high-income skills, is doing exceptionally well in the digital economy, was recognized among the Top 100 Under 40 Young Builders by Jamie Pajoel International, and has architected the exact practical blueprints taught inside Newton Academy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UNICEF SECTION -->
-            
-    <!-- UNICEF FEMALE TECH EMPOWERMENT & INCLUSIVITY SECTION -->
-    <!-- INSPIRING MOMENTUM & MOTIVATION POSTERS -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <div class="rounded-3xl overflow-hidden border-2 border-slate-200 brand-shadow bg-slate-900 group">
-                    <img src="assets/images/inspire_ai_marketing.jpg" alt="Is Digital Marketing still relevant in an AI-driven world?" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
-                </div>
-                <div class="rounded-3xl overflow-hidden border-2 border-slate-200 brand-shadow bg-slate-900 group">
-                    <img src="assets/images/inspire_innovation_career.jpg" alt="Innovation is the outcome of a habit, not a random act" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
-                </div>
-            </div>
-
-            <!-- ENDOWMENT VOUCHERS -->
-            <div class="border-t border-slate-200 pt-10 space-y-6">
+            <!-- ENDOWMENT BREAKDOWN (PLACED BEFORE 'WHY WE ARE AWARDING') -->
+            <div class="border-t border-slate-200 pt-10 pb-6 space-y-6">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
                         Newton Academy Foundation Endowment Breakdown
@@ -438,6 +295,183 @@
                 </div>
             </div>
 
+<div class="border-t border-slate-200 pt-10 pb-4 space-y-3">
+                
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
+                    Why We Are Awarding 100% Full Tuition Endowments (Worth ₦200,000) To Exactly 50 Ambitious Delegates
+                </h2>
+                <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans leading-relaxed">
+                    Dear <span id="storyRecipientName" class="font-bold text-slate-900">Delegate</span>, if you are tired of theoretical university certificates that produce zero income in the real world, this briefing will change the trajectory of your entire commercial life.
+                </p>
+            </div>
+
+            
+            <!-- UNICEF FEMALE TECH EMPOWERMENT (FULL WIDTH BACKGROUND - NOT BOXED) -->
+    <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-gradient-to-br from-[#002826] via-[#003835] to-[#001f1e] text-white py-16 sm:py-20 border-y-2 border-teal-500/30 overflow-hidden my-12">
+        <!-- Background Watermark Image -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="assets/images/unicef_girls_coding_classroom.jpg" alt="UNICEF Digital Empowerment for Women &amp; Girls" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#002826] via-[#003835]/95 to-[#001f1e]"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 z-10">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
+                Empowering Women &amp; Girls In Tech To Lead The Global AI Economy
+            </h2>
+
+            <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans">
+                In alignment with UNICEF's global vision for female education, digital inclusion, and economic emancipation, Newton Academy champions the education and elevation of women, ladies, and the girl child. We equip females across Africa and the diaspora with practical commercial skills in digital marketing, enterprise automation, and applied artificial intelligence.
+            </p>
+
+            <div class="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-xs sm:text-sm text-teal-100 font-sans">
+                <span class="font-bold text-amber-300 block mb-1">Inclusivity Commitment:</span>
+                While our primary institutional focus is closing the digital gender divide and uplifting female builders, <strong class="text-white">ambitious male delegates are warmly welcome</strong> to apply and learn side by side in our transformative cohorts.
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-3">
+                <div class="rounded-2xl overflow-hidden border border-white/20 shadow-xl group">
+                    <img src="assets/images/unicef_women_laptops_joy.jpg" alt="Joyful Female Fellows with Laptops" class="w-full h-32 sm:h-44 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/20 shadow-xl group">
+                    <img src="assets/images/unicef_girl_child_laptop.jpg" alt="Girl Child Learning on Laptop" class="w-full h-32 sm:h-44 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/20 shadow-xl col-span-2 sm:col-span-1 group">
+                    <img src="assets/images/unicef_women_tech_collaboration.jpg" alt="Women Collaborating on Tech Projects" class="w-full h-32 sm:h-44 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+            
+
+            <!-- INLINE NARRATIVE 1: AMINAT'S JOURNEY (SINGLE REALISTIC CLOSE SHOT) -->
+            <div class="py-10 border-y border-slate-200 space-y-8">
+                <div class="max-w-3xl">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 font-heading leading-snug">
+                        From Hawking Boiled Corn On Campus To Earning $1,200/Month From Her Living Room
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <!-- Single Close Shot Image Column -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm rounded-3xl overflow-hidden border-2 border-emerald-600/30 shadow-xl bg-slate-900 group">
+                            <img src="assets/images/aminat_story.jpg" alt="Aminat - Newton Academy Fellow" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div class="bg-slate-950/95 border-t border-emerald-500/30 p-3 sm:p-4 text-center">
+                                <span class="block text-xs font-bold text-white">Aminat Bello</span>
+                                <span class="block text-[11px] text-emerald-400 font-medium">Newton Academy Fellow • Earning $1,200/mo Remote</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Text Column -->
+                    <div class="md:col-span-7 space-y-4 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+                        <p>
+                            Meet Aminat. In her university days, she had zero wealthy uncles or political godfathers. To buy semester handouts, photocopies, and feed herself, she stood by the campus main gate every evening hawking boiled and roasted corn with a heavy tray balanced on her head.
+                        </p>
+                        <p>
+                            Despite bone-crushing fatigue, she gave her studies everything she had &mdash; graduating with a coveted <strong>First-Class Honours degree in Economics</strong>. She finished NYSC full of hope, believing the corporate world would celebrate her brilliance. Instead, after submitting over 80 CVs across Lagos and Abuja, the only job offer she received was an ₦85,000/month administrative role where third-party bus fares alone would gobble up ₦50,000 every 30 days!
+                        </p>
+                        <p>
+                            Refusing to accept a life of quiet desperation, Aminat secured a seat in Newton Academy. Within 90 days of applying our practical frameworks in high-ROAS paid ads and AI-assisted copywriting, she landed her first international remote client on a $1,200 monthly retainer (over ₦1.8 Million Naira).
+                        </p>
+                        <p class="font-bold text-[#005f5a] pt-1">
+                            Today, Aminat works comfortably from her home in Lagos, provides for her aging parents, and earns in hard currency &mdash; all built on verifiable digital skills, not theoretical certificates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Story Text Column -->
+                    <div class="md:col-span-7 space-y-4 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+                        <p>
+                            Meet Aminat. In her university days, she had zero wealthy uncles or political godfathers. To buy semester handouts, photocopies, and feed herself, she stood by the campus main gate every evening hawking boiled and roasted corn with a heavy tray balanced on her head.
+                        </p>
+                        <p>
+                            Despite bone-crushing fatigue, she gave her studies everything she had &mdash; graduating with a coveted <strong>First-Class Honours degree in Economics</strong>. She finished NYSC full of hope, believing the corporate world would celebrate her brilliance. Instead, after submitting over 80 CVs across Lagos and Abuja, the only job offer she received was an ₦85,000/month administrative role where third-party bus fares alone would gobble up ₦50,000 every 30 days!
+                        </p>
+                        <p>
+                            Refusing to accept a life of quiet desperation, Aminat secured a seat in Newton Academy. Within 90 days of applying our practical frameworks in high-ROAS paid ads and AI-assisted copywriting, she landed her first international remote client on a $1,200 monthly retainer (over ₦1.8 Million Naira).
+                        </p>
+                        <p class="font-bold text-[#005f5a] pt-1">
+                            Today, Aminat works comfortably from her home in Lagos, provides for her aging parents, and earns in hard currency &mdash; all built on verifiable digital skills, not theoretical certificates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INLINE NARRATIVE 2: FREEDOM OBANIJESU -->
+            <div class="bg-teal-50/50 border-2 border-[#005f5a]/30 rounded-3xl p-6 sm:p-10 space-y-8 my-10">
+                <div class="max-w-3xl">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 font-heading leading-snug">
+                        From Manual POP Ceiling Laborer Inhaling Dust To AI Product Marketer &amp; Go-To-Market Strategist
+                    </h3>
+                </div>
+
+                <!-- Profile Picture Alongside Story Text -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <!-- Profile Picture Column (Read alongside the story) -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm rounded-3xl overflow-hidden border-2 border-[#005f5a]/40 shadow-2xl bg-slate-900 group">
+                            <img src="assets/images/freedom_profile.jpg" alt="Freedom Obanijesu - AI Product Marketer &amp; Go-to-Market Strategist" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent p-4 text-center">
+                                <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider mb-1">
+                                    Lead Curriculum Architect
+                                </span>
+                                <p class="text-xs font-bold text-white">Freedom Obanijesu &bull; AI Product Marketer &amp; Go-to-Market Strategist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story Text Column -->
+                    <div class="md:col-span-7 space-y-4 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+                        <p>
+                            This is not theory. Freedom Obanijesu spent years mixing plaster of Paris under scorching heat on dusty Nigerian construction sites, inhaling gypsum powder, and installing POP ceilings just to put food on the table. He knew that physical sweat without leverage leads to poverty. He spent late nights in cybercafes studying direct-response customer acquisition, copywriting, and practical applied AI tools.
+                        </p>
+                        <p>
+                            His deep dedication to tech-driven enterprise bore fruit during his National Youth Service Corps year. Competing against thousands of corps members, his digital venture was awarded <strong>1st Place in the NYSC Corpreneurship Challenge</strong> &mdash; earning state recognition, an official grant, and proof that digital leverage beats manual labor every time.
+                        </p>
+                        <p class="font-medium text-slate-900 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            Today, Freedom learned practical high-income skills, is doing exceptionally well in the digital economy as an AI Product Marketer and Go-to-Market Strategist, was recognized among the Top 100 Under 40 Young Builders by Jamie Pajoel International, and has architected the exact practical blueprints taught inside Newton Academy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Last Two Award & Proof Images Brought Down (Seen after reading the story) -->
+                <div class="border-t border-teal-200/60 pt-6">
+                    <p class="text-xs font-bold uppercase tracking-wider text-teal-900 mb-4 text-center sm:text-left">
+                        Verifiable Proof &amp; National Recognition:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Award 1: NYSC Corpreneurship Challenge -->
+                        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-900 group">
+                            <img src="assets/images/freedom_nysc_award.jpg" alt="Freedom Obanijesu 1st Place NYSC Corpreneurship Award Winner Check" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="block bg-slate-900 text-white text-[11px] sm:text-xs p-3 text-center italic font-sans border-t border-slate-800">
+                                Service Honor &bull; 1st Place NYSC Corpreneurship Award
+                            </span>
+                        </div>
+                        <!-- Award 2: 100 Under 40 Young Builders Award -->
+                        <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-900 group">
+                            <img src="assets/images/freedom_honoree_award.jpg" alt="Freedom Obanijesu Honoree 100 Under 40 Award" class="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <span class="block bg-slate-900 text-white text-[11px] sm:text-xs p-3 text-center italic font-sans border-t border-slate-800">
+                                Honoree &bull; 100 Under 40 Young Builders Award
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- UNICEF SECTION -->
+            
+    <!-- UNICEF FEMALE TECH EMPOWERMENT & INCLUSIVITY SECTION -->
+    <!-- INSPIRING MOMENTUM & MOTIVATION POSTERS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                <div class="rounded-3xl overflow-hidden border-2 border-slate-200 brand-shadow bg-slate-900 group">
+                    <img src="assets/images/inspire_ai_marketing.jpg" alt="Is Digital Marketing still relevant in an AI-driven world?" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                </div>
+                <div class="rounded-3xl overflow-hidden border-2 border-slate-200 brand-shadow bg-slate-900 group">
+                    <img src="assets/images/inspire_innovation_career.jpg" alt="Innovation is the outcome of a habit, not a random act" class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-300">
+                </div>
+            </div>
+
             <!-- STANDALONE VIDEO TESTIMONIALS (Optimized for Mobile/Tablet/Desktop: 1 per col on phone, 2 on tablet, 4 on desktop, NO HORIZONTAL SLIDER!) -->
             
     <!-- Curvy Organic Background Wave Transition (Matches User Sample) -->
@@ -450,7 +484,7 @@
 
     <!-- AMAZING ALUMNI TESTIMONIALS (Exact Visual Recreation from User Asset) -->
     <!-- STRICTLY NO PREHEADINGS ABOVE HEADING -->
-    <section id="alumni-showcase" class="py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002f2d] text-white">
+    <section id="alumni-showcase" class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-16 sm:py-20 relative overflow-hidden bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002f2d] text-white border-y-2 border-teal-500/30 my-10">
         <!-- Subtle dark curved watermark background -->
         <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" style="background-image: url('assets/images/dark_curved_bg.jpg');"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-[#003835]/90 via-transparent to-[#003835]/95 pointer-events-none"></div>
@@ -855,7 +889,14 @@
             
             if (envelope && letter) {
                 envelope.addEventListener('click', function() {
+                if (typeof window.triggerDoorOpeningAndRain === 'function') {
+                    window.triggerDoorOpeningAndRain(null, function() {
+                        letter.scrollIntoView({ behavior: 'smooth' });
+                    });
+                } else {
                     letter.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
                 });
             }
 
@@ -939,7 +980,11 @@
                     });
                     const targetCheckoutUrl = 'checkout.php?' + chkParams.toString();
 
-                    triggerEvaluationModal(fullName, targetCheckoutUrl);
+                    if (typeof window.startScholarshipEvaluation === 'function') {
+                        window.startScholarshipEvaluation(fullName, targetCheckoutUrl);
+                    } else {
+                        window.location.href = targetCheckoutUrl;
+                    }
                 });
             }
         });
@@ -1076,9 +1121,9 @@
 
             <div class="text-[11px] text-slate-400 italic">
                 Please do not close this window. Processing official certificate...
-            </div>
-        </div>
-    </div>
+            
+        
+    
 
 </body>
 </html>

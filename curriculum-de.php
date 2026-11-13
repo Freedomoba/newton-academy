@@ -1695,10 +1695,15 @@
                     const targetUrl = 'checkout.php?' + chkParams.toString();
 
                     // Trigger evaluation popup before redirecting
-                    triggerEvaluationModal(name, targetUrl);
+                    if (typeof window.startScholarshipEvaluation === 'function') {
+                        window.startScholarshipEvaluation(name, targetUrl);
+                    } else {
+                        window.location.href = targetUrl;
+                    }
                 });
             }
         });
     </script>
+<script src="assets/js/application-evaluation.js"></script>
 </body>
 </html>

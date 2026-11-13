@@ -1,0 +1,4 @@
+const fs = require('fs');
+const html = fs.readFileSync('thank-you.html', 'utf8');
+console.log(html.slice(1500, 4500));
+

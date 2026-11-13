@@ -11,3 +11,4 @@ if (modeIdx !== -1) {
 // Find UNICEF section
 const unicefIdx = html.indexOf('Empowering Women & Girls In Tech');
 console.log('\nUNICEF section found at:', unicefIdx);
+

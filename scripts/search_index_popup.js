@@ -7,3 +7,4 @@ while ((m = regex.exec(html)) !== null) {
     console.log('index.html match at', m.index, ':', m[0]);
     console.log(html.slice(Math.max(0, m.index - 50), m.index + 100));
 }
+

@@ -832,12 +832,17 @@ function generateCurriculumPage(cfg) {
                     });
                     const targetUrl = '${isPhp ? 'checkout.php' : 'checkout.html'}?' + chkParams.toString();
 
-                    // Trigger evaluation popup before redirecting
-                    triggerEvaluationModal(name, targetUrl);
+                    // Trigger evaluation popup, 3D door opening, and confetti rain before redirecting
+                    if (typeof window.startScholarshipEvaluation === 'function') {
+                        window.startScholarshipEvaluation(name, targetUrl);
+                    } else {
+                        window.location.href = targetUrl;
+                    }
                 });
             }
         });
     </script>
+<script src="assets/js/application-evaluation.js"></script>
 </body>
 </html>`;
 }
