@@ -70,7 +70,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
 
     <!-- Official Header -->
     <header class="border-b border-slate-200 bg-white sticky top-0 z-40 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
             <a href="index.php" class="flex items-center shrink-0">
                 <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-10 w-auto max-w-[130px] sm:max-w-none object-contain">
             </a>
@@ -83,7 +83,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         
         <!-- Reservation Timer -->
         <div class="bg-amber-50 border border-amber-200 text-amber-950 rounded-2xl p-4 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm shadow-sm">
@@ -342,7 +342,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
     
     <!-- SUPPORT BANNER (WITH REAL PHOTOS OF ODUNAYO & FREEDOM) -->
     <section class="relative bg-gradient-to-r from-[#f59e0b] via-[#fbbf24] to-[#f59e0b] text-slate-950 overflow-hidden border-b-8 border-[#003835]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 
                 <!-- Left: Headline & Support Contact Action -->

@@ -34,7 +34,7 @@
 
     <!-- Top Navigation Bar -->
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
             <a href="index.html" class="flex items-center shrink-0">
                 <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-10 w-auto object-contain">
             </a>
@@ -55,7 +55,7 @@
         <div class="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                 
                 <!-- Left Column: Copy & CTAs (PERFECTLY CENTERED BUTTON TEXT) -->
@@ -130,7 +130,7 @@
 
     <!-- 3. COURSE OVERVIEW & LEARNING OUTCOMES (MATCHING SCREENSHOT eae853c4) -->
     <section class="py-14 sm:py-20 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center mb-10">
                 <a href="#applyForm" class="inline-block bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all font-heading">
@@ -219,7 +219,7 @@
 
     <!-- 4. CAREER OPPORTUNITIES & GLOBAL SALARY TRENDS (MATCHING SCREENSHOT 0e3fc429) -->
     <section class="py-14 sm:py-20 bg-white border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
@@ -325,7 +325,7 @@
 
     <!-- 5. FULL 15-MODULE SYLLABUS (CONNECTED ACCORDION LIST WITH PLUS SIGNS) -->
     <section id="modules" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight">
@@ -1218,7 +1218,7 @@
 
     <!-- 6. LEAD FACULTY TUTOR PROFILE -->
     <section class="bg-gradient-to-br from-[#002f2d] via-[#004d49] to-[#003835] text-white py-16 border-y-2 border-teal-400/30">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <!-- Tutor Photo Column -->
                 <div class="md:col-span-6 text-center md:text-left space-y-4">
@@ -1258,7 +1258,7 @@
     
     <!-- FAQ SECTION (ZERO PREHEADINGS) -->
     <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center mb-12">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#003835] font-heading tracking-tight">
@@ -1345,7 +1345,7 @@
     
     <!-- SUPPORT BANNER (WITH REAL PHOTOS OF ODUNAYO & FREEDOM) -->
     <section class="relative bg-gradient-to-r from-[#f59e0b] via-[#fbbf24] to-[#f59e0b] text-slate-950 overflow-hidden border-b-8 border-[#003835]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 
                 <!-- Left: Headline & Support Contact Action -->
@@ -1549,7 +1549,7 @@
 
     <!-- 11. MINIMAL BRAND FOOTER -->
     <footer class="bg-[#003835] text-slate-300 py-10 border-t border-emerald-900/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             <a href="index.html" class="inline-block">
                 <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto mx-auto object-contain brightness-0 invert">
             </a>

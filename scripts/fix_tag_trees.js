@@ -36,3 +36,4 @@ function fixFiles() {
 
 fixFiles();
 console.log('Fixed tags');
+

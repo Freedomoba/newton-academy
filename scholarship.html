@@ -53,7 +53,7 @@
     </div>
 
     <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
             <a href="index.html" class="flex items-center">
                 <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto object-contain">
             </a>
@@ -68,10 +68,10 @@
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
 
         <!-- Envelope -->
-        <div id="confidentialEnvelope" class="relative max-w-4xl mx-auto bg-gradient-to-br from-[#003e3b] via-[#005f5a] to-[#002f2d] border-2 border-amber-400/70 rounded-3xl p-6 sm:p-10 text-white text-center brand-shadow cursor-pointer transform hover:scale-[1.01] transition-all">
+        <div id="confidentialEnvelope" class="relative max-w-5xl mx-auto bg-gradient-to-br from-[#003e3b] via-[#005f5a] to-[#002f2d] border-2 border-amber-400/70 rounded-3xl p-6 sm:p-10 text-white text-center brand-shadow cursor-pointer transform hover:scale-[1.01] transition-all">
             <div class="space-y-4">
                 <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full bg-amber-400/20 border-2 border-amber-400 flex items-center justify-center p-3 gold-glow">
                     <img src="assets/logo.png" alt="Newton Academy Wax Seal" class="w-full h-full object-contain filter drop-shadow">
@@ -256,7 +256,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                     <div class="relative bg-gradient-to-br from-[#003e3b] to-[#002f2d] border-2 border-emerald-400 rounded-3xl p-6 sm:p-8 text-white space-y-4 shadow-xl overflow-hidden">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-emerald-400 text-slate-950">
@@ -461,7 +461,7 @@
         <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none" style="background-image: url('assets/images/dark_curved_bg.jpg');"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-[#003835]/90 via-transparent to-[#003835]/95 pointer-events-none"></div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <!-- Section Header (NO PREHEADING) -->
             <div class="text-center max-w-3xl mx-auto">
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
@@ -725,7 +725,7 @@
     
     <!-- SUPPORT BANNER (WITH REAL PHOTOS OF ODUNAYO & FREEDOM) -->
     <section class="relative bg-gradient-to-r from-[#f59e0b] via-[#fbbf24] to-[#f59e0b] text-slate-950 overflow-hidden border-b-8 border-[#003835]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 relative z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 
                 <!-- Left: Headline & Support Contact Action -->
@@ -820,7 +820,7 @@
 
     <!-- Clean Minimal Brand Footer -->
     <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
                 <!-- Logo -->
                 <a href="index.html" class="inline-block">

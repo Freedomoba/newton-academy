@@ -29,3 +29,4 @@ const brokenFooterRegex = /<!-- Quick Links & Contact -->[\s\S]*?<\/footer>/;
         console.log(`[${file}] Fixed footer tag structure`);
     }
 });
+

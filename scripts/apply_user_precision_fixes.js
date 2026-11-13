@@ -76,3 +76,4 @@ files.forEach(file => {
 
     fs.writeFileSync(file, content, 'utf8');
 });
+
