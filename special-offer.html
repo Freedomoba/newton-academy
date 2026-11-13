@@ -43,7 +43,7 @@
     </style>
     <link rel="stylesheet" href="assets/css/animations.css">
 </head>
-<body class="bg-[#f1f5f9] text-slate-800 antialiased selection:bg-[#005f5a] selection:text-white">
+<body class="bg-white text-slate-800 antialiased selection:bg-[#005f5a] selection:text-white">
 
     <div class="bg-gradient-to-r from-[#002f2d] via-[#005f5a] to-[#002f2d] text-white text-xs py-2.5 px-4 text-center border-b border-amber-400/40">
         <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
@@ -59,7 +59,7 @@
             </a>
             <div class="flex items-center gap-3">
                 <span class="hidden md:inline-block px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold">
-                    Council Quota: 50 Award Seats
+                    Academy Quota: 50 Award Seats
                 </span>
                 <a href="#scholarshipForm" class="px-4 py-2 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white text-xs sm:text-sm font-bold shadow-md transition-all">
                     Apply Now &darr;
@@ -80,7 +80,7 @@
                 <div class="space-y-2">
                     
                     <h1 class="text-xl sm:text-3xl font-extrabold tracking-tight font-heading text-white">
-                        Official Academic Council Endowment &bull; 100% Full Tuition Scholarship
+                        Official Academic Board Endowment &bull; 100% Full Tuition Scholarship
                     </h1>
                     <p class="text-xs sm:text-sm text-teal-100 max-w-2xl mx-auto leading-relaxed">
                         Strictly reserved for pre-screened delegates. Click this official wax seal to break the tamper-proof ribbon and review your full direct-response scholarship briefing.
@@ -96,7 +96,7 @@
         </div>
 
         <!-- Official Letter -->
-        <article id="officialSalesLetter" class="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 border border-slate-200 brand-shadow space-y-10" style="opacity: 1 !important; visibility: visible !important;">
+        <article id="officialSalesLetter" class="w-full max-w-5xl mx-auto py-6 sm:py-10 space-y-10" style="opacity: 1 !important; visibility: visible !important;">
 
             <div class="border-b border-slate-200 pb-8 space-y-4">
                 
@@ -109,7 +109,7 @@
             </div>
 
             <!-- INLINE NARRATIVE 1: AMINAT'S JOURNEY -->
-            <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="py-8 border-y border-slate-200 space-y-6">
                 <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
                     From Hawking Boiled Corn On Campus To Earning $1,200/Month From Her Living Room
                 </h3>
@@ -412,7 +412,7 @@
                         Newton Academy Foundation Endowment Breakdown
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm">
-                        Official Academic Council financial allocation certificate for 2026/2027 fellows:
+                        Official Newton Academy financial allocation certificate for 2026/2027 fellows:
                     </p>
                 </div>
 
@@ -426,7 +426,7 @@
                         </div>
                         <div class="space-y-1">
                             <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">Full Tuition Waiver Grant</h3>
-                            <p class="text-xs text-teal-100">Newton Academic Council Endowment Fund</p>
+                            <p class="text-xs text-teal-100">Newton Academy Endowment Fund</p>
                         </div>
                         <div class="pt-4 border-t border-teal-600/50 flex items-baseline justify-between">
                             <span class="text-xs text-slate-300">Official Tuition Value:</span>
@@ -444,7 +444,7 @@
                         </div>
                         <div class="space-y-1">
                             <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">Admissions & Portal Evaluation</h3>
-                            <p class="text-xs text-amber-200">Tamper-proof council screening & ID issuance</p>
+                            <p class="text-xs text-amber-200">Tamper-proof academy verification & ID issuance</p>
                         </div>
                         <div class="pt-4 border-t border-amber-500/40 flex items-baseline justify-between">
                             <span class="text-xs text-slate-300">Candidate Investment:</span>
@@ -456,152 +456,6 @@
             </div>
 
             <!-- STANDALONE VIDEO TESTIMONIALS (Optimized for Mobile/Tablet/Desktop: 1 per col on phone, 2 on tablet, 4 on desktop, NO HORIZONTAL SLIDER!) -->
-            <div id="videoInterviewsSection" class="border-t border-slate-200 pt-12 space-y-8">
-                <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
-                        Video Reviews From Real Student Fellows
-                    </h2>
-                    <p class="text-slate-600 text-xs sm:text-sm">
-                        Watch unfiltered video interviews recorded by verified cohort graduates and educators:
-                    </p>
-                </div>
-
-                <!-- Grid: 1 col on mobile, 2 on tablet, 4 on desktop -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-        <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-4 shadow-lg transition-all group flex flex-col justify-between">
-            <div class="flex items-center justify-between px-1 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
-                <div class="flex items-center gap-1.5 font-bold text-slate-700">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Verified Fellow</span>
-                </div>
-                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">1m 25s</span>
-            </div>
-            
-            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
-                <iframe 
-                    src="https://player.vimeo.com/video/1245537104?h=cfef4b1fb4&badge=0&autopause=0&player_id=0&app_id=58479" 
-                    class="absolute inset-0 w-full h-full" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                    title="Newton Academy Interview - Chukwunonso">
-                </iframe>
-            </div>
-            
-            <div class="pt-3 px-1 space-y-1">
-                <div class="flex items-center justify-between">
-                    <h4 class="text-sm font-bold text-slate-900 font-heading">Chukwunonso</h4>
-                    <div class="text-amber-400 text-xs">★★★★★</div>
-                </div>
-                <p class="text-[11px] text-slate-500 font-sans leading-normal">
-                    Practical hands-on tech training experience & cohort mentorship.
-                </p>
-            </div>
-        </div>
-  
-
-        <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-4 shadow-lg transition-all group flex flex-col justify-between">
-            <div class="flex items-center justify-between px-1 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
-                <div class="flex items-center gap-1.5 font-bold text-slate-700">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Verified Fellow</span>
-                </div>
-                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 44s</span>
-            </div>
-            
-            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
-                <iframe 
-                    src="https://player.vimeo.com/video/1245537113?h=1e8bb3076b&badge=0&autopause=0&player_id=0&app_id=58479" 
-                    class="absolute inset-0 w-full h-full" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                    title="Newton Academy Interview - Clemson">
-                </iframe>
-            </div>
-            
-            <div class="pt-3 px-1 space-y-1">
-                <div class="flex items-center justify-between">
-                    <h4 class="text-sm font-bold text-slate-900 font-heading">Clemson</h4>
-                    <div class="text-amber-400 text-xs">★★★★★</div>
-                </div>
-                <p class="text-[11px] text-slate-500 font-sans leading-normal">
-                    From zero experience to building live client-ready projects.
-                </p>
-            </div>
-        </div>
-  
-
-        <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-4 shadow-lg transition-all group flex flex-col justify-between">
-            <div class="flex items-center justify-between px-1 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
-                <div class="flex items-center gap-1.5 font-bold text-slate-700">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Verified Fellow</span>
-                </div>
-                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 40s</span>
-            </div>
-            
-            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
-                <iframe 
-                    src="https://player.vimeo.com/video/1245537116?h=52775ed3e6&badge=0&autopause=0&player_id=0&app_id=58479" 
-                    class="absolute inset-0 w-full h-full" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                    title="Newton Academy Interview - Emmanuel">
-                </iframe>
-            </div>
-            
-            <div class="pt-3 px-1 space-y-1">
-                <div class="flex items-center justify-between">
-                    <h4 class="text-sm font-bold text-slate-900 font-heading">Emmanuel</h4>
-                    <div class="text-amber-400 text-xs">★★★★★</div>
-                </div>
-                <p class="text-[11px] text-slate-500 font-sans leading-normal">
-                    Why this curriculum is completely different from traditional school.
-                </p>
-            </div>
-        </div>
-  
-
-        <div class="bg-white border-2 border-slate-200 hover:border-[#005f5a] rounded-3xl p-4 shadow-lg transition-all group flex flex-col justify-between">
-            <div class="flex items-center justify-between px-1 pb-2 text-[11px] text-slate-500 border-b border-slate-100 mb-2">
-                <div class="flex items-center gap-1.5 font-bold text-slate-700">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                    <span>Verified Fellow</span>
-                </div>
-                <span class="font-mono text-[10px] bg-slate-100 px-2 py-0.5 rounded-full">2m 06s</span>
-            </div>
-            
-            <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
-                <iframe 
-                    src="https://player.vimeo.com/video/1245537093?h=fdaaca5d75&badge=0&autopause=0&player_id=0&app_id=58479" 
-                    class="absolute inset-0 w-full h-full" 
-                    frameborder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-                    title="Newton Academy Interview - Fernanda">
-                </iframe>
-            </div>
-            
-            <div class="pt-3 px-1 space-y-1">
-                <div class="flex items-center justify-between">
-                    <h4 class="text-sm font-bold text-slate-900 font-heading">Fernanda</h4>
-                    <div class="text-amber-400 text-xs">★★★★★</div>
-                </div>
-                <p class="text-[11px] text-slate-500 font-sans leading-normal">
-                    The quality of direct mentorship and personal growth gained.
-                </p>
-            </div>
-        </div>
-  
-                </div>
-
-                <div class="text-center">
-                    <p class="text-xs text-slate-500 flex items-center justify-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        <span>Playable directly on this page &bull; No external redirects</span>
-                    </p>
-                </div>
-            </div>
-
             <!-- 100 DOCUMENTED WRITTEN REVIEWS SLIDER -->
             <div class="border-t border-slate-200 pt-12 space-y-6">
                 <div class="text-center max-w-2xl mx-auto space-y-2">
@@ -665,7 +519,7 @@
                         Submit Your Scholarship Application
                     </h2>
                     <p class="text-slate-600 text-xs sm:text-sm">
-                        Complete your evaluation details below. The Admissions Council triggers a 30-second live screening upon submission:
+                        Complete your evaluation details below. The Admissions Board triggers a 30-second live screening upon submission:
                     </p>
                 </div>
 
@@ -777,7 +631,7 @@
                             </svg>
                         </button>
                         <p class="text-[11px] text-center text-slate-500 mt-2">
-                            Evaluated live in 30 seconds by the Admissions Council &bull; Zero spam
+                            Evaluated live in 30 seconds by the Admissions Board &bull; Zero spam
                         </p>
                     </div>
 

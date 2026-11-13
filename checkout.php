@@ -64,7 +64,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Entrepreneurs
     <div class="bg-gradient-to-r from-[#003d3a] via-[#005f5a] to-[#003d3a] text-white py-2.5 px-4 text-center text-xs font-sans border-b border-amber-400/30">
         <div class="max-w-4xl mx-auto flex items-center justify-center gap-2 flex-wrap">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>Admissions Council Decision: <strong class="text-amber-300">100% Full Tuition Scholarship Officially Ratified</strong> for <span id="announcementName" class="font-bold underline decoration-amber-400"><?php echo htmlspecialchars($name); ?></span></span>
+            <span>Admissions Board Decision: <strong class="text-amber-300">100% Full Tuition Scholarship Officially Ratified</strong> for <span id="announcementName" class="font-bold underline decoration-amber-400"><?php echo htmlspecialchars($name); ?></span></span>
         </div>
     </div>
 

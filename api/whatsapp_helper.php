@@ -122,7 +122,7 @@ class NewtonWhatsApp {
      */
     public static function getScholarshipAwardMessage($name, $programme, $checkoutUrl) {
         $fee = number_format(SCHOLARSHIP_APPLICATION_FEE);
-        return "Dear {$name},\n\nCongratulations! The Academic Council of Newton Academy has approved your 90% Partial Scholarship for {$programme}.\n\nYour tuition has been subsidized from ₦200,000 down to a one-time application fee of ₦{$fee}.\n\nPlease access your official award letter and finalize your admission here:\n{$checkoutUrl}\n\nNote: Scholarship seat hold expires in 24 hours.\n— Newton Academy Admissions";
+        return "Dear {$name},\n\nCongratulations! The Academic Board of Newton Academy has approved your 90% Partial Scholarship for {$programme}.\n\nYour tuition has been subsidized from ₦200,000 down to a one-time application fee of ₦{$fee}.\n\nPlease access your official award letter and finalize your admission here:\n{$checkoutUrl}\n\nNote: Scholarship seat hold expires in 24 hours.\n— Newton Academy Admissions";
     }
 }
 

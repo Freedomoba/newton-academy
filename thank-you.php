@@ -89,7 +89,7 @@
                         You Have Been Pre-Screened For A 100% Tuition Scholarship
                     </h3>
                     <p class="text-xs text-teal-100">
-                        Redirecting you to the Confidential Academic Council Briefing in <span id="countdown" class="font-mono text-amber-400 font-bold">15</span> seconds...
+                        Redirecting you to the Confidential Scholarship Briefing in <span id="countdown" class="font-mono text-amber-400 font-bold">15</span> seconds...
                     </p>
                     <a id="redirectBtn" href="scholarship.php" class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md hover:brightness-105 transition-all">
                         Open Scholarship Briefing Immediately &rarr;

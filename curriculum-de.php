@@ -92,32 +92,6 @@
                 Master the art of building, launching, and scaling profitable digital businesses, automated sales pipelines, and high-margin AI video workflows.
             </p>
 
-            <!-- Financial Award Summary Box -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 max-w-xl mx-auto text-left space-y-3 font-sans">
-                <div class="flex justify-between text-xs sm:text-sm text-teal-200">
-                    <span>Standard Program Tuition:</span>
-                    <span class="line-through font-mono">₦200,000</span>
-                </div>
-                <div class="flex justify-between text-xs sm:text-sm text-amber-300 font-bold">
-                    <span>Newton Academy Foundation Grant:</span>
-                    <span class="font-mono">-₦200,000 (100% Covered)</span>
-                </div>
-                <div class="border-t border-white/15 pt-2 flex justify-between items-center text-white">
-                    <div>
-                        <strong class="text-sm block">Tuition Payable by Fellow:</strong>
-                        <span class="text-[11px] text-emerald-300">100% Full Tuition Free</span>
-                    </div>
-                    <span class="text-2xl font-black text-emerald-400 font-mono">₦0.00</span>
-                </div>
-                <div class="border-t border-white/15 pt-2 flex justify-between items-center text-white">
-                    <div>
-                        <strong class="text-sm block">One-Time Application Fee:</strong>
-                        <span class="text-[11px] text-teal-200">Mandatory Seriousness & Commitment Filter</span>
-                    </div>
-                    <span class="text-2xl font-black text-amber-400 font-mono">₦20,000</span>
-                </div>
-            </div>
-
             <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#applyForm" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl gold-glow transition-all transform active:scale-95 text-center">
                     Claim 100% Scholarship & Fill Application Form
@@ -166,9 +140,9 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <!-- Tutor Photo Column -->
-                <div class="md:col-span-5 text-center md:text-left space-y-4">
+                <div class="md:col-span-6 text-center md:text-left space-y-4">
                     <div class="relative inline-block mx-auto md:mx-0 rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl bg-slate-900">
-                        <img src="assets/images/tutor_judith_imanai.jpg" alt="Judith Imanai - Seasoned Digital Entrepreneur" class="w-72 sm:w-80 h-auto object-cover max-h-[420px]">
+                        <img src="assets/images/tutor_judith_imanai.jpg" alt="Judith Imanai - Seasoned Digital Entrepreneur" class="w-full sm:w-[420px] md:w-full h-auto object-cover max-h-[560px]">
                         <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-4 text-center">
                             <span class="block text-amber-400 text-xs font-black uppercase tracking-wider">Lead Programme Tutor</span>
                             <span class="block text-white text-sm font-bold">Judith Imanai</span>
@@ -182,7 +156,7 @@
                 </div>
 
                 <!-- Tutor Bio Column -->
-                <div class="md:col-span-7 space-y-5">
+                <div class="md:col-span-6 space-y-5">
                     <span class="px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md inline-block">
                         Faculty Profile &bull; Meet Your Lead Tutor
                     </span>

@@ -233,7 +233,7 @@ HTML;
                                 Dear <strong>{$name}</strong>,
                             </p>
                             <p style="margin:0 0 18px; font-size:15px; color:#475569;">
-                                Following review of your candidate application, the Academic Council of {$academyName} has formally granted you a <strong>100% Full Tuition Scholarship</strong> for the following flagship program:
+                                Following review of your candidate application, the Academic Board of {$academyName} has formally granted you a <strong>100% Full Tuition Scholarship</strong> for the following flagship program:
                             </p>
 
                             <div style="background-color:#f0f9f8; border:1px solid #ccfbf1; border-radius:8px; padding:20px; margin:22px 0;">

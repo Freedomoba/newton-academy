@@ -57,7 +57,7 @@
                     <!-- Academic Crest & Tag -->
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-50 text-[#005f5a] border border-[#005f5a]/30 mb-4">
                         <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                        <span>Academic Admissions Council In Session</span>
+                        <span>Admissions Board In Session</span>
                     </div>
 
                     <h3 class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight mb-2">
@@ -95,7 +95,7 @@
                     </div>
 
                     <p class="text-[10px] text-slate-400 mt-4 italic">
-                        Newton Academy Academic Council &bull; Official Endowment Evaluation
+                        Newton Academy Academic Board &bull; Official Endowment Evaluation
                     </p>
                 </div>
 
@@ -217,7 +217,7 @@
                 if (phaseDesc) phaseDesc.textContent = "Verifying Newton Academy Foundation full-tuition endowment balance...";
                 if (phaseIcon) phaseIcon.className = "w-2 h-2 rounded-full bg-teal-500 animate-pulse";
             } else if (remaining > 0) {
-                if (phaseTitle) phaseTitle.textContent = "Phase 3: Academic Council Ratification";
+                if (phaseTitle) phaseTitle.textContent = "Phase 3: Admissions Board Ratification";
                 if (phaseDesc) phaseDesc.textContent = "Admissions Committee unanimous approval received! Printing official award...";
                 if (phaseIcon) phaseIcon.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
             }
