@@ -1,906 +1,1572 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing + Applied AI | Full Curriculum & Scholarship Syllabus | Newton Academy</title>
-    <!-- Favicon & Social Meta -->
+    <title>Digital Marketing + Applied AI Diploma Curriculum | Newton Academy</title>
     <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
     <link rel="apple-touch-icon" href="assets/favicon.jpg">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cabinet+Grotesk:wght@700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'Ubuntu', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        heading: ['Montserrat', 'Ubuntu', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            bg: '#f1f5f9',
-                            50: '#f0f9f8',
-                            100: '#d9f0ee',
-                            500: '#007771',
-                            600: '#005f5a',
-                            700: '#004d49',
-                            800: '#003e3b',
-                            900: '#002f2d',
-                        }
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Cabinet Grotesk', 'Poppins', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .brand-shadow {
-            box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.15);
-        }
-        .gold-glow {
-            box-shadow: 0 10px 30px -8px rgba(245, 158, 11, 0.35);
-        }
-    
-        p {
-            line-height: 1.65 !important;
-        }
-        .prose-readable {
-            line-height: 1.65 !important;
-        }
-        .heading-highlight {
-            text-decoration-color: #f59e0b;
-            text-underline-offset: 8px;
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-heading { font-family: 'Cabinet Grotesk', sans-serif; }
+        .brand-shadow { box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.15); }
+        .gold-glow { box-shadow: 0 10px 30px -8px rgba(245, 158, 11, 0.35); }
     </style>
     <link rel="stylesheet" href="assets/css/animations.css">
 </head>
-<body class="bg-[#f1f5f9] text-[#1e293b] font-sans antialiased selection:bg-[#005f5a] selection:text-white">
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-[#005f5a] selection:text-white">
 
     <!-- Top Navigation Bar -->
     <header class="border-b border-slate-200/90 bg-white/95 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
-            <!-- Left: Logo -->
             <a href="index.html" class="flex items-center shrink-0">
-                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-11 w-auto max-w-[130px] sm:max-w-none object-contain">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-10 w-auto object-contain">
             </a>
-
-            <!-- Right: Back to Briefing Link & Apply Action -->
             <div class="flex items-center gap-2 sm:gap-4 shrink-0">
-                <a id="backToBriefingLink" href="thank-you.html" class="text-[11px] sm:text-xs font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1 transition-colors whitespace-nowrap">
-                    ← <span class="hidden sm:inline">Back to</span> <span>Briefing</span>
+                <a href="scholarship.php" class="text-[11px] sm:text-xs font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1 transition-colors whitespace-nowrap">
+                    ← <span class="hidden sm:inline">Back to</span> <span>Scholarship Briefing</span>
                 </a>
-                <a href="#applyForm" class="bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 sm:py-2 rounded-full gold-glow transition-all whitespace-nowrap">
+                <a href="#applyForm" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 text-slate-950 font-black text-[11px] sm:text-xs px-3.5 sm:px-5 py-2 rounded-full gold-glow transition-all whitespace-nowrap font-heading">
                     Apply Now
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO HEADER: Program Track & Scholarship Status -->
-    <section class="bg-gradient-to-br from-[#003330] via-[#005f5a] to-[#00433f] text-white py-14 sm:py-20 border-b border-amber-500/30">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-            
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-4">
-                Digital Marketing + Applied AI
-            </h1>
+    <!-- 1. HERO SECTION (2-COLUMN HERO MATCHING SCREENSHOT 1a11c668) -->
+    <section class="relative bg-gradient-to-br from-[#002826] via-[#003835] to-[#001f1e] text-white py-14 sm:py-20 overflow-hidden border-b border-teal-500/30">
+        <!-- Subtle Background Glows -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            <p class="text-base sm:text-xl text-teal-100 max-w-3xl mx-auto font-sans leading-relaxed mb-8">
-                Transform into a globally certified digital marketing specialist commanding high-ticket foreign retainers in USD and scaling multi-channel paid acquisition.
-            </p>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Copy & CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="text-xs sm:text-sm font-black tracking-widest uppercase text-emerald-400 font-mono">
+                        Digital Marketing (Applied AI)
+                    </div>
 
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#applyForm" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl gold-glow transition-all transform active:scale-95 text-center">
-                    Claim 100% Scholarship & Fill Application Form
-                </a>
-                <a href="#modules" class="w-full sm:w-auto bg-white/15 hover:bg-white/25 text-white font-bold text-xs sm:text-sm md:text-base px-8 py-4 rounded-xl border border-white/25 transition-all text-center">
-                    Explore All 15 Modules Below ↓
-                </a>
-            </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] font-heading text-white">
+                        Become a World-Class Digital Marketer & Growth Strategist
+                    </h1>
 
-        
-            <div class="mt-12 max-w-4xl mx-auto px-2">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 bg-slate-950 group">
-                    <img src="assets/images/mockup_digital_marketing.jpg" alt="Digital Marketing Multi-Device Learning Suite" class="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-700">
-                    <div class="bg-slate-900 border-t border-white/10 p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-white">
-                        <div class="flex items-center gap-3">
-                            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="text-xs sm:text-sm font-bold">100% Cross-Platform Access: Desktop, Laptop, Tablet & Mobile</span>
-                        </div>
-                        <span class="text-[11px] font-mono text-amber-300 font-bold bg-amber-500/20 px-3 py-1 rounded-full border border-amber-400/30">
-                            Includes Lumenvox AI Suite + LMS Portal
-                        </span>
+                    <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans max-w-xl mx-auto lg:mx-0">
+                        Master multi-platform paid ads (Meta, Google, TikTok), high-converting direct-response copywriting, and international client acquisition paying in USD.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#applyForm" class="w-full sm:w-auto bg-gradient-to-r from-emerald-400 to-emerald-500 hover:from-emerald-500 hover:to-emerald-600 text-slate-950 font-black text-xs sm:text-sm px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/25 transition-all transform active:scale-95 text-center font-heading">
+                            Enrol Now
+                        </a>
+                        <a href="#applyForm" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm px-8 py-4 rounded-xl border border-white/30 transition-all text-center font-heading">
+                            Apply For Scholarship
+                        </a>
                     </div>
                 </div>
+
+                <!-- Right Column: 3D Product Mockup Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-950 group">
+                        <img src="assets/images/mockup_digital_marketing.jpg" alt="Digital Marketing + Applied AI Diploma Curriculum Learning Suite" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="bg-slate-900/95 border-t border-amber-400/30 p-3 sm:p-4 flex items-center justify-between text-white text-xs">
+                            <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                LMS Portal + AI Tool Suite
+                            </span>
+                            <span class="text-amber-400 font-bold">100% Online</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FACULTY CREDENTIALS BANNER -->
+    <!-- 2. 5-PILLAR HORIZONTAL VALUE STRIP (MATCHING SCREENSHOT 53009992) -->
     <div class="bg-white border-b border-slate-200 py-6">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <span class="text-[11px] font-bold text-slate-500 uppercase tracking-widest block mb-2">
-                Taught by Global Industry Tutors with Enterprise Backgrounds At:
-            </span>
-            <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-12 font-black text-slate-800 text-xs sm:text-sm">
-                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Microsoft</span>
-                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Meta (Facebook)</span>
-                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>Accenture</span>
-                <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-[#005f5a]"></span>7Up Bottling Company</span>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-200 text-left">
+                <div class="py-3 md:py-0 md:px-4 first:pl-0">
+                    <h4 class="font-bold text-slate-900 text-sm font-heading">Beginner Friendly</h4>
+                    <p class="text-xs text-slate-500 mt-1">No prior experience required.</p>
+                </div>
+                <div class="py-3 md:py-0 md:px-4">
+                    <h4 class="font-bold text-slate-900 text-sm font-heading">Job Placement Support</h4>
+                    <p class="text-xs text-slate-500 mt-1">Launch your career with internships and retainers.</p>
+                </div>
+                <div class="py-3 md:py-0 md:px-4">
+                    <h4 class="font-bold text-slate-900 text-sm font-heading">Flexible Learning</h4>
+                    <p class="text-xs text-slate-500 mt-1">Choose to learn at a pace that fits your schedule.</p>
+                </div>
+                <div class="py-3 md:py-0 md:px-4">
+                    <h4 class="font-bold text-slate-900 text-sm font-heading">World-Class Tutors &amp; Mentorship</h4>
+                    <p class="text-xs text-slate-500 mt-1">Learn directly from verified industry practitioners.</p>
+                </div>
+                <div class="py-3 md:py-0 md:px-4 last:pr-0">
+                    <h4 class="font-bold text-slate-900 text-sm font-heading">Recognised Diploma</h4>
+                    <p class="text-xs text-slate-500 mt-1">Earn a globally verifiable diploma certificate.</p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- 3. COURSE OVERVIEW & LEARNING OUTCOMES (MATCHING SCREENSHOT eae853c4) -->
+    <section class="py-14 sm:py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-10">
+                <a href="#applyForm" class="inline-block bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-md transition-all font-heading">
+                    Download Course Brochure &amp; Curriculum PDF ↓
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Left: Overview & Outcomes -->
+                <div class="lg:col-span-7 space-y-8">
+                    
+                    <div class="space-y-4">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading tracking-tight">
+                            Course Overview
+                        </h2>
+                        
+        <p class="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+            The <strong>Digital Marketing + Applied AI</strong> diploma program equips delegates with the practical skills to deploy high-ROAS paid advertising, master direct-response copywriting, construct automated sales funnels, and acquire high-paying foreign clients in USD and GBP.
+        </p>
+        <p class="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+            You will learn how to architect conversion campaigns on Meta (Facebook &amp; Instagram), Google Search &amp; YouTube, and TikTok, while integrating generative AI tools to automate copywriting, video creative production, and audience targeting.
+        </p>
+        <p class="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
+            This beginner-to-advanced curriculum blends data-driven media buying with psychological sales funnels, preparing you to operate as an elite growth marketer, in-demand agency freelancer, or foreign remote specialist.
+        </p>
     
-    <!-- LEAD FACULTY TUTOR SPOTLIGHT: THEOPHILUS AKHIMIE -->
+                    </div>
+
+                    <div class="space-y-4 pt-4 border-t border-slate-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading tracking-tight">
+                            Learning Outcomes
+                        </h3>
+                        <ol class="space-y-3 text-xs sm:text-sm text-slate-700 font-sans leading-relaxed list-decimal list-outside pl-5">
+                            <li><strong>Multi-Platform Paid Advertising:</strong> Master conversion campaign architecture across Meta Ads Manager, Google Performance Max, and TikTok Ads delivering verified Return on Ad Spend (ROAS).</li>
+<li><strong>Persuasive Direct-Response Copywriting:</strong> Write high-converting sales letters, video sales scripts (VSLs), and email sequences using applied generative AI.</li>
+<li><strong>Conversion Funnels &amp; CRO:</strong> Construct and optimize high-converting landing pages, lead capture mechanisms, and automated WhatsApp/email customer journeys.</li>
+<li><strong>Data Analytics &amp; Attribution:</strong> Implement Google Analytics 4 (GA4), Meta Pixel Conversions API (CAPI), and user heatmap tracking to optimize marketing ROI.</li>
+<li><strong>International Remote Client Acquisition:</strong> Pitch, close, and retain international clients in the US, UK, and Canada paying $1,500 – $5,000 monthly retainers.</li>
+<li><strong>Commercial Growth Defense:</strong> Execute a live capstone agency campaign defending an end-to-end commercial growth audit before faculty evaluators.</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <!-- Right: Program Card (NO "Next Cohort Starts by" as instructed!) -->
+                <div class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border-2 border-slate-200 shadow-xl space-y-6">
+                    <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                        <img src="assets/images/virtual_fellows_laptops.jpg" alt="Newton Academy Fellows in Practical Training" class="w-full h-52 sm:h-64 object-cover">
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
+                            <span class="font-bold text-slate-500 uppercase tracking-wider">Program Duration:</span>
+                            <span class="font-extrabold text-slate-900 font-mono text-sm">3 Months (12 Weeks)</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
+                            <span class="font-bold text-slate-500 uppercase tracking-wider">Learning Format:</span>
+                            <span class="font-bold text-[#005f5a]">100% Online + LMS Portal Replays</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
+                            <span class="font-bold text-slate-500 uppercase tracking-wider">Weekly Commitment:</span>
+                            <span class="font-bold text-slate-800">4 – 6 Hours / Week</span>
+                        </div>
+                        <div class="flex items-center justify-between pb-1 text-xs">
+                            <span class="font-bold text-slate-500 uppercase tracking-wider">Accreditation:</span>
+                            <span class="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Verifiable Diploma</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                        <a href="#applyForm" class="flex-1 py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-center text-sm shadow-md transition-all font-heading">
+                            Enrol Now
+                        </a>
+                        <a href="#applyForm" class="flex-1 py-3.5 px-4 rounded-xl bg-white hover:bg-slate-50 text-[#005f5a] font-bold text-center text-sm border-2 border-[#005f5a] transition-all font-heading">
+                            Apply For Scholarship
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. CAREER OPPORTUNITIES & GLOBAL SALARY TRENDS (MATCHING SCREENSHOT 0e3fc429) -->
+    <section class="py-14 sm:py-20 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Left: Opportunities & Pathways -->
+                <div class="lg:col-span-7 space-y-8">
+                    
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#003835] font-heading tracking-tight mb-4">
+                            Career Opportunities
+                        </h2>
+                        <ol class="space-y-2 text-xs sm:text-sm md:text-base text-slate-800 font-sans font-medium list-decimal list-outside pl-5 leading-relaxed">
+                            <li><strong>United States</strong> – $85,000 – $130,000 USD / yr</li>
+<li><strong>United Kingdom</strong> – £50,000 – £90,000 GBP / yr</li>
+<li><strong>Canada</strong> – $70,000 – $110,000 CAD / yr</li>
+<li><strong>Germany &amp; EU</strong> – €55,000 – €95,000 EUR / yr</li>
+<li><strong>Nigeria</strong> – ₦6,000,000 – ₦14,000,000 NGN / yr</li>
+<li><strong>Kenya &amp; East Africa</strong> – KSh 3,200,000 – KSh 5,500,000 KES / yr</li>
+<li><strong>Remote / Global Agency Roles</strong> – $75,000 – $120,000 USD / yr</li>
+                        </ol>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200">
+                        <h3 class="text-xl sm:text-2xl font-bold text-[#003835] font-heading tracking-tight mb-3">
+                            Career Pathways
+                        </h3>
+                        <ol class="space-y-1.5 text-xs sm:text-sm md:text-base text-slate-700 font-sans font-medium list-decimal list-outside pl-5 leading-relaxed">
+                            <li>AI Growth &amp; Performance Marketer</li>
+<li>Meta, Google &amp; TikTok Paid Media Buyer</li>
+<li>Direct-Response Copywriter &amp; Funnel Architect</li>
+<li>Conversion Rate Optimization (CRO) Strategist</li>
+<li>Head of Growth &amp; International Agency Retainer Consultant</li>
+                        </ol>
+                    </div>
+
+                </div>
+
+                <!-- Right: Salary Trend Table (Matching screenshot 0e3fc429) -->
+                <div class="lg:col-span-5 bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
+                    <div class="bg-[#003835] text-white p-4 font-bold text-sm sm:text-base font-heading flex items-center justify-between">
+                        <span>Salary Trend (Digital Marketing + Applied AI)</span>
+                        <span class="text-[10px] text-amber-400 font-mono">USD ($)</span>
+                    </div>
+                    <table class="w-full text-left text-xs sm:text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-[#004d49] text-white font-semibold text-[11px] uppercase tracking-wider">
+                                <th class="p-3 border-r border-teal-800">Year</th>
+                                <th class="p-3 text-right">Average Global Salary (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2018</td>
+                                    <td class="p-3 text-right font-mono ">$72,000</td>
+                                </tr>
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2019</td>
+                                    <td class="p-3 text-right font-mono ">$78,000</td>
+                                </tr>
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2020</td>
+                                    <td class="p-3 text-right font-mono ">$86,000</td>
+                                </tr>
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2021</td>
+                                    <td class="p-3 text-right font-mono ">$94,000</td>
+                                </tr>
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2022</td>
+                                    <td class="p-3 text-right font-mono ">$105,000</td>
+                                </tr>
+                            
+                                <tr class="hover:bg-slate-50">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2023</td>
+                                    <td class="p-3 text-right font-mono ">$114,000</td>
+                                </tr>
+                            
+                                <tr class="bg-teal-50/70 font-bold text-slate-900">
+                                    <td class="p-3 text-teal-800 font-bold border-r border-slate-100 font-mono">2024</td>
+                                    <td class="p-3 text-right font-mono ">$127,000</td>
+                                </tr>
+                            
+                                <tr class="bg-amber-50/80 font-black text-amber-950">
+                                    <td class="p-3 text-amber-800 border-r border-slate-100 font-mono">2026 (Projected)</td>
+                                    <td class="p-3 text-right font-mono text-amber-700 font-black text-sm">$138,000+</td>
+                                </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="p-3 bg-slate-50 text-[10px] text-slate-500 text-center border-t border-slate-100">
+                        Based on verified international remote market benchmarks across Upwork, LinkedIn, and foreign agency retainers.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. FULL 15-MODULE SYLLABUS (CONNECTED ACCORDION LIST WITH PLUS SIGNS) -->
+    <section id="modules" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 font-heading tracking-tight">
+                    The 15 Comprehensive Modules of Digital Marketing + Applied AI
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-2">
+                    Click each module to view full lesson breakdowns and practical portfolio deliverables.
+                </p>
+            </div>
+
+            <!-- Connected Accordion List -->
+            
+    <div class="relative border-l-2 border-[#005f5a]/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-5">
+        
+            <!-- Module 01 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    01
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 01
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 1</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Introduction to Modern Digital Marketing & Strategic Advantage
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            The commercial revolution in customer attention. Traditional vs modern direct-response marketing. How top agencies and multinational brands structure customer journeys, analyze competitors, and drive predictable commercial sales.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Customer Journey Mapping: Cold, Warm, and Hot audience transitions</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Competitive intelligence frameworks using Similarweb and Meta Ad Library</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Establishing commercial unit economics: CAC, LTV, and ROAS calculations</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 02 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    02
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 02
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 2</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Building a High-Converting Digital Marketing Strategy
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            In-depth market research and competitive intelligence. Developing psychographic customer personas and multi-stage buyer journey maps. Setting SMART commercial metrics and crafting a 90-day actionable marketing masterplan.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>90-Day Go-To-Market (GTM) growth roadmap</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Psychographic avatar profiles and empathy mapping</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Commercial KPI dashboard setup and milestone forecasting</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 03 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    03
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 03
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 3</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Website Optimization, Conversion Rate Optimization (CRO) & UX
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Turning casual visitors into buyers. Mobile-first user experience design, rapid page load optimization, layout psychology, heatmap tracking, and conversion-centered design that doubles sales conversion.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Landing page audit checklist (UX, speed, visual hierarchy, mobile thumb-zone)</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Setting up Hotjar and Clarity heatmaps to track user click behaviour</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>A/B split-testing frameworks for headlines, CTAs, and checkout forms</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 04 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    04
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 04
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 4</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Content Marketing, Copywriting & Brand Storytelling
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            The psychology of persuasion in text. Writing irresistible headlines, high-converting video sales letters (VSLs), email copy, and organic content that commands immediate authority and builds organic demand.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>The PAS and AIDA direct-response copywriting master formula</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>High-converting Video Sales Letter (VSL) script architecture</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Authority content calendar generation using ChatGPT and Claude</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 05 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    05
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 05
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 4</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Search Engine Optimization (SEO) & Organic Discovery
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Dominating Google search results without paying for ads. Technical SEO, keyword research, on-page optimization, backlink strategies, and optimizing for Google's Helpful Content System and AI Overviews.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Target keyword strategy mapped to high commercial buyer intent</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>On-page meta tags, semantic schema markup, and image SEO optimization</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Building high-authority contextual backlinks and digital PR mentions</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 06 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    06
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 06
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 5</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Paid Search & Google Performance Max Advertising
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Capturing high-intent buyers on Google Search, YouTube, Display, and Performance Max campaigns. Bidding strategies, quality scores, negative keywords, and budget optimization for maximum ROAS.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>End-to-end Google Ads account setup and conversion tag implementation</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>High-converting Google Search copy with dynamic keyword insertion</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Performance Max asset group creation blending video, imagery, and text</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 07 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    07
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 07
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 6</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Social Media Strategy & Organic Community Growth
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Platform-native content strategies for LinkedIn, Instagram, X (Twitter), and TikTok. Building engaged organic audiences, viral content distribution, and social proof engines that support paid acquisition.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Platform algorithm playbook: what triggers reach across TikTok and LinkedIn</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Short-form viral video storytelling blueprint (hooks, retention, payoff)</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Automated social scheduling and community engagement workflows</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 08 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    08
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 08
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 7</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Meta Ads (Facebook & Instagram) Architecture & Scale
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            The undisputed king of direct-response customer acquisition. Creative testing methodologies, Advantage+ campaigns, lookalike audiences, custom audiences, Pixel CAPI setup, and scaling budgets profitably.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Meta Business Suite & Conversions API (CAPI) pixel installation</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>The 3:2:2 Dynamic Creative Testing (DCT) scientific ad method</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Horizontal and vertical scaling protocols without fatigue</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 09 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    09
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 09
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 7</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Email Marketing Automation & Retention Funnels
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Your highest ROI digital channel. Welcome sequences, abandoned cart recovery, automated nurture flows, and promotional broadcast strategies using Klaviyo, Brevo, Mailchimp, and ActiveCampaign.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>5-Part automated customer indoctrination welcome sequence</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>High-converting 3-step abandoned checkout recovery sequence</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>List hygiene, SPF/DKIM/DMARC deliverability protocols</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 10 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    10
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 10
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 8</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Influencer Marketing, High-ROI Partnerships & Affiliate Systems
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Leveraging other people's audiences for explosive growth. Finding, vetting, negotiating, and tracking influencer campaigns. Setting up affiliate referral engines that pay on commission only.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Influencer evaluation scorecard: detecting fake followers and engagement</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Outreach swipe scripts and performance-based contract templates</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Affiliate tracking software setup with automated commission payouts</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 11 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    11
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 11
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 9</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Analytics, Data-Driven Decision Making & Attribution
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Google Analytics 4 (GA4), UTM tracking frameworks, attribution modeling, and executive KPI dashboards. Learning to speak the language of numbers and making confident, profitable marketing decisions.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>GA4 custom event setup and conversion funnel tracking</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Standardized UTM tagging convention across every ad channel</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Real-time Looker Studio executive commercial dashboard</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 12 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    12
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 12
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 10</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Social Media Listening & Online Reputation Management (ORM)
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Protecting and elevating brand authority. Brand monitoring tools, sentiment analysis, customer review acquisition systems, and crisis communication management that safeguards enterprise value.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Automated brand mention alerts across search and social</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>5-Star customer review generation funnel (Google Business, Trustpilot)</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Negative review de-escalation and public relations turnaround framework</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 13 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    13
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 13
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 11</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Mobile & WhatsApp Marketing Automation
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Reaching customers on Africa's dominant communication platform. WhatsApp Business API, chatbot flows, broadcast messaging, SMS remarketing, and conversational commerce funnels.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>WhatsApp Business automated catalog, quick replies, and labels</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>No-code chatbot flow setup for automated lead qualification</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Conversational WhatsApp remarketing campaigns that close deals fast</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 14 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    14
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 14
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 12</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                International Remote Work & Foreign Client Retainers
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            Landing lucrative US, UK, and European clients paying in USD and GBP from Nigeria. Upwork optimization, LinkedIn outreach, cold email prospecting, foreign bank accounts, and retainer management.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Upwork 100% Job Success profile positioning and proposal templates</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>LinkedIn executive direct-outreach system for foreign agency founders</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Setting up multi-currency USD/GBP bank accounts (Geegpay, Grey, Payoneer)</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Module 15 -->
+            <div class="relative group">
+                <!-- Connected Node Circle on Line -->
+                <div class="absolute -left-[35px] sm:-left-[51px] top-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-md border-2 border-white group-hover:bg-amber-500 transition-colors">
+                    15
+                </div>
+
+                <!-- Accordion Card -->
+                <div class="bg-white border border-slate-200/90 hover:border-[#005f5a] rounded-2xl shadow-sm transition-all overflow-hidden">
+                    <button type="button" onclick="toggleAccordion(this)" class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 hover:bg-slate-50/70 transition-colors">
+                        <div class="space-y-1 pr-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-[10px] font-black uppercase tracking-wider text-[#005f5a] bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full">
+                                    Module 15
+                                </span>
+                                <span class="text-xs font-mono font-bold text-slate-400">Week 12</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 font-heading leading-snug">
+                                Capstone Agency Campaign & Live Commercial Audit
+                            </h3>
+                        </div>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-lg shrink-0 accordion-icon group-hover:bg-[#005f5a] group-hover:text-white transition-colors">
+                            +
+                        </span>
+                    </button>
+
+                    <!-- Collapsible Content -->
+                    <div class="hidden px-5 pb-5 pt-2 border-t border-slate-100 space-y-3 font-sans text-xs sm:text-sm text-slate-600 bg-slate-50/40">
+                        <p class="leading-relaxed">
+                            The defining practical defense. You will design, build, and present a complete multi-channel growth strategy for a real enterprise or prospective foreign client before Newton Academy's faculty council.
+                        </p>
+                        <div class="pt-1">
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-900 block mb-1.5">
+                                Practical Portfolio Deliverables:
+                            </span>
+                            <ul class="space-y-1.5">
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Complete end-to-end commercial growth audit deck</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Full campaign creative assets, ad copy, and funnel layout</span>
+                                    </li>
+                                
+                                    <li class="flex items-start gap-2">
+                                        <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                        <span>Live faculty oral defense, feedback review, and Diploma Ratification</span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+
+        </div>
+    </section>
+
+    <!-- 6. LEAD FACULTY TUTOR PROFILE -->
     <section class="bg-gradient-to-br from-[#002f2d] via-[#004d49] to-[#003835] text-white py-16 border-y-2 border-teal-400/30">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 <!-- Tutor Photo Column -->
                 <div class="md:col-span-6 text-center md:text-left space-y-4">
                     <div class="relative inline-block mx-auto md:mx-0 rounded-3xl overflow-hidden border-4 border-amber-400 shadow-2xl bg-slate-900">
-                        <img src="assets/images/tutor_theophilus_akhimie.jpg" alt="Theophilus Akhimie - Seasoned Digital Marketer" class="w-72 sm:w-80 h-auto object-cover max-h-[420px]">
+                        <img src="assets/images/tutor_theophilus_akhimie.jpg" alt="Theophilus Akhimie" class="w-full sm:w-[420px] md:w-full h-auto object-cover max-h-[560px]">
                         <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-4 text-center">
                             <span class="block text-amber-400 text-xs font-black uppercase tracking-wider">Lead Programme Tutor</span>
                             <span class="block text-white text-sm font-bold">Theophilus Akhimie</span>
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1">
-                        <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold">12 Years Global Exp</span>
-                        <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-200 text-xs font-bold">M.Sc Marketing (USA)</span>
-                        </div>
                 </div>
 
                 <!-- Tutor Bio Column -->
                 <div class="md:col-span-6 space-y-5">
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
-                        Theophilus Akhimie: Seasoned Digital Marketer & Global Strategist
+                        Theophilus Akhimie: Seasoned Digital Marketer &amp; Growth Specialist
                     </h2>
-                    <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans">
-                        Theophilus Akhimie is a seasoned Digital Marketer with 12 years of hands-on experience driving exponential organizational growth and high-ticket consumer value across multinational markets.
-                    </p>
-                    <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
-                        <p>
-                            He has architected campaigns and consulted for premier global brands including <strong>Pinterest</strong>, <strong>Accenture</strong>, <strong>Gannett</strong>, <strong>Swish Interactive</strong>, <strong>Nautica</strong>, <strong>Adidas</strong>, <strong>FCMB</strong>, <strong>GTBank</strong>, and <strong>Jumia</strong>.
-                        </p>
-                        <p>
-                            His core mastery spans enterprise brand management, precision market research, conversion analytics, high-ROAS multi-channel paid acquisition, and commercial business development.
-                        </p>
-                        <p class="p-3.5 rounded-xl bg-[#002826] border border-teal-400/30 text-teal-200 font-medium">
-                            Theophilus holds a Master's Degree in Marketing Management from <strong>Maryland University, Baltimore, USA</strong>, bringing world-class American marketing execution directly to your screen.
-                        </p>
-                    </div>
-
-                    <!-- Motivational AI Poster Preview -->
-                    <div class="pt-2">
-                        <div class="rounded-2xl overflow-hidden border border-teal-400/30 shadow-md max-w-sm">
-                            <img src="assets/images/inspire_ai_marketing.jpg" alt="Is Digital Marketing still relevant in an AI-driven world?" class="w-full h-auto object-cover">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MOUTH-WATERING BENEFITS SECTION -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Mouth-Watering Benefits: Everything You Receive as a <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Newton Academy Fellow</span>
-            </h2>
-            <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans mt-2">
-                Designed to take you from uncertain graduate or struggling builder to an independent, globally competitive operator commanding high income.
+                    
+        <p class="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed font-sans">
+            Theophilus Akhimie is a seasoned Digital Marketer and Growth Specialist with over 12 years of hands-on experience driving multi-million-dollar acquisition campaigns across top technology and consumer giants.
+        </p>
+        <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+            <p>
+                He has led paid media strategy and conversion funnels for iconic brands including <strong>Pinterest</strong>, <strong>Accenture</strong>, <strong>Adidas</strong>, and <strong>DLHS</strong>.
+            </p>
+            <p>
+                Holding an M.Sc in Marketing from the United States, Theophilus strips away theoretical academic fluff and trains fellows on exact tactical frameworks that produce real revenue.
             </p>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
-                    01
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">Globally Verifiable Diploma</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Graduate with an internationally accredited digital diploma verifiable by employers worldwide to elevate your LinkedIn, CV, and consulting portfolio.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
-                    02
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">15 Core Commercial Modules</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Step-by-step masterclasses covering real-world business models, marketing funnels, customer persuasion, and legal/financial frameworks.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 font-black flex items-center justify-center text-base mb-4 border border-amber-200">
-                    03
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">Integrated Lumenvox AI Suite</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Full access to advanced prompt engineering, Runway Gen-3 AI video generation, Kling AI, and ElevenLabs voice cloning tools directly inside your LMS.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
-                    04
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">Multi-Currency Payment Setup</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Hands-on setup of Stripe, Paystack, Geegpay, and foreign merchant accounts so you can seamlessly collect payments in USD, GBP, and EUR from Nigeria.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
-                    05
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">Foreign Client Acquisition</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Battle-tested cold outreach swipe files, proposal decks, and contract templates to pitch and close $1,500 to $4,000 monthly retainers with international firms.
-                </p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 brand-shadow">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#005f5a] font-black flex items-center justify-center text-base mb-4 border border-teal-200">
-                    06
-                </div>
-                <h4 class="text-base font-bold text-slate-900 mb-1">Weekly Live Faculty Hot-Seats</h4>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Live weekly interactive coaching and review sessions with faculty mentors who dissect your campaigns, funnels, and business models live on Zoom.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FULL 15-MODULE SYLLABUS -->
-    <section id="modules" class="bg-white py-16 border-t border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    The 15 Comprehensive Modules of Digital Marketing + Applied AI
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-2">
-                    Direct from our accredited curriculum. Zero fluff. 100% practical market skills.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
-                
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 1
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 1</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Introduction to Modern Digital Marketing & Strategic Advantage
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    The commercial revolution in customer attention. Traditional vs modern direct-response marketing. How top agencies and multinational brands structure customer journeys, analyze competitors, and drive predictable sales.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 2
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 2</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Building a High-Converting Digital Marketing Strategy
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    In-depth market research and competitive intelligence. Developing psychographic customer personas and multi-stage buyer journey maps. Setting SMART commercial metrics and crafting a 90-day actionable marketing masterplan.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 3
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 3</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Website Optimization, Conversion Rate Optimization (CRO) & UX
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Turning casual visitors into buyers. Mobile-first user experience design, rapid page load optimization, layout psychology, heatmap tracking, and conversion-centered design that doubles sales conversion.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 4
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Content Marketing, Copywriting & Brand Storytelling
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    The psychology of persuasion in text. Writing irresistible headlines, high-converting video sales letters (VSLs), email copy, and organic content that commands immediate authority and builds organic demand.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 5
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 4</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Social Media Marketing & Algorithmic Growth
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Dominating distribution on Instagram, LinkedIn, TikTok, and X. Designing engagement systems, community building, viral content loops, and converting followers into qualified inbound buyer leads.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 6
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 5</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Pay-Per-Click (PPC) Advertising & Meta Ads Mastery
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Running high-ROI paid traffic on Meta (Facebook & Instagram). Ad account structuring, custom audience segmentation, lookalike modeling, pixel tracking, and scaling daily ad spend profitably.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 7
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 6</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Email Marketing & Advanced Lifecycle Automation
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Building, segmenting, and monetizing responsive email lists. Mastering behavioral automation workflows, cart abandonment sequences, re-engagement campaigns, and lifecycle deliverability.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 8
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 7</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Search Engine Optimization (SEO) & Technical Authority
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Dominating Google organic search. On-page keyword architecture, technical SEO auditing, backlink acquisition strategies, and localized SEO to drive free, high-intent traffic for years.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 9
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Search Engine Marketing (SEM) & Google Ads Mastery
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Capturing bottom-of-the-funnel buyers searching for immediate solutions. Google Search, Display, and Performance Max campaigns. Bidding strategies, quality score optimization, and negative keyword filtering.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 10
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 8</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Influencer Marketing, High-ROI Partnerships & Affiliate Systems
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Identifying authentic influencers, negotiating performance-based deals, calculating influencer ROI, and structuring scalable affiliate networks that recruit armies of marketers to promote your offers.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 11
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 9</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Analytics, Data-Driven Decision Making & Attribution
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Google Analytics 4 (GA4), Meta Conversions API (CAPI), and multi-touch attribution modeling. Setting up custom dashboards, A/B split testing protocols, and extracting actionable business intelligence.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 12
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 10</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Social Media Listening & Online Reputation Management (ORM)
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Brand monitoring, sentiment analysis, managing public relations crises, turning negative customer feedback into retention opportunities, and safeguarding corporate brand perception.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 13
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 11</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Mobile & WhatsApp Marketing Automation
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Direct-to-consumer conversational commerce. Building automated WhatsApp broadcast funnels, SMS marketing, chatbot customer support, and closing high-ticket deals inside messaging apps.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 14
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    International Remote Work & Foreign Client Retainers
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    How to pitch, close, and retain international clients in the US, UK, Canada, and Europe paying $1,500 to $4,000 monthly retainers. Positioning, proposals, contracts, and international invoicing.
-                </p>
-            </div>
-  
-
-            <div class="bg-white border border-slate-200/90 rounded-2xl p-6 brand-shadow hover:border-[#005f5a] transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[11px] font-black text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Module 15
-                    </span>
-                    <span class="text-xs font-mono text-slate-400 font-bold">Week 12</span>
-                </div>
-                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Capstone Agency Campaign & Live Commercial Audit
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
-                    Comprehensive execution capstone: deploy a full-funnel live marketing campaign, audit a corporate brand, present multi-channel analytics, and receive formal review from international agency directors.
-                </p>
-            </div>
-  
-            </div>
-
-            <!-- INTEGRATED LUMENVOX AI SPECIALIZATION MODULES -->
-            <div class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002b28] rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-amber-500/40">
-                <div class="text-center max-w-2xl mx-auto mb-8">
-                    <h3 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
-                        Integrated Lumenvox AI Creator Suite (5 Modules)
-                    </h3>
-                    <p class="text-xs sm:text-sm text-teal-100 font-sans mt-1">
-                        Never purchase separate prompt engineering or video editing courses. The full Lumenvox suite is integrated directly into your diploma.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    
-            <div class="bg-[#003835]/40 border border-amber-500/30 rounded-2xl p-6 text-white hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[10px] font-black text-slate-950 bg-amber-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                        AI-01
-                    </span>
-                    <span class="text-[11px] font-mono text-amber-300 font-bold">Integrated Suite</span>
-                </div>
-                <h4 class="text-base font-bold text-white tracking-tight mb-2">
-                    Generative AI Prompt Engineering Architecture
-                </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
-                    Master advanced structured prompting with GPT-4o, Claude 3.5 Sonnet, and deep research agents. Automated market research, customer psychographics, and instantaneous commercial copy generation.
-                </p>
-            </div>
-  
-
-            <div class="bg-[#003835]/40 border border-amber-500/30 rounded-2xl p-6 text-white hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[10px] font-black text-slate-950 bg-amber-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                        AI-02
-                    </span>
-                    <span class="text-[11px] font-mono text-amber-300 font-bold">Integrated Suite</span>
-                </div>
-                <h4 class="text-base font-bold text-white tracking-tight mb-2">
-                    Cinematic AI Video Creation (Runway Gen-3 & Kling AI)
-                </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
-                    Create broadcast-quality commercial ads, cinematic brand films, and social video ads from text prompts and still imagery without physical camera crews, expensive studios, or studio sets.
-                </p>
-            </div>
-  
-
-            <div class="bg-[#003835]/40 border border-amber-500/30 rounded-2xl p-6 text-white hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[10px] font-black text-slate-950 bg-amber-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                        AI-03
-                    </span>
-                    <span class="text-[11px] font-mono text-amber-300 font-bold">Integrated Suite</span>
-                </div>
-                <h4 class="text-base font-bold text-white tracking-tight mb-2">
-                    Synthetic Voice Cloning & Hyper-Realistic Audio (ElevenLabs)
-                </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
-                    Synthesize flawless human narrations in British, American, and native African accents. Voice cloning for international video sales letters, multi-lingual translations, and podcast automation.
-                </p>
-            </div>
-  
-
-            <div class="bg-[#003835]/40 border border-amber-500/30 rounded-2xl p-6 text-white hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[10px] font-black text-slate-950 bg-amber-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                        AI-04
-                    </span>
-                    <span class="text-[11px] font-mono text-amber-300 font-bold">Integrated Suite</span>
-                </div>
-                <h4 class="text-base font-bold text-white tracking-tight mb-2">
-                    Faceless Video Ad Channels & Kinetic VSL Production
-                </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
-                    Building automated video ad engines: automated B-roll sourcing, auto-caption kinetic typography in CapCut and Premiere Pro, and producing 30 video ads weekly in under 3 hours.
-                </p>
-            </div>
-  
-
-            <div class="bg-[#003835]/40 border border-amber-500/30 rounded-2xl p-6 text-white hover:border-amber-400 transition-all">
-                <div class="flex items-center justify-between gap-2 mb-3">
-                    <span class="text-[10px] font-black text-slate-950 bg-amber-400 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                        AI-05
-                    </span>
-                    <span class="text-[11px] font-mono text-amber-300 font-bold">Integrated Suite</span>
-                </div>
-                <h4 class="text-base font-bold text-white tracking-tight mb-2">
-                    AI Service Packaging & Foreign Client Monetization
-                </h4>
-                <p class="text-xs sm:text-sm text-teal-100 font-sans leading-relaxed">
-                    Packaging your AI creation skills into high-ticket service retainers. Delivering commercial video ads to international agencies in the US and UK who gladly pay $500 to $1,500 per video.
-                </p>
-            </div>
-  
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- EMBEDDED APPLICATION FORM: APPLY DIRECTLY FROM THIS PAGE -->
-    <section id="applyForm" class="py-16 max-w-3xl mx-auto px-4 sm:px-6">
-        <div class="bg-white border-2 border-[#005f5a] rounded-3xl p-6 sm:p-10 brand-shadow">
-            
-            <div class="text-center mb-8">
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                    Apply for 100% Full Tuition Scholarship
-                </h3>
-                <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
-                    Selected Track: <strong class="text-[#005f5a]">Digital Marketing + Applied AI</strong>
-                </p>
-            </div>
-
-            <!-- The Transparency Box: The ₦20,000 Filter -->
-            <div class="bg-amber-50 border border-amber-300 rounded-2xl p-5 mb-8 text-xs text-amber-950 font-sans leading-relaxed">
-                <strong>Why is there a ₦20,000 application fee?</strong>
-                Because free programs suffer a 95% dropout rate. We have thousands of applicants and limited mentor capacity. The ₦20,000 is not tuition - it is a non-refundable commitment filter that ensures every seat goes to a fellow who will finish the full 3-month curriculum.
-            </div>
-
-            <div id="cAlert" class="hidden mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium"></div>
-
-            <form id="curriculumApplyForm" class="space-y-5">
-                <input type="hidden" name="programme" value="Digital Marketing + Applied AI">
-
-                <!-- Full Legal Name -->
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Candidate Full Legal Name
-                    </label>
-                    <input 
-                        type="text" 
-                        name="fullName" 
-                        value="Freedom Obanijesu" 
-                        required 
-                        placeholder="e.g. Samuel Adeyemi"
-                        class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
-                    >
-                </div>
-
-                <!-- Email Address -->
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        Primary Email Address
-                    </label>
-                    <input type="email" id="cEmail" name="email" value="freedom@lumenvoxai.com" 
-                        required 
-                        placeholder="e.g. samuel@example.com"
-                        class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
-                    >
-                </div>
-
-                <!-- Phone -->
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                        WhatsApp Contact Number
-                    </label>
-                    <input type="tel" id="cPhone" name="phone" value="+2348012345678" 
-                        required 
-                        placeholder="e.g. 08012345678"
-                        class="w-full bg-[#f1f5f9] border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#005f5a] focus:bg-white transition-all"
-                    >
-                </div>
-
-                <!-- Agreement -->
-                <div class="p-3 bg-[#f8fafc] border border-slate-200 rounded-xl text-xs text-slate-600 flex items-start gap-2.5">
-                    <input type="checkbox" id="cAgree" required class="mt-0.5 rounded text-[#005f5a] focus:ring-[#005f5a] shrink-0">
-                    <label for="cAgree" class="cursor-pointer">
-                        I agree to pay the mandatory ₦20,000 application fee if accepted and commit to completing all 15 modules and the capstone project.
-                    </label>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="pt-2">
-                    <button 
-                        type="submit" 
-                        id="cSubmitBtn"
-                        class="w-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 hover:to-yellow-500 text-slate-950 font-black py-4 px-6 rounded-xl text-base gold-glow transform active:scale-95 transition-all cursor-pointer text-center"
-                    >
-                        Submit Application & Access Award Document
-                    </button>
-                </div>
-
-                <p class="text-center text-[11px] text-slate-500">
-                    Secured by 256-bit SSL encryption. Evaluated by Admissions Committee.
-                </p>
-            </form>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     
-    <!-- TESTIMONIALS SHOWCASE (100 VERIFIED FELLOW EXPERIENCES) -->
-    <section id="reviews" class="border-t border-slate-200 bg-[#f1f5f9] py-16">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ SECTION (ZERO PREHEADINGS) -->
+    
+    <!-- FAQ SECTION (ZERO PREHEADINGS) -->
+    <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
-            <!-- Section Header -->
-            <div class="text-center max-w-2xl mx-auto mb-10">
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-snug">
-                    Real Experiences from <span class="text-[#005f5a] underline decoration-amber-400 decoration-4 underline-offset-8">Ambitious Women & Founders</span>
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#003835] font-heading tracking-tight">
+                    Do you have worries about why you should learn with Newton Academy?
                 </h2>
-                <p class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
-                    Verified feedback from 100 fellows and alumni across Nigeria, Africa, the UK, and the diaspora who transitioned into high-income digital enterprise.
+                <p class="text-xs sm:text-sm text-slate-600 font-sans mt-3 max-w-2xl mx-auto">
+                    Here are straightforward, verified answers to the most common questions prospective fellows ask about our curriculum, diploma, and career outcomes.
                 </p>
             </div>
 
-            <!-- Single Full-Width Card Showcase (Every Word Fully Readable!) -->
-            <div class="bg-white border-2 border-[#005f5a]/30 rounded-3xl p-7 sm:p-10 brand-shadow relative transition-all duration-300" id="testimonialCard">
-                
-                <!-- Card Header: Rating & Badge -->
-                <div class="flex items-center justify-between gap-2 mb-6">
-                    <div class="flex items-center text-amber-500 text-sm tracking-wide">
-                        <span id="tStars">★★★★★</span>
-                        <span id="tRating" class="text-slate-900 text-xs font-bold ml-2">5.0 / 5.0</span>
-                    </div>
-                    <span id="tBadge" class="text-[10px] font-extrabold text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full uppercase tracking-wider">
-                        Verified Fellow
-                    </span>
-                </div>
-
-                <!-- Full Quote Body (100% visible, natural text wrap, no horizontal cutoff!) -->
-                <div class="min-h-[140px] sm:min-h-[120px] flex items-center">
-                    <p id="tQuote" class="text-xs sm:text-sm md:text-base lg:text-lg text-slate-800 font-sans leading-[1.65] italic">
-                        "The caliber of tutors here is unmatched. Having tutors who actually led campaigns at Meta and Accenture review my offer positioning changed everything. Within 6 weeks of applying their high-ticket packaging principles, I closed two foreign consulting retainers paying in USD."
-                    </p>
-                </div>
-
-                <!-- Card Footer: Author Profile & Navigation Controls -->
-                <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    
-                    <div class="flex items-center gap-3.5">
-                        <div id="tAvatar" class="w-11 h-11 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-black text-sm shrink-0">
-                            OO
-                        </div>
-                        <div>
-                            <h4 id="tName" class="text-sm font-bold text-slate-900">Oluwaseun O.</h4>
-                            <p id="tRole" class="text-xs text-slate-500 leading-normal">Brand Strategist & Independent Consultant &bull; Lagos</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide Controls & Review Index Counter -->
-                    <div class="flex items-center gap-3 self-end sm:self-auto">
-                        <span id="tCounter" class="text-xs font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg">
-                            Review 1 of 100
-                        </span>
-                        <div class="flex items-center gap-1.5">
-                            <button 
-                                type="button" 
-                                id="btnPrevT" 
-                                aria-label="Previous review"
-                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
-                            >
-                                ←
-                            </button>
-                            <button 
-                                type="button" 
-                                id="btnNextT" 
-                                aria-label="Next review"
-                                class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-[#005f5a] hover:text-white text-slate-700 flex items-center justify-center font-bold text-base transition-all cursor-pointer"
-                            >
-                                →
-                            </button>
-                        </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>Is this diploma program suitable for complete beginners with zero background?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        Yes, absolutely. The curriculum is structured from the ground up starting with foundational digital concepts before moving into advanced artificial intelligence workflows, high-converting funnel architectures, and client acquisition retainers. You do not need any coding knowledge or prior digital marketing experience to succeed.
                     </div>
                 </div>
 
-                <!-- Animated Auto-Rotate Progress Bar -->
-                <div class="w-full bg-slate-100 h-1 rounded-full mt-6 overflow-hidden">
-                    <div id="tProgressBar" class="h-full bg-[#005f5a] transition-all duration-100" style="width: 0%"></div>
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>How are classes scheduled, and what if I have a busy 9-to-5 job or school?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        The program is 100% online and built for busy working professionals and university students. Masterclasses are hosted live on weekends and recorded in high definition. All lectures, slide decks, practical templates, and AI prompts are uploaded immediately to your dedicated LMS Student Portal for 24/7 on-demand replay access.
+                    </div>
                 </div>
-            </div>
 
-            <!-- Review Notice -->
-            <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
-                <span class="font-bold text-[#005f5a]">Average 4.9 / 5.0 Rating Across 100 Documented Graduate Reviews</span>
-                <span>Reviews rotate automatically every 4 seconds. Tap arrows or hover to pause and read.</span>
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>Are the tutors and instructors real industry practitioners?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        Yes. Our faculties are led by verified senior executives and venture operators—such as Theophilus Akhimie (M.Sc Marketing USA; worked with Pinterest, Accenture, and Adidas) and Judith Imanai (Tech founder, former FinTech COO, and ACCA certified). They teach real, battlefield-tested strategies, not theoretical classroom fluff.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>How does the 100% Full Tuition Scholarship award work?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        Newton Academy's Council subsidizes the complete $250 / ₦385,000 tuition fee for qualified fellows through institutional endowments. Recipients only cover a one-time subsidized acceptance and LMS onboarding registration fee to secure their cloud student portal credentials, courseware resources, and grading evaluation access.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>Will I receive an accredited, verifiable certificate upon graduation?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        Yes. Upon successful completion of the 15 modules and submission of your capstone portfolio project, you are awarded an official Newton Academy Diploma Certificate complete with a unique cryptographic verification serial and QR code that can be verified globally by employers on LinkedIn and company portals.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden hover:border-[#005f5a] transition-all bg-white shadow-sm">
+                    <button type="button" onclick="toggleFaq(this)" class="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 font-heading text-sm sm:text-base hover:bg-slate-50 transition-colors">
+                        <span>How will Newton Academy help me secure international remote client retainers or jobs?</span>
+                        <span class="w-7 h-7 rounded-full bg-teal-50 text-[#005f5a] flex items-center justify-center font-bold text-base shrink-0 faq-icon">+</span>
+                    </button>
+                    <div class="hidden p-5 pt-0 text-xs sm:text-sm text-slate-600 font-sans leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                        Our final modules are dedicated specifically to International Client Acquisition, High-Ticket Retainers, and Global Remote Job Applications. You will receive plug-and-play cold pitch templates, contract agreements, multi-currency invoicing systems, and interview prep to win clients paying in USD, GBP, and EUR.
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
 
-    <!-- Newton Official Dark Brand Footer (Not Black) -->
+    <!-- 8. SUPPORT BANNER (WITH ODUNAYO & FREEDOM + HEADSET IMAGE) -->
     
-    <!-- Clean Minimal Brand Footer -->
-    <footer class="bg-[#003835] text-slate-300 py-8 border-t border-emerald-900/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-5 pb-5 border-b border-emerald-800/40 text-center sm:text-left">
-                <!-- Logo -->
-                <a href="index.html" class="inline-block">
-                    <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto object-contain brightness-0 invert" onerror="this.src='assets/images/logo.png'">
-                </a>
+    <!-- SUPPORT BANNER (MATCHING SCREENSHOT 2b87e08b WITH ODUNAYO & FREEDOM) -->
+    <section class="relative bg-gradient-to-r from-[#f59e0b] via-[#fbbf24] to-[#f59e0b] text-slate-950 overflow-hidden border-b-8 border-[#003835]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Left: Headline & Support Contact Action -->
+                <div class="md:col-span-7 space-y-4 text-center md:text-left">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-slate-950 tracking-tight leading-tight">
+                        Need Help? Contact us
+                    </h2>
+                    <p class="text-sm sm:text-base font-semibold text-slate-900 font-sans">
+                        For more enquiries reach out to us. Available 24/7
+                    </p>
 
-                <!-- Quick Links & Contact -->
-                <div class="flex flex-wrap items-center justify-center gap-5 sm:gap-7 text-xs text-slate-300 font-medium">
-                    <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
-                    <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
-                    <a href="scholarship.html" class="hover:text-amber-400 transition-colors">Scholarship</a>
-                    <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
+                    <!-- Contact Specialist Buttons for Odunayo and Freedom -->
+                    <div class="pt-3 flex flex-wrap items-center justify-center md:justify-start gap-3 sm:gap-4">
+                        <!-- Odunayo -->
+                        <div class="bg-white/95 rounded-2xl p-3 sm:p-4 border border-amber-600/20 shadow-md text-left flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-[#005f5a] text-white flex items-center justify-center font-black text-sm shrink-0">
+                                OD
+                            </div>
+                            <div>
+                                <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-500">Admissions Advisor</span>
+                                <span class="block text-sm font-black text-slate-900">Odunayo</span>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <a href="https://wa.me/2347019602639?text=Hello%20Odunayo%2C%20I%20need%20assistance%20with%20Newton%20Academy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-md border border-emerald-300 transition-colors">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                        WhatsApp
+                                    </a>
+                                    <a href="tel:+2347019602639" class="inline-flex items-center gap-1 text-[11px] font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-md border border-slate-300 transition-colors">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+                                        Call
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Freedom -->
+                        <div class="bg-white/95 rounded-2xl p-3 sm:p-4 border border-amber-600/20 shadow-md text-left flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-[#003835] text-white flex items-center justify-center font-black text-sm shrink-0">
+                                FR
+                            </div>
+                            <div>
+                                <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-500">Student Support Lead</span>
+                                <span class="block text-sm font-black text-slate-900">Freedom</span>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <a href="https://wa.me/2348053708909?text=Hello%20Freedom%2C%20I%20need%20assistance%20with%20Newton%20Academy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1 rounded-md border border-emerald-300 transition-colors">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                        WhatsApp
+                                    </a>
+                                    <a href="tel:+2348053708909" class="inline-flex items-center gap-1 text-[11px] font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 px-2.5 py-1 rounded-md border border-slate-300 transition-colors">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path></svg>
+                                        Call
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Copyright & Minimal Disclaimer -->
-            <div class="pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-[11px] text-slate-400">
-                <p>&copy; 2026 Newton Academy. All rights reserved.</p>
-                <p class="text-slate-400/80">
-                    Professional education only. Not affiliated with Meta Platforms, Inc. or Google LLC.
+                <!-- Right: Support Specialist Headset Photo (Matching screenshot 2b87e08b) -->
+                <div class="md:col-span-5 flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-sm rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-[#003835]">
+                        <img src="assets/images/support_rep_headset.jpg" alt="Newton Academy Customer Support Specialist" class="w-full h-auto object-cover max-h-72 sm:max-h-80">
+                        <div class="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md border border-amber-400/40 rounded-xl px-3.5 py-2 flex items-center justify-between text-white">
+                            <span class="flex items-center gap-2 text-xs font-bold">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                Live Support Active
+                            </span>
+                            <span class="text-[11px] font-mono text-amber-300 font-bold">24/7 Available</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING WHATSAPP BUTTON (FIXED BOTTOM RIGHT) -->
+    <a href="https://wa.me/2348053708909?text=Hello%20Newton%20Academy%20Support%2C%20I%20need%20help%20with%20my%20enrolment" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 group" aria-label="Chat with Newton Academy Support on WhatsApp">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="sr-only">Support WhatsApp</span>
+    </a>
+
+
+    <!-- 9. SCHOLARSHIP APPLICATION FORM -->
+    <section id="applyForm" class="py-16 sm:py-24 bg-gradient-to-b from-slate-50 to-white border-t border-slate-200">
+        <div class="max-w-xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center mb-8 space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                    Apply for 100% Full Tuition Scholarship
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 font-sans">
+                    Complete your candidate file. Submissions are evaluated immediately by the Admissions Board.
                 </p>
             </div>
+
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 brand-shadow">
+                <form id="officialScholarshipForm" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Legal Name</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="e.g. Amina Bello" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#005f5a] focus:border-[#005f5a] outline-none text-sm transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Primary Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="e.g. amina@gmail.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#005f5a] focus:border-[#005f5a] outline-none text-sm transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="e.g. +234 810 000 0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#005f5a] focus:border-[#005f5a] outline-none text-sm transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Selected Program Track</label>
+                        <input type="text" id="course_select" name="programme" readonly value="Digital Marketing + Applied AI" class="w-full px-4 py-3 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 font-bold text-sm outline-none">
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 hover:from-amber-600 text-slate-950 font-black text-sm sm:text-base gold-glow transition-all transform active:scale-95 text-center font-heading">
+                            Submit Application &amp; Access Award Document
+                        </button>
+                    </div>
+
+                    <div class="text-center text-[11px] text-slate-400 pt-1">
+                        Secured with 256-bit encryption &bull; Real-time faculty review
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. MINIMAL BRAND FOOTER -->
+    <footer class="bg-[#003835] text-slate-300 py-10 border-t border-emerald-900/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-4">
+            <a href="index.html" class="inline-block">
+                <img src="assets/logo.png" alt="Newton Academy" class="h-8 w-auto mx-auto object-contain brightness-0 invert">
+            </a>
+            <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300 font-medium">
+                <a href="curriculum-dm.html" class="hover:text-amber-400 transition-colors">Digital Marketing</a>
+                <a href="curriculum-de.html" class="hover:text-amber-400 transition-colors">Digital Entrepreneurship</a>
+                <a href="scholarship.php" class="hover:text-amber-400 transition-colors">Scholarship Portal</a>
+                <a href="mailto:na@newtoncore.com" class="hover:text-amber-400 transition-colors">na@newtoncore.com</a>
+            </div>
+            <p class="text-[11px] text-slate-400 pt-2">&copy; 2026 Newton Academy. All rights reserved. Professional education only.</p>
         </div>
     </footer>
 
-
-
-        <!-- Form Script & Connector -->
+    <!-- ACCORDION & EVALUATION SCRIPTS -->
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const userName = urlParams.get('name') || localStorage.getItem('newton_name') || 'Freedom Obanijesu';
-        const userEmail = urlParams.get('email') || localStorage.getItem('newton_email') || 'freedom@lumenvoxai.com';
-        const userPhone = urlParams.get('phone') || localStorage.getItem('newton_phone') || '+2348012345678';
-
-        const backLink = document.getElementById('backToBriefingLink');
-        if (backLink) {
-            backLink.href = 'thank-you.html?name=' + encodeURIComponent(userName) + 
-                            '&email=' + encodeURIComponent(userEmail) + 
-                            '&phone=' + encodeURIComponent(userPhone);
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.accordion-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) icon.textContent = '−';
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.textContent = '+';
+            }
         }
 
-        const cNameInput = document.getElementById('cName');
-        if (cNameInput) cNameInput.value = userName;
-        const cEmailInput = document.getElementById('cEmail');
-        if (cEmailInput) cEmailInput.value = userEmail;
-        const cPhoneInput = document.getElementById('cPhone');
-        if (cPhoneInput) cPhoneInput.value = userPhone;
-
-        const cForm = document.getElementById('curriculumApplyForm');
-        const cBtn = document.getElementById('cSubmitBtn');
-        const cAlert = document.getElementById('cAlert');
-
-        if (cForm) {
-            cForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                cBtn.disabled = true;
-                cBtn.textContent = 'Filing Candidate Record...';
-                cAlert.classList.add('hidden');
-
-                const nameVal = (document.getElementById('cName') ? document.getElementById('cName').value : userName).trim();
-                const emailVal = (document.getElementById('cEmail') ? document.getElementById('cEmail').value : userEmail).trim();
-                const phoneVal = (document.getElementById('cPhone') ? document.getElementById('cPhone').value : userPhone).trim();
-                const trackVal = 'Digital Marketing + Applied AI';
-                const appId = 'NA-SCH-' + Math.floor(1000000 + Math.random() * 9000000);
-
-                try {
-                    localStorage.setItem('newton_name', nameVal);
-                    localStorage.setItem('newton_email', emailVal);
-                    localStorage.setItem('newton_phone', phoneVal);
-                    localStorage.setItem('newton_track', trackVal);
-                    localStorage.setItem('newton_app_id', appId);
-                } catch (err) {}
-
-                cAlert.className = 'mb-6 p-4 rounded-xl text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-200';
-                cAlert.textContent = 'Scholarship Verified! Directing to your Official Award Document...';
-                cAlert.classList.remove('hidden');
-
-                try {
-                    const formData = new FormData(cForm);
-                    formData.append('app_id', appId);
-                    fetch('api/scholarship.php', { method: 'POST', body: formData }).catch(function() {});
-                } catch (e) {}
-
-                setTimeout(function() {
-                    const chkQuery = '?app_id=' + encodeURIComponent(appId) + 
-                                     '&name=' + encodeURIComponent(nameVal) + 
-                                     '&email=' + encodeURIComponent(emailVal) + 
-                                     '&phone=' + encodeURIComponent(phoneVal) + 
-                                     '&track=' + encodeURIComponent(trackVal);
-                    window.location.href = 'checkout.html' + chkQuery;
-                }, 600);
-            });
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) icon.textContent = '−';
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.textContent = '+';
+            }
         }
+
+        // Form submission wiring
+        document.addEventListener('DOMContentLoaded', function() {
+            // Prepopulate from localStorage
+            try {
+                const sName = localStorage.getItem('newton_name') || '';
+                const sEmail = localStorage.getItem('newton_email') || '';
+                const sPhone = localStorage.getItem('newton_phone') || '';
+                if (sName && document.getElementById('fullName')) document.getElementById('fullName').value = sName;
+                if (sEmail && document.getElementById('email')) document.getElementById('email').value = sEmail;
+                if (sPhone && document.getElementById('phone')) document.getElementById('phone').value = sPhone;
+            } catch(e) {}
+
+            const form = document.getElementById('officialScholarshipForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('fullName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const appId = 'NA-SCH-' + Date.now().toString().slice(-6);
+
+                    try {
+                        localStorage.setItem('newton_name', name);
+                        localStorage.setItem('newton_email', email);
+                        localStorage.setItem('newton_phone', phone);
+                        localStorage.setItem('newton_track', 'Digital Marketing + Applied AI');
+                    } catch(e) {}
+
+                    // Background submit
+                    try {
+                        const fd = new FormData(form);
+                        fd.append('app_id', appId);
+                        fd.append('source', localStorage.getItem('newton_source') || 'WhatsApp');
+                        fd.append('location', localStorage.getItem('newton_location') || 'Lagos, Nigeria');
+                        fetch('api/scholarship.php', { method: 'POST', body: fd }).catch(function() {});
+                    } catch(e) {}
+
+                    const chkParams = new URLSearchParams({
+                        app_id: appId,
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        track: 'Digital Marketing + Applied AI'
+                    });
+                    window.location.href = 'checkout.php?' + chkParams.toString();
+                });
+            }
+        });
     </script>
-
-    <!-- 100 Verified Testimonials Data & Slider Controller -->
-    <script src="assets/js/testimonials.js"></script>
-    <script src="assets/js/testimonial-slider.js"></script>
-    <script src="assets/js/animations.js"></script>
 </body>
 </html>
