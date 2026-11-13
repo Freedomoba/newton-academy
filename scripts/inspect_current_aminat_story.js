@@ -8,3 +8,4 @@ const endStoryIdx = html.indexOf('<!-- END OF INLINE NARRATIVE 1 -->') !== -1
 
 console.log('Story starts at:', storyIdx, 'ends at:', endStoryIdx);
 console.log(html.slice(storyIdx - 100, Math.min(storyIdx + 3000, endStoryIdx + 200)));
+

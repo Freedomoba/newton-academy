@@ -6,3 +6,4 @@ const fs = require('fs');
     console.log(file, 'after images:');
     console.log(html.slice(idx, idx + 400));
 });
+

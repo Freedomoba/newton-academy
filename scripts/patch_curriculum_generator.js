@@ -20,3 +20,4 @@ if (!content.includes('assets/js/application-evaluation.js')) {
 
 fs.writeFileSync('scripts/generate_complete_curriculum.js', content, 'utf8');
 console.log('Updated scripts/generate_complete_curriculum.js');
+

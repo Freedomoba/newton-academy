@@ -5,3 +5,4 @@ console.log('scholarship.html length:', html.length);
 console.log('Contains alumni-showcase:', html.includes('id="alumni-showcase"'));
 console.log('Contains confidentialEnvelope:', html.includes('id="confidentialEnvelope"'));
 console.log('Contains officialScholarshipForm:', html.includes('id="officialScholarshipForm"'));
+

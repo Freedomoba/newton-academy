@@ -275,22 +275,22 @@
                         <p class="text-[11px] text-teal-200 italic">Zero monthly tuition charged for the full 3-month duration.</p>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-amber-500/20 via-slate-900 to-[#002f2d] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 text-white space-y-4 shadow-xl overflow-hidden">
+                    <div class="relative bg-gradient-to-br from-amber-400 via-amber-300 to-yellow-400 border-2 border-amber-500 rounded-3xl p-6 sm:p-8 text-slate-950 space-y-4 shadow-xl overflow-hidden">
                         <div class="flex items-center justify-between">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-slate-950 text-amber-300 shadow-sm">
                                 Candidate Commitment
                             </span>
-                            <span class="text-xs text-amber-300 font-mono">ONE-TIME FEE</span>
+                            <span class="text-xs text-slate-950 font-black font-mono tracking-wide">ONE-TIME FEE</span>
                         </div>
                         <div class="space-y-1">
-                            <h3 class="text-xl sm:text-2xl font-bold font-heading text-white">Admissions & Portal Evaluation</h3>
-                            <p class="text-xs text-amber-200">Tamper-proof academy verification & ID issuance</p>
+                            <h3 class="text-xl sm:text-2xl font-black font-heading text-slate-950">Admissions & Portal Evaluation</h3>
+                            <p class="text-xs font-semibold text-slate-900/90">Tamper-proof academy verification & ID issuance</p>
                         </div>
-                        <div class="pt-4 border-t border-amber-500/40 flex items-baseline justify-between">
-                            <span class="text-xs text-slate-300">Candidate Investment:</span>
-                            <span class="text-3xl sm:text-4xl font-black text-amber-400 font-mono">₦20,000</span>
+                        <div class="pt-4 border-t border-slate-950/20 flex items-baseline justify-between">
+                            <span class="text-xs font-bold text-slate-900">Candidate Investment:</span>
+                            <span class="text-3xl sm:text-4xl font-black text-slate-950 font-mono">₦20,000</span>
                         </div>
-                        <p class="text-[11px] text-amber-200/90 italic">Only paid if your 30-second live evaluation is successful.</p>
+                        <p class="text-[11px] text-slate-900 font-bold italic">Only paid if your 30-second live evaluation is successful.</p>
                     </div>
                 </div>
             </div>
@@ -340,11 +340,7 @@
                 </div>
             </div>
         </div>
-    </div>
-            </div>
-            
-
-            <!-- INLINE NARRATIVE 1: AMINAT'S JOURNEY (SINGLE REALISTIC CLOSE SHOT) -->
+    </div><!-- INLINE NARRATIVE 1: AMINAT'S JOURNEY (SINGLE REALISTIC CLOSE SHOT) -->
             <div class="py-10 border-y border-slate-200 space-y-8">
                 <div class="max-w-3xl">
                     <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 font-heading leading-snug">
@@ -361,24 +357,6 @@
                                 <span class="block text-xs font-bold text-white">Aminat Bello</span>
                                 <span class="block text-[11px] text-emerald-400 font-medium">Newton Academy Fellow • Earning $1,200/mo Remote</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Story Text Column -->
-                    <div class="md:col-span-7 space-y-4 text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed font-sans">
-                        <p>
-                            Meet Aminat. In her university days, she had zero wealthy uncles or political godfathers. To buy semester handouts, photocopies, and feed herself, she stood by the campus main gate every evening hawking boiled and roasted corn with a heavy tray balanced on her head.
-                        </p>
-                        <p>
-                            Despite bone-crushing fatigue, she gave her studies everything she had &mdash; graduating with a coveted <strong>First-Class Honours degree in Economics</strong>. She finished NYSC full of hope, believing the corporate world would celebrate her brilliance. Instead, after submitting over 80 CVs across Lagos and Abuja, the only job offer she received was an ₦85,000/month administrative role where third-party bus fares alone would gobble up ₦50,000 every 30 days!
-                        </p>
-                        <p>
-                            Refusing to accept a life of quiet desperation, Aminat secured a seat in Newton Academy. Within 90 days of applying our practical frameworks in high-ROAS paid ads and AI-assisted copywriting, she landed her first international remote client on a $1,200 monthly retainer (over ₦1.8 Million Naira).
-                        </p>
-                        <p class="font-bold text-[#005f5a] pt-1">
-                            Today, Aminat works comfortably from her home in Lagos, provides for her aging parents, and earns in hard currency &mdash; all built on verifiable digital skills, not theoretical certificates.
-                        </p>
-                    </div>
                 </div>
             </div>
 
@@ -415,9 +393,6 @@
                         <div class="relative w-full max-w-sm rounded-3xl overflow-hidden border-2 border-[#005f5a]/40 shadow-2xl bg-slate-900 group">
                             <img src="assets/images/freedom_profile.jpg" alt="Freedom Obanijesu - AI Product Marketer &amp; Go-to-Market Strategist" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent p-4 text-center">
-                                <span class="inline-block px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider mb-1">
-                                    Lead Curriculum Architect
-                                </span>
                                 <p class="text-xs font-bold text-white">Freedom Obanijesu &bull; AI Product Marketer &amp; Go-to-Market Strategist</p>
                             </div>
                         </div>
@@ -439,9 +414,6 @@
 
                 <!-- Last Two Award & Proof Images Brought Down (Seen after reading the story) -->
                 <div class="border-t border-teal-200/60 pt-6">
-                    <p class="text-xs font-bold uppercase tracking-wider text-teal-900 mb-4 text-center sm:text-left">
-                        Verifiable Proof &amp; National Recognition:
-                    </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Award 1: NYSC Corpreneurship Challenge -->
                         <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-lg bg-slate-900 group">
@@ -1121,9 +1093,8 @@
 
             <div class="text-[11px] text-slate-400 italic">
                 Please do not close this window. Processing official certificate...
-            
-        
-    
-
+            </div>
+        </div>
+    </div>
 </body>
 </html>

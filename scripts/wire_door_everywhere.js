@@ -76,3 +76,4 @@ console.log('--- Wiring 3D Door Opening & Confetti Rain across all pages ---');
 });
 
 console.log('Wiring completed successfully.');
+

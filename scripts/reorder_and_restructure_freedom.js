@@ -155,3 +155,4 @@ function restructureFile(filePath) {
 }
 
 ['scholarship.html', 'scholarship.php', 'special-offer.html', 'special-offer.php', 'upsell.html', 'upsell.php'].forEach(restructureFile);
+
