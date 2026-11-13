@@ -115,10 +115,6 @@
                     <!-- Track 1: Digital Marketing + Applied AI (Daylight Agency Track) -->
                     <div class="bg-white border-2 border-slate-300 hover:border-[#005f5a] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all brand-shadow">
                         <div class="space-y-5">
-                            <span class="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 text-[#005f5a] border border-[#005f5a]/30 inline-block">
-                                Track 01 &bull; Client Acquisition
-                            </span>
-
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
                                 <img src="assets/images/mockup_digital_marketing.jpg" alt="3D Multi-Device Digital Marketing Mockup" class="w-full h-auto object-cover">
                                 <div class="bg-slate-900/90 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-slate-800">
@@ -183,10 +179,6 @@
                     <!-- Track 2: Digital Entrepreneurship + Applied AI (Midnight Executive Track) -->
                     <div class="relative bg-gradient-to-br from-[#002826] via-[#003835] to-[#001f1e] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all shadow-2xl brand-shadow ring-4 ring-amber-400/15 md:-translate-y-2">
                         <div class="space-y-5">
-                            <span class="px-3.5 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-md inline-block">
-                                Track 02 &bull; Most Popular
-                            </span>
-
                             <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-amber-400/40 shadow-xl">
                                 <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="3D Multi-Device Digital Entrepreneurship Mockup" class="w-full h-auto object-cover">
                                 <div class="bg-slate-950/95 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-amber-400/30">

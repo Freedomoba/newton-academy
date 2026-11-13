@@ -151,8 +151,7 @@
                     <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-1">
                         <span class="px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold">ACCA Certified</span>
                         <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-200 text-xs font-bold">FinTech Innovator</span>
-                        <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-bold">Multi-Venture Founder</span>
-                    </div>
+                        </div>
                 </div>
 
                 <!-- Tutor Bio Column -->

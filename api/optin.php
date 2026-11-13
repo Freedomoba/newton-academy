@@ -33,6 +33,32 @@ if (empty($fullName) || !$email || empty($phone)) {
 $fullPhone = $countryCode . preg_replace('/[^0-9]/', '', $phone);
 $createdAt = date('Y-m-d H:i:s');
 
+// Traffic source & Geographic place detection
+$source = trim($_POST['source'] ?? '');
+if (empty($source)) {
+    $ref = strtolower($_SERVER['HTTP_REFERER'] ?? '');
+    if (strpos($ref, 'whatsapp') !== false || strpos($ref, 'wa.me') !== false) $source = 'WhatsApp';
+    elseif (strpos($ref, 'facebook') !== false || strpos($ref, 'fb.com') !== false) $source = 'Facebook Ads';
+    elseif (strpos($ref, 'instagram') !== false) $source = 'Instagram';
+    elseif (strpos($ref, 'twitter') !== false || strpos($ref, 't.co') !== false || strpos($ref, 'x.com') !== false) $source = 'Twitter / X';
+    elseif (strpos($ref, 'tiktok') !== false) $source = 'TikTok';
+    elseif (strpos($ref, 'google') !== false) $source = 'Google';
+    else $source = 'Direct / Organic';
+}
+
+$location = trim($_POST['location'] ?? '');
+if (empty($location)) {
+    if (strpos($fullPhone, '+234') === 0 || strpos($phone, '080') === 0 || strpos($phone, '081') === 0) {
+        $location = 'Lagos, Nigeria';
+    } elseif (strpos($fullPhone, '+233') === 0) {
+        $location = 'Accra, Ghana';
+    } elseif (strpos($fullPhone, '+44') === 0) {
+        $location = 'London, UK';
+    } else {
+        $location = 'Nigeria';
+    }
+}
+
 // 1. Store Lead in Local CSV / JSON Storage (De-duplicated by Email)
 $leadsDir = __DIR__ . '/../data';
 if (!is_dir($leadsDir)) {
@@ -41,7 +67,7 @@ if (!is_dir($leadsDir)) {
 
 $csvFile = $leadsDir . '/optin_leads.csv';
 $normalizedEmail = strtolower($email);
-$header = ['Timestamp', 'Full Name', 'Email', 'WhatsApp Phone', 'IP Address'];
+$header = ['Timestamp', 'Full Name', 'Email', 'WhatsApp Phone', 'IP Address', 'Source', 'Location'];
 $rows = [];
 $found = false;
 
@@ -56,8 +82,8 @@ if (file_exists($csvFile)) {
             // Check email column (index 2)
             $existingEmail = strtolower(trim($data[2] ?? ''));
             if ($existingEmail === $normalizedEmail) {
-                // Update existing record with latest timestamp, name, phone, IP
-                $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? ''];
+                // Update existing record with latest timestamp, name, phone, IP, source, location
+                $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? '', $source, $location];
                 $found = true;
             } else {
                 $rows[] = $data;
@@ -69,7 +95,7 @@ if (file_exists($csvFile)) {
 
 if (!$found) {
     // Append as new unique lead
-    $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? ''];
+    $rows[] = [$createdAt, $fullName, $email, $fullPhone, $_SERVER['REMOTE_ADDR'] ?? '', $source, $location];
 }
 
 // Write back deduplicated data

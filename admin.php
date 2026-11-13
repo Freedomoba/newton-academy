@@ -258,6 +258,7 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
         body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
         .font-heading { font-family: 'Cabinet Grotesk', sans-serif; }
     </style>
+    <script src="assets/js/chart.umd.min.js"></script>
 </head>
 <body class="bg-[#f1f5f9] text-[#1e293b] min-h-screen flex flex-col antialiased">
 
@@ -357,6 +358,109 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
             </div>
         </div>
 
+        
+        <!-- PERFORMANCE & TRAFFIC ANALYTICS (CLICKS, FLOWS, DIRECTIONS & PLACES) -->
+        <div class="space-y-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-teal-500 animate-pulse"></span>
+                    <h2 class="text-sm sm:text-base font-bold text-slate-900 font-heading">Clicks, Funnel Flows &amp; Traffic Attribution</h2>
+                </div>
+                <div class="text-[11px] text-slate-500 font-medium hidden sm:block">
+                    Attribution by Direction &amp; Geographic Place Name
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+                
+                <!-- Card 1: Clicks & Funnel Flows -->
+                <div class="lg:col-span-7 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-start justify-between gap-2">
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading">Funnel Clicks &amp; Conversion Flow</h3>
+                                <p class="text-[11px] text-slate-500">Impressions &rarr; Opt-ins &rarr; Scholarship Briefings &rarr; Applications &rarr; Enrolled</p>
+                            </div>
+                            <span id="funnelConversionRateBadge" class="px-2.5 py-1 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800">
+                                0% Conversion
+                            </span>
+                        </div>
+
+                        <!-- Funnel Stage Progression Badges -->
+                        <div class="grid grid-cols-5 gap-1.5 pt-2 text-center text-[10px] font-bold">
+                            <div class="bg-slate-50 p-1.5 rounded-lg border border-slate-200">
+                                <span class="block text-slate-400 font-normal">1. Clicks</span>
+                                <span id="flowVisits" class="text-slate-900 font-mono">0</span>
+                            </div>
+                            <div class="bg-teal-50 p-1.5 rounded-lg border border-teal-200 text-[#005f5a]">
+                                <span class="block text-teal-600 font-normal">2. Opt-ins</span>
+                                <span id="flowOptins" class="font-mono"><?php echo $totalDelegates; ?></span>
+                            </div>
+                            <div class="bg-amber-50 p-1.5 rounded-lg border border-amber-200 text-amber-900">
+                                <span class="block text-amber-600 font-normal">3. Briefing</span>
+                                <span id="flowBriefing" class="font-mono">0</span>
+                            </div>
+                            <div class="bg-indigo-50 p-1.5 rounded-lg border border-indigo-200 text-indigo-900">
+                                <span class="block text-indigo-600 font-normal">4. Applied</span>
+                                <span id="flowApplied" class="font-mono"><?php echo $totalScholarships; ?></span>
+                            </div>
+                            <div class="bg-emerald-50 p-1.5 rounded-lg border border-emerald-200 text-emerald-900">
+                                <span class="block text-emerald-600 font-normal">5. Enrolled</span>
+                                <span id="flowEnrolled" class="font-mono"><?php echo $totalPaid; ?></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart Canvas -->
+                    <div class="mt-4 relative h-56 sm:h-64">
+                        <canvas id="funnelFlowChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Card 2: Traffic Directions / Sources -->
+                <div class="lg:col-span-5 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start justify-between gap-2 mb-2">
+                            <div>
+                                <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading">Traffic Directions</h3>
+                                <p class="text-[11px] text-slate-500">Incoming channel attribution (WhatsApp, Meta, Direct, etc.)</p>
+                            </div>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">
+                                Channels
+                            </span>
+                        </div>
+                        <div class="relative h-48 sm:h-52 flex items-center justify-center">
+                            <canvas id="trafficDirectionsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Legend Pills -->
+                    <div id="directionLegendPills" class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 mt-2 text-[10px]"></div>
+                </div>
+
+                <!-- Card 3: Leads by Places & Cities -->
+                <div class="lg:col-span-12 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/90 shadow-sm">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xs sm:text-sm font-bold text-slate-900 font-heading">Leads by Places &amp; Cities</h3>
+                            <p class="text-[11px] text-slate-500">Real geographic distribution of recorded leads with verified place names</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Top Place:</span>
+                            <span id="topPlaceBadge" class="px-2.5 py-1 rounded-full text-xs font-black bg-teal-50 text-[#005f5a] border border-teal-200">
+                                -
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="relative h-60 sm:h-72">
+                        <canvas id="leadsByPlacesChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <!-- DEDUPLICATION CLEAN ACTION BAR -->
         <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
             <div class="space-y-0.5">
@@ -426,7 +530,11 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                                     <button type="submit" class="text-rose-600 bg-rose-50 border border-rose-200 text-[10px] font-bold px-2.5 py-1 rounded-lg">Delete</button>
                                 </form>
                             </div>
-                            <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                            <div class="flex flex-wrap items-center gap-1.5 text-[10px]">
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">📍 <?php echo htmlspecialchars($lead['Location'] ?? ($lead[6] ?? 'Lagos, Nigeria')); ?></span>
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-teal-50 text-[#005f5a] border border-teal-200 font-bold">🔗 <?php echo htmlspecialchars($lead['Source'] ?? ($lead[5] ?? 'WhatsApp')); ?></span>
+                            </div>
+                            <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono pt-1 border-t border-slate-100">
                                 <span>Phone: <?php echo htmlspecialchars($lead['WhatsApp Phone'] ?? ($lead[3] ?? '-')); ?></span>
                                 <span><?php echo htmlspecialchars($lead['Timestamp'] ?? ($lead[0] ?? '-')); ?></span>
                             </div>
@@ -439,11 +547,13 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                     <table class="w-full text-left border-collapse text-xs">
                         <thead>
                             <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
-                                <th class="p-4">Timestamp</th>
-                                <th class="p-4">Full Name</th>
-                                <th class="p-4">Email</th>
-                                <th class="p-4">WhatsApp Phone</th>
-                                <th class="p-4 text-right">Action</th>
+                                <th class="p-3.5">Timestamp</th>
+                                <th class="p-3.5">Full Name</th>
+                                <th class="p-3.5">Email</th>
+                                <th class="p-3.5">Phone</th>
+                                <th class="p-3.5">Place Name</th>
+                                <th class="p-3.5">Direction</th>
+                                <th class="p-3.5 text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100">
@@ -451,11 +561,13 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                                 $leadEmail = $lead['Email'] ?? ($lead[2] ?? '');
                             ?>
                             <tr class="hover:bg-slate-50/70">
-                                <td class="p-4 font-mono text-slate-500"><?php echo htmlspecialchars($lead['Timestamp'] ?? ($lead[0] ?? '-')); ?></td>
-                                <td class="p-4 font-bold text-slate-900"><?php echo htmlspecialchars($lead['Full Name'] ?? ($lead[1] ?? '-')); ?></td>
-                                <td class="p-4 text-slate-600 font-mono"><?php echo htmlspecialchars($leadEmail); ?></td>
-                                <td class="p-4 text-slate-600 font-mono"><?php echo htmlspecialchars($lead['WhatsApp Phone'] ?? ($lead[3] ?? '-')); ?></td>
-                                <td class="p-4 text-right">
+                                <td class="p-3.5 font-mono text-slate-500 text-[11px]"><?php echo htmlspecialchars($lead['Timestamp'] ?? ($lead[0] ?? '-')); ?></td>
+                                <td class="p-3.5 font-bold text-slate-900"><?php echo htmlspecialchars($lead['Full Name'] ?? ($lead[1] ?? '-')); ?></td>
+                                <td class="p-3.5 text-slate-600 font-mono"><?php echo htmlspecialchars($leadEmail); ?></td>
+                                <td class="p-3.5 text-slate-600 font-mono"><?php echo htmlspecialchars($lead['WhatsApp Phone'] ?? ($lead[3] ?? '-')); ?></td>
+                                <td class="p-3.5"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">📍 <?php echo htmlspecialchars($lead['Location'] ?? ($lead[6] ?? 'Lagos, Nigeria')); ?></span></td>
+                                <td class="p-3.5"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-teal-50 text-[#005f5a] border border-teal-200">🔗 <?php echo htmlspecialchars($lead['Source'] ?? ($lead[5] ?? 'WhatsApp')); ?></span></td>
+                                <td class="p-3.5 text-right">
                                     <form method="POST" action="admin.php" onsubmit="return confirm('Delete <?php echo htmlspecialchars($leadEmail); ?>?');" class="inline">
                                         <input type="hidden" name="action" value="delete_single">
                                         <input type="hidden" name="target_table" value="conference">
@@ -493,11 +605,16 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                                     <button type="submit" class="text-rose-600 bg-rose-50 border border-rose-200 text-[10px] font-bold px-2.5 py-1 rounded-lg">Delete</button>
                                 </form>
                             </div>
-                            <div class="flex items-center justify-between gap-2 text-[10px]">
+                            <div class="flex flex-wrap items-center gap-1.5 text-[10px]">
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold">📍 <?php echo htmlspecialchars($app['Location'] ?? ($app[9] ?? 'Lagos, Nigeria')); ?></span>
+                                <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-teal-50 text-[#005f5a] border border-teal-200 font-bold">🔗 <?php echo htmlspecialchars($app['Source'] ?? ($app[8] ?? 'WhatsApp')); ?></span>
                                 <span class="px-2 py-0.5 rounded font-bold <?php echo strpos(($app['Programme'] ?? ($app[5] ?? '')), 'Entrepreneurship') !== false ? 'bg-amber-100 text-amber-800' : 'bg-teal-100 text-teal-800'; ?>">
                                     <?php echo htmlspecialchars($app['Programme'] ?? ($app[5] ?? '-')); ?>
                                 </span>
-                                <span class="font-mono text-slate-500"><?php echo htmlspecialchars($app['Phone'] ?? ($app[4] ?? '-')); ?></span>
+                            </div>
+                            <div class="flex items-center justify-between text-[10px] text-slate-500 font-mono pt-1 border-t border-slate-100">
+                                <span>Phone: <?php echo htmlspecialchars($app['Phone'] ?? ($app[4] ?? '-')); ?></span>
+                                <span><?php echo htmlspecialchars($app['Timestamp'] ?? ($app[0] ?? '-')); ?></span>
                             </div>
                         </div>
                     <?php endforeach; endif; ?>
@@ -508,14 +625,14 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                     <table class="w-full text-left border-collapse text-xs">
                         <thead>
                             <tr class="bg-slate-50 text-slate-500 border-b border-slate-200 font-semibold uppercase text-[10px] tracking-wider">
-                                <th class="p-4">Timestamp</th>
-                                <th class="p-4">App ID</th>
-                                <th class="p-4">Candidate</th>
-                                <th class="p-4">Email</th>
-                                <th class="p-4">Phone</th>
-                                <th class="p-4">Track</th>
-                                <th class="p-4">Status</th>
-                                <th class="p-4 text-right">Action</th>
+                                <th class="p-3.5">Timestamp</th>
+                                <th class="p-3.5">App ID</th>
+                                <th class="p-3.5">Candidate</th>
+                                <th class="p-3.5">Programme</th>
+                                <th class="p-3.5">Place Name</th>
+                                <th class="p-3.5">Direction</th>
+                                <th class="p-3.5 text-center">Status</th>
+                                <th class="p-3.5 text-right">Action</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100">
@@ -523,14 +640,14 @@ $totalRevenue = $totalPaid * SCHOLARSHIP_APPLICATION_FEE;
                                 $appEmail = $app['Email'] ?? ($app[3] ?? '');
                             ?>
                             <tr class="hover:bg-slate-50/70">
-                                <td class="p-4 font-mono text-slate-500"><?php echo htmlspecialchars($app['Timestamp'] ?? ($app[0] ?? '-')); ?></td>
-                                <td class="p-4 font-mono font-bold text-[#005f5a]"><?php echo htmlspecialchars($app['Application ID'] ?? ($app[1] ?? '-')); ?></td>
-                                <td class="p-4 font-bold text-slate-900"><?php echo htmlspecialchars($app['Full Name'] ?? ($app[2] ?? '-')); ?></td>
-                                <td class="p-4 text-slate-600 font-mono"><?php echo htmlspecialchars($appEmail); ?></td>
-                                <td class="p-4 text-slate-600 font-mono"><?php echo htmlspecialchars($app['Phone'] ?? ($app[4] ?? '-')); ?></td>
-                                <td class="p-4"><span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-teal-100 text-teal-800"><?php echo htmlspecialchars($app['Programme'] ?? ($app[5] ?? '-')); ?></span></td>
-                                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600"><?php echo htmlspecialchars($app['Payment Status'] ?? ($app[7] ?? 'Pending')); ?></span></td>
-                                <td class="p-4 text-right">
+                                <td class="p-3.5 font-mono text-slate-500 text-[11px]"><?php echo htmlspecialchars($app['Timestamp'] ?? ($app[0] ?? '-')); ?></td>
+                                <td class="p-3.5 font-mono font-bold text-[#005f5a]"><?php echo htmlspecialchars($app['Application ID'] ?? ($app[1] ?? '-')); ?></td>
+                                <td class="p-3.5 font-bold text-slate-900"><?php echo htmlspecialchars($app['Full Name'] ?? ($app[2] ?? '-')); ?></td>
+                                <td class="p-3.5"><span class="px-2.5 py-1 rounded-md text-[10px] font-bold bg-teal-100 text-teal-800"><?php echo htmlspecialchars($app['Programme'] ?? ($app[5] ?? '-')); ?></span></td>
+                                <td class="p-3.5"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">📍 <?php echo htmlspecialchars($app['Location'] ?? ($app[9] ?? 'Lagos, Nigeria')); ?></span></td>
+                                <td class="p-3.5"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold bg-teal-50 text-[#005f5a] border border-teal-200">🔗 <?php echo htmlspecialchars($app['Source'] ?? ($app[8] ?? 'WhatsApp')); ?></span></td>
+                                <td class="p-3.5 text-center"><span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600"><?php echo htmlspecialchars($app['Payment Status'] ?? ($app[7] ?? 'Pending')); ?></span></td>
+                                <td class="p-3.5 text-right">
                                     <form method="POST" action="admin.php" onsubmit="return confirm('Delete <?php echo htmlspecialchars($appEmail); ?>?');" class="inline">
                                         <input type="hidden" name="action" value="delete_single">
                                         <input type="hidden" name="target_table" value="scholarship">

@@ -110,6 +110,24 @@
             document.body.appendChild(toast);
         }
 
+        // Try loading real recorded leads into the notification ticker
+        try {
+            const savedName = localStorage.getItem('newton_name');
+            const savedPlace = localStorage.getItem('newton_location') || 'Lagos, Nigeria';
+            const savedTrack = localStorage.getItem('newton_track') || 'Digital Marketing + AI';
+            if (savedName && savedName !== 'Delegate' && savedName !== 'Candidate') {
+                const parts = savedName.trim().split(' ');
+                const displayShortName = parts[0] + (parts.length > 1 ? ' ' + parts[1][0] + '.' : '');
+                registrationNames.unshift({
+                    name: displayShortName,
+                    loc: savedPlace,
+                    pronoun: "their",
+                    track: savedTrack,
+                    time: "Just now"
+                });
+            }
+        } catch (e) {}
+
         let nameIndex = 0;
         function showNextToast() {
             const data = registrationNames[nameIndex];

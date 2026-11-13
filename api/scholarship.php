@@ -48,6 +48,27 @@ if (empty($fullName) || !$email || empty($phone)) {
 $createdAt = date('Y-m-d H:i:s');
 $applicationId = !empty($_POST['app_id']) ? trim($_POST['app_id']) : ('NA-SCH-' . strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 8)));
 
+$source = trim($_POST['source'] ?? '');
+if (empty($source)) {
+    $ref = strtolower($_SERVER['HTTP_REFERER'] ?? '');
+    if (strpos($ref, 'whatsapp') !== false || strpos($ref, 'wa.me') !== false) $source = 'WhatsApp';
+    elseif (strpos($ref, 'facebook') !== false || strpos($ref, 'fb.com') !== false) $source = 'Facebook Ads';
+    elseif (strpos($ref, 'instagram') !== false) $source = 'Instagram';
+    elseif (strpos($ref, 'twitter') !== false || strpos($ref, 't.co') !== false || strpos($ref, 'x.com') !== false) $source = 'Twitter / X';
+    elseif (strpos($ref, 'tiktok') !== false) $source = 'TikTok';
+    elseif (strpos($ref, 'google') !== false) $source = 'Google';
+    else $source = 'Direct / Organic';
+}
+
+$location = trim($_POST['location'] ?? '');
+if (empty($location)) {
+    if (!empty($stateCity)) {
+        $location = $stateCity . (!empty($country) && $country !== 'Nigeria' ? ', ' . $country : ', Nigeria');
+    } else {
+        $location = 'Lagos, Nigeria';
+    }
+}
+
 // 1. Record Application in CSV storage (De-duplicated by Email)
 $leadsDir = __DIR__ . '/../data';
 if (!is_dir($leadsDir)) {
@@ -56,7 +77,7 @@ if (!is_dir($leadsDir)) {
 
 $csvFile = $leadsDir . '/scholarship_applications.csv';
 $normalizedEmail = strtolower($email);
-$header = ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Course', 'Scholarship Scheme', 'Country', 'State', 'Employment', 'Education', 'Payment Status'];
+$header = ['Timestamp', 'Application ID', 'Full Name', 'Email', 'Phone', 'Programme', 'Scholarship Scheme', 'Payment Status', 'Source', 'Location'];
 $rows = [];
 $found = false;
 
@@ -73,8 +94,10 @@ if (file_exists($csvFile)) {
             if ($existingEmail === $normalizedEmail) {
                 $existingAppId = !empty($data[1]) ? $data[1] : $applicationId;
                 $applicationId = $existingAppId;
-                $existingPaymentStatus = !empty($data[11]) ? $data[11] : (!empty($data[7]) ? $data[7] : 'Pending Payment');
-                $rows[] = [$createdAt, $existingAppId, $fullName, $email, $phone, $course, $scholarshipScheme, $country, $stateCity, $employmentStatus, $educationalLevel, $existingPaymentStatus];
+                $existingPaymentStatus = !empty($data[7]) ? $data[7] : 'Pending Payment';
+                $existingSource = !empty($data[8]) ? $data[8] : $source;
+                $existingLoc = !empty($data[9]) ? $data[9] : $location;
+                $rows[] = [$createdAt, $existingAppId, $fullName, $email, $phone, $course, $scholarshipScheme, $existingPaymentStatus, $existingSource, $existingLoc];
                 $found = true;
             } else {
                 $rows[] = $data;
@@ -85,7 +108,7 @@ if (file_exists($csvFile)) {
 }
 
 if (!$found) {
-    $rows[] = [$createdAt, $applicationId, $fullName, $email, $phone, $course, $scholarshipScheme, $country, $stateCity, $employmentStatus, $educationalLevel, 'Pending Payment'];
+    $rows[] = [$createdAt, $applicationId, $fullName, $email, $phone, $course, $scholarshipScheme, 'Pending Payment', $source, $location];
 }
 
 // Write back deduplicated data
