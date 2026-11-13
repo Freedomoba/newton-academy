@@ -226,3 +226,4 @@ function toggleFaq(btn) {
 `;
 
 console.log('Templates ready. Now generating DM & DE curriculum modules and career projections.');
+

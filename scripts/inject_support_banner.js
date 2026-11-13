@@ -139,3 +139,4 @@ targetFiles.forEach(fileName => {
 });
 
 console.log('Finished injecting Support Banner and Floating WhatsApp button.');
+
