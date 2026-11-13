@@ -389,7 +389,7 @@ require_once __DIR__ . '/config.php';
                                 <span class="text-[10px] font-mono text-amber-300 font-bold bg-amber-500/20 px-2 py-0.5 rounded border border-amber-400/30">₦75,000 Value</span>
                             </div>
                             <p class="text-teal-100 text-xs leading-relaxed">
-                                Unfiltered access to industry leaders and tutors with enterprise backgrounds at Microsoft, Meta, Accenture, and 7Up Bottling Company.
+                                Direct access to industry leaders and tutors with enterprise backgrounds at Microsoft, Meta, Accenture, and 7Up Bottling Company.
                             </p>
                         </div>
                     </div>
@@ -669,7 +669,7 @@ require_once __DIR__ . '/config.php';
                     Student &amp; Faculty Video Interviews
                 </h2>
                 <p class="text-xs sm:text-sm md:text-base text-slate-600 font-sans">
-                    Authentic, unedited feedback from verified fellows and educators. Click play on any video below:
+                    Hear directly from fellows and educators sharing their experience with Newton Academy. Click play on any video below:
                 </p>
             </div>
 
@@ -749,7 +749,7 @@ require_once __DIR__ . '/config.php';
                     
                     <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
                         <iframe 
-                            src="https://player.vimeo.com/video/1245537116?h=2cbba86e8a&badge=0&autopause=0&player_id=0&app_id=58479" 
+                            src="https://player.vimeo.com/video/1245537116?h=52775ed3e6&badge=0&autopause=0&player_id=0&app_id=58479" 
                             class="absolute inset-0 w-full h-full" 
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
@@ -780,7 +780,7 @@ require_once __DIR__ . '/config.php';
                     
                     <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
                         <iframe 
-                            src="https://player.vimeo.com/video/1245537093?h=bc9d63c5ef&badge=0&autopause=0&player_id=0&app_id=58479" 
+                            src="https://player.vimeo.com/video/1245537093?h=fdaaca5d75&badge=0&autopause=0&player_id=0&app_id=58479" 
                             class="absolute inset-0 w-full h-full" 
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
@@ -814,7 +814,7 @@ require_once __DIR__ . '/config.php';
                     
                     <div class="relative w-full aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden shadow-inner border border-slate-900">
                         <iframe 
-                            src="https://player.vimeo.com/video/1245537098?h=3f3366c820&badge=0&autopause=0&player_id=0&app_id=58479" 
+                            src="https://player.vimeo.com/video/1245537098?h=845f352b05&badge=0&autopause=0&player_id=0&app_id=58479" 
                             class="absolute inset-0 w-full h-full" 
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
