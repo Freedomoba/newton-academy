@@ -40,6 +40,7 @@
         h1, h2, h3, h4, button, .font-heading { font-family: 'Poppins', sans-serif; }
         .brand-shadow { box-shadow: 0 20px 40px -15px rgba(0, 95, 90, 0.15); }
     </style>
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body class="bg-[#f1f5f9] text-slate-800 antialiased selection:bg-[#005f5a] selection:text-white">
 
@@ -161,5 +162,6 @@
             }, 1000);
         });
     </script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

@@ -66,20 +66,29 @@
         counters.forEach(c => countObserver.observe(c));
     }
 
-    // 3. LIVE REGISTRATION SOCIAL PROOF TICKER
+        // 3. LIVE REGISTRATION SOCIAL PROOF TICKER
     const registrationNames = [
-        { name: "Chidinma O.", loc: "Lagos, Nigeria", track: "Digital Marketing + AI", time: "2 minutes ago" },
-        { name: "Blessing A.", loc: "Abuja, FCT", track: "Digital Entrepreneurship + AI", time: "4 minutes ago" },
-        { name: "Zainab B.", loc: "Kano, Nigeria", track: "Digital Marketing + AI", time: "7 minutes ago" },
-        { name: "Folashade K.", loc: "London, UK", track: "Digital Entrepreneurship + AI", time: "9 minutes ago" },
-        { name: "Amina M.", loc: "Accra, Ghana", track: "Digital Marketing + AI", time: "11 minutes ago" },
-        { name: "Chioma E.", loc: "Port Harcourt", track: "Digital Marketing + AI", time: "14 minutes ago" },
-        { name: "Grace T.", loc: "Ibadan, Oyo", track: "Digital Entrepreneurship + AI", time: "16 minutes ago" }
+        { name: "Chidinma O.", loc: "Lagos, Nigeria", pronoun: "her", track: "Digital Marketing + AI", time: "2 minutes ago" },
+        { name: "Blessing A.", loc: "Abuja, FCT", pronoun: "her", track: "Digital Entrepreneurship + AI", time: "4 minutes ago" },
+        { name: "Zainab B.", loc: "Kano, Nigeria", pronoun: "her", track: "Digital Marketing + AI", time: "6 minutes ago" },
+        { name: "Bryan B.", loc: "Enugu, Nigeria", pronoun: "his", track: "Digital Entrepreneurship + AI", time: "8 minutes ago" },
+        { name: "Folashade K.", loc: "London, UK", pronoun: "her", track: "Digital Entrepreneurship + AI", time: "10 minutes ago" },
+        { name: "Amina M.", loc: "Accra, Ghana", pronoun: "her", track: "Digital Marketing + AI", time: "12 minutes ago" },
+        { name: "Emmanuel O.", loc: "Ibadan, Oyo", pronoun: "his", track: "Digital Entrepreneurship + AI", time: "15 minutes ago" },
+        { name: "Chioma E.", loc: "Port Harcourt", pronoun: "her", track: "Digital Marketing + AI", time: "17 minutes ago" },
+        { name: "Tunde A.", loc: "Lagos, Nigeria", pronoun: "his", track: "Digital Marketing + AI", time: "20 minutes ago" },
+        { name: "Grace T.", loc: "Warri, Delta", pronoun: "her", track: "Digital Entrepreneurship + AI", time: "23 minutes ago" }
     ];
 
     function initSocialProofTicker() {
         if (window.innerWidth < 480) return; // cleaner experience on tiny devices
         
+        // Context detection:
+        // Opt-in page: contains #registrationForm or index in URL
+        const pathname = window.location.pathname.toLowerCase();
+        const hasRegForm = !!document.getElementById('registrationForm');
+        const isOptin = hasRegForm || pathname.endsWith('index.html') || pathname.endsWith('index.php') || pathname === '/' || pathname.endsWith('/newton-academy/') || pathname.endsWith('/newton/');
+
         let toast = document.getElementById('socialProofToast');
         if (!toast) {
             toast = document.createElement('div');
@@ -92,8 +101,9 @@
                     </div>
                     <div class="text-left text-xs leading-tight">
                         <p class="font-bold text-slate-900" id="toastName">Chidinma O.</p>
-                        <p class="text-slate-500 text-[11px]" id="toastAction">Reserved Free Delegate Pass</p>
-                        <span class="text-[10px] text-teal-700 font-semibold" id="toastTime">2 minutes ago</span>
+                        <p class="text-slate-600 text-[11px] mt-0.5" id="toastAction"></p>
+                        <p class="text-[10px] text-[#005f5a] font-semibold mt-0.5" id="toastDetail"></p>
+                        <span class="text-[9px] text-slate-400 font-medium block mt-0.5" id="toastTime">2 minutes ago</span>
                     </div>
                 </div>
             `;
@@ -108,11 +118,22 @@
             const avatar = document.getElementById('toastAvatar');
             const nameEl = document.getElementById('toastName');
             const actionEl = document.getElementById('toastAction');
+            const detailEl = document.getElementById('toastDetail');
             const timeEl = document.getElementById('toastTime');
 
             if (avatar) avatar.textContent = initials;
             if (nameEl) nameEl.textContent = data.name + ' (' + data.loc + ')';
-            if (actionEl) actionEl.textContent = 'Enrolled in ' + data.track;
+            
+            if (isOptin) {
+                // Opt-in page: "x just grabbed his/her delegate seat"
+                if (actionEl) actionEl.textContent = 'just grabbed ' + data.pronoun + ' delegate seat';
+                if (detailEl) detailEl.textContent = 'Virtual Masterclass Pass Reserved';
+            } else {
+                // Thank You / Scholarship / Offer pages: "x just secured a fully funded scholarship to study..."
+                if (actionEl) actionEl.textContent = 'just secured a fully funded scholarship';
+                if (detailEl) detailEl.textContent = 'to study ' + data.track;
+            }
+
             if (timeEl) timeEl.textContent = data.time;
 
             toast.classList.add('is-active');
@@ -127,7 +148,7 @@
         setTimeout(() => {
             showNextToast();
             setInterval(showNextToast, 12000);
-        }, 3500);
+        }, 3000);
     }
 
     // Auto-init on DOMContentLoaded
