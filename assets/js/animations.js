@@ -127,7 +127,7 @@
             if (isOptin) {
                 // Opt-in page: "x just grabbed his/her delegate seat"
                 if (actionEl) actionEl.textContent = 'just grabbed ' + data.pronoun + ' delegate seat';
-                if (detailEl) detailEl.textContent = 'Virtual Masterclass Pass Reserved';
+                if (detailEl) detailEl.textContent = 'Digital & Financial Literacy Pass Reserved';
             } else {
                 // Thank You / Scholarship / Offer pages: "x just secured a fully funded scholarship to study..."
                 if (actionEl) actionEl.textContent = 'just secured a fully funded scholarship';

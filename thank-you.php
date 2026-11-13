@@ -67,7 +67,7 @@
                     Registration Confirmed, <span id="attendeeName">Delegate</span>!
                 </h1>
                 <p class="text-slate-600 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
-                    Your delegate access pass for the <strong class="text-slate-900">From Skills to Income</strong> Virtual Conference is reserved.
+                    Your delegate access pass for the <strong class="text-slate-900">Digital and Financial Literacy</strong> Virtual Conference is reserved.
                 </p>
             </div>
 
@@ -76,7 +76,7 @@
                 <p class="text-xs sm:text-sm text-slate-600">
                     Get conference live links, speaker materials, and immediate notification when session doors open:
                 </p>
-                <a href="https://chat.whatsapp.com/invite" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
+                <a href="https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
                     <span>Join Official WhatsApp Community &rarr;</span>
                 </a>
             </div>

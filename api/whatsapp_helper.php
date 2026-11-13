@@ -114,7 +114,7 @@ class NewtonWhatsApp {
      */
     public static function getConferenceWelcomeMessage($name) {
         $roomLink = WHATSAPP_WAITLIST_LINK;
-        return "Hello {$name},\n\nYour delegate pass for 'From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead' by Newton Academy is officially confirmed.\n\nPlease join the Private Conference WhatsApp Room now to access your live stream link, speaker workbook, and schedules:\n\n{$roomLink}\n\nWe look forward to hosting you.\n— Newton Academy Secretariat";
+        return "Hello {$name},\n\nYour delegate pass for 'Digital and Financial Literacy: Building Your Brand, Growing Your Business and Using AI to Get Ahead' by Newton Academy is officially confirmed.\n\nPlease join the Private Conference WhatsApp Room now to access your live stream link, speaker workbook, and schedules:\n\n{$roomLink}\n\nWe look forward to hosting you.\n— Newton Academy Secretariat";
     }
 
     /**

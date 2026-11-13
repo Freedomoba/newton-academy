@@ -154,7 +154,7 @@ class NewtonMailer {
                                 Dear {$name},
                             </p>
                             <p style="margin:0 0 16px; font-size:15px; color:#475569;">
-                                We are pleased to confirm your seat for the upcoming virtual conference: <strong>From Skills to Income: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong>.
+                                We are pleased to confirm your seat for the upcoming virtual conference: <strong>Digital and Financial Literacy: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong>.
                             </p>
                             
                             <div style="background-color:#f0fdfa; border-left:4px solid #008080; padding:18px; border-radius:4px; margin:24px 0;">

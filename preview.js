@@ -15,7 +15,7 @@ const CONFIG = {
     ACADEMY_NAME: 'Newton Academy',
     ACADEMY_TAGLINE: "Empowering Tomorrow's Global Leaders in Tech & Business",
     ACADEMY_EMAIL: 'admissions@newtonacademy.co',
-    WHATSAPP_WAITLIST_LINK: 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi?s=cl&p=i&mlu=4&ilr=4&iam=2',
+    WHATSAPP_WAITLIST_LINK: 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi',
     WHATSAPP_VIP_ENROLLED_LINK: 'https://chat.whatsapp.com/YOUR_VIP_ENROLLED_GROUP_LINK',
     WHATSAPP_SUPPORT_PHONE: '2348000000000',
     CURRENCY_SYMBOL: '₦',
@@ -235,7 +235,7 @@ function renderAdminDashboard(isAuthenticated, loginError = '') {
             <div class="bg-white border border-slate-200/90 rounded-3xl p-6 brand-shadow">
                 <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block">Conference Delegates</span>
                 <span class="text-3xl font-extrabold text-slate-900 mt-1 block">${totalDelegates.toLocaleString()}</span>
-                <span class="text-[11px] text-[#005f5a] font-semibold mt-1 block">From Skills to Income Opt-ins</span>
+                <span class="text-[11px] text-[#005f5a] font-semibold mt-1 block">Digital & Financial Literacy Opt-ins</span>
             </div>
 
             <div class="bg-white border border-slate-200/90 rounded-3xl p-6 brand-shadow">

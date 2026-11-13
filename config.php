@@ -10,7 +10,7 @@ define('ACADEMY_TAGLINE', 'Empowering Tomorrow\'s Global Leaders in Tech & Busin
 define('ACADEMY_EMAIL', 'admissions@newtonacademy.co'); // Replace with your cPanel email
 
 // WhatsApp Community Links
-define('WHATSAPP_WAITLIST_LINK', 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi?s=cl&p=i&mlu=4&ilr=4&iam=2');
+define('WHATSAPP_WAITLIST_LINK', 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi');
 define('WHATSAPP_VIP_ENROLLED_LINK', 'https://chat.whatsapp.com/YOUR_VIP_ENROLLED_GROUP_LINK');
 
 // WhatsApp Direct Support Number (international format without +)
