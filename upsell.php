@@ -78,9 +78,6 @@
                 </div>
 
                 <div class="space-y-2">
-                    <span class="px-3.5 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-extrabold uppercase tracking-widest inline-block shadow-sm">
-                        
-                    </span>
                     <h1 class="text-xl sm:text-3xl font-extrabold tracking-tight font-heading text-white">
                         Official Academic Board Endowment &bull; 100% Full Tuition Scholarship
                     </h1>
@@ -100,7 +97,160 @@
         <!-- Official Letter -->
         <article id="officialSalesLetter" class="w-full max-w-5xl mx-auto py-6 sm:py-10 space-y-10" style="opacity: 1 !important; visibility: visible !important;">
 
-            <div class="border-b border-slate-200 pb-8 space-y-4">
+            
+            <!-- 2 FLAGSHIP DIPLOMA TRACKS (SHOWN FIRST FOR MAXIMUM CONVERSION) -->
+            <div class="space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-2 border-b border-slate-200 pb-6">
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-heading leading-tight">
+                        Two Industry-Accredited 3-Month Diploma Programs
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm md:text-base font-sans leading-relaxed">
+                        Dear <span id="storyRecipientName" class="font-bold text-slate-900">Delegate</span>, select the high-income track you wish to apply your 100% tuition endowment to (₦200,000 value covered):
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                    
+                    <!-- Track 1: Digital Marketing + Applied AI (Daylight Agency Track) -->
+                    <div class="bg-white border-2 border-slate-300 hover:border-[#005f5a] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all brand-shadow">
+                        <div class="space-y-5">
+                            <span class="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 text-[#005f5a] border border-[#005f5a]/30 inline-block">
+                                Track 01 &bull; Client Acquisition
+                            </span>
+
+                            <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
+                                <img src="assets/images/mockup_digital_marketing.jpg" alt="3D Multi-Device Digital Marketing Mockup" class="w-full h-auto object-cover">
+                                <div class="bg-slate-900/90 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-slate-800">
+                                    <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
+                                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                        LMS Portal + Lumenvox AI Suite
+                                    </span>
+                                    <span class="text-amber-400 font-bold">100% Online</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
+                                    Digital Marketing + Applied AI
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                    Master multi-platform paid ads (Meta, Google, TikTok), high-converting direct-response copywriting, and international client acquisition paying in USD.
+                                </p>
+                            </div>
+
+                            <!-- Lead Tutor Spotlight: Theophilus Akhimie -->
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-teal-50/70 border border-teal-100">
+                                <img src="assets/images/tutor_theophilus_akhimie.jpg" alt="Theophilus Akhimie" class="w-11 h-11 rounded-full object-cover border-2 border-[#005f5a]/30 shadow-sm flex-shrink-0">
+                                <div class="text-left">
+                                    <span class="block text-xs font-bold text-slate-900 leading-tight">Lead Tutor: Theophilus Akhimie</span>
+                                    <span class="block text-[10px] text-slate-600 mt-0.5">12 Yrs Exp &bull; Ex-Pinterest, Accenture, Adidas &bull; M.Sc USA</span>
+                                </div>
+                            </div>
+
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>High-ROAS Meta, Google & TikTok Ad Campaign Systems</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>Direct-Response Copywriting & High-Converting Funnels</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>US/UK Foreign Client Acquisition & Monthly Retainers</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-6 space-y-3">
+                            <a href="curriculum-dm.html" target="_blank" class="block text-center text-xs font-bold text-[#005f5a] hover:underline">
+                                Read Full 14-Module Syllabus & Benefits &rarr;
+                            </a>
+                            <a href="#scholarshipForm" onclick="selectTrack('Digital Marketing + Applied AI')" class="block w-full py-3.5 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-center text-sm shadow-md transition-all font-heading">
+                                Apply For Digital Marketing Track
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Track 2: Digital Entrepreneurship + Applied AI (Midnight Executive Track) -->
+                    <div class="relative bg-gradient-to-br from-[#002826] via-[#003835] to-[#001f1e] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all shadow-2xl brand-shadow ring-4 ring-amber-400/15 md:-translate-y-2">
+                        <div class="space-y-5">
+                            <span class="px-3.5 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-md inline-block">
+                                Track 02 &bull; Most Popular
+                            </span>
+
+                            <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-amber-400/40 shadow-xl">
+                                <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="3D Multi-Device Digital Entrepreneurship Mockup" class="w-full h-auto object-cover">
+                                <div class="bg-slate-950/95 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-amber-400/30">
+                                    <span class="flex items-center gap-1.5 text-amber-300 font-semibold">
+                                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                                        LMS Portal + Lumenvox AI Suite
+                                    </span>
+                                    <span class="text-amber-400 font-black">Founder Edition</span>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h3 class="text-xl sm:text-2xl font-black text-white font-heading">
+                                    Digital Entrepreneurship & Business Innovation
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                    Build scalable automated internet businesses: create high-margin digital products, deploy automated sales engines, and use AI to replace expensive staff.
+                                </p>
+                            </div>
+
+                            <!-- Lead Tutor Spotlight: Judith Imanai -->
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-amber-400/10 border border-amber-400/30">
+                                <img src="assets/images/tutor_judith_imanai.jpg" alt="Judith Imanai" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400/60 shadow-sm flex-shrink-0">
+                                <div class="text-left">
+                                    <span class="block text-xs font-black text-white leading-tight">Lead Tutor: Judith Imanai</span>
+                                    <span class="block text-[10px] text-amber-200 mt-0.5">FinTech Co-Founder &bull; Ex-COO Stawika, ACCA Certified</span>
+                                </div>
+                            </div>
+
+                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-100">
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>High-Ticket Digital Products & Knowledge Monetization</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>Automated Sales Funnel Infrastructure & Upsells</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    </div>
+                                    <span>Autonomous AI Agent Business Operations</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-6 space-y-3">
+                            <a href="curriculum-de.html" target="_blank" class="block text-center text-xs font-bold text-amber-300 hover:text-amber-200 underline">
+                                Read Full 15-Module Syllabus & Benefits &rarr;
+                            </a>
+                            <a href="#scholarshipForm" onclick="selectTrack('Digital Entrepreneurship & Business Innovation + Applied AI')" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-center text-sm shadow-xl shadow-amber-500/25 transition-all font-heading uppercase tracking-wide">
+                                Apply For Entrepreneurship Track
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-10 pb-4 space-y-3">
                 <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500 font-medium">
                     <span>Office of the Academic Board &bull; Newton Academy</span>
                     <span>Classified Dispatch #NA-2026-ADM</span>
@@ -246,159 +396,6 @@
             </div>
         </div>
     </div>
-
-
-            <!-- 2 FLAGSHIP DIPLOMA TRACKS (Pattern Interruption: Daylight Agency vs Midnight Executive, NO stray pre-statements) -->
-            <div class="border-t border-slate-200 pt-10 space-y-8">
-                <div class="text-center max-w-2xl mx-auto space-y-2">
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
-                        Two Industry-Accredited 3-Month Diploma Programs
-                    </h2>
-                    <p class="text-slate-600 text-xs sm:text-sm md:text-base">
-                        Select the track that matches your professional career goals and earning aspirations:
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                    
-                    <!-- Track 1: Digital Marketing + Applied AI (Daylight Agency Track) -->
-                    <div class="bg-white border-2 border-slate-300 hover:border-[#005f5a] rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all brand-shadow">
-                        <div class="space-y-5">
-                            <span class="px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 text-[#005f5a] border border-[#005f5a]/30 inline-block">
-                                Track 01 &bull; Client Acquisition
-                            </span>
-
-                            <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-md">
-                                <img src="assets/images/mockup_digital_marketing.jpg" alt="3D Multi-Device Digital Marketing Mockup" class="w-full h-auto object-cover">
-                                <div class="bg-slate-900/90 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-slate-800">
-                                    <span class="flex items-center gap-1.5 text-emerald-400 font-medium">
-                                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                                        LMS Portal + Lumenvox AI Suite
-                                    </span>
-                                    <span class="text-amber-400 font-bold">100% Online</span>
-                                </div>
-                            </div>
-
-                            <div class="space-y-2">
-                                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
-                                    Digital Marketing + Applied AI
-                                </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                                    Master multi-platform paid ads (Meta, Google, TikTok), high-converting direct-response copywriting, and international client acquisition paying in USD.
-                                </p>
-                            </div>
-
-                            <!-- Lead Tutor Spotlight: Theophilus Akhimie -->
-                            <div class="flex items-center gap-3 p-3 rounded-xl bg-teal-50/70 border border-teal-100">
-                                <img src="assets/images/tutor_theophilus_akhimie.jpg" alt="Theophilus Akhimie" class="w-11 h-11 rounded-full object-cover border-2 border-[#005f5a]/30 shadow-sm flex-shrink-0">
-                                <div class="text-left">
-                                    <span class="block text-xs font-bold text-slate-900 leading-tight">Lead Tutor: Theophilus Akhimie</span>
-                                    <span class="block text-[10px] text-slate-600 mt-0.5">12 Yrs Exp &bull; Ex-Pinterest, Accenture, Adidas &bull; M.Sc USA</span>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700">
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>High-ROAS Meta, Google & TikTok Ad Campaign Systems</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>Direct-Response Copywriting & High-Converting Funnels</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>US/UK Foreign Client Acquisition & Monthly Retainers</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="pt-6 space-y-3">
-                            <a href="curriculum-dm.html" target="_blank" class="block text-center text-xs font-bold text-[#005f5a] hover:underline">
-                                Read Full 14-Module Syllabus & Benefits &rarr;
-                            </a>
-                            <a href="#scholarshipForm" onclick="selectTrack('Digital Marketing + Applied AI')" class="block w-full py-3.5 rounded-xl bg-[#005f5a] hover:bg-[#004d49] text-white font-bold text-center text-sm shadow-md transition-all font-heading">
-                                Apply For Digital Marketing Track
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Track 2: Digital Entrepreneurship + Applied AI (Midnight Executive Track) -->
-                    <div class="relative bg-gradient-to-br from-[#002826] via-[#003835] to-[#001f1e] border-2 border-amber-400 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all shadow-2xl brand-shadow ring-4 ring-amber-400/15 md:-translate-y-2">
-                        <div class="space-y-5">
-                            <span class="px-3.5 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 shadow-md inline-block">
-                                Track 02 &bull; Most Popular
-                            </span>
-
-                            <div class="relative rounded-2xl overflow-hidden bg-slate-950 border border-amber-400/40 shadow-xl">
-                                <img src="assets/images/mockup_digital_entrepreneurship.jpg" alt="3D Multi-Device Digital Entrepreneurship Mockup" class="w-full h-auto object-cover">
-                                <div class="bg-slate-950/95 text-white px-3.5 py-2 text-xs flex items-center justify-between border-t border-amber-400/30">
-                                    <span class="flex items-center gap-1.5 text-amber-300 font-semibold">
-                                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                                        LMS Portal + Lumenvox AI Suite
-                                    </span>
-                                    <span class="text-amber-400 font-black">Founder Edition</span>
-                                </div>
-                            </div>
-
-                            <div class="space-y-2">
-                                <h3 class="text-xl sm:text-2xl font-black text-white font-heading">
-                                    Digital Entrepreneurship & Business Innovation
-                                </h3>
-                                <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                                    Build scalable automated internet businesses: create high-margin digital products, deploy automated sales engines, and use AI to replace expensive staff.
-                                </p>
-                            </div>
-
-                            <!-- Lead Tutor Spotlight: Judith Imanai -->
-                            <div class="flex items-center gap-3 p-3 rounded-xl bg-amber-400/10 border border-amber-400/30">
-                                <img src="assets/images/tutor_judith_imanai.jpg" alt="Judith Imanai" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400/60 shadow-sm flex-shrink-0">
-                                <div class="text-left">
-                                    <span class="block text-xs font-black text-white leading-tight">Lead Tutor: Judith Imanai</span>
-                                    <span class="block text-[10px] text-amber-200 mt-0.5">FinTech Co-Founder &bull; Ex-COO Stawika, ACCA Certified</span>
-                                </div>
-                            </div>
-
-                            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-100">
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>High-Ticket Digital Products & Knowledge Monetization</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>Automated Sales Funnel Infrastructure & Upsells</span>
-                                </li>
-                                <li class="flex items-start gap-2.5">
-                                    <div class="w-5 h-5 rounded-full bg-amber-400/20 border border-amber-400/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    </div>
-                                    <span>Autonomous AI Agent Business Operations</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="pt-6 space-y-3">
-                            <a href="curriculum-de.html" target="_blank" class="block text-center text-xs font-bold text-amber-300 hover:text-amber-200 underline">
-                                Read Full 15-Module Syllabus & Benefits &rarr;
-                            </a>
-                            <a href="#scholarshipForm" onclick="selectTrack('Digital Entrepreneurship & Business Innovation + Applied AI')" class="block w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-center text-sm shadow-xl shadow-amber-500/25 transition-all font-heading uppercase tracking-wide">
-                                Apply For Entrepreneurship Track
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
 
             <!-- INSPIRING MOMENTUM & MOTIVATION POSTERS -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">

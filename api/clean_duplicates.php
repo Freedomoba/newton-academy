@@ -67,3 +67,4 @@ echo json_encode([
     'scholarships_removed' => $schRemoved,
     'message' => "Successfully purged {$totalRemoved} duplicate email entries. Exactly 1 record per email remains on disk."
 ]);
+

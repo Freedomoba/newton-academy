@@ -83,9 +83,6 @@
 
             <div class="border-t border-slate-200 pt-6 space-y-4">
                 <div class="p-5 rounded-2xl bg-gradient-to-r from-[#003e3b] via-[#005f5a] to-[#002f2d] text-white max-w-xl mx-auto space-y-3">
-                    <span class="px-3 py-1 rounded-full bg-amber-400 text-slate-950 text-xs font-bold uppercase tracking-wider inline-block">
-                        Urgent Admissions Notice
-                    </span>
                     <h3 class="text-lg font-bold font-heading">
                         You Have Been Pre-Screened For A 100% Tuition Scholarship
                     </h3>

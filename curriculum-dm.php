@@ -157,9 +157,6 @@
 
                 <!-- Tutor Bio Column -->
                 <div class="md:col-span-6 space-y-5">
-                    <span class="px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider bg-amber-400 text-slate-950 shadow-md inline-block">
-                        Faculty Profile &bull; Meet Your Lead Tutor
-                    </span>
                     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading tracking-tight leading-tight">
                         Theophilus Akhimie: Seasoned Digital Marketer & Global Strategist
                     </h2>
@@ -524,9 +521,6 @@
             <!-- INTEGRATED LUMENVOX AI SPECIALIZATION MODULES -->
             <div class="bg-gradient-to-br from-[#003835] via-[#004d49] to-[#002b28] rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-amber-500/40">
                 <div class="text-center max-w-2xl mx-auto mb-8">
-                    <span class="inline-block bg-amber-400 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2">
-                        Included Bonus Suite
-                    </span>
                     <h3 class="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                         Integrated Lumenvox AI Creator Suite (5 Modules)
                     </h3>
