@@ -225,3 +225,4 @@ function harmonizeCheckout(file) {
 ['scholarship.html', 'scholarship.php', 'special-offer.html', 'special-offer.php', 'upsell.html', 'upsell.php'].forEach(harmonizeScholarship);
 ['curriculum-dm.html', 'curriculum-dm.php', 'curriculum-de.html', 'curriculum-de.php'].forEach(harmonizeCurriculum);
 ['checkout.html', 'checkout.php'].forEach(harmonizeCheckout);
+

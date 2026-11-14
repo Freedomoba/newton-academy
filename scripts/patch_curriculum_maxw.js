@@ -6,3 +6,4 @@ const fs = require('fs');
     fs.writeFileSync(f, c, 'utf8');
 });
 console.log('Updated curriculum files');
+

@@ -21,3 +21,4 @@ function inspectPage(file) {
 }
 
 ['index.html', 'scholarship.html', 'curriculum-dm.html', 'curriculum-de.html', 'checkout.html'].forEach(inspectPage);
+

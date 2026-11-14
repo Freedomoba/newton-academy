@@ -605,7 +605,7 @@
                     </p>
                 </div>
 
-                <form id="officialScholarshipForm" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-6 sm:p-10 brand-shadow max-w-3xl mx-auto space-y-6">
+                <form id="officialScholarshipForm" method="POST" action="checkout.html" onsubmit="return handleScholarshipSubmit(event);" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-6 sm:p-10 brand-shadow max-w-3xl mx-auto space-y-6">
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="space-y-1.5">
@@ -699,7 +699,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" id="submitAppBtn" class="w-full py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm md:text-xs sm:text-sm md:text-base lg:text-xs sm:text-sm md:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
+                        <button type="submit" id="submitAppBtn" onclick="return handleScholarshipSubmit(event);" class="w-full py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm md:text-xs sm:text-sm md:text-base lg:text-xs sm:text-sm md:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
                             <span>Submit Application & Start Live Evaluation</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -855,20 +855,86 @@
     <script src="assets/js/animations.js"></script>
 
     <script>
+        // Bulletproof scholarship application submit handler
+        window.handleScholarshipSubmit = function(e) {
+            if (e && e.preventDefault) e.preventDefault();
+
+            const form = document.getElementById('officialScholarshipForm');
+            if (form && !form.checkValidity()) {
+                form.reportValidity();
+                return false;
+            }
+
+            const fNameEl = document.getElementById('first_name');
+            const lNameEl = document.getElementById('last_name');
+            const fName = (fNameEl ? fNameEl.value : '').trim();
+            const lName = (lNameEl ? lNameEl.value : '').trim();
+            const fullName = (fName + ' ' + lName).trim() || 'Candidate';
+
+            const emailEl = document.getElementById('email');
+            const emailVal = (emailEl ? emailEl.value : '').trim();
+
+            const phoneEl = document.getElementById('phone');
+            const phoneVal = (phoneEl ? phoneEl.value : '').trim();
+
+            const courseEl = document.getElementById('course_select');
+            const courseVal = courseEl ? courseEl.value : 'Digital Marketing + Applied AI';
+
+            const schemeEl = document.getElementById('scholarship_scheme');
+            const schemeVal = schemeEl ? schemeEl.value : '100% Full Tuition Endowment (₦20,000 Admission Fee Only)';
+
+            const appId = 'NA-' + Date.now().toString().slice(-6);
+
+            try {
+                localStorage.setItem('newton_name', fullName);
+                localStorage.setItem('newton_email', emailVal);
+                localStorage.setItem('newton_phone', phoneVal);
+                localStorage.setItem('newton_track', courseVal);
+                localStorage.setItem('newton_app_id', appId);
+            } catch (err) {}
+
+            try {
+                if (form) {
+                    const fd = new FormData(form);
+                    fd.append('app_id', appId);
+                    fetch('api/scholarship.php', { method: 'POST', body: fd }).catch(function() {});
+                }
+            } catch (err) {}
+
+            const isPhp = window.location.pathname.endsWith('.php');
+            const checkoutPage = isPhp ? 'checkout.php' : 'checkout.html';
+            const chkParams = new URLSearchParams({
+                app_id: appId,
+                name: fullName,
+                email: emailVal,
+                phone: phoneVal,
+                track: courseVal,
+                scheme: schemeVal
+            });
+            const targetCheckoutUrl = checkoutPage + '?' + chkParams.toString();
+
+            if (typeof window.startScholarshipEvaluation === 'function') {
+                window.startScholarshipEvaluation(fullName, targetCheckoutUrl);
+            } else {
+                window.location.href = targetCheckoutUrl;
+            }
+
+            return false;
+        };
+    
         document.addEventListener('DOMContentLoaded', function() {
             const envelope = document.getElementById('confidentialEnvelope');
             const letter = document.getElementById('officialSalesLetter');
             
             if (envelope && letter) {
                 envelope.addEventListener('click', function() {
-                if (typeof window.triggerDoorOpeningAndRain === 'function') {
-                    window.triggerDoorOpeningAndRain(null, function() {
+                    if (typeof window.triggerDoorOpeningAndRain === 'function') {
+                        window.triggerDoorOpeningAndRain(null, function() {
+                            letter.scrollIntoView({ behavior: 'smooth' });
+                        });
+                    } else {
                         letter.scrollIntoView({ behavior: 'smooth' });
-                    });
-                } else {
-                    letter.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+                    }
                 });
             }
 
@@ -974,65 +1040,7 @@
         }
     
 
-    function triggerEvaluationModal(candidateName, targetUrl) {
-        const modal = document.getElementById('evaluationModal');
-        if (!modal) {
-            window.location.href = targetUrl;
-            return;
-        }
-
-        modal.classList.remove('hidden');
-        const heading = document.getElementById('evalModalHeading');
-        const status = document.getElementById('evalModalStatus');
-        const pBar = document.getElementById('evalProgressBar');
-        const pPercent = document.getElementById('evalPercent');
-        const s1 = document.getElementById('evalStep1');
-        const s2 = document.getElementById('evalStep2');
-        const s3 = document.getElementById('evalStep3');
-
-        if (heading) heading.textContent = 'Screening Candidate: ' + candidateName;
-
-        // Step 1: 0 - 35%
-        setTimeout(function() {
-            if (pBar) pBar.style.width = '35%';
-            if (pPercent) pPercent.textContent = '35%';
-            if (status) status.textContent = 'Identity verified. Checking cohort seat availability...';
-            if (s1) {
-                s1.className = 'flex items-center gap-2 text-emerald-700 font-bold';
-                s1.querySelector('span').className = 'w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]';
-            }
-        }, 800);
-
-        // Step 2: 35 - 75%
-        setTimeout(function() {
-            if (pBar) pBar.style.width = '75%';
-            if (pPercent) pPercent.textContent = '75%';
-            if (status) status.textContent = 'Quota available. Ratifying 100% full tuition grant...';
-            if (s2) {
-                s2.className = 'flex items-center gap-2 text-emerald-700 font-bold';
-                s2.querySelector('span').className = 'w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]';
-            }
-        }, 1800);
-
-        // Step 3: 75 - 100% -> Congratulations!
-        setTimeout(function() {
-            if (pBar) pBar.style.width = '100%';
-            if (pPercent) pPercent.textContent = '100%';
-            if (heading) heading.innerHTML = '🎉 Congratulations, ' + candidateName + '!';
-            if (status) status.innerHTML = '<strong class="text-emerald-700">100% Full Tuition Scholarship Officially Approved!</strong><br><span class="text-xs text-slate-500">Redirecting to your official award dossier...</span>';
-            if (s3) {
-                s3.className = 'flex items-center gap-2 text-emerald-700 font-bold';
-                s3.querySelector('span').className = 'w-4 h-4 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px]';
-            }
-        }, 2900);
-
-        // Forward to target URL
-        setTimeout(function() {
-            window.location.href = targetUrl;
-        }, 4100);
-    }
-
-</script>
+    </script>
 
     <!-- FLOATING WHATSAPP BUTTON (FIXED BOTTOM RIGHT) -->
     <a href="https://wa.me/2347019602639?text=Hello%20Odunayo%2C%20I%20need%20assistance%20with%20Newton%20Academy" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 group" aria-label="Chat with Newton Academy Support on WhatsApp">
@@ -1041,60 +1049,6 @@
     </a>
 
 
-    <!-- EVALUATION / LOADING POPUP MODAL (BEFORE CONGRATULATIONS) -->
-    <div id="evaluationModal" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-center space-y-6 shadow-2xl border border-slate-200 transform transition-all">
-            
-            <div class="mx-auto w-16 h-16 rounded-full bg-teal-50 border-2 border-[#005f5a] flex items-center justify-center relative">
-                <svg class="w-8 h-8 text-[#005f5a] animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-            </div>
-
-            <div class="space-y-2">
-                <span class="text-[11px] font-black uppercase tracking-widest text-[#005f5a] bg-teal-50 border border-teal-200 px-3 py-1 rounded-full">
-                    Admissions Council Live Screening
-                </span>
-                <h3 id="evalModalHeading" class="text-xl sm:text-2xl font-black text-slate-900 font-heading">
-                    Evaluating Candidate File...
-                </h3>
-                <p id="evalModalStatus" class="text-xs sm:text-sm text-slate-600 font-sans">
-                    Verifying applicant profile &amp; scholarship quota allocation...
-                </p>
-            </div>
-
-            <!-- Progress Bar -->
-            <div class="space-y-2">
-                <div class="w-full bg-slate-100 rounded-full h-3 overflow-hidden border border-slate-200">
-                    <div id="evalProgressBar" class="h-full bg-gradient-to-r from-[#005f5a] via-teal-500 to-amber-500 rounded-full transition-all duration-300" style="width: 15%"></div>
-                </div>
-                <div class="flex justify-between text-[11px] font-mono text-slate-500">
-                    <span>File Evaluation</span>
-                    <span id="evalPercent">15%</span>
-                </div>
-            </div>
-
-            <!-- Checklist Animation -->
-            <div class="bg-slate-50 rounded-2xl p-4 text-left space-y-2.5 text-xs text-slate-700 font-sans border border-slate-100">
-                <div id="evalStep1" class="flex items-center gap-2 text-slate-400">
-                    <span class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px]">&#10003;</span>
-                    <span>Identity and contact verification</span>
-                </div>
-                <div id="evalStep2" class="flex items-center gap-2 text-slate-400">
-                    <span class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px]">&#10003;</span>
-                    <span>Checking regional cohort quota allocation</span>
-                </div>
-                <div id="evalStep3" class="flex items-center gap-2 text-slate-400">
-                    <span class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center text-[10px]">&#10003;</span>
-                    <span>Faculty Council ratification &amp; waiver grant</span>
-                </div>
-            </div>
-
-            <div class="text-[11px] text-slate-400 italic">
-                Please do not close this window. Processing official certificate...
-            </div>
-        </div>
-    </div>
+    
 </body>
 </html>

@@ -34,3 +34,4 @@ const fs = require('fs');
 
     fs.writeFileSync(file, content, 'utf8');
 });
+

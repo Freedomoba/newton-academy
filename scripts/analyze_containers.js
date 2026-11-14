@@ -17,3 +17,4 @@ function analyzeFile(file) {
 }
 
 ['index.html', 'scholarship.html', 'curriculum-dm.html', 'curriculum-de.html', 'checkout.html'].forEach(analyzeFile);
+

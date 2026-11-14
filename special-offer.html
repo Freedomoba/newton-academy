@@ -511,7 +511,7 @@
                     </p>
                 </div>
 
-                <form id="officialScholarshipForm" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-6 sm:p-10 brand-shadow max-w-3xl mx-auto space-y-6">
+                <form id="officialScholarshipForm" method="POST" action="checkout.html" onsubmit="return handleScholarshipSubmit(event);" class="bg-slate-50 border-2 border-slate-200 rounded-3xl p-6 sm:p-10 brand-shadow max-w-3xl mx-auto space-y-6">
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="space-y-1.5">
@@ -605,7 +605,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <button type="submit" id="submitAppBtn" class="w-full py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm md:text-xs sm:text-sm md:text-base lg:text-xs sm:text-sm md:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
+                        <button type="submit" id="submitAppBtn" onclick="return handleScholarshipSubmit(event);" class="w-full py-3 sm:py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs sm:text-sm md:text-xs sm:text-sm md:text-base lg:text-xs sm:text-sm md:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:scale-[1.01] font-heading flex items-center justify-center gap-3">
                             <span>Submit Application & Start Live Evaluation</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -761,6 +761,73 @@
     <script src="assets/js/animations.js"></script>
 
     <script>
+        // Bulletproof scholarship application submit handler
+        window.handleScholarshipSubmit = function(e) {
+            if (e && e.preventDefault) e.preventDefault();
+
+            const form = document.getElementById('officialScholarshipForm');
+            if (form && !form.checkValidity()) {
+                form.reportValidity();
+                return false;
+            }
+
+            const fNameEl = document.getElementById('first_name');
+            const lNameEl = document.getElementById('last_name');
+            const fName = (fNameEl ? fNameEl.value : '').trim();
+            const lName = (lNameEl ? lNameEl.value : '').trim();
+            const fullName = (fName + ' ' + lName).trim() || 'Candidate';
+
+            const emailEl = document.getElementById('email');
+            const emailVal = (emailEl ? emailEl.value : '').trim();
+
+            const phoneEl = document.getElementById('phone');
+            const phoneVal = (phoneEl ? phoneEl.value : '').trim();
+
+            const courseEl = document.getElementById('course_select');
+            const courseVal = courseEl ? courseEl.value : 'Digital Marketing + Applied AI';
+
+            const schemeEl = document.getElementById('scholarship_scheme');
+            const schemeVal = schemeEl ? schemeEl.value : '100% Full Tuition Endowment (₦20,000 Admission Fee Only)';
+
+            const appId = 'NA-' + Date.now().toString().slice(-6);
+
+            try {
+                localStorage.setItem('newton_name', fullName);
+                localStorage.setItem('newton_email', emailVal);
+                localStorage.setItem('newton_phone', phoneVal);
+                localStorage.setItem('newton_track', courseVal);
+                localStorage.setItem('newton_app_id', appId);
+            } catch (err) {}
+
+            try {
+                if (form) {
+                    const fd = new FormData(form);
+                    fd.append('app_id', appId);
+                    fetch('api/scholarship.php', { method: 'POST', body: fd }).catch(function() {});
+                }
+            } catch (err) {}
+
+            const isPhp = window.location.pathname.endsWith('.php');
+            const checkoutPage = isPhp ? 'checkout.php' : 'checkout.html';
+            const chkParams = new URLSearchParams({
+                app_id: appId,
+                name: fullName,
+                email: emailVal,
+                phone: phoneVal,
+                track: courseVal,
+                scheme: schemeVal
+            });
+            const targetCheckoutUrl = checkoutPage + '?' + chkParams.toString();
+
+            if (typeof window.startScholarshipEvaluation === 'function') {
+                window.startScholarshipEvaluation(fullName, targetCheckoutUrl);
+            } else {
+                window.location.href = targetCheckoutUrl;
+            }
+
+            return false;
+        };
+    
         document.addEventListener('DOMContentLoaded', function() {
             const envelope = document.getElementById('confidentialEnvelope');
             const letter = document.getElementById('officialSalesLetter');
