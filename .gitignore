@@ -19,3 +19,4 @@ yarn-error.log*
 config.local.php
 .env*
 scripts/send_followup.js
+*.zip
