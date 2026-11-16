@@ -16,9 +16,8 @@ const SENDER = 'Newton Academy <na@newtoncore.com>';
 const OFFICIAL_EMAIL = 'na@newtoncore.com';
 const FOUNDER_NAME = 'Ade Braimoh';
 
-// Recipients to receive the 4 test emails
+// Target recipient: specified by user
 const RECIPIENTS = [
-    { name: 'Freedom Emmanuel', email: 'marketerfreedom@gmail.com' },
     { name: 'Freedom Emmanuel', email: 'masterfreedom23@gmail.com' }
 ];
 
@@ -120,8 +119,8 @@ function getEmail1_WebinarRegistration(name) {
     const bodyHtml = `
         <p style="margin:0 0 16px;">Dear ${firstName},</p>
         
-        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
-            Congratulations! Your registration for the Digital and Financial Literacy Virtual Conference is confirmed.
+        <p style="margin:0 0 16px; font-size:16.5px; font-weight:800; color:#005f5a; line-height:1.4;">
+            🎉 Congratulations! Your registration for the Digital and Financial Literacy Virtual Conference is confirmed.
         </p>
 
         <p style="margin:0 0 16px;">
@@ -180,7 +179,7 @@ function getEmail1_WebinarRegistration(name) {
 }
 
 /**
- * EMAIL 2: Scholarship Approval Letter (Accompanied by clean normal PDF)
+ * EMAIL 2: Scholarship Approval Letter (Copywriter Edition)
  */
 function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied AI') {
     const firstName = name.split(' ')[0] || 'Candidate';
@@ -188,39 +187,55 @@ function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied A
     const bodyHtml = `
         <p style="margin:0 0 16px;">Dear ${firstName},</p>
 
-        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
-            Congratulations! You have been approved for a 100% Full Tuition Scholarship.
+        <p style="margin:0 0 16px; font-size:17px; font-weight:800; color:#005f5a; line-height:1.4;">
+            🎉 Congratulations! You have been officially awarded a 100% Full Tuition Scholarship.
         </p>
 
         <p style="margin:0 0 16px;">
-            Following the review of your candidate application, the Academic Board of Newton Academy has formally accepted your candidacy for the <strong>${track} (Flagship Diploma)</strong>.
+            We have exceptional news for you.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Following a rigorous evaluation of your candidate profile, the Academic Board of Newton Academy has formally approved your candidacy for the <strong>${track} (Flagship Diploma)</strong>.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Out of hundreds of applications reviewed across the continent this week, your ambition, background, and commitment stood out. You have been selected into an elite cohort of emerging digital operators and business leaders.
         </p>
 
         <!-- Official Award Breakdown Box (Yellow Accent) -->
-        <div style="background-color:#fffbeb; border:1px solid #fde68a; border-left:4px solid #f59e0b; border-radius:8px; padding:14px 16px; margin:18px 0;">
-            <p style="margin:0 0 6px; font-weight:800; color:#92400e; font-size:13.5px; text-transform:uppercase; letter-spacing:0.5px;">
-                Official Award Breakdown
+        <div style="background-color:#fffbeb; border:1px solid #fde68a; border-left:4px solid #f59e0b; border-radius:8px; padding:16px 18px; margin:20px 0;">
+            <p style="margin:0 0 8px; font-weight:800; color:#92400e; font-size:13.5px; text-transform:uppercase; letter-spacing:0.5px;">
+                Official Scholarship Allocation Summary
             </p>
-            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#78350f; line-height:1.65;">
-                <li style="margin-bottom:4px;">Standard Program Tuition: <span style="text-decoration:line-through; color:#94a3b8;">₦200,000</span></li>
-                <li style="margin-bottom:4px;">Newton Academy 100% Endowment: <strong>-₦200,000 (Fully Waived)</strong></li>
-                <li style="margin-bottom:4px;">Tuition Payable: <strong style="color:#059669;">₦0.00 (FREE)</strong></li>
-                <li>One-Time Admissions &amp; Evaluation Fee: <strong>₦20,000 Only</strong></li>
+            <ul style="margin:0; padding-left:18px; font-size:14px; color:#78350f; line-height:1.7;">
+                <li style="margin-bottom:4px;">Standard 3-Month Tuition: <span style="text-decoration:line-through; color:#94a3b8;">₦200,000</span></li>
+                <li style="margin-bottom:4px;">Newton Academy 100% Endowment: <strong>-₦200,000 (100% Waived)</strong></li>
+                <li style="margin-bottom:4px;">Tuition Balance Payable: <strong style="color:#059669;">₦0.00 (Zero Tuition for 3 Months)</strong></li>
+                <li>One-Time Admissions &amp; LMS Portal Fee: <strong>₦20,000 Only</strong></li>
             </ul>
         </div>
 
         <p style="margin:0 0 16px;">
-            Your scholarship completely eliminates all tuition expenses for the entire 3 months. The one-time ₦20,000 admissions fee covers your student portal registration, verified student ID, and live LMS setup.
+            This endowment completely wipes out your tuition costs for the entire three-month curriculum. Over the course of the programme, you will receive direct mentorship from seasoned practitioners with experience at Microsoft, Meta, Accenture, and 7Up — mastering real-world, high-income digital competencies.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Your one-time ₦20,000 admissions fee covers your student ID issuance, cloud LMS infrastructure, personalized dashboard provisioning, and lifetime access to our alumni network.
         </p>
 
         <p style="margin:0 0 16px;">
             <strong>Official Award Document Attached:</strong><br>
-            Your formal signed Scholarship Award Letter containing your full name and credentials has been generated and attached to this email as a PDF document for your permanent records.
+            Attached directly to this email is your official, signed <strong>Scholarship Award Letter (PDF)</strong> bearing your name, credentials, and institutional reference code for your records.
         </p>
 
         <p style="margin:0 0 16px;">
-            <strong style="color:#b91c1c;">Next Step — 24-Hour Allocation Policy:</strong><br>
-            Due to strict mentor-to-student coaching ratios, your scholarship award is reserved for exactly <strong>24 hours</strong>. Please click the button below to access your admissions dossier and finalize your seat before your allocation expires:
+            <strong style="color:#b91c1c;">Strict 24-Hour Allocation Policy:</strong><br>
+            To maintain our high tutor-to-student coaching standards, seats are strictly capped. Your scholarship seat and ₦200,000 tuition waiver are held for exactly <strong>24 hours</strong>. If your seat is not claimed within this period, your allocation will be automatically released to waitlisted applicants.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Do not let this commercial opportunity pass you by. Tap the button below to review your admissions dossier and finalize your seat right now:
         </p>
     `;
 
@@ -229,7 +244,7 @@ function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied A
         html: wrapCleanEmail({
             title: 'Official Award of 100% Full Tuition Scholarship',
             bodyHtml,
-            ctaText: 'Access Award Document & Finalize Seat',
+            ctaText: 'Claim Your 100% Scholarship Seat Now',
             ctaUrl: CHECKOUT_URL
         })
     };
@@ -284,7 +299,7 @@ function getEmail3_PendingFollowup(name, track = 'Digital Marketing + Applied AI
 }
 
 /**
- * EMAIL 4: Enrolment Confirmed / Seat Secured (Leads to Odunayo)
+ * EMAIL 4: Enrolment Confirmed / Seat Secured (Copywriter Edition)
  */
 function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied AI', appId = 'NA-SCH-748921') {
     const firstName = name.split(' ')[0] || 'Fellow';
@@ -296,39 +311,46 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
     const bodyHtml = `
         <p style="margin:0 0 16px;">Dear ${firstName},</p>
 
-        <p style="margin:0 0 16px; font-size:18px; font-weight:700; color:#059669;">
-            Congratulations and welcome to Newton Academy!
+        <p style="margin:0 0 16px; font-size:18px; font-weight:800; color:#059669; line-height:1.4;">
+            🎉 Congratulations — You Are Officially In!
         </p>
 
         <p style="margin:0 0 16px;">
-            Your one-time admissions commitment fee of <strong>₦20,000</strong> has been officially received and verified.
+            Your one-time admissions commitment fee of <strong>₦20,000</strong> has been received, verified, and officially cleared by Admissions.
         </p>
 
         <p style="margin:0 0 16px;">
-            Your status is now upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (worth ₦200,000) is locked in, and your seat in the upcoming cohort is officially guaranteed with zero tuition balance (₦0.00).
+            Your status has been upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (₦200,000 endowment) is locked in permanently, and your seat in the upcoming cohort is officially guaranteed with zero tuition balance (₦0.00).
+        </p>
+
+        <p style="margin:0 0 16px;">
+            By taking decisive action today, you've separated yourself from the crowd of passive observers. You are now part of a driven community of founders, marketers, and digital operators who don't just study the future — they build it.
         </p>
 
         <!-- Official Credentials Box (Green & Yellow Accents) -->
-        <div style="background-color:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #10b981; border-radius:8px; padding:14px 16px; margin:18px 0;">
-            <p style="margin:0 0 6px; font-weight:800; color:#166534; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">
-                Official Enrollment Credentials
+        <div style="background-color:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #10b981; border-radius:8px; padding:16px 18px; margin:20px 0;">
+            <p style="margin:0 0 8px; font-weight:800; color:#166534; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">
+                Verified Fellowship Credentials
             </p>
-            <ul style="margin:0; padding-left:18px; font-size:13.5px; color:#14532d; line-height:1.65;">
-                <li style="margin-bottom:4px;">Student ID: <strong style="color:#005f5a; font-family:monospace; font-size:15px;">${appId}</strong></li>
-                <li style="margin-bottom:4px;">Enrolled Track: <strong>${track}</strong></li>
-                <li style="margin-bottom:4px;">Scholarship Status: <strong style="color:#059669;">100% Tuition Fully Covered (₦0 Balance)</strong></li>
-                <li>Admission Fee: <strong>₦20,000 (Paid &amp; Verified)</strong></li>
+            <ul style="margin:0; padding-left:18px; font-size:14px; color:#14532d; line-height:1.7;">
+                <li style="margin-bottom:4px;">Student ID: <strong style="color:#005f5a; font-family:monospace; font-size:15.5px;">${appId}</strong></li>
+                <li style="margin-bottom:4px;">Enrolled Specialization: <strong>${track}</strong></li>
+                <li style="margin-bottom:4px;">Tuition Coverage: <strong style="color:#059669;">100% Waived by Endowment (₦0 Balance)</strong></li>
+                <li>Admission Status: <strong>Verified &amp; Active</strong></li>
             </ul>
         </div>
 
-        <p style="margin:0 0 8px; font-size:15px; font-weight:700; color:#003835;">
-            Final Step — Message Odunayo on WhatsApp to Enter the VIP Group:
+        <p style="margin:0 0 8px; font-size:15.5px; font-weight:700; color:#003835;">
+            Your Final Step: Enter the Private VIP Fellows Room
         </p>
         <p style="margin:0 0 12px;">
-            To ensure the absolute privacy and security of our enrolled cohort, group entry is granted manually. Please message <strong>Odunayo</strong> (Lead Admissions Advisor) on WhatsApp by tapping the button below.
+            To preserve the confidentiality, prestige, and focus of our enrolled cohort, access to our community is handled with high care.
+        </p>
+        <p style="margin:0 0 16px;">
+            Please tap the button below to message <strong>Odunayo</strong> (Lead Admissions Advisor) directly on WhatsApp. A pre-filled verification message containing your Student ID will be loaded automatically.
         </p>
         <p style="margin:0 0 16px; color:#64748b; font-size:13.5px;">
-            A pre-filled verification message containing your Student ID and name will be ready for you to send. Once received, Odunayo will verify your record and grant you instant access to the private <strong>VIP Enrolled Fellows WhatsApp Room</strong> and LMS portal orientation.
+            Once received, Odunayo will grant you immediate access to the <strong>Private VIP Enrolled Fellows WhatsApp Room</strong> and walk you through your onboarding portal before classes begin.
         </p>
     `;
 
