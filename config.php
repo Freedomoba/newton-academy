@@ -1,4 +1,9 @@
 <?php
+// Load local private environment overrides if present
+if (file_exists(__DIR__ . '/config.local.php')) {
+    require_once __DIR__ . '/config.local.php';
+}
+
 /**
  * Newton Academy - Funnel Configuration
  * Update the values below with your credentials and WhatsApp links.

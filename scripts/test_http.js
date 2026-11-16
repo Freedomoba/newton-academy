@@ -9,3 +9,4 @@ http.get('http://localhost:3000/scholarship.html', res => {
         console.log('has checkout.html target:', d.includes('checkout.html'));
     });
 });
+

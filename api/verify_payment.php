@@ -76,47 +76,9 @@ if ($fp) {
 // 2. Dispatch Post-Payment VIP Onboarding Email
 if ($email) {
     $vipLink = WHATSAPP_VIP_ENROLLED_LINK;
-    $academy = ACADEMY_NAME;
-
-    $subject = "Enrollment Confirmed: Welcome to Newton Academy";
-    $vipHtml = <<<HTML
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Enrollment Confirmed</title></head>
-<body style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f4f6f8; padding:30px 15px; margin:0; color:#1e293b;">
-    <div style="max-width:600px; margin:auto; background:#ffffff; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0;">
-        <div style="background:#004d4d; padding:32px 30px; text-align:center; color:#ffffff;">
-            <h1 style="margin:0; font-size:22px; font-weight:700;">NEWTON ACADEMY</h1>
-            <p style="margin:6px 0 0; color:#99f6e4; font-size:12px; text-transform:uppercase; letter-spacing:1.5px;">Office of Fellow Onboarding</p>
-        </div>
-        <div style="padding:36px 32px;">
-            <h2 style="color:#0f172a; margin:0 0 16px; font-size:20px; font-weight:700;">Admission Receipt & Next Steps</h2>
-            <p>Dear <strong>{$name}</strong>,</p>
-            <p>Your one-time scholarship application fee of <strong>₦20,000</strong> (Receipt Reference: {$reference}) has been verified. Your enrollment for <strong>{$programme}</strong> is now official.</p>
-            
-            <div style="background:#f0fdfa; border-left:4px solid #008080; padding:18px; margin:22px 0; border-radius:4px;">
-                <strong style="margin:0 0 8px; color:#004d4d; display:block; font-size:14px;">HOW TO ACTIVATE YOUR LMS STUDENT PORTAL:</strong>
-                <ol style="margin:0; padding-left:18px; color:#0f766e; font-size:13px; line-height:1.6;">
-                    <li>Join the Enrolled Fellows WhatsApp Room using the link below.</li>
-                    <li>Read the <strong>PINNED MESSAGE</strong> at the top of the chat room.</li>
-                    <li>Submit your Full Legal Name, Email Address, and Payment Reference as requested in the pinned notice.</li>
-                    <li>The Admissions Registrar will provision your LMS login and orientation schedule.</li>
-                </ol>
-            </div>
-
-            <div style="text-align:center; margin:32px 0;">
-                <a href="{$vipLink}" style="background-color:#008080; color:#ffffff; text-decoration:none; padding:16px 34px; border-radius:8px; font-weight:700; display:inline-block; font-size:15px;">
-                    Enter Enrolled Fellows WhatsApp Room
-                </a>
-            </div>
-            
-            <hr style="border:none; border-top:1px solid #e2e8f0; margin:28px 0;">
-            <p style="font-size:12px; color:#94a3b8; text-align:center;">&copy; 2026 {$academy}. All rights reserved.</p>
-        </div>
-    </div>
-</body>
-</html>
-HTML;
+    $studentId = !empty($appId) ? $appId : ('NA-ID-' . strtoupper(substr(preg_replace('/[^a-zA-Z0-9]/', '', $reference), -6)));
+    $subject = "Enrolment Confirmed: Your Seat is Officially Secured (" . $programme . ")";
+    $vipHtml = NewtonMailer::getEnrolmentSuccessTemplate($name, $programme, $studentId, $vipLink);
     NewtonMailer::send($email, $name, $subject, $vipHtml);
 }
 

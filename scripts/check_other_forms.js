@@ -7,3 +7,4 @@ const fs = require('fs');
     const hasSubmitListener = c.includes("addEventListener('submit'");
     console.log(f, { hasForm, hasSubmitBtn, hasSubmitListener });
 });
+

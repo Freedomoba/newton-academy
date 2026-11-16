@@ -8,3 +8,4 @@ const formHtml = c.substring(fStart, fEnd);
 const reqs = formHtml.match(/<[^>]+required[^>]*>/gi) || [];
 console.log('Required fields in form:');
 reqs.forEach(r => console.log('  ', r));
+
