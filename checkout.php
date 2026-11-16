@@ -118,47 +118,86 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 </div>
             </div>
 
-            <!-- Straightforward Financial Ledger -->
-            <div class="py-6 border-b border-slate-200 space-y-3 font-sans">
-                <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500 mb-2">
-                    Official Fee Breakdown
-                </h2>
-                
-                <div class="flex justify-between items-center text-sm sm:text-base">
-                    <span class="text-slate-600">Standard 3-Month Diploma Tuition</span>
-                    <span class="line-through text-slate-400 font-mono font-bold">₦200,000</span>
+            <!-- Structured Two-Column Financial Ledger with Column & Row Dividers -->
+            <div class="my-6 font-sans">
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500">
+                        Official Fee Breakdown &amp; Valuation
+                    </h2>
+                    <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                        100% Tuition Waived
+                    </span>
                 </div>
-                
-                <div class="flex justify-between items-center text-sm sm:text-base">
-                    <span class="text-emerald-700 font-semibold">Newton Academy 100% Tuition Endowment</span>
-                    <span class="text-emerald-700 font-bold font-mono">-₦200,000 (100% Waived)</span>
-                </div>
-                
-                <div class="flex justify-between items-center text-sm sm:text-base">
-                    <span class="text-slate-600 font-medium">Your Remaining Tuition Balance</span>
-                    <span class="text-emerald-700 font-black font-mono">₦0.00 (FREE)</span>
-                </div>
-                
-                <div class="flex justify-between items-start text-sm sm:text-base pt-3 border-t border-slate-100">
-                    <div class="pr-4">
-                        <span class="text-slate-900 font-bold block">One-Time Admissions &amp; Portal Evaluation Fee</span>
-                        <span class="text-xs text-slate-500">Covers student ID verification, personalized LMS access, and mentor allocation.</span>
+
+                <!-- Structured Table / Grid with Column Divider and Row Dividers -->
+                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 shadow-sm">
+                    
+                    <!-- Table Header -->
+                    <div class="grid grid-cols-12 bg-slate-100 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
+                            Description / Item
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right">
+                            Fee (NGN)
+                        </div>
                     </div>
-                    <span class="text-slate-900 font-bold font-mono text-base sm:text-lg shrink-0">₦20,000</span>
-                </div>
-                
-                <div class="flex justify-between items-center pt-4 border-t-2 border-slate-900">
-                    <div>
-                        <span class="text-base sm:text-lg font-black text-slate-900 block font-heading">Total Amount Payable Today</span>
-                        <span class="text-xs text-red-600 font-bold flex items-center gap-1 mt-0.5">
-                            <span>Saves you ₦200,000</span>
-                            <span>&bull;</span>
-                            <span>Expires in: <span class="timerText font-mono font-black">23:59:45</span></span>
-                        </span>
+
+                    <!-- Row 1: Standard Tuition -->
+                    <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-slate-700">
+                            Standard 3-Month Diploma Tuition
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm line-through text-slate-400 font-bold">
+                            ₦200,000
+                        </div>
                     </div>
-                    <div class="text-right">
-                        <span class="text-3xl sm:text-4xl font-black text-[#005f5a] font-mono">₦20,000</span>
+
+                    <!-- Row 2: 100% Endowment -->
+                    <div class="grid grid-cols-12 border-b border-slate-200 bg-emerald-50/40 items-center">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-emerald-800 font-semibold">
+                            Newton Academy 100% Tuition Endowment
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm text-emerald-700 font-bold">
+                            -₦200,000 <span class="hidden sm:inline text-xs font-sans font-bold">(100% Waived)</span>
+                        </div>
                     </div>
+
+                    <!-- Row 3: Remaining Tuition Balance -->
+                    <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm font-semibold text-slate-800">
+                            Remaining Tuition Balance
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm font-black text-emerald-700">
+                            ₦0.00 <span class="text-xs font-sans font-bold text-emerald-600">(FREE)</span>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: One-Time Admissions Fee -->
+                    <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
+                            <span class="text-sm font-bold text-slate-900 block">One-Time Admissions &amp; Portal Evaluation Fee</span>
+                            <span class="text-xs text-slate-500 block leading-tight mt-0.5">Covers student ID verification, personalized LMS access, and mentor allocation.</span>
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-base font-bold text-slate-900">
+                            ₦20,000
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Total Amount Payable Today (Highlighted) -->
+                    <div class="grid grid-cols-12 bg-amber-50/60 items-center border-t-2 border-slate-300">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
+                            <span class="text-sm sm:text-base font-black text-slate-900 block font-heading">Total Amount Payable Today</span>
+                            <span class="text-xs text-red-600 font-bold flex items-center gap-1 mt-0.5">
+                                <span>Saves you ₦200,000</span>
+                                <span>&bull;</span>
+                                <span>Expires in: <span class="timerText font-mono font-black">23:59:45</span></span>
+                            </span>
+                        </div>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right">
+                            <span class="text-2xl sm:text-3xl font-black text-[#005f5a] font-mono block">₦20,000</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
