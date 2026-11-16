@@ -163,8 +163,9 @@ class NewtonMailer {
     }
 
     /**
-     * Clean, Fully Centralized Master Layout (NO tables, NO boxed containers)
-     * Pure, readable typography, logo centered at top, all text centered, high inbox deliverability.
+     * Clean, Harmonized Master Layout (NO tables, NO boxed containers)
+     * Centered: Logo, Main Page Headline, CTA Button, and Footer.
+     * Left-Aligned: Body copy, subheadings, paragraphs, bullet lists, and Founder Sign-off.
      */
     public static function wrapCleanEmail($title, $bodyHtml, $ctaText = '', $ctaUrl = '', $secondaryLink = null) {
         $logoUrl = 'https://freedomoba.github.io/newton-academy/assets/logo.png';
@@ -174,7 +175,7 @@ class NewtonMailer {
         $ctaBlock = '';
         if (!empty($ctaText) && !empty($ctaUrl)) {
             $ctaBlock = <<<HTML
-            <div style="margin:32px 0 20px; text-align:center;">
+            <div style="margin:34px 0 18px; text-align:center;">
                 <a href="{$ctaUrl}" style="display:inline-block; background-color:#005f5a; color:#ffffff; font-weight:700; font-size:15px; text-decoration:none; padding:14px 32px; border-radius:8px;">
                     {$ctaText} &rarr;
                 </a>
@@ -185,7 +186,7 @@ HTML;
         $secondaryBlock = '';
         if (!empty($secondaryLink) && isset($secondaryLink['text']) && isset($secondaryLink['url'])) {
             $secondaryBlock = <<<HTML
-            <div style="margin:16px 0 28px; font-size:14px; text-align:center;">
+            <div style="margin:14px 0 28px; font-size:14px; text-align:center;">
                 <a href="{$secondaryLink['url']}" style="color:#005f5a; font-weight:700; text-decoration:underline;">
                     {$secondaryLink['text']}
                 </a>
@@ -202,7 +203,7 @@ HTML;
     <title>{$title}</title>
 </head>
 <body style="margin:0; padding:0; background-color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1e293b; line-height:1.75; -webkit-font-smoothing:antialiased;">
-    <div style="max-width:560px; margin:0 auto; padding:36px 20px 48px; text-align:center;">
+    <div style="max-width:580px; margin:0 auto; padding:36px 20px 48px;">
         
         <!-- Centered Logo -->
         <div style="padding-bottom:24px; border-bottom:1px solid #e2e8f0; margin-bottom:28px; text-align:center;">
@@ -211,13 +212,13 @@ HTML;
             </a>
         </div>
 
-        <!-- Centered Title -->
-        <h1 style="font-size:22px; font-weight:800; color:#003835; margin:0 0 22px; line-height:1.35; letter-spacing:-0.2px; text-align:center;">
+        <!-- Centered Main Headline -->
+        <h1 style="font-size:22px; font-weight:800; color:#003835; margin:0 0 24px; line-height:1.35; letter-spacing:-0.2px; text-align:center;">
             {$title}
         </h1>
 
-        <!-- Centered Body Content -->
-        <div style="font-size:15px; color:#334155; line-height:1.75; text-align:center;">
+        <!-- Natural Left-Aligned Body Content -->
+        <div style="font-size:15px; color:#334155; line-height:1.75; text-align:left;">
             {$bodyHtml}
         </div>
 
@@ -227,8 +228,8 @@ HTML;
         <!-- Centered Secondary Link -->
         {$secondaryBlock}
 
-        <!-- Centered Sign-off -->
-        <div style="margin-top:38px; padding-top:24px; border-top:1px solid #e2e8f0; font-size:14px; color:#475569; line-height:1.6; text-align:center;">
+        <!-- Natural Left-Aligned Sign-off -->
+        <div style="margin-top:36px; padding-top:24px; border-top:1px solid #e2e8f0; font-size:14px; color:#475569; line-height:1.6; text-align:left;">
             <p style="margin:0 0 4px; font-weight:700; color:#0f172a;">Warm regards,</p>
             <p style="margin:0; font-weight:800; color:#003835; font-size:15px;">{$founderName}</p>
             <p style="margin:2px 0 0; color:#64748b; font-size:13px;">Founder, Newton Academy</p>
@@ -248,7 +249,7 @@ HTML;
     }
 
     /**
-     * Email Template 1: Virtual Conference Pass Confirmation (Centralized)
+     * Email Template 1: Virtual Conference Pass Confirmation
      */
     public static function getOptinWelcomeTemplate($name) {
         $waitlistLink = defined('WHATSAPP_WAITLIST_LINK') ? WHATSAPP_WAITLIST_LINK : 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi';
@@ -267,23 +268,31 @@ HTML;
             We are excited to welcome you to this premier virtual conference featuring seasoned global practitioners with experience from Microsoft, Meta, Accenture, and 7Up.
         </p>
 
-        <p style="margin:0 0 16px;">
-            <strong>Important — Please Move Us to Your Primary Inbox:</strong><br>
-            To make sure our conference workbooks, live session links, and AI templates land directly in your view, please drag this email to your <strong>Primary tab</strong> on Gmail (or tap the 3 dots and select <strong>"Move to Primary"</strong> on your mobile phone) and add <strong>{$officialEmail}</strong> to your contacts list.
+        <p style="margin:0 0 8px; font-weight:700; color:#0f172a;">
+            Important — Please Move Us to Your Primary Inbox:
         </p>
+        <p style="margin:0 0 16px;">
+            To ensure you don't miss our official session workbooks, live conference links, and practical AI templates:
+        </p>
+        <ul style="margin:0 0 20px; padding-left:20px; line-height:1.7;">
+            <li style="margin-bottom:6px;"><strong>On Gmail (Desktop):</strong> Drag this email to your <strong>Primary</strong> tab and click "Yes" when prompted.</li>
+            <li style="margin-bottom:6px;"><strong>On Mobile:</strong> Tap the 3 dots at the top right and select <strong>"Move to Primary"</strong>.</li>
+            <li>Add <strong>{$officialEmail}</strong> to your email contacts list.</li>
+        </ul>
 
-        <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
+        <p style="margin:0 0 8px; font-size:15px; font-weight:700; color:#003835;">
             Apply for a 100% Full Tuition Scholarship (DM &amp; DE):
         </p>
-        <p style="margin:0 0 16px;">
+        <p style="margin:0 0 12px;">
             As an official conference delegate, you are invited to apply for our <strong>100% Full Tuition Scholarship (valued at ₦200,000)</strong> to study either of our two premier VIP courses:
         </p>
-        <p style="margin:0 0 16px;">
-            <strong>1. Digital Marketing + Applied AI (DM):</strong> Master high-converting funnels, performance advertising, and AI-driven growth.<br>
-            <strong>2. Data Engineering + AI Systems (DE):</strong> Master cloud data architectures, modern data stacks, SQL/Python analytics, and enterprise AI workflows.
-        </p>
-        <p style="margin:0 0 22px;">
-            <a href="{$scholarshipUrl}" style="color:#005f5a; font-weight:700; text-decoration:underline;">Click here to take the 30-second evaluation and apply for the 100% Scholarship &rarr;</a>
+        <ul style="margin:0 0 16px; padding-left:20px; line-height:1.7;">
+            <li style="margin-bottom:6px;"><strong>1. Digital Marketing + Applied AI (DM):</strong> Master high-converting funnels, performance advertising, and AI-driven growth.</li>
+            <li><strong>2. Data Engineering + AI Systems (DE):</strong> Master cloud data architectures, modern data stacks, SQL/Python analytics, and enterprise AI workflows.</li>
+        </ul>
+        <p style="margin:0 0 20px;">
+            Scholarship allocations are limited. You can take the 30-second live evaluation right now:<br>
+            <a href="{$scholarshipUrl}" style="color:#005f5a; font-weight:700; text-decoration:underline;">Click here to apply for the 100% Scholarship (DM or DE) &rarr;</a>
         </p>
 
         <p style="margin:0 0 16px;">
@@ -304,7 +313,7 @@ HTML;
     }
 
     /**
-     * Email Template 2: Scholarship Award Letter (Centralized)
+     * Email Template 2: Scholarship Award Letter
      */
     public static function getScholarshipApprovalTemplate($name, $programmeName, $checkoutUrl) {
         $firstName = explode(' ', trim($name))[0] ?: 'Candidate';
@@ -312,7 +321,7 @@ HTML;
         $bodyHtml = <<<HTML
         <p style="margin:0 0 16px;">Dear {$firstName},</p>
 
-        <p style="margin:0 0 16px; font-size:17px; font-weight:700; color:#005f5a;">
+        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
             Congratulations! You have been approved for a 100% Full Tuition Scholarship.
         </p>
 
@@ -320,12 +329,18 @@ HTML;
             Following the review of your candidate application, the Academic Board of Newton Academy has formally accepted your candidacy for the <strong>{$programmeName} (Flagship Diploma)</strong>.
         </p>
 
-        <p style="margin:0 0 16px;">
-            Under this scholarship award, your full standard tuition of <strong>₦200,000</strong> is completely covered and waived by the Newton Academy Endowment Fund. You bear zero tuition balance (₦0.00).
+        <p style="margin:0 0 8px; font-weight:700; color:#0f172a;">
+            Official Award Breakdown:
         </p>
+        <ul style="margin:0 0 18px; padding-left:20px; line-height:1.7;">
+            <li style="margin-bottom:6px;">Standard Program Tuition: <span style="text-decoration:line-through; color:#94a3b8;">₦200,000</span></li>
+            <li style="margin-bottom:6px;">Newton Academy 100% Endowment: <strong>-₦200,000 (Fully Waived)</strong></li>
+            <li style="margin-bottom:6px;">Tuition Payable: <strong style="color:#059669;">₦0.00 (FREE)</strong></li>
+            <li>One-Time Admissions &amp; Evaluation Fee: <strong>₦20,000 Only</strong></li>
+        </ul>
 
         <p style="margin:0 0 16px;">
-            To secure your seat in this cohort, successful candidates complete a mandatory one-time admissions commitment and student portal verification fee of <strong>₦20,000 only</strong>.
+            Your scholarship completely eliminates all tuition expenses for the entire 3 months. The one-time ₦20,000 admissions fee covers your student portal registration, verified student ID, and live LMS setup.
         </p>
 
         <p style="margin:0 0 16px;">
@@ -348,7 +363,7 @@ HTML;
     }
 
     /**
-     * Email Template 3: Follow-Up ("Seat Not Yet Secured" - Centralized)
+     * Email Template 3: Follow-Up ("Seat Not Yet Secured")
      */
     public static function getScholarshipFollowupTemplate($name, $programmeName, $checkoutUrl) {
         $firstName = explode(' ', trim($name))[0] ?: 'Candidate';
@@ -368,7 +383,7 @@ HTML;
             Our records indicate that your candidate application was unanimously approved for a <strong>100% Full Tuition Waiver (worth ₦200,000)</strong>, but you have not yet completed the one-time ₦20,000 admissions fee to secure your seat.
         </p>
 
-        <p style="margin:0 0 16px; color:#b91c1c; font-weight:700;">
+        <p style="margin:0 0 8px; color:#b91c1c; font-weight:700;">
             Admissions Quota Warning: 42 of 50 Seats Taken.
         </p>
         <p style="margin:0 0 16px;">
@@ -389,8 +404,7 @@ HTML;
     }
 
     /**
-     * Email Template 4: Enrolment Confirmed ("Seat Secured" - Centralized)
-     * Leads directly to Odunayo on WhatsApp with prefilled verification text
+     * Email Template 4: Enrolment Confirmed ("Seat Secured")
      */
     public static function getEnrolmentSuccessTemplate($name, $programmeName, $studentId) {
         $firstName = explode(' ', trim($name))[0] ?: 'Fellow';
@@ -413,16 +427,20 @@ HTML;
             Your status is now upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (worth ₦200,000) is locked in, and your seat in the upcoming cohort is officially guaranteed with zero tuition balance (₦0.00).
         </p>
 
-        <p style="margin:0 0 16px;">
-            <strong>Your Official Student ID:</strong><br>
-            <span style="font-size:18px; font-family:monospace; font-weight:800; color:#005f5a; letter-spacing:1px;">{$studentId}</span><br>
-            Enrolled Specialization: <strong>{$programmeName}</strong>
+        <p style="margin:0 0 8px; font-weight:700; color:#0f172a;">
+            Your Official Enrollment Credentials:
         </p>
+        <ul style="margin:0 0 18px; padding-left:20px; line-height:1.7;">
+            <li style="margin-bottom:6px;">Student ID: <strong style="color:#005f5a; font-family:monospace; font-size:16px;">{$studentId}</strong></li>
+            <li style="margin-bottom:6px;">Enrolled Specialization: <strong>{$programmeName}</strong></li>
+            <li style="margin-bottom:6px;">Scholarship Status: <strong style="color:#059669;">100% Tuition Fully Covered (₦0 Balance)</strong></li>
+            <li>Admission Fee: <strong>₦20,000 (Paid &amp; Verified)</strong></li>
+        </ul>
 
-        <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
+        <p style="margin:0 0 8px; font-size:15px; font-weight:700; color:#003835;">
             Final Step — Message Odunayo on WhatsApp to Enter the VIP Group:
         </p>
-        <p style="margin:0 0 16px;">
+        <p style="margin:0 0 12px;">
             To ensure the absolute privacy and security of our enrolled cohort, group entry is granted manually. Please message <strong>Odunayo</strong> (Lead Admissions Advisor) on WhatsApp by tapping the button below.
         </p>
         <p style="margin:0 0 16px; color:#64748b; font-size:13.5px;">
