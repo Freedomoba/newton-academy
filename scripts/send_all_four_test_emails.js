@@ -28,10 +28,10 @@ const CHECKOUT_URL = 'https://freedomoba.github.io/newton-academy/checkout.html?
 const LOGO_URL = 'https://freedomoba.github.io/newton-academy/assets/logo.png';
 
 /**
- * Clean, Editorial Master Layout (NO tables, NO boxed containers)
- * Pure, readable typography, logo at top, and high inbox deliverability.
+ * Fully Centralized Master Layout (NO tables, NO boxed containers)
+ * Logo centered at top, all text centered, clean typography, high deliverability.
  */
-function wrapCleanEmail({ title, bodyHtml, ctaText = '', ctaUrl = '', secondaryLink = null }) {
+function wrapCentralizedEmail({ title, bodyHtml, ctaText = '', ctaUrl = '', secondaryLink = null }) {
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,52 +39,52 @@ function wrapCleanEmail({ title, bodyHtml, ctaText = '', ctaUrl = '', secondaryL
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
 </head>
-<body style="margin:0; padding:0; background-color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1e293b; line-height:1.7; -webkit-font-smoothing:antialiased;">
-    <div style="max-width:600px; margin:0 auto; padding:32px 20px 48px;">
+<body style="margin:0; padding:0; background-color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1e293b; line-height:1.75; -webkit-font-smoothing:antialiased;">
+    <div style="max-width:560px; margin:0 auto; padding:36px 20px 48px; text-align:center;">
         
-        <!-- Top Logo -->
-        <div style="padding-bottom:24px; border-bottom:1px solid #e2e8f0; margin-bottom:28px;">
+        <!-- Centered Logo -->
+        <div style="padding-bottom:24px; border-bottom:1px solid #e2e8f0; margin-bottom:28px; text-align:center;">
             <a href="https://freedomoba.github.io/newton-academy/" style="text-decoration:none; display:inline-block;">
-                <img src="${LOGO_URL}" alt="Newton Academy" width="160" style="width:160px; height:auto; display:block;" />
+                <img src="${LOGO_URL}" alt="Newton Academy" width="160" style="width:160px; height:auto; display:block; margin:0 auto;" />
             </a>
         </div>
 
-        <!-- Heading -->
-        <h1 style="font-size:22px; font-weight:800; color:#003835; margin:0 0 20px; line-height:1.35; letter-spacing:-0.2px;">
+        <!-- Centered Title -->
+        <h1 style="font-size:22px; font-weight:800; color:#003835; margin:0 0 22px; line-height:1.35; letter-spacing:-0.2px; text-align:center;">
             ${title}
         </h1>
 
-        <!-- Body Content (Clean text, no box containers, no tables) -->
-        <div style="font-size:15px; color:#334155; line-height:1.75;">
+        <!-- Centered Body Content -->
+        <div style="font-size:15px; color:#334155; line-height:1.75; text-align:center;">
             ${bodyHtml}
         </div>
 
-        <!-- Primary Action Button / Link -->
+        <!-- Centered Primary Action Button -->
         ${ctaText && ctaUrl ? `
-        <div style="margin:32px 0 24px;">
-            <a href="${ctaUrl}" style="display:inline-block; background-color:#005f5a; color:#ffffff; font-weight:700; font-size:15px; text-decoration:none; padding:14px 28px; border-radius:8px;">
+        <div style="margin:32px 0 20px; text-align:center;">
+            <a href="${ctaUrl}" style="display:inline-block; background-color:#005f5a; color:#ffffff; font-weight:700; font-size:15px; text-decoration:none; padding:14px 32px; border-radius:8px;">
                 ${ctaText} &rarr;
             </a>
         </div>` : ''}
 
-        <!-- Secondary Link -->
+        <!-- Centered Secondary Link -->
         ${secondaryLink ? `
-        <div style="margin:16px 0 28px; font-size:14px;">
+        <div style="margin:16px 0 28px; font-size:14px; text-align:center;">
             <a href="${secondaryLink.url}" style="color:#005f5a; font-weight:700; text-decoration:underline;">
                 ${secondaryLink.text}
             </a>
         </div>` : ''}
 
-        <!-- Clean Sign-off -->
-        <div style="margin-top:36px; padding-top:24px; border-top:1px solid #e2e8f0; font-size:14px; color:#475569; line-height:1.6;">
+        <!-- Centered Sign-off -->
+        <div style="margin-top:38px; padding-top:24px; border-top:1px solid #e2e8f0; font-size:14px; color:#475569; line-height:1.6; text-align:center;">
             <p style="margin:0 0 4px; font-weight:700; color:#0f172a;">Warm regards,</p>
             <p style="margin:0; font-weight:800; color:#003835; font-size:15px;">${FOUNDER_NAME}</p>
             <p style="margin:2px 0 0; color:#64748b; font-size:13px;">Founder, Newton Academy</p>
             <p style="margin:2px 0 0; color:#64748b; font-size:13px;">Official Email: <a href="mailto:${OFFICIAL_EMAIL}" style="color:#005f5a; text-decoration:none;">${OFFICIAL_EMAIL}</a></p>
         </div>
 
-        <!-- Simple Legal Footer -->
-        <div style="margin-top:40px; font-size:11px; color:#94a3b8; line-height:1.6;">
+        <!-- Centered Legal Footer -->
+        <div style="margin-top:36px; font-size:11px; color:#94a3b8; line-height:1.6; text-align:center;">
             <p style="margin:0;">&copy; 2026 Newton Academy. All rights reserved.</p>
             <p style="margin:4px 0 0;">Lagos, Nigeria &bull; ${OFFICIAL_EMAIL}</p>
         </div>
@@ -95,8 +95,7 @@ function wrapCleanEmail({ title, bodyHtml, ctaText = '', ctaUrl = '', secondaryL
 }
 
 /**
- * EMAIL 1: Webinar Pass Confirmation
- * Direct congratulations text, Primary inbox instruction, 100% scholarship link for DM and DE.
+ * EMAIL 1: Webinar Pass Confirmation (Fully Centralized)
  */
 function getEmail1_WebinarRegistration(name) {
     const firstName = name.split(' ')[0] || 'Delegate';
@@ -109,42 +108,36 @@ function getEmail1_WebinarRegistration(name) {
         </p>
 
         <p style="margin:0 0 16px;">
-            We are excited to have you join us for this high-impact gathering featuring seasoned global tutors and leaders with experience from Microsoft, Meta, Accenture, and 7Up.
+            We are excited to welcome you to this premier virtual conference featuring seasoned global practitioners with experience from Microsoft, Meta, Accenture, and 7Up.
         </p>
 
         <p style="margin:0 0 16px;">
             <strong>Important — Please Move Us to Your Primary Inbox:</strong><br>
-            To ensure you don't miss our official session workbooks, live conference links, and practical AI templates:
-        </p>
-        <p style="margin:0 0 16px; padding-left:12px;">
-            &bull; <strong>On Gmail (Desktop):</strong> Drag this email to your <strong>Primary</strong> tab and click "Yes" when prompted.<br>
-            &bull; <strong>On Mobile:</strong> Tap the 3 dots at the top right and select <strong>"Move to Primary"</strong>.<br>
-            &bull; Add <strong>${OFFICIAL_EMAIL}</strong> to your email contact list.
+            To make sure our conference workbooks, live session links, and AI templates land directly in your view, please drag this email to your <strong>Primary tab</strong> on Gmail (or tap the 3 dots and select <strong>"Move to Primary"</strong> on your mobile phone) and add <strong>${OFFICIAL_EMAIL}</strong> to your contacts list.
         </p>
 
         <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
             Apply for a 100% Full Tuition Scholarship (DM &amp; DE):
         </p>
         <p style="margin:0 0 16px;">
-            As a registered conference delegate, you are eligible to apply for our <strong>100% Full Tuition Scholarship (worth ₦200,000)</strong> to study either of our two premier VIP courses:
+            As an official conference delegate, you are invited to apply for our <strong>100% Full Tuition Scholarship (valued at ₦200,000)</strong> to study either of our two premier VIP courses:
         </p>
-        <p style="margin:0 0 16px; padding-left:12px;">
-            1. <strong>Digital Marketing + Applied AI (DM):</strong> Master high-converting funnels, performance advertising, and AI-driven growth.<br>
-            2. <strong>Data Engineering + AI Systems (DE):</strong> Master cloud data architectures, modern data stacks, SQL/Python analytics, and enterprise AI workflows.
+        <p style="margin:0 0 16px;">
+            <strong>1. Digital Marketing + Applied AI (DM):</strong> Master high-converting funnels, performance advertising, and AI-driven growth.<br>
+            <strong>2. Data Engineering + AI Systems (DE):</strong> Master cloud data architectures, modern data stacks, SQL/Python analytics, and enterprise AI workflows.
         </p>
-        <p style="margin:0 0 20px;">
-            Scholarship allocations are limited. You can take the 30-second live evaluation right now:<br>
-            <a href="${SCHOLARSHIP_URL}" style="color:#005f5a; font-weight:700; text-decoration:underline;">Click here to apply for the 100% Scholarship (DM or DE) &rarr;</a>
+        <p style="margin:0 0 22px;">
+            <a href="${SCHOLARSHIP_URL}" style="color:#005f5a; font-weight:700; text-decoration:underline;">Click here to take the 30-second evaluation and apply for the 100% Scholarship &rarr;</a>
         </p>
 
         <p style="margin:0 0 16px;">
-            Please tap the button below to join the Private Conference Delegates WhatsApp Room where schedules and live session links will be shared:
+            Please tap the button below to enter the Private Conference Delegates WhatsApp Room where schedules and live session links will be shared:
         </p>
     `;
 
     return {
         subject: '[Delegate Pass Confirmed] Digital and Financial Literacy Virtual Conference',
-        html: wrapCleanEmail({
+        html: wrapCentralizedEmail({
             title: 'Your Virtual Conference Pass is Confirmed',
             bodyHtml,
             ctaText: 'Enter Conference WhatsApp Room',
@@ -158,8 +151,7 @@ function getEmail1_WebinarRegistration(name) {
 }
 
 /**
- * EMAIL 2: Scholarship Approval Letter (Accompanied by signed PDF attachment)
- * Direct congratulations text, clear numbers, next steps, Ade Braimoh sign-off.
+ * EMAIL 2: Scholarship Approval Letter (Fully Centralized + Attached PDF)
  */
 function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied AI') {
     const firstName = name.split(' ')[0] || 'Candidate';
@@ -167,7 +159,7 @@ function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied A
     const bodyHtml = `
         <p style="margin:0 0 16px;">Dear ${firstName},</p>
 
-        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
+        <p style="margin:0 0 16px; font-size:17px; font-weight:700; color:#005f5a;">
             Congratulations! You have been approved for a 100% Full Tuition Scholarship.
         </p>
 
@@ -176,31 +168,27 @@ function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied A
         </p>
 
         <p style="margin:0 0 16px;">
-            <strong>Official Award Breakdown:</strong><br>
-            &bull; Standard Program Tuition: <span style="text-decoration:line-through; color:#94a3b8;">₦200,000</span><br>
-            &bull; Newton Academy 100% Endowment: <strong>-₦200,000 (Fully Waived)</strong><br>
-            &bull; Tuition Payable: <strong style="color:#059669;">₦0.00 (FREE)</strong><br>
-            &bull; One-Time Admissions &amp; Evaluation Fee: <strong>₦20,000 Only</strong>
+            Under this scholarship award, your full standard tuition of <strong>₦200,000</strong> is completely covered and waived by the Newton Academy Endowment Fund. You bear zero tuition balance (₦0.00).
         </p>
 
         <p style="margin:0 0 16px;">
-            Your scholarship completely eliminates all tuition expenses for the entire 3 months. The one-time ₦20,000 admissions fee covers your student portal registration, verified student ID, and live LMS setup.
+            To secure your seat in this cohort, successful candidates complete a mandatory one-time admissions commitment and student portal verification fee of <strong>₦20,000 only</strong>.
         </p>
 
         <p style="margin:0 0 16px;">
-            <strong>Official Award PDF Attached:</strong><br>
-            Your formal signed Scholarship Award Letter with your full name has been generated and attached to this email as a PDF document for your records.
+            <strong>Official Award Document Attached:</strong><br>
+            Your formal signed Scholarship Award Letter containing your full name and credentials has been generated and attached to this email as a PDF document for your permanent records.
         </p>
 
         <p style="margin:0 0 16px;">
-            <strong>Next Step — 24-Hour Seat Hold:</strong><br>
-            Due to strict tutor-to-student coaching ratios, your scholarship award is reserved for exactly <strong>24 hours</strong>. Please click the button below to access your official admissions file and finalize your seat before your allocation expires.
+            <strong>Next Step — 24-Hour Allocation Policy:</strong><br>
+            Due to strict mentor-to-student coaching ratios, your scholarship award is reserved for exactly <strong>24 hours</strong>. Please click the button below to access your admissions dossier and finalize your seat before your allocation expires:
         </p>
     `;
 
     return {
         subject: `Official Award: 100% Full Tuition Scholarship Granted (${track})`,
-        html: wrapCleanEmail({
+        html: wrapCentralizedEmail({
             title: 'Official Award of 100% Full Tuition Scholarship',
             bodyHtml,
             ctaText: 'Access Award Document & Finalize Seat',
@@ -210,8 +198,7 @@ function getEmail2_ScholarshipAward(name, track = 'Digital Marketing + Applied A
 }
 
 /**
- * EMAIL 3: Pending Seat Follow-up ("Seat Not Yet Secured")
- * Clean text follow-up, urgency, quota count.
+ * EMAIL 3: Pending Seat Follow-up (Fully Centralized)
  */
 function getEmail3_PendingFollowup(name, track = 'Digital Marketing + Applied AI') {
     const firstName = name.split(' ')[0] || 'Candidate';
@@ -245,7 +232,7 @@ function getEmail3_PendingFollowup(name, track = 'Digital Marketing + Applied AI
 
     return {
         subject: `Action Required: Your 100% Scholarship Award is Pending Finalization`,
-        html: wrapCleanEmail({
+        html: wrapCentralizedEmail({
             title: 'Your Scholarship Seat Has Not Yet Been Secured',
             bodyHtml,
             ctaText: 'Secure My 100% Scholarship Seat Now',
@@ -255,8 +242,7 @@ function getEmail3_PendingFollowup(name, track = 'Digital Marketing + Applied AI
 }
 
 /**
- * EMAIL 4: Enrolment Confirmed / Seat Secured
- * Big congratulations text, Student ID, CTA leads directly to Odunayo on WhatsApp with custom text.
+ * EMAIL 4: Enrolment Confirmed / Seat Secured (Fully Centralized, Leads to Odunayo)
  */
 function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied AI', appId = 'NA-SCH-748921') {
     const firstName = name.split(' ')[0] || 'Fellow';
@@ -268,7 +254,7 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
     const bodyHtml = `
         <p style="margin:0 0 16px;">Dear ${firstName},</p>
 
-        <p style="margin:0 0 16px; font-size:17px; font-weight:700; color:#059669;">
+        <p style="margin:0 0 16px; font-size:18px; font-weight:700; color:#059669;">
             Congratulations and welcome to Newton Academy!
         </p>
 
@@ -277,15 +263,13 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
         </p>
 
         <p style="margin:0 0 16px;">
-            Your status is now upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (worth ₦200,000) is locked in, and your seat in the upcoming cohort is officially guaranteed.
+            Your status is now upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (worth ₦200,000) is locked in, and your seat in the upcoming cohort is officially guaranteed with zero tuition balance (₦0.00).
         </p>
 
         <p style="margin:0 0 16px;">
-            <strong>Your Official Enrollment Credentials:</strong><br>
-            &bull; Student ID: <strong style="color:#005f5a; font-family:monospace;">${appId}</strong><br>
-            &bull; Enrolled Track: <strong>${track}</strong><br>
-            &bull; Scholarship Status: <strong style="color:#059669;">100% Tuition Fully Covered (₦0 Balance)</strong><br>
-            &bull; Admission Fee: <strong>₦20,000 (Paid &amp; Verified)</strong>
+            <strong>Your Official Student ID:</strong><br>
+            <span style="font-size:18px; font-family:monospace; font-weight:800; color:#005f5a; letter-spacing:1px;">${appId}</span><br>
+            Enrolled Specialization: <strong>${track}</strong>
         </p>
 
         <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
@@ -301,7 +285,7 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
 
     return {
         subject: `Enrolment Confirmed: Your Seat is Officially Secured (${track})`,
-        html: wrapCleanEmail({
+        html: wrapCentralizedEmail({
             title: 'Enrolment Confirmed: Your Seat is Officially Secured',
             bodyHtml,
             ctaText: 'Message Odunayo to Enter VIP Group',
@@ -364,12 +348,13 @@ function sendEmailViaResend({ to, subject, html, attachments = [] }) {
  */
 async function run() {
     console.log('========================================================');
-    console.log('NEWTON ACADEMY - CLEAN TEXT-BASED EDITORIAL TEST EMAILS');
+    console.log('NEWTON ACADEMY - CENTRALIZED EDITORIAL TEST EMAILS');
     console.log('FOUNDER: ' + FOUNDER_NAME + ' | EMAIL: ' + OFFICIAL_EMAIL);
+    console.log('PDF: Clean institutional letter (no boxes, no colorful text, no tables)');
     console.log('========================================================\n');
 
     for (const recipient of RECIPIENTS) {
-        console.log(`>>> Dispatching 4 Clean Emails to: ${recipient.email} (${recipient.name})`);
+        console.log(`>>> Dispatching 4 Centralized Emails to: ${recipient.email} (${recipient.name})`);
 
         // EMAIL 1
         console.log('[1/4] Sending Email 1: Webinar Pass + 100% Scholarship Invitation...');
@@ -381,8 +366,8 @@ async function run() {
         });
         console.log(`      Status: ${res1.statusCode} | Resend ID: ${res1.data?.id || 'ERR'}`);
 
-        // EMAIL 2 (With Generated Signed PDF Attachment by Ade Braimoh)
-        console.log('[2/4] Generating official PDF award letter & sending Email 2...');
+        // EMAIL 2 (With Clean Normal PDF by Ade Braimoh)
+        console.log('[2/4] Generating normal letterhead PDF & sending Email 2...');
         const pdfBuffer = await generateAwardPdfBuffer({
             candidateName: recipient.name,
             programmeName: 'Digital Marketing + Applied AI',
@@ -425,8 +410,8 @@ async function run() {
     }
 
     console.log('========================================================');
-    console.log('ALL 4 TEST EMAILS (CLEAN EDITORIAL TEXT, PDF BY ADE BRAIMOH,');
-    console.log('na@newtoncore.com, NO TABLES/BOXES, ODUNAYO VIP LINK)');
+    console.log('ALL 4 TEST EMAILS (CENTRALIZED, NORMAL LETTERHEAD PDF,');
+    console.log('ADE BRAIMOH, na@newtoncore.com, ODUNAYO VIP LINK)');
     console.log('DISPATCHED SUCCESSFULLY TO INBOXES!');
     console.log('========================================================');
 }

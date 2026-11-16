@@ -4,14 +4,14 @@ const path = require('path');
 
 /**
  * Generate official Newton Academy Scholarship Award Letter PDF
- * Returns a Promise that resolves with a Buffer
+ * Pure formal letter: No colorful text, no boxes, no tables, written in clear sentences & paragraphs, logo in header.
  */
 function generateAwardPdfBuffer({ candidateName, programmeName = 'Digital Marketing + Applied AI', applicationId = 'NA-SCH-748921', issueDate = null }) {
     return new Promise((resolve, reject) => {
         try {
             const doc = new PDFDocument({
                 size: 'A4',
-                margins: { top: 40, bottom: 40, left: 45, right: 45 }
+                margins: { top: 50, bottom: 50, left: 55, right: 55 }
             });
 
             const buffers = [];
@@ -25,155 +25,111 @@ function generateAwardPdfBuffer({ candidateName, programmeName = 'Digital Market
                 year: 'numeric'
             });
 
-            // 1. Top Decorative Brand Bar
-            doc.rect(0, 0, doc.page.width, 10).fill('#005f5a');
-            doc.rect(0, 10, doc.page.width, 3).fill('#f59e0b');
-
-            // 2. Header with Logo & Institution Details
+            // 1. Header with Logo (No colorful bars, clean institutional letterhead)
             const logoPath = path.join(__dirname, '..', 'assets', 'logo.png');
-            let headerY = 28;
+            let currentY = 50;
 
             if (fs.existsSync(logoPath)) {
                 try {
-                    doc.image(logoPath, 45, headerY, { width: 130 });
+                    doc.image(logoPath, 55, currentY, { width: 140 });
                 } catch (e) {
-                    doc.fontSize(18).fillColor('#005f5a').font('Helvetica-Bold').text('NEWTON ACADEMY', 45, headerY);
+                    doc.fontSize(16).fillColor('#000000').font('Helvetica-Bold').text('NEWTON ACADEMY', 55, currentY);
                 }
             } else {
-                doc.fontSize(18).fillColor('#005f5a').font('Helvetica-Bold').text('NEWTON ACADEMY', 45, headerY);
+                doc.fontSize(16).fillColor('#000000').font('Helvetica-Bold').text('NEWTON ACADEMY', 55, currentY);
             }
 
-            // Right-aligned header credentials
-            doc.fontSize(8.5).font('Helvetica-Bold').fillColor('#005f5a').text('OFFICE OF ACADEMIC AFFAIRS & AWARDS', 280, headerY + 4, { align: 'right' });
-            doc.font('Helvetica').fillColor('#64748b').text('Reference ID: ' + applicationId, 280, headerY + 16, { align: 'right' });
-            doc.text('Date of Issuance: ' + formattedDate, 280, headerY + 28, { align: 'right' });
-            doc.text('Global Secretariat • na@newtoncore.com', 280, headerY + 40, { align: 'right' });
+            // Letterhead details on the right
+            doc.fontSize(9).font('Helvetica-Bold').fillColor('#111827')
+               .text('OFFICE OF ACADEMIC AFFAIRS & AWARDS', 260, currentY + 2, { align: 'right' });
+            doc.font('Helvetica').fillColor('#4b5563')
+               .text('Newton Academy Global Secretariat', 260, currentY + 16, { align: 'right' });
+            doc.text('Official Contact: na@newtoncore.com', 260, currentY + 28, { align: 'right' });
 
-            doc.moveTo(45, headerY + 60).lineTo(doc.page.width - 45, headerY + 60).strokeColor('#e2e8f0').lineWidth(1).stroke();
+            currentY += 52;
 
-            // 3. Document Title / Headline
-            let contentY = headerY + 75;
-            doc.rect(45, contentY, doc.page.width - 90, 42).fillAndStroke('#f0f9f8', '#ccfbf1');
-            
-            doc.fontSize(14).font('Helvetica-Bold').fillColor('#003835')
-               .text('OFFICIAL AWARD OF 100% FULL TUITION SCHOLARSHIP', 55, contentY + 9, {
+            // Thin dividing rule
+            doc.moveTo(55, currentY).lineTo(doc.page.width - 55, currentY).strokeColor('#d1d5db').lineWidth(0.75).stroke();
+
+            currentY += 22;
+
+            // Metadata: Date & Reference
+            doc.fontSize(9.5).font('Helvetica-Bold').fillColor('#111827').text('Date: ', 55, currentY, { continued: true });
+            doc.font('Helvetica').fillColor('#374151').text(formattedDate);
+
+            currentY += 15;
+            doc.font('Helvetica-Bold').fillColor('#111827').text('Reference Number: ', 55, currentY, { continued: true });
+            doc.font('Helvetica').fillColor('#374151').text(applicationId);
+
+            currentY += 15;
+            doc.font('Helvetica-Bold').fillColor('#111827').text('Candidate Name: ', 55, currentY, { continued: true });
+            doc.font('Helvetica').fillColor('#374151').text(candidateName);
+
+            currentY += 24;
+
+            // Formal Subject Line (Clean, centered or bold, no colored boxes)
+            doc.fontSize(11).font('Helvetica-Bold').fillColor('#000000')
+               .text('OFFICIAL AWARD OF 100% FULL TUITION SCHOLARSHIP', 55, currentY, {
                    width: doc.page.width - 110,
-                   align: 'center'
+                   align: 'left'
                });
-            doc.fontSize(8.5).font('Helvetica').fillColor('#005f5a')
-               .text('3-Month International Professional Diploma • Academic Cohort 2026', 55, contentY + 26, {
+            doc.fontSize(9.5).font('Helvetica-Bold').fillColor('#374151')
+               .text(`Programme Specialization: ${programmeName} (Flagship Diploma)`, 55, currentY + 14, {
                    width: doc.page.width - 110,
-                   align: 'center'
-               });
-
-            // 4. Salutation & Official Notice
-            contentY += 58;
-            doc.fontSize(10.5).font('Helvetica-Bold').fillColor('#0f172a')
-               .text(`Dear ${candidateName},`, 45, contentY);
-
-            contentY += 18;
-            doc.font('Helvetica').fillColor('#334155').fontSize(9.5).lineGap(3.5);
-            
-            const introText = `On behalf of the Academic Council, Faculty Board, and International Mentors of Newton Academy, we are delighted to inform you that your application has been evaluated and officially APPROVED for a 100% Full Tuition Scholarship into our flagship accredited professional training programme:`;
-            doc.text(introText, 45, contentY, { width: doc.page.width - 90, align: 'justify' });
-
-            contentY = doc.y + 10;
-
-            // 5. Approved Track Banner
-            doc.rect(45, contentY, doc.page.width - 90, 32).fill('#003835');
-            doc.fontSize(11).font('Helvetica-Bold').fillColor('#fbbf24')
-               .text(`APPROVED SPECIALIZATION: ${programmeName.toUpperCase()}`, 55, contentY + 10, {
-                   width: doc.page.width - 110,
-                   align: 'center'
+                   align: 'left'
                });
 
-            contentY += 44;
+            currentY += 36;
 
-            // 6. Financial Ledger Table
-            doc.fontSize(10).font('Helvetica-Bold').fillColor('#005f5a')
-               .text('OFFICIAL SCHOLARSHIP LEDGER & FINANCIAL STATEMENT', 45, contentY);
+            // Body Paragraphs (Normal sentences and paragraphs, no tables, no colorful text)
+            doc.font('Helvetica').fillColor('#111827').fontSize(10).lineGap(4);
 
-            contentY += 16;
-            const tableWidth = doc.page.width - 90;
-            const rowHeight = 22;
+            doc.text(`Dear ${candidateName},`, 55, currentY);
 
-            // Table Header
-            doc.rect(45, contentY, tableWidth, rowHeight).fill('#005f5a');
-            doc.fontSize(8.5).font('Helvetica-Bold').fillColor('#ffffff')
-               .text('ITEM / EXPENDITURE BREAKDOWN', 55, contentY + 6)
-               .text('STANDARD COST', 330, contentY + 6, { width: 100, align: 'right' })
-               .text('CANDIDATE BALANCE', 440, contentY + 6, { width: tableWidth - 405, align: 'right' });
+            currentY = doc.y + 12;
 
-            contentY += rowHeight;
+            const p1 = `We are pleased to inform you that following the review of your application, the Admissions Committee and Academic Board of Newton Academy have approved your admission and officially awarded you a 100% Full Tuition Scholarship for the ${programmeName} professional training programme.`;
+            doc.text(p1, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            // Row 1: Full Tuition
-            doc.rect(45, contentY, tableWidth, rowHeight).fill('#f8fafc');
-            doc.fontSize(8.5).font('Helvetica').fillColor('#334155')
-               .text('Full 3-Month Accredited Curriculum Tuition', 55, contentY + 6)
-               .text('NGN 200,000', 330, contentY + 6, { width: 100, align: 'right' });
-            doc.font('Helvetica-Bold').fillColor('#059669')
-               .text('NGN 0.00 (100% WAIVED)', 410, contentY + 6, { width: tableWidth - 375, align: 'right' });
+            currentY = doc.y + 10;
 
-            contentY += rowHeight;
+            const p2 = `Under the terms of this award, your standard programme tuition of ₦200,000 is fully covered and waived by the Newton Academy Endowment Fund. You bear zero tuition liability for the entire duration of the three-month curriculum, including all live classes, practical assignments, tutor office hours, and specialized AI tool suites.`;
+            doc.text(p2, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            // Row 2: Live Mentorship & Lab
-            doc.rect(45, contentY, tableWidth, rowHeight).fill('#ffffff');
-            doc.fontSize(8.5).font('Helvetica').fillColor('#334155')
-               .text('Live Executive Masterclasses & AI Tool Suites', 55, contentY + 6)
-               .text('INCLUDED', 330, contentY + 6, { width: 100, align: 'right' });
-            doc.font('Helvetica-Bold').fillColor('#059669')
-               .text('COVERED BY ENDOWMENT', 410, contentY + 6, { width: tableWidth - 375, align: 'right' });
+            currentY = doc.y + 10;
 
-            contentY += rowHeight;
+            const p3 = `To secure your scholarship allocation, successful candidates are required to complete a one-time admissions commitment and candidate portal verification fee of ₦20,000 only. This fee covers your tamper-proof student identification issuance, personalized student dashboard provisioning, and orientation materials.`;
+            doc.text(p3, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            // Row 3: Mandatory Evaluation & Admission Commitment Fee
-            doc.rect(45, contentY, tableWidth, rowHeight + 4).fillAndStroke('#fffbeb', '#fcd34d');
-            doc.fontSize(8.5).font('Helvetica-Bold').fillColor('#92400e')
-               .text('Admissions Portal Verification & Candidate ID Issuance Fee', 55, contentY + 7);
-            doc.fillColor('#005f5a')
-               .text('ONE-TIME FEE', 330, contentY + 7, { width: 100, align: 'right' })
-               .text('NGN 20,000 ONLY', 410, contentY + 7, { width: tableWidth - 375, align: 'right' });
+            currentY = doc.y + 10;
 
-            contentY += rowHeight + 14;
+            const p4 = `Please be advised that because of strict tutor-to-student coaching ratios, scholarship allocations are held for exactly 24 hours from the time of issuance. You are required to access your official admissions file via the admissions portal and finalize your registration within this window to guarantee your seat.`;
+            doc.text(p4, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            // 7. Policy and Next Steps
-            doc.fontSize(9.5).font('Helvetica-Bold').fillColor('#005f5a').text('WHAT YOU MUST DO NEXT (MANDATORY ENROLLMENT STEPS):', 45, contentY);
-            contentY += 14;
+            currentY = doc.y + 10;
 
-            doc.font('Helvetica').fillColor('#334155').fontSize(8.5).lineGap(3);
-            const steps = [
-                '1. 24-HOUR SEAT RESERVATION: Due to strict faculty-to-student coaching ratios (max 50 delegates per cohort), your scholarship allocation is held for exactly 24 hours from the dispatch of this letter.',
-                '2. FINALIZE YOUR ADMISSION DOSSIER: Access your official admissions checkout portal and complete the one-time NGN 20,000 commitment and portal issuance fee.',
-                '3. VERIFIED STUDENT ID ISSUANCE: Upon confirmation, your verified Newton Fellow ID is created and you are invited to join the private VIP Enrolled Fellows Room hosted by Odunayo (Lead Admissions Advisor).'
-            ];
-            
-            steps.forEach(step => {
-                doc.text(step, 45, contentY, { width: doc.page.width - 90, align: 'justify' });
-                contentY = doc.y + 4;
-            });
+            const p5 = `Upon confirmation of your one-time fee, your verified Newton Fellow credentials will be issued immediately, and you will be directed to contact Odunayo (Lead Admissions Advisor) on WhatsApp to receive your official onboarding pack and entry into the VIP Enrolled Fellows Room.`;
+            doc.text(p5, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            contentY += 10;
+            currentY = doc.y + 12;
 
-            // 8. Signatory & Attestation Block
-            doc.moveTo(45, contentY).lineTo(doc.page.width - 45, contentY).strokeColor('#e2e8f0').lineWidth(1).stroke();
-            contentY += 12;
+            const p6 = `Once again, congratulations on your selection. We look forward to supporting your professional journey and celebrating your milestones with Newton Academy.`;
+            doc.text(p6, 55, currentY, { width: doc.page.width - 110, align: 'justify' });
 
-            doc.fontSize(10).font('Helvetica-Bold').fillColor('#0f172a').text('Ade Braimoh', 45, contentY);
-            doc.fontSize(8.5).font('Helvetica').fillColor('#475569').text('Founder, Newton Academy', 45, contentY + 13);
-            doc.text('Global Directorate for Tech Talent & Commercial Empowerment', 45, contentY + 24);
+            currentY = doc.y + 24;
 
-            // Verified Badge right side
-            doc.rect(doc.page.width - 185, contentY - 2, 140, 36).fillAndStroke('#f0fdfa', '#99f6e4');
-            doc.fontSize(8).font('Helvetica-Bold').fillColor('#005f5a')
-               .text('OFFICIALLY ENDORSED', doc.page.width - 185, contentY + 5, { width: 140, align: 'center' })
-               .font('Helvetica').fillColor('#0f766e')
-               .text('Academic Affairs Board', doc.page.width - 185, contentY + 18, { width: 140, align: 'center' });
+            // Formal Sign-off
+            doc.font('Helvetica').fillColor('#111827').text('Yours sincerely,', 55, currentY);
 
-            // 9. Bottom Footer Bar
-            doc.rect(0, doc.page.height - 18, doc.page.width, 18).fill('#003835');
-            doc.fontSize(7).font('Helvetica').fillColor('#94a3b8')
-               .text('Newton Academy Official Award Document • Tamper-proof Serialized Verification • na@newtoncore.com', 0, doc.page.height - 13, {
-                   width: doc.page.width,
+            currentY = doc.y + 14;
+            doc.font('Helvetica-Bold').fontSize(11).fillColor('#000000').text('Ade Braimoh', 55, currentY);
+            doc.font('Helvetica').fontSize(9.5).fillColor('#4b5563').text('Founder, Newton Academy', 55, currentY + 14);
+            doc.text('na@newtoncore.com', 55, currentY + 27);
+
+            // Simple subtle footer
+            doc.fontSize(8).fillColor('#9ca3af')
+               .text('Newton Academy • Official Scholarship Award Letter • Reference: ' + applicationId, 55, doc.page.height - 40, {
+                   width: doc.page.width - 110,
                    align: 'center'
                });
 
