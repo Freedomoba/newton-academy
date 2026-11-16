@@ -118,6 +118,18 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 </div>
             </div>
 
+            <!-- Award Letter Quick Action Link -->
+            <div class="py-3 px-4 my-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
+                <div class="flex items-center gap-2">
+                    <span class="text-base">📄</span>
+                    <span class="text-slate-700">Official Signed Award Letter has been generated for your candidate file.</span>
+                </div>
+                <a id="downloadAwardPdfBtn" href="api/download_award_letter.php?app_id=<?php echo urlencode($appId); ?>&name=<?php echo urlencode($name); ?>&track=<?php echo urlencode($programme); ?>" target="_blank" class="font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1">
+                    <span>Download Award Letter (PDF)</span>
+                    <span>&rarr;</span>
+                </a>
+            </div>
+
             <!-- Structured Two-Column Financial Ledger with Column & Row Dividers -->
             <div class="my-6 font-sans">
                 <div class="flex items-center justify-between mb-2">
@@ -439,6 +451,11 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
         if (elAppId) elAppId.textContent = appId;
         const elTrack = document.getElementById('awardeeTrack');
         if (elTrack) elTrack.textContent = programme;
+
+        const downloadPdfBtn = document.getElementById('downloadAwardPdfBtn');
+        if (downloadPdfBtn) {
+            downloadPdfBtn.href = 'api/download_award_letter.php?app_id=' + encodeURIComponent(appId) + '&name=' + encodeURIComponent(userName) + '&track=' + encodeURIComponent(programme);
+        }
 
         const payBtn = document.getElementById('payNowBtn');
 

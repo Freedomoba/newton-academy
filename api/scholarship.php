@@ -7,6 +7,7 @@
 
 require_once __DIR__ . '/../config.php';
 require_once __DIR__ . '/mail_helper.php';
+require_once __DIR__ . '/award_letter_pdf.php';
 
 header('Content-Type: application/json');
 
@@ -135,11 +136,20 @@ $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
 $dir = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/\\');
 $checkoutUrl = $scheme . '://' . $host . $dir . '/checkout.php?' . http_build_query($checkoutParams);
 
-// 3. Dispatch Instant Scholarship Award Email
+// 3. Dispatch Instant Scholarship Award Email with Attached PDF
 try {
     $emailHtml = NewtonMailer::getScholarshipApprovalTemplate($fullName, $course, $checkoutUrl);
-    $subject = "CONGRATULATIONS: Your Scholarship at Newton Academy Has Been Granted!";
-    NewtonMailer::send($email, $fullName, $subject, $emailHtml);
+    $subject = "Official Award: 100% Full Tuition Scholarship Granted (" . $course . ")";
+    
+    $pdfContent = NewtonAwardPdf::generate($fullName, $course, $applicationId);
+    $attachments = [
+        [
+            'filename' => 'Newton_Academy_Scholarship_Award_' . $applicationId . '.pdf',
+            'content' => base64_encode($pdfContent)
+        ]
+    ];
+    
+    NewtonMailer::send($email, $fullName, $subject, $emailHtml, $attachments);
 } catch (Exception $e) {}
 
 // 4. Return response with redirect to checkout page
