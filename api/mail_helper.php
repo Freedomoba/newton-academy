@@ -9,9 +9,9 @@ require_once __DIR__ . '/../config.php';
 
 class NewtonMailer {
 
-    public static function send($toEmail, $toName, $subject, $htmlContent) {
+    public static function send($toEmail, $toName, $subject, $htmlContent, $attachments = []) {
         if (defined('RESEND_API_KEY') && !empty(RESEND_API_KEY)) {
-            $resendResult = self::sendViaResend($toEmail, $toName, $subject, $htmlContent);
+            $resendResult = self::sendViaResend($toEmail, $toName, $subject, $htmlContent, $attachments);
             if ($resendResult === true) {
                 return true;
             }
@@ -26,7 +26,7 @@ class NewtonMailer {
         return self::sendViaNativeMail($toEmail, $toName, $subject, $htmlContent);
     }
 
-        private static function sendViaResend($toEmail, $toName, $subject, $htmlContent) {
+    private static function sendViaResend($toEmail, $toName, $subject, $htmlContent, $attachments = []) {
         $apiKey = defined('RESEND_API_KEY') ? RESEND_API_KEY : '';
         if (empty($apiKey)) return false;
 
@@ -34,12 +34,18 @@ class NewtonMailer {
         $senderName = defined('SMTP_FROM_NAME') ? SMTP_FROM_NAME : 'Newton Academy';
         $from = "{$senderName} <{$senderEmail}>";
 
-        $payload = json_encode([
+        $payloadData = [
             'from' => $from,
             'to' => [$toEmail],
             'subject' => $subject,
             'html' => $htmlContent
-        ]);
+        ];
+
+        if (!empty($attachments) && is_array($attachments)) {
+            $payloadData['attachments'] = $attachments;
+        }
+
+        $payload = json_encode($payloadData);
 
         $ch = curl_init('https://api.resend.com/emails');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -157,21 +163,35 @@ class NewtonMailer {
     }
 
     /**
-     * Master Email HTML Layout Wrapper
+     * Clean, Editorial Master Layout (NO tables, NO boxed containers)
+     * Pure, readable typography, logo at top, and high inbox deliverability.
      */
-    public static function wrapEmail($category, $title, $bodyHtml, $ctaText = '', $ctaUrl = '', $noticeHtml = '') {
+    public static function wrapCleanEmail($title, $bodyHtml, $ctaText = '', $ctaUrl = '', $secondaryLink = null) {
+        $logoUrl = 'https://freedomoba.github.io/newton-academy/assets/logo.png';
+        $founderName = 'Ade Braimoh';
+        $officialEmail = 'na@newtoncore.com';
+
         $ctaBlock = '';
         if (!empty($ctaText) && !empty($ctaUrl)) {
             $ctaBlock = <<<HTML
-            <div style="text-align:center; margin:30px 0 20px;">
-                <a href="{$ctaUrl}" style="display:inline-block; background:linear-gradient(135deg, #005f5a 0%, #004d49 100%); color:#ffffff; font-weight:800; font-size:14px; text-decoration:none; padding:15px 32px; border-radius:10px; box-shadow:0 4px 14px rgba(0,95,90,0.25); letter-spacing:0.3px;">
+            <div style="margin:32px 0 24px;">
+                <a href="{$ctaUrl}" style="display:inline-block; background-color:#005f5a; color:#ffffff; font-weight:700; font-size:15px; text-decoration:none; padding:14px 28px; border-radius:8px;">
                     {$ctaText} &rarr;
                 </a>
             </div>
 HTML;
         }
 
-        $noticeBlock = !empty($noticeHtml) ? "<div style=\"margin:22px 0;\">{$noticeHtml}</div>" : '';
+        $secondaryBlock = '';
+        if (!empty($secondaryLink) && isset($secondaryLink['text']) && isset($secondaryLink['url'])) {
+            $secondaryBlock = <<<HTML
+            <div style="margin:16px 0 28px; font-size:14px;">
+                <a href="{$secondaryLink['url']}" style="color:#005f5a; font-weight:700; text-decoration:underline;">
+                    {$secondaryLink['text']}
+                </a>
+            </div>
+HTML;
+        }
 
         return <<<HTML
 <!DOCTYPE html>
@@ -181,119 +201,111 @@ HTML;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{$title}</title>
 </head>
-<body style="margin:0; padding:0; background-color:#f1f5f9; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#0f172a; -webkit-font-smoothing:antialiased; line-height:1.6;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f1f5f9; padding:28px 12px;">
-        <tr>
-            <td align="center">
-                <!-- Container Card -->
-                <table width="100%" cellpadding="0" cellspacing="0" style="max-width:580px; background-color:#ffffff; border:1px solid #e2e8f0; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px -4px rgba(0,0,0,0.06);">
-                    
-                    <!-- Header -->
-                    <tr>
-                        <td style="background:linear-gradient(135deg, #002826 0%, #003835 50%, #001f1e 100%); padding:24px 28px; text-align:center; border-bottom:3px solid #f59e0b;">
-                            <div style="font-size:19px; font-weight:900; letter-spacing:1px; color:#ffffff; text-transform:uppercase;">
-                                NEWTON ACADEMY
-                            </div>
-                            <div style="font-size:10px; font-weight:700; color:#fbbf24; text-transform:uppercase; letter-spacing:2px; margin-top:3px;">
-                                {$category}
-                            </div>
-                        </td>
-                    </tr>
+<body style="margin:0; padding:0; background-color:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#1e293b; line-height:1.7; -webkit-font-smoothing:antialiased;">
+    <div style="max-width:600px; margin:0 auto; padding:32px 20px 48px;">
+        
+        <!-- Top Logo -->
+        <div style="padding-bottom:24px; border-bottom:1px solid #e2e8f0; margin-bottom:28px;">
+            <a href="https://freedomoba.github.io/newton-academy/" style="text-decoration:none; display:inline-block;">
+                <img src="{$logoUrl}" alt="Newton Academy" width="160" style="width:160px; height:auto; display:block;" />
+            </a>
+        </div>
 
-                    <!-- Main Content -->
-                    <tr>
-                        <td style="padding:32px 28px 24px;">
-                            <h1 style="margin:0 0 16px; font-size:20px; font-weight:800; color:#0f172a; line-height:1.35; letter-spacing:-0.2px;">
-                                {$title}
-                            </h1>
+        <!-- Heading -->
+        <h1 style="font-size:22px; font-weight:800; color:#003835; margin:0 0 20px; line-height:1.35; letter-spacing:-0.2px;">
+            {$title}
+        </h1>
 
-                            <div style="font-size:14px; color:#334155; line-height:1.65;">
-                                {$bodyHtml}
-                            </div>
+        <!-- Body Content (Clean text, no box containers, no tables) -->
+        <div style="font-size:15px; color:#334155; line-height:1.75;">
+            {$bodyHtml}
+        </div>
 
-                            {$noticeBlock}
+        <!-- Primary Action Button -->
+        {$ctaBlock}
 
-                            {$ctaBlock}
+        <!-- Secondary Link -->
+        {$secondaryBlock}
 
-                            <hr style="border:none; border-top:1px solid #e2e8f0; margin:26px 0;">
+        <!-- Clean Sign-off -->
+        <div style="margin-top:36px; padding-top:24px; border-top:1px solid #e2e8f0; font-size:14px; color:#475569; line-height:1.6;">
+            <p style="margin:0 0 4px; font-weight:700; color:#0f172a;">Warm regards,</p>
+            <p style="margin:0; font-weight:800; color:#003835; font-size:15px;">{$founderName}</p>
+            <p style="margin:2px 0 0; color:#64748b; font-size:13px;">Founder, Newton Academy</p>
+            <p style="margin:2px 0 0; color:#64748b; font-size:13px;">Official Email: <a href="mailto:{$officialEmail}" style="color:#005f5a; text-decoration:none;">{$officialEmail}</a></p>
+        </div>
 
-                            <table width="100%" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td>
-                                        <div style="font-size:13px; font-weight:800; color:#0f172a;">Admissions &amp; Academic Directorate</div>
-                                        <div style="font-size:12px; color:#64748b; margin-top:2px;">Newton Academy &bull; Empowering Global Tech Leaders</div>
-                                    </td>
-                                    <td align="right" style="vertical-align:top;">
-                                        <div style="font-size:11px; font-weight:700; color:#005f5a; background-color:#f0fdfa; border:1px solid #ccfbf1; padding:4px 10px; border-radius:6px; display:inline-block;">
-                                            Verified Dispatch
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+        <!-- Simple Legal Footer -->
+        <div style="margin-top:40px; font-size:11px; color:#94a3b8; line-height:1.6;">
+            <p style="margin:0;">&copy; 2026 Newton Academy. All rights reserved.</p>
+            <p style="margin:4px 0 0;">Lagos, Nigeria &bull; {$officialEmail}</p>
+        </div>
 
-                    <!-- Footer -->
-                    <tr>
-                        <td style="background-color:#f8fafc; padding:20px 28px; text-align:center; font-size:11px; color:#94a3b8; border-top:1px solid #e2e8f0; line-height:1.6;">
-                            <div>&copy; 2026 Newton Academy. All rights reserved.</div>
-                            <div style="margin-top:4px;">You received this email because you registered for Newton Academy programs.</div>
-                            <div style="margin-top:4px; color:#cbd5e1;">Newton OS Limited &bull; Lagos, Nigeria &bull; na@newtoncore.com</div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    </div>
 </body>
 </html>
 HTML;
     }
 
     /**
-     * Email Template 1: Virtual Conference Pass Confirmation (with Primary Inbox Tip)
+     * Email Template 1: Virtual Conference Pass Confirmation
      */
     public static function getOptinWelcomeTemplate($name) {
         $waitlistLink = defined('WHATSAPP_WAITLIST_LINK') ? WHATSAPP_WAITLIST_LINK : 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi';
+        $scholarshipUrl = 'https://freedomoba.github.io/newton-academy/scholarship.html';
+        $officialEmail = 'na@newtoncore.com';
         $firstName = explode(' ', trim($name))[0] ?: 'Delegate';
 
         $bodyHtml = <<<HTML
-        <p style="margin:0 0 14px;">Dear <strong>{$firstName}</strong>,</p>
+        <p style="margin:0 0 16px;">Dear {$firstName},</p>
         
-        <p style="margin:0 0 14px;">
-            Congratulations. Your registration for the upcoming premier virtual gathering: <strong>Digital and Financial Literacy: Building Your Brand, Growing Your Business and Using AI to Get Ahead</strong> has been successfully confirmed.
+        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
+            Congratulations! Your registration for the Digital and Financial Literacy Virtual Conference is confirmed.
         </p>
 
-        <p style="margin:0 0 14px;">
-            This masterclass brings together seasoned practitioners with executive experience at Microsoft, Meta, Accenture, and 7Up to deliver an intensive, battle-tested operational blueprint for monetizing your skills in today's digital economy.
+        <p style="margin:0 0 16px;">
+            We are excited to have you join us for this high-impact gathering featuring seasoned global tutors and leaders with experience from Microsoft, Meta, Accenture, and 7Up.
         </p>
 
-        <!-- Primary Inbox Deliverability Tip Box -->
-        <div style="background-color:#fffbeb; border:1px solid #fde68a; border-left:4px solid #f59e0b; border-radius:10px; padding:16px 18px; margin:22px 0;">
-            <div style="font-size:12px; font-weight:800; color:#92400e; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">
-                Important: Move Us To Your Primary Inbox
-            </div>
-            <p style="margin:0; font-size:13px; color:#78350f; line-height:1.55;">
-                To guarantee that our official conference workbook, live session access links, and downloadable AI prompt packs do not get lost in your <strong>Promotions</strong> or <strong>Spam</strong> tabs:
-            </p>
-            <ul style="margin:8px 0 0; padding-left:18px; font-size:12px; color:#78350f; line-height:1.55;">
-                <li><strong>In Gmail:</strong> Drag this email over to your <strong>Primary</strong> tab right now, and click <em>"Yes"</em> when asked to do this for future emails.</li>
-                <li><strong>On Mobile:</strong> Tap the 3 dots at the top right of your screen and select <strong>"Move to Primary"</strong>.</li>
-                <li>Add <strong>na@newtoncore.com</strong> to your VIP contacts list.</li>
-            </ul>
-        </div>
+        <p style="margin:0 0 16px;">
+            <strong>Important — Please Move Us to Your Primary Inbox:</strong><br>
+            To ensure you don't miss our official session workbooks, live conference links, and practical AI templates:
+        </p>
+        <p style="margin:0 0 16px; padding-left:12px;">
+            &bull; <strong>On Gmail (Desktop):</strong> Drag this email to your <strong>Primary</strong> tab and click "Yes" when prompted.<br>
+            &bull; <strong>On Mobile:</strong> Tap the 3 dots at the top right and select <strong>"Move to Primary"</strong>.<br>
+            &bull; Add <strong>{$officialEmail}</strong> to your email contact list.
+        </p>
 
-        <p style="margin:0 0 14px;">
-            All live breakout links, session orientation notes, and speaker Q&amp;A sessions will be coordinated directly inside the <strong>Private Conference Delegates WhatsApp Room</strong>. Please tap below to join your fellow delegates.
+        <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
+            Apply for a 100% Full Tuition Scholarship (DM &amp; DE):
+        </p>
+        <p style="margin:0 0 16px;">
+            As a registered conference delegate, you are eligible to apply for our <strong>100% Full Tuition Scholarship (worth ₦200,000)</strong> to study either of our two premier VIP courses:
+        </p>
+        <p style="margin:0 0 16px; padding-left:12px;">
+            1. <strong>Digital Marketing + Applied AI (DM):</strong> Master high-converting funnels, performance advertising, and AI-driven growth.<br>
+            2. <strong>Data Engineering + AI Systems (DE):</strong> Master cloud data architectures, modern data stacks, SQL/Python analytics, and enterprise AI workflows.
+        </p>
+        <p style="margin:0 0 20px;">
+            Scholarship allocations are limited. You can take the 30-second live evaluation right now:<br>
+            <a href="{$scholarshipUrl}" style="color:#005f5a; font-weight:700; text-decoration:underline;">Click here to apply for the 100% Scholarship (DM or DE) &rarr;</a>
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Please tap the button below to join the Private Conference Delegates WhatsApp Room where schedules and live session links will be shared:
         </p>
 HTML;
 
-        return self::wrapEmail(
-            'Conference Admissions Secretariat',
+        return self::wrapCleanEmail(
             'Your Virtual Conference Pass is Confirmed',
             $bodyHtml,
-            'Enter Private Conference WhatsApp Room',
-            $waitlistLink
+            'Enter Conference WhatsApp Room',
+            $waitlistLink,
+            [
+                'text' => 'Apply for 100% Full Tuition Scholarship (DM or DE) →',
+                'url' => $scholarshipUrl
+            ]
         );
     }
 
@@ -302,65 +314,45 @@ HTML;
      */
     public static function getScholarshipApprovalTemplate($name, $programmeName, $checkoutUrl) {
         $firstName = explode(' ', trim($name))[0] ?: 'Candidate';
-        $originalPrice = number_format(defined('ORIGINAL_PRICE') ? ORIGINAL_PRICE : 200000);
-        $appFee = number_format(defined('SCHOLARSHIP_APPLICATION_FEE') ? SCHOLARSHIP_APPLICATION_FEE : 20000);
 
         $bodyHtml = <<<HTML
-        <p style="margin:0 0 14px;">Dear <strong>{$firstName}</strong>,</p>
+        <p style="margin:0 0 16px;">Dear {$firstName},</p>
 
-        <p style="margin:0 0 14px;">
-            Following the live review of your application file, the Faculty Council and Admissions Board of Newton Academy have officially approved your candidacy and awarded you a <strong>100% Full Tuition Scholarship</strong> into our accredited 3-Month International Professional Diploma.
+        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#005f5a;">
+            Congratulations! You have been approved for a 100% Full Tuition Scholarship.
         </p>
 
-        <!-- Official Financial Breakdown Table -->
-        <div style="background-color:#f0f9f8; border:1px solid #ccfbf1; border-radius:12px; padding:18px 20px; margin:20px 0;">
-            <div style="font-size:11px; font-weight:800; color:#005f5a; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">
-                Approved Specialization:
-            </div>
-            <div style="font-size:16px; font-weight:800; color:#003835; margin-bottom:14px;">
-                {$programmeName} (Flagship Diploma)
-            </div>
-
-            <table width="100%" cellpadding="6" cellspacing="0" style="font-size:13px; color:#1e293b; border-top:1px solid #ccfbf1;">
-                <tr>
-                    <td>Standard Institutional Tuition:</td>
-                    <td align="right" style="text-decoration:line-through; color:#94a3b8; font-weight:600;">₦{$originalPrice}</td>
-                </tr>
-                <tr>
-                    <td>Newton Academy Endowment:</td>
-                    <td align="right" style="color:#005f5a; font-weight:800;">- ₦{$originalPrice} (100% Full Tuition Covered)</td>
-                </tr>
-                <tr style="border-top:1px solid #ccfbf1;">
-                    <td style="font-weight:700; color:#059669;">Tuition Balance Payable:</td>
-                    <td align="right" style="color:#059669; font-weight:800; font-size:14px;">₦0.00 (FREE)</td>
-                </tr>
-                <tr style="border-top:2px solid #005f5a; font-weight:800; font-size:14px;">
-                    <td style="color:#003835; padding-top:10px;">One-Time Admissions &amp; Evaluation Fee:</td>
-                    <td align="right" style="color:#005f5a; padding-top:10px; font-size:16px;">₦{$appFee}</td>
-                </tr>
-            </table>
-        </div>
-
-        <p style="margin:0 0 14px;">
-            Your scholarship completely eliminates all tuition expenses for the entire 3 months. The one-time <strong>₦{$appFee}</strong> commitment fee covers your verified student identity portal, live LMS access, and acts as an essential seriousness filter so fully funded seats are reserved for dedicated delegates.
+        <p style="margin:0 0 16px;">
+            Following the review of your candidate application, the Academic Board of Newton Academy has formally accepted your candidacy for the <strong>{$programmeName} (Flagship Diploma)</strong>.
         </p>
 
-        <!-- Seat Hold Notice -->
-        <div style="background-color:#fffbeb; border-left:4px solid #d97706; padding:12px 16px; border-radius:6px; margin:20px 0;">
-            <div style="font-size:11px; font-weight:800; color:#92400e; text-transform:uppercase; letter-spacing:0.5px;">
-                24-Hour Allocation Policy
-            </div>
-            <p style="margin:4px 0 0; font-size:12px; color:#78350f;">
-                To maintain our tutor-to-student coaching ratio, your 100% full-tuition endowment is reserved for exactly <strong>24 hours</strong>. Unclaimed allocations are automatically transferred to the next candidate on the waiting list.
-            </p>
-        </div>
+        <p style="margin:0 0 16px;">
+            <strong>Official Award Breakdown:</strong><br>
+            &bull; Standard Program Tuition: <span style="text-decoration:line-through; color:#94a3b8;">₦200,000</span><br>
+            &bull; Newton Academy 100% Endowment: <strong>-₦200,000 (Fully Waived)</strong><br>
+            &bull; Tuition Payable: <strong style="color:#059669;">₦0.00 (FREE)</strong><br>
+            &bull; One-Time Admissions &amp; Evaluation Fee: <strong>₦20,000 Only</strong>
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Your scholarship completely eliminates all tuition expenses for the entire 3 months. The one-time ₦20,000 admissions fee covers your student portal registration, verified student ID, and live LMS setup.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            <strong>Official Award PDF Attached:</strong><br>
+            Your formal signed Scholarship Award Letter with your full name has been generated and attached to this email as a PDF document for your records.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            <strong>Next Step — 24-Hour Seat Hold:</strong><br>
+            Due to strict tutor-to-student coaching ratios, your scholarship award is reserved for exactly <strong>24 hours</strong>. Please click the button below to access your official admissions file and finalize your seat before your allocation expires.
+        </p>
 HTML;
 
-        return self::wrapEmail(
-            'Office of Academic Affairs & Awards',
+        return self::wrapCleanEmail(
             'Official Award of 100% Full Tuition Scholarship',
             $bodyHtml,
-            'Access Official Award Dossier & Finalize Seat',
+            'Access Award Document & Finalize Seat',
             $checkoutUrl
         );
     }
@@ -372,37 +364,33 @@ HTML;
         $firstName = explode(' ', trim($name))[0] ?: 'Candidate';
 
         $bodyHtml = <<<HTML
-        <p style="margin:0 0 14px;">Dear <strong>{$firstName}</strong>,</p>
+        <p style="margin:0 0 16px;">Dear {$firstName},</p>
 
-        <p style="margin:0 0 14px;">
-            This is a priority notification from the Newton Academy Admissions Board regarding your approved scholarship for the <strong>{$programmeName}</strong>.
+        <p style="margin:0 0 16px; font-size:16px; font-weight:700; color:#003835;">
+            Quick reminder: Your 100% Scholarship Seat has not yet been secured.
         </p>
 
-        <p style="margin:0 0 14px;">
-            Our records indicate that your candidate application was unanimously approved for a <strong>100% Full Tuition Waiver (worth ₦200,000)</strong>, but you have <strong>not yet secured your seat</strong> by finalizing the one-time ₦20,000 admissions fee.
+        <p style="margin:0 0 16px;">
+            This is a priority notification from the Admissions Board regarding your approved scholarship for the <strong>{$programmeName}</strong>.
         </p>
 
-        <!-- Quota Alert Box -->
-        <div style="background-color:#fef2f2; border:1px solid #fecaca; border-left:4px solid #ef4444; border-radius:10px; padding:16px 18px; margin:22px 0;">
-            <div style="font-size:12px; font-weight:800; color:#991b1b; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">
-                Admissions Quota Warning: 42 of 50 Seats Taken
-            </div>
-            <p style="margin:0; font-size:13px; color:#7f1d1d; line-height:1.55;">
-                Over the past 48 hours, 42 candidates have finalized their admissions files. Only <strong>8 remaining scholarship allocations</strong> are available before the quota closes permanently and standard ₦200,000 tuition applies.
-            </p>
-        </div>
-
-        <p style="margin:0 0 14px;">
-            Do not let this commercial opportunity slip away. Within 90 days, you will master the same practical high-ROAS advertising, AI automation, and client acquisition blueprints that helped past fellows land international remote roles and high-paying consulting contracts.
+        <p style="margin:0 0 16px;">
+            Our records indicate that your candidate application was unanimously approved for a <strong>100% Full Tuition Waiver (worth ₦200,000)</strong>, but you have not yet completed the one-time ₦20,000 admissions fee to secure your seat.
         </p>
 
-        <p style="margin:0 0 14px;">
-            Your official evaluation file and payment checkout portal remain open for your final confirmation. Tap below to secure your seat before your allocation expires.
+        <p style="margin:0 0 16px; color:#b91c1c; font-weight:700;">
+            Admissions Quota Warning: 42 of 50 Seats Taken.
+        </p>
+        <p style="margin:0 0 16px;">
+            Over the past 48 hours, 42 candidates have finalized their admissions files. Only <strong>8 remaining scholarship allocations</strong> are available before the quota closes permanently and standard ₦200,000 tuition resumes.
+        </p>
+
+        <p style="margin:0 0 16px;">
+            Please do not let this commercial opportunity slip away. Your evaluation file and checkout portal remain open. Tap the button below to secure your seat now:
         </p>
 HTML;
 
-        return self::wrapEmail(
-            'Admissions Council & Enrollment Secretariat',
+        return self::wrapCleanEmail(
             'Your Scholarship Seat Has Not Yet Been Secured',
             $bodyHtml,
             'Secure My 100% Scholarship Seat Now',
@@ -412,62 +400,53 @@ HTML;
 
     /**
      * Email Template 4: Enrolment Confirmed ("Seat Secured")
+     * Leads directly to Odunayo on WhatsApp with prefilled verification text
      */
-    public static function getEnrolmentSuccessTemplate($name, $programmeName, $studentId, $whatsappGroupLink = '') {
+    public static function getEnrolmentSuccessTemplate($name, $programmeName, $studentId) {
         $firstName = explode(' ', trim($name))[0] ?: 'Fellow';
-        $vipLink = !empty($whatsappGroupLink) ? $whatsappGroupLink : (defined('WHATSAPP_VIP_ENROLLED_LINK') ? WHATSAPP_VIP_ENROLLED_LINK : 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGaBi');
+        
+        $customMessage = rawurlencode("Hello Odunayo, I have officially secured my seat for Newton Academy!\n\n*Name:* {$name}\n*Student ID:* {$studentId}\n*Course:* {$programmeName}\n*Status:* 100% Full Tuition Scholarship (Admission Fee Verified)\n\nPlease verify my admission file and add me to the private VIP Enrolled Fellows WhatsApp Room.");
+        $odunayoWhatsAppUrl = "https://wa.me/2347019602639?text={$customMessage}";
 
         $bodyHtml = <<<HTML
-        <p style="margin:0 0 14px;">Dear <strong>{$firstName}</strong>,</p>
+        <p style="margin:0 0 16px;">Dear {$firstName},</p>
 
-        <p style="margin:0 0 14px;">
-            Congratulations and welcome to Newton Academy! Your one-time admissions commitment fee of <strong>₦20,000</strong> has been officially received and verified.
+        <p style="margin:0 0 16px; font-size:17px; font-weight:700; color:#059669;">
+            Congratulations and welcome to Newton Academy!
         </p>
 
-        <p style="margin:0 0 14px;">
+        <p style="margin:0 0 16px;">
+            Your one-time admissions commitment fee of <strong>₦20,000</strong> has been officially received and verified.
+        </p>
+
+        <p style="margin:0 0 16px;">
             Your status is now upgraded to <strong>Verified Newton Academy Fellow</strong>. Your 100% full-tuition scholarship (worth ₦200,000) is locked in, and your seat in the upcoming cohort is officially guaranteed.
         </p>
 
-        <!-- Official Enrollment Pass Box -->
-        <div style="background-color:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:20px; margin:22px 0;">
-            <div style="font-size:11px; font-weight:800; color:#15803d; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">
-                Official Enrollment Credentials
-            </div>
-            <table width="100%" cellpadding="4" cellspacing="0" style="font-size:13px; color:#0f172a;">
-                <tr>
-                    <td style="font-weight:700; color:#166534; width:140px;">Student ID:</td>
-                    <td style="font-family:monospace; font-weight:800; color:#005f5a;">{$studentId}</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:700; color:#166534;">Enrolled Track:</td>
-                    <td style="font-weight:800;">{$programmeName}</td>
-                </tr>
-                <tr>
-                    <td style="font-weight:700; color:#166534;">Scholarship Status:</td>
-                    <td><span style="font-weight:800; color:#15803d;">100% Tuition Fully Covered (₦0 Balance)</span></td>
-                </tr>
-                <tr>
-                    <td style="font-weight:700; color:#166534;">Admission Fee:</td>
-                    <td>₦20,000 (Paid &amp; Verified)</td>
-                </tr>
-            </table>
-        </div>
+        <p style="margin:0 0 16px;">
+            <strong>Your Official Enrollment Credentials:</strong><br>
+            &bull; Student ID: <strong style="color:#005f5a; font-family:monospace;">{$studentId}</strong><br>
+            &bull; Enrolled Track: <strong>{$programmeName}</strong><br>
+            &bull; Scholarship Status: <strong style="color:#059669;">100% Tuition Fully Covered (₦0 Balance)</strong><br>
+            &bull; Admission Fee: <strong>₦20,000 (Paid &amp; Verified)</strong>
+        </p>
 
-        <h3 style="font-size:15px; font-weight:800; color:#0f172a; margin:24px 0 10px;">
-            Next Step: Join the VIP Enrolled Fellows Room
-        </h3>
-        
-        <p style="margin:0 0 14px;">
-            As an enrolled fellow, you now have access to our private <strong>VIP Enrolled Fellows WhatsApp Room</strong> where course materials, live workshop links, tutor office hours, and collaborative projects are coordinated.
+        <p style="margin:0 0 16px; font-size:15px; font-weight:700; color:#003835;">
+            Final Step — Message Odunayo on WhatsApp to Enter the VIP Group:
+        </p>
+        <p style="margin:0 0 16px;">
+            To ensure the absolute privacy and security of our enrolled cohort, group entry is granted manually. Please message <strong>Odunayo</strong> (Lead Admissions Advisor) on WhatsApp by tapping the button below.
+        </p>
+        <p style="margin:0 0 16px; color:#64748b; font-size:13.5px;">
+            A pre-filled verification message containing your Student ID and name will be ready for you to send. Once received, Odunayo will verify your record and grant you instant access to the private <strong>VIP Enrolled Fellows WhatsApp Room</strong> and LMS portal orientation.
         </p>
 HTML;
 
-        return self::wrapEmail(
-            'Office of Fellow Onboarding',
+        return self::wrapCleanEmail(
             'Enrolment Confirmed: Your Seat is Officially Secured',
             $bodyHtml,
-            'Access VIP Enrolled Fellows WhatsApp Room',
-            $vipLink
+            'Message Odunayo to Enter VIP Group',
+            $odunayoWhatsAppUrl
         );
     }
 }

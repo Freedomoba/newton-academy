@@ -75,10 +75,9 @@ if ($fp) {
 
 // 2. Dispatch Post-Payment VIP Onboarding Email
 if ($email) {
-    $vipLink = WHATSAPP_VIP_ENROLLED_LINK;
     $studentId = !empty($appId) ? $appId : ('NA-ID-' . strtoupper(substr(preg_replace('/[^a-zA-Z0-9]/', '', $reference), -6)));
     $subject = "Enrolment Confirmed: Your Seat is Officially Secured (" . $programme . ")";
-    $vipHtml = NewtonMailer::getEnrolmentSuccessTemplate($name, $programme, $studentId, $vipLink);
+    $vipHtml = NewtonMailer::getEnrolmentSuccessTemplate($name, $programme, $studentId);
     NewtonMailer::send($email, $name, $subject, $vipHtml);
 }
 
