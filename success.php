@@ -84,47 +84,76 @@ $programme = htmlspecialchars($_GET['programme'] ?? 'Flagship Professional Track
             </p>
             <p class="text-xs text-slate-400 font-mono mt-1">Receipt Reference: <?php echo $reference; ?></p>
 
-            <!-- Action Card for LMS Activation -->
+            <!-- Action Card for Portal Sign Up & Course Approval -->
             <div class="my-8 bg-[#f0f9f8] border border-[#005f5a]/25 rounded-2xl p-6 sm:p-8">
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight mb-2">
-                    Required Final Step: Student LMS Account Activation
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#005f5a] bg-teal-100/70 border border-teal-200 px-3 py-1 rounded-full inline-block mb-3">
+                    Immediate Action Required
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-2">
+                    Two Steps to Activate Your Course &amp; Enter VIP Group
                 </h3>
                 
                 <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-6 font-sans">
-                    To have your learning portal provisioned and access your cohort syllabus, please complete the following steps immediately:
+                    Your ₦20,000 admission fee is verified. To have your selected specialization provisioned on our student portal and gain access to the private cohort room, complete these 2 steps in order:
                 </p>
 
-                <ol class="space-y-3 text-xs sm:text-sm text-slate-800 list-decimal pl-5 leading-relaxed">
-                    <li>
-                        Click the button below to enter the <strong>Official Enrolled Fellows WhatsApp Room</strong>.
-                    </li>
-                    <li>
-                        Once inside the room, locate and read the <strong>PINNED MESSAGE</strong> at the top of the chat.
-                    </li>
-                    <li>
-                        Follow the pinned prompt to send in your <strong>Full Legal Name</strong>, <strong>Primary Email Address</strong>, and a screenshot or reference of your <strong>Payment Receipt</strong>.
-                    </li>
-                    <li>
-                        The Admissions Officer will issue your unique LMS student portal credentials and cohort calendar within the hour.
-                    </li>
-                </ol>
-
-                <div class="mt-8 text-center sm:text-left">
+                <!-- STEP 1: Sign Up on Portal -->
+                <div class="bg-white border-2 border-amber-300 rounded-xl p-5 mb-5 shadow-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center shrink-0">1</span>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base">
+                            Create Your Student Account on the Portal
+                        </h4>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
+                        Sign up by creating an account on our official academy portal so that your course of choice can be approved:
+                    </p>
+                    <div class="p-3.5 bg-amber-50 rounded-lg border border-amber-200 text-xs text-amber-900 font-semibold mb-4 leading-relaxed">
+                        ⚠️ <strong>IMPORTANT:</strong> You must sign up with the <u>exact same email address</u> and <u>same full name</u> you used during admission. This ensures your course of choice is automatically matched and approved faster.
+                    </div>
                     <a 
-                        href="<?php echo WHATSAPP_VIP_ENROLLED_LINK; ?>" 
+                        href="https://academy.newtoncore.com/auth/register" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        class="inline-block bg-[#005f5a] hover:bg-[#004d49] text-white font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-[#005f5a]/25 transition-all cursor-pointer"
+                        class="inline-flex items-center gap-2 bg-[#005f5a] hover:bg-[#004d49] text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md shadow-[#005f5a]/20 transition-all cursor-pointer"
                     >
-                        Join the Official Enrolled Fellows WhatsApp Room
+                        <span>Step 1: Sign Up at academy.newtoncore.com/auth/register</span>
+                        <span>&rarr;</span>
                     </a>
                 </div>
+
+                <!-- STEP 2: Message Odunayo -->
+                <div class="bg-white border-2 border-emerald-300 rounded-xl p-5 shadow-sm">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="w-6 h-6 rounded-full bg-emerald-600 text-white font-black text-xs flex items-center justify-center shrink-0">2</span>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base">
+                            Message Odunayo on WhatsApp to Approve Your Course &amp; Enter VIP Group
+                        </h4>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+                        After creating your portal account, message <strong>Odunayo</strong> (Lead Admissions Advisor) on WhatsApp. She will verify your portal registration, approve your course enrollment, and grant you instant entry into the private <strong>VIP Enrolled Fellows WhatsApp Room</strong>.
+                    </p>
+                    <?php
+                    $whatsappMsg = rawurlencode("Hello Odunayo, I have officially secured my seat for Newton Academy and created my portal account on academy.newtoncore.com!\n\n*Name:* {$name}\n*Track:* {$programme}\n*Reference:* {$reference}\n\nPlease approve my course of choice on the portal and add me to the private VIP Enrolled Fellows Room.");
+                    ?>
+                    <a 
+                        id="odunayoWhatsAppBtn"
+                        href="https://wa.me/2347019602639?text=<?php echo $whatsappMsg; ?>" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+                    >
+                        <span>Step 2: Message Odunayo on WhatsApp (+2347019602639)</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+
             </div>
 
             <p class="text-xs text-slate-500">
-                If you encounter any administrative delays, you can reach our Admissions Helpdesk directly on WhatsApp:
-                <a href="https://wa.me/<?php echo WHATSAPP_SUPPORT_PHONE; ?>" target="_blank" class="text-[#005f5a] underline font-semibold ml-1">
-                    +<?php echo WHATSAPP_SUPPORT_PHONE; ?>
+                Need direct help with your registration? Contact Odunayo directly on WhatsApp:
+                <a href="https://wa.me/2347019602639" target="_blank" class="text-[#005f5a] underline font-semibold ml-1">
+                    +2347019602639
                 </a>
             </p>
 

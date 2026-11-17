@@ -295,8 +295,8 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                             <span>I Have Transferred ₦20,000 &bull; Confirm on WhatsApp</span>
                             <span>&rarr;</span>
                         </button>
-                        <p class="text-xs text-slate-500 text-center mt-2 font-sans">
-                            Click after making your transfer. You will be connected to Odunayo (Lead Admissions Advisor) to verify your payment and grant instant VIP group access.
+                        <p class="text-xs text-slate-600 text-center mt-2 font-sans leading-relaxed">
+                            <strong>Next Step:</strong> After making your transfer, please create your account at <a href="https://academy.newtoncore.com/auth/register" target="_blank" class="text-[#005f5a] font-bold underline">academy.newtoncore.com/auth/register</a> using your same name &amp; email, then click the button above to confirm with Odunayo on WhatsApp for immediate course approval.
                         </p>
                     </div>
                 </div>
@@ -547,7 +547,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 `• Email: ${userEmail}\n` +
                 `• Track: ${programme}\n` +
                 `• Reference ID: ${appId}\n\n` +
-                `Kindly verify my payment and grant me entry into the VIP Enrolled Fellows Room.`
+                `I am also signing up on academy.newtoncore.com/auth/register with my same name and email. Kindly verify my payment and approve my course access in the VIP Enrolled Fellows Room.`
             );
             window.location.href = `https://wa.me/2347019602639?text=${message}`;
         };

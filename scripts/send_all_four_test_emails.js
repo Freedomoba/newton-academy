@@ -340,18 +340,41 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
             </ul>
         </div>
 
-        <p style="margin:0 0 8px; font-size:15.5px; font-weight:700; color:#003835;">
-            Your Final Step: Enter the Private VIP Fellows Room
+        <!-- Next Steps to Activate LMS & Course Approval -->
+        <p style="margin:24px 0 10px; font-size:16px; font-weight:800; color:#003835;">
+            Follow These 2 Steps Immediately for Course Approval:
         </p>
-        <p style="margin:0 0 12px;">
-            To preserve the confidentiality, prestige, and focus of our enrolled cohort, access to our community is handled with high care.
-        </p>
-        <p style="margin:0 0 16px;">
-            Please tap the button below to message <strong>Odunayo</strong> (Lead Admissions Advisor) directly on WhatsApp. A pre-filled verification message containing your Student ID will be loaded automatically.
-        </p>
-        <p style="margin:0 0 16px; color:#64748b; font-size:13.5px;">
-            Once received, Odunayo will grant you immediate access to the <strong>Private VIP Enrolled Fellows WhatsApp Room</strong> and walk you through your onboarding portal before classes begin.
-        </p>
+
+        <!-- Step 1: Sign up on academy.newtoncore.com -->
+        <div style="background-color:#fffbeb; border:1px solid #fde68a; border-left:4px solid #f59e0b; border-radius:8px; padding:16px 18px; margin:14px 0;">
+            <p style="margin:0 0 6px; font-weight:800; color:#92400e; font-size:14px;">
+                STEP 1: Create Your Account on the Academy Portal
+            </p>
+            <p style="margin:0 0 10px; font-size:13.5px; color:#78350f; line-height:1.6;">
+                Sign up by creating an account on our official academy portal so that your course of choice can be approved:
+            </p>
+            <div style="margin:10px 0 12px; text-align:left;">
+                <a href="https://academy.newtoncore.com/auth/register" target="_blank" style="display:inline-block; background-color:#005f5a; color:#ffffff; font-weight:800; font-size:13.5px; text-decoration:none; padding:10px 22px; border-radius:6px;">
+                    Sign Up at academy.newtoncore.com/auth/register &rarr;
+                </a>
+            </div>
+            <p style="margin:0; font-size:13px; color:#92400e; font-weight:700; line-height:1.55;">
+                ⚠️ CRITICAL: You must use the EXACT SAME email address and the SAME NAME (${name}) you used during your admission. This allows the system to match your file and approve your course faster.
+            </p>
+        </div>
+
+        <!-- Step 2: Message Odunayo -->
+        <div style="background-color:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #10b981; border-radius:8px; padding:16px 18px; margin:14px 0;">
+            <p style="margin:0 0 6px; font-weight:800; color:#166534; font-size:14px;">
+                STEP 2: Message Odunayo on WhatsApp to Finalize Course Approval
+            </p>
+            <p style="margin:0 0 10px; font-size:13.5px; color:#14532d; line-height:1.6;">
+                After creating your portal account, message <strong>Odunayo</strong> (Lead Admissions Advisor) on WhatsApp. She will verify your portal registration, approve your course enrollment, and add you to the private <strong>VIP Enrolled Fellows WhatsApp Room</strong>.
+            </p>
+            <p style="margin:0; font-size:12.5px; color:#166534; font-style:italic;">
+                A pre-filled verification message containing your Student ID (${appId}) will be loaded automatically when you click the button below.
+            </p>
+        </div>
     `;
 
     return {
@@ -359,8 +382,12 @@ function getEmail4_EnrolmentSuccess(name, track = 'Digital Marketing + Applied A
         html: wrapCleanEmail({
             title: 'Enrolment Confirmed: Your Seat is Officially Secured',
             bodyHtml,
-            ctaText: 'Message Odunayo to Enter VIP Group',
-            ctaUrl: odunayoWhatsAppUrl
+            ctaText: 'Step 2: Message Odunayo on WhatsApp',
+            ctaUrl: odunayoWhatsAppUrl,
+            secondaryLink: {
+                text: 'Step 1: Create Your Account at academy.newtoncore.com/auth/register →',
+                url: 'https://academy.newtoncore.com/auth/register'
+            }
         })
     };
 }
