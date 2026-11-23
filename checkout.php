@@ -74,8 +74,8 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 <img src="assets/logo.png" alt="Newton Academy" class="h-8 sm:h-10 w-auto max-w-[130px] sm:max-w-none object-contain">
             </a>
             <div class="flex items-center gap-2">
-                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full whitespace-nowrap">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-black bg-slate-100 border border-slate-300 px-3 py-1 rounded whitespace-nowrap">
+                    <span class="w-2 h-2 bg-black"></span>
                     <span>100% Scholarship Approved</span>
                 </span>
             </div>
@@ -116,35 +116,23 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 </div>
             </div>
 
-            <!-- Award Letter Quick Action Link -->
-            <div class="py-3 px-4 my-4 bg-slate-50 border border-slate-200 rounded-xl flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
-                <div class="flex items-center gap-2">
-                    <span class="text-base">📄</span>
-                    <span class="text-slate-700">Official Signed Award Letter has been generated for your candidate file.</span>
-                </div>
-                <a id="downloadAwardPdfBtn" href="api/download_award_letter.php?app_id=<?php echo urlencode($appId); ?>&name=<?php echo urlencode($name); ?>&track=<?php echo urlencode($programme); ?>" target="_blank" class="font-bold text-[#005f5a] hover:text-[#004d49] hover:underline flex items-center gap-1">
-                    <span>Download Award Letter (PDF)</span>
-                    <span>&rarr;</span>
-                </a>
-            </div>
-
             <!-- Structured Two-Column Financial Ledger with Column & Row Dividers -->
             <div class="my-6 font-sans">
                 <div class="flex items-center justify-between mb-2">
-                    <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500">
+                    <h2 class="text-xs uppercase tracking-wider font-bold text-black">
                         Official Fee Breakdown &amp; Valuation
                     </h2>
-                    <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                    <span class="text-[11px] font-bold text-black bg-slate-100 px-2.5 py-1 rounded border border-slate-300">
                         100% Tuition Waived
                     </span>
                 </div>
 
                 <!-- Structured Table / Grid with Column Divider and Row Dividers -->
-                <div class="border border-slate-200 rounded-xl overflow-hidden bg-slate-50/50 shadow-sm">
+                <div class="border border-slate-300 rounded overflow-hidden bg-white shadow-sm">
                     
                     <!-- Table Header -->
-                    <div class="grid grid-cols-12 bg-slate-100 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
-                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
+                    <div class="grid grid-cols-12 bg-slate-100 border-b border-slate-300 text-xs font-bold text-black uppercase tracking-wider">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-300">
                             Description / Item
                         </div>
                         <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right">
@@ -154,49 +142,49 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
 
                     <!-- Row 1: Standard Tuition -->
                     <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
-                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-slate-700">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-slate-800">
                             Standard 3-Month Diploma Tuition
                         </div>
-                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm line-through text-slate-400 font-bold">
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm line-through text-slate-500 font-bold">
                             ₦200,000
                         </div>
                     </div>
 
                     <!-- Row 2: 100% Endowment -->
-                    <div class="grid grid-cols-12 border-b border-slate-200 bg-emerald-50/40 items-center">
-                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-emerald-800 font-semibold">
+                    <div class="grid grid-cols-12 border-b border-slate-200 bg-slate-50/60 items-center">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm text-black font-bold">
                             Newton Academy 100% Tuition Endowment
                         </div>
-                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm text-emerald-700 font-bold">
-                            -₦200,000 <span class="hidden sm:inline text-xs font-sans font-bold">(100% Waived)</span>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm text-black font-black">
+                            -₦200,000 <span class="hidden sm:inline text-xs font-sans font-bold text-black">(100% Waived)</span>
                         </div>
                     </div>
 
                     <!-- Row 3: Remaining Tuition Balance -->
                     <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
-                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm font-semibold text-slate-800">
+                        <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200 text-sm font-bold text-black">
                             Remaining Tuition Balance
                         </div>
-                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm font-black text-emerald-700">
-                            ₦0.00 <span class="text-xs font-sans font-bold text-emerald-600">(FREE)</span>
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-sm font-black text-black">
+                            ₦0.00 <span class="text-xs font-sans font-bold text-black">(FREE)</span>
                         </div>
                     </div>
 
                     <!-- Row 4: One-Time Admissions Fee -->
                     <div class="grid grid-cols-12 border-b border-slate-200 bg-white items-center">
                         <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
-                            <span class="text-sm font-bold text-slate-900 block">One-Time Admissions &amp; Portal Evaluation Fee</span>
-                            <span class="text-xs text-slate-500 block leading-tight mt-0.5">Covers student ID verification, personalized LMS access, and mentor allocation.</span>
+                            <span class="text-sm font-bold text-black block">One-Time Admissions &amp; Portal Evaluation Fee</span>
+                            <span class="text-xs text-slate-600 block leading-tight mt-0.5">Covers student ID verification, personalized LMS access, and mentor allocation.</span>
                         </div>
-                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-base font-bold text-slate-900">
+                        <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right font-mono text-base font-black text-black">
                             ₦20,000
                         </div>
                     </div>
 
                     <!-- Row 5: Total Amount Payable Today (Highlighted) -->
-                    <div class="grid grid-cols-12 bg-amber-50/60 items-center border-t-2 border-slate-300">
+                    <div class="grid grid-cols-12 bg-slate-50 items-center border-t-2 border-slate-300">
                         <div class="col-span-7 sm:col-span-8 p-3 sm:px-4 border-r border-slate-200">
-                            <span class="text-sm sm:text-base font-black text-slate-900 block font-heading">Total Amount Payable Today</span>
+                            <span class="text-sm sm:text-base font-black text-black block font-heading">Total Amount Payable Today</span>
                             <span class="text-xs text-red-600 font-bold flex items-center gap-1 mt-0.5">
                                 <span>Saves you ₦200,000</span>
                                 <span>&bull;</span>
@@ -204,7 +192,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                             </span>
                         </div>
                         <div class="col-span-5 sm:col-span-4 p-3 sm:px-4 text-right">
-                            <span class="text-2xl sm:text-3xl font-black text-[#005f5a] font-mono block">₦20,000</span>
+                            <span class="text-2xl sm:text-3xl font-black text-black font-mono block">₦20,000</span>
                         </div>
                     </div>
 
@@ -215,75 +203,73 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
             <div class="pt-6 space-y-6">
                 
                 <!-- Beneficiary Card & Official Corporate Accounts -->
-                <div class="bg-gradient-to-b from-slate-50 to-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
+                <div class="bg-white border border-slate-300 rounded-xl p-4 sm:p-6 shadow-sm space-y-4">
                     
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 border-b border-slate-200">
                         <div>
-                            <span class="text-[11px] font-black uppercase tracking-wider text-[#005f5a] flex items-center gap-1.5 font-heading">
-                                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-black flex items-center gap-1.5 font-heading">
                                 Direct Bank Transfer Payment
                             </span>
-                            <h3 class="text-base sm:text-lg font-black text-slate-900 mt-0.5 font-heading">
+                            <h3 class="text-base sm:text-lg font-black text-black mt-0.5 font-heading">
                                 Official Corporate Accounts
                             </h3>
                         </div>
-                        <span class="text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full self-start sm:self-auto flex items-center gap-1">
-                            <svg class="w-3.5 h-3.5 text-emerald-600 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span class="text-[11px] font-bold text-black bg-slate-100 border border-slate-300 px-3 py-1 rounded self-start sm:self-auto flex items-center gap-1">
                             Verified Institution
                         </span>
                     </div>
 
-                    <div class="flex items-center justify-between text-xs sm:text-sm bg-slate-100/70 p-3 rounded-xl border border-slate-200/80">
-                        <span class="text-slate-600 font-medium">Beneficiary Account Name:</span>
-                        <strong class="text-slate-950 font-black tracking-wide font-heading">Newton OS Limited</strong>
+                    <div class="flex items-center justify-between text-xs sm:text-sm bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <span class="text-slate-700 font-medium">Beneficiary Account Name:</span>
+                        <strong class="text-black font-black tracking-wide font-heading">Newton OS Limited</strong>
                     </div>
 
                     <!-- Clean Bank Account List (No Nested Clutter) -->
                     <div class="space-y-2.5">
                         <!-- Zenith Bank -->
-                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-lg bg-white border border-slate-300 hover:border-black transition-all">
                             <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-black text-xs border border-red-200 font-mono">
+                                <div class="w-10 h-10 rounded bg-slate-100 text-black flex items-center justify-center font-black text-xs border border-slate-300 font-mono">
                                     ZEN
                                 </div>
                                 <div>
                                     <span class="text-xs text-slate-500 font-semibold block">Zenith Bank</span>
-                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">1229109189</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-black tracking-wider">1229109189</span>
                                 </div>
                             </div>
-                            <button type="button" onclick="copyAccount('1229109189', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                            <button type="button" onclick="copyAccount('1229109189', this)" class="text-xs font-bold bg-slate-100 hover:bg-black hover:text-white text-black border border-slate-300 py-2 px-3 sm:px-4 rounded transition-colors cursor-pointer flex items-center gap-1.5">
                                 <span>Copy Account</span>
                             </button>
                         </div>
 
                         <!-- UBA -->
-                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-lg bg-white border border-slate-300 hover:border-black transition-all">
                             <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-black text-xs border border-red-200 font-mono">
+                                <div class="w-10 h-10 rounded bg-slate-100 text-black flex items-center justify-center font-black text-xs border border-slate-300 font-mono">
                                     UBA
                                 </div>
                                 <div>
                                     <span class="text-xs text-slate-500 font-semibold block">UBA (United Bank for Africa)</span>
-                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">1027518730</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-black tracking-wider">1027518730</span>
                                 </div>
                             </div>
-                            <button type="button" onclick="copyAccount('1027518730', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                            <button type="button" onclick="copyAccount('1027518730', this)" class="text-xs font-bold bg-slate-100 hover:bg-black hover:text-white text-black border border-slate-300 py-2 px-3 sm:px-4 rounded transition-colors cursor-pointer flex items-center gap-1.5">
                                 <span>Copy Account</span>
                             </button>
                         </div>
 
                         <!-- Union Bank -->
-                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-lg bg-white border border-slate-300 hover:border-black transition-all">
                             <div class="flex items-center gap-3">
-                                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center font-black text-xs border border-blue-200 font-mono">
+                                <div class="w-10 h-10 rounded bg-slate-100 text-black flex items-center justify-center font-black text-xs border border-slate-300 font-mono">
                                     UBN
                                 </div>
                                 <div>
                                     <span class="text-xs text-slate-500 font-semibold block">Union Bank</span>
-                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">0204007446</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-black tracking-wider">0204007446</span>
                                 </div>
                             </div>
-                            <button type="button" onclick="copyAccount('0204007446', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                            <button type="button" onclick="copyAccount('0204007446', this)" class="text-xs font-bold bg-slate-100 hover:bg-black hover:text-white text-black border border-slate-300 py-2 px-3 sm:px-4 rounded transition-colors cursor-pointer flex items-center gap-1.5">
                                 <span>Copy Account</span>
                             </button>
                         </div>
@@ -291,23 +277,23 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 </div>
 
                 <!-- 3-Step Clear Action Guide -->
-                <div class="p-4 sm:p-5 rounded-2xl bg-teal-50/70 border border-teal-200/80 space-y-3">
-                    <span class="text-xs font-black uppercase tracking-wider text-[#005f5a] block font-heading">
+                <div class="p-4 sm:p-5 rounded-xl bg-slate-50 border border-slate-300 space-y-3">
+                    <span class="text-xs font-black uppercase tracking-wider text-black block font-heading">
                         Mandatory Steps to Finalize Your Enrollment:
                     </span>
                     <ol class="space-y-3 text-xs sm:text-sm text-slate-800">
                         <li class="flex items-start gap-2.5">
-                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">1</span>
+                            <span class="w-5 h-5 rounded bg-black text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 font-mono">1</span>
                             <span><strong>Transfer ₦20,000</strong> to any of the official Newton OS Limited accounts above via your mobile banking app or USSD.</span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">2</span>
+                            <span class="w-5 h-5 rounded bg-black text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 font-mono">2</span>
                             <span>
-                                <strong>Sign up &amp; create your account</strong> on the Academy Portal at <a href="https://academy.newtoncore.com/auth/register" target="_blank" class="text-[#005f5a] font-bold underline hover:text-teal-900">academy.newtoncore.com/auth/register</a> using your <strong>exact same name &amp; email</strong> for immediate course approval.
+                                <strong>Sign up &amp; create your account</strong> on the Academy Portal at <a href="https://academy.newtoncore.com/auth/register" target="_blank" class="text-black font-bold underline hover:text-slate-700">academy.newtoncore.com/auth/register</a> using your <strong>exact same name &amp; email</strong> for immediate course approval.
                             </span>
                         </li>
                         <li class="flex items-start gap-2.5">
-                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">3</span>
+                            <span class="w-5 h-5 rounded bg-black text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5 font-mono">3</span>
                             <span><strong>Confirm with Odunayo:</strong> Click the button below to send your transfer receipt on WhatsApp. Odunayo will verify your payment and grant you instant VIP room admission.</span>
                         </li>
                     </ol>
@@ -318,7 +304,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                     <button 
                         type="button" 
                         onclick="confirmBankTransfer()"
-                        class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-black py-4 px-6 rounded-xl text-base sm:text-lg shadow-lg shadow-teal-900/20 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2"
+                        class="w-full bg-black hover:bg-slate-900 text-white font-black py-4 px-6 rounded-xl text-base sm:text-lg shadow-lg active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2"
                     >
                         <span>I Have Transferred ₦20,000 &bull; Confirm on WhatsApp</span>
                         <span>&rarr;</span>
@@ -370,7 +356,7 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                             </div>
                             <div>
                                 <div class="flex items-center gap-1.5">
-                                    <span class="text-[10px] font-black uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">Lead Advisor</span>
+                                    <span class="text-[10px] font-black uppercase tracking-wider text-black bg-slate-100 px-2 py-0.5 rounded border border-slate-300">Lead Advisor</span>
                                     <span class="text-[10px] text-slate-500 font-semibold hidden sm:inline">Fast Response</span>
                                 </div>
                                 <span class="block text-sm sm:text-base font-black text-slate-950 mt-0.5">Odunayo</span>
@@ -476,10 +462,6 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
         const elTrack = document.getElementById('awardeeTrack');
         if (elTrack) elTrack.textContent = programme;
 
-        const downloadPdfBtn = document.getElementById('downloadAwardPdfBtn');
-        if (downloadPdfBtn) {
-            downloadPdfBtn.href = 'api/download_award_letter.php?app_id=' + encodeURIComponent(appId) + '&name=' + encodeURIComponent(userName) + '&track=' + encodeURIComponent(programme);
-        }
 
         // Copy Account Helper with instant feedback
         window.copyAccount = function(accountNumber, btn) {
@@ -487,10 +469,10 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 navigator.clipboard.writeText(accountNumber).then(() => {
                     const originalText = btn.textContent;
                     btn.textContent = '✓ Copied!';
-                    btn.classList.add('bg-[#005f5a]', 'text-white');
+                    btn.classList.add('bg-black', 'text-white');
                     setTimeout(() => {
                         btn.textContent = originalText;
-                        btn.classList.remove('bg-[#005f5a]', 'text-white');
+                        btn.classList.remove('bg-black', 'text-white');
                     }, 2200);
                 });
             } else {
