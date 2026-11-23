@@ -19,8 +19,6 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
     <meta property="og:image" content="assets/favicon.jpg">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Paystack Inline JS -->
-    <script src="https://js.paystack.co/v1/inline.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -213,92 +211,121 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
                 </div>
             </div>
 
-            <!-- Straightforward Payment Actions -->
+            <!-- Official Direct Bank Transfer Payment Method -->
             <div class="pt-6 space-y-6">
                 
-                <!-- OPTION 1: INSTANT ONLINE PAYMENT VIA PAYSTACK -->
-                <div class="space-y-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block">
-                        Option 1: Instant Online Payment (Recommended)
-                    </span>
+                <!-- Beneficiary Card & Official Corporate Accounts -->
+                <div class="bg-gradient-to-b from-slate-50 to-white border border-slate-200 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
                     
-                    <button 
-                        type="button" 
-                        id="payNowBtn"
-                        class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-black py-4 px-6 rounded-xl text-base sm:text-lg shadow-lg shadow-teal-900/20 active:scale-[0.99] transition-all cursor-pointer text-center flex items-center justify-center gap-2"
-                    >
-                        <span>Pay ₦20,000 Online Instantly (Card / Bank / USSD)</span>
-                        <span>&rarr;</span>
-                    </button>
-                    
-                    <p class="text-center text-xs text-slate-500">
-                        Instant automated activation &bull; 256-bit SSL encrypted via Paystack
-                    </p>
-                </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 border-b border-slate-200">
+                        <div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-[#005f5a] flex items-center gap-1.5 font-heading">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                                Direct Bank Transfer Payment
+                            </span>
+                            <h3 class="text-base sm:text-lg font-black text-slate-900 mt-0.5 font-heading">
+                                Official Corporate Accounts
+                            </h3>
+                        </div>
+                        <span class="text-[11px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full self-start sm:self-auto flex items-center gap-1">
+                            <svg class="w-3.5 h-3.5 text-emerald-600 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Verified Institution
+                        </span>
+                    </div>
 
-                <!-- DIVIDER -->
-                <div class="relative py-2">
-                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
-                    <div class="relative flex justify-center text-xs uppercase font-bold text-slate-400"><span class="bg-white px-3 font-mono">Or Pay Via Direct Bank Transfer</span></div>
-                </div>
-
-                <!-- OPTION 2: DIRECT BANK TRANSFER -->
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between text-xs sm:text-sm font-sans pb-1">
-                        <span class="text-slate-600">Beneficiary Account Name:</span>
-                        <strong class="text-slate-900 font-bold">Newton OS Limited</strong>
+                    <div class="flex items-center justify-between text-xs sm:text-sm bg-slate-100/70 p-3 rounded-xl border border-slate-200/80">
+                        <span class="text-slate-600 font-medium">Beneficiary Account Name:</span>
+                        <strong class="text-slate-950 font-black tracking-wide font-heading">Newton OS Limited</strong>
                     </div>
 
                     <!-- Clean Bank Account List (No Nested Clutter) -->
-                    <div class="space-y-2">
+                    <div class="space-y-2.5">
                         <!-- Zenith Bank -->
-                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                            <div>
-                                <span class="text-xs text-slate-500 font-semibold block">Zenith Bank</span>
-                                <span class="text-base font-black font-mono text-slate-900 tracking-wider">1229109189</span>
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-black text-xs border border-red-200 font-mono">
+                                    ZEN
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-semibold block">Zenith Bank</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">1229109189</span>
+                                </div>
                             </div>
-                            <button type="button" onclick="copyAccount('1229109189', this)" class="text-xs font-bold bg-white hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3.5 rounded-lg transition-colors cursor-pointer">
-                                Copy Account
+                            <button type="button" onclick="copyAccount('1229109189', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                                <span>Copy Account</span>
                             </button>
                         </div>
 
                         <!-- UBA -->
-                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                            <div>
-                                <span class="text-xs text-slate-500 font-semibold block">UBA (United Bank for Africa)</span>
-                                <span class="text-base font-black font-mono text-slate-900 tracking-wider">1027518730</span>
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center font-black text-xs border border-red-200 font-mono">
+                                    UBA
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-semibold block">UBA (United Bank for Africa)</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">1027518730</span>
+                                </div>
                             </div>
-                            <button type="button" onclick="copyAccount('1027518730', this)" class="text-xs font-bold bg-white hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3.5 rounded-lg transition-colors cursor-pointer">
-                                Copy Account
+                            <button type="button" onclick="copyAccount('1027518730', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                                <span>Copy Account</span>
                             </button>
                         </div>
 
                         <!-- Union Bank -->
-                        <div class="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-                            <div>
-                                <span class="text-xs text-slate-500 font-semibold block">Union Bank</span>
-                                <span class="text-base font-black font-mono text-slate-900 tracking-wider">0204007446</span>
+                        <div class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl bg-white border border-slate-200 hover:border-[#005f5a]/40 shadow-sm transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center font-black text-xs border border-blue-200 font-mono">
+                                    UBN
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-semibold block">Union Bank</span>
+                                    <span class="text-base sm:text-lg font-black font-mono text-slate-900 tracking-wider">0204007446</span>
+                                </div>
                             </div>
-                            <button type="button" onclick="copyAccount('0204007446', this)" class="text-xs font-bold bg-white hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3.5 rounded-lg transition-colors cursor-pointer">
-                                Copy Account
+                            <button type="button" onclick="copyAccount('0204007446', this)" class="text-xs font-bold bg-slate-50 hover:bg-[#005f5a] hover:text-white text-slate-700 border border-slate-300 py-2 px-3 sm:px-4 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5">
+                                <span>Copy Account</span>
                             </button>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Confirm Transfer Button leading to Odunayo -->
-                    <div class="pt-2">
-                        <button 
-                            type="button" 
-                            onclick="confirmBankTransfer()"
-                            class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl text-sm shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
-                        >
-                            <span>I Have Transferred ₦20,000 &bull; Confirm on WhatsApp</span>
-                            <span>&rarr;</span>
-                        </button>
-                        <p class="text-xs text-slate-600 text-center mt-2 font-sans leading-relaxed">
-                            <strong>Next Step:</strong> After making your transfer, please create your account at <a href="https://academy.newtoncore.com/auth/register" target="_blank" class="text-[#005f5a] font-bold underline">academy.newtoncore.com/auth/register</a> using your same name &amp; email, then click the button above to confirm with Odunayo on WhatsApp for immediate course approval.
-                        </p>
-                    </div>
+                <!-- 3-Step Clear Action Guide -->
+                <div class="p-4 sm:p-5 rounded-2xl bg-teal-50/70 border border-teal-200/80 space-y-3">
+                    <span class="text-xs font-black uppercase tracking-wider text-[#005f5a] block font-heading">
+                        Mandatory Steps to Finalize Your Enrollment:
+                    </span>
+                    <ol class="space-y-3 text-xs sm:text-sm text-slate-800">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">1</span>
+                            <span><strong>Transfer ₦20,000</strong> to any of the official Newton OS Limited accounts above via your mobile banking app or USSD.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">2</span>
+                            <span>
+                                <strong>Sign up &amp; create your account</strong> on the Academy Portal at <a href="https://academy.newtoncore.com/auth/register" target="_blank" class="text-[#005f5a] font-bold underline hover:text-teal-900">academy.newtoncore.com/auth/register</a> using your <strong>exact same name &amp; email</strong> for immediate course approval.
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#005f5a] text-white flex items-center justify-center text-xs font-black shrink-0 mt-0.5 font-mono">3</span>
+                            <span><strong>Confirm with Odunayo:</strong> Click the button below to send your transfer receipt on WhatsApp. Odunayo will verify your payment and grant you instant VIP room admission.</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Primary Confirmation Button leading to Odunayo -->
+                <div class="space-y-2 pt-1">
+                    <button 
+                        type="button" 
+                        onclick="confirmBankTransfer()"
+                        class="w-full bg-[#005f5a] hover:bg-[#004d49] text-white font-black py-4 px-6 rounded-xl text-base sm:text-lg shadow-lg shadow-teal-900/20 active:scale-[0.99] transition-all cursor-pointer flex items-center justify-center gap-2"
+                    >
+                        <span>I Have Transferred ₦20,000 &bull; Confirm on WhatsApp</span>
+                        <span>&rarr;</span>
+                    </button>
+                    <p class="text-center text-[11px] text-slate-500 font-sans">
+                        Instant human verification &bull; Direct access to Lead Admissions Advisor Odunayo
+                    </p>
                 </div>
 
                 <!-- PSYCHOLOGICAL RED SCARCITY NOTICE -->
@@ -429,11 +456,8 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
         </div>
     </footer>
 
-    <!-- Paystack Integration & Logic -->
+    <!-- Direct Bank Transfer Onboarding Logic -->
     <script>
-        const paystackPublicKey = "<?php echo PAYSTACK_PUBLIC_KEY; ?>";
-        const amountKobo = <?php echo (SCHOLARSHIP_APPLICATION_FEE * 100); ?>;
-
         const urlParams = new URLSearchParams(window.location.search);
         const userName = urlParams.get('name') || "<?php echo addslashes($name); ?>";
         const userEmail = urlParams.get('email') || "<?php echo addslashes($email); ?>";
@@ -455,64 +479,6 @@ $programme = trim($_GET['programme'] ?? $_GET['track'] ?? 'Digital Marketing + A
         const downloadPdfBtn = document.getElementById('downloadAwardPdfBtn');
         if (downloadPdfBtn) {
             downloadPdfBtn.href = 'api/download_award_letter.php?app_id=' + encodeURIComponent(appId) + '&name=' + encodeURIComponent(userName) + '&track=' + encodeURIComponent(programme);
-        }
-
-        const payBtn = document.getElementById('payNowBtn');
-
-        if (payBtn) {
-            payBtn.addEventListener('click', function() {
-                if (!paystackPublicKey || paystackPublicKey.includes('xxxxxxxx')) {
-                    const demoRef = 'DEMO_NA_' + Math.floor(Math.random() * 1000000000);
-                    verifyAndRedirect(demoRef);
-                    return;
-                }
-
-                if (typeof PaystackPop !== 'undefined') {
-                    let handler = PaystackPop.setup({
-                        key: paystackPublicKey,
-                        email: userEmail,
-                        amount: amountKobo,
-                        currency: 'NGN',
-                        ref: 'NA_' + Math.floor((Math.random() * 1000000000) + 1),
-                        metadata: {
-                            custom_fields: [
-                                { display_name: "Applicant Name", variable_name: "applicant_name", value: userName },
-                                { display_name: "Application ID", variable_name: "app_id", value: appId },
-                                { display_name: "Programme", variable_name: "programme", value: programme }
-                            ]
-                        },
-                        callback: function(response) {
-                            verifyAndRedirect(response.reference);
-                        },
-                        onClose: function() {
-                            alert('Your transaction was cancelled. Your scholarship seat reservation remains held for 24 hours.');
-                        }
-                    });
-                    handler.openIframe();
-                } else {
-                    const demoRef = 'DEMO_NA_' + Math.floor(Math.random() * 1000000000);
-                    verifyAndRedirect(demoRef);
-                }
-            });
-        }
-
-        async function verifyAndRedirect(reference) {
-            if (payBtn) {
-                payBtn.disabled = true;
-                payBtn.innerHTML = '<span>Verifying Payment &amp; Activating Admission...</span>';
-            }
-
-            try {
-                const res = await fetch(`api/verify_payment.php?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&email=${encodeURIComponent(userEmail)}&programme=${encodeURIComponent(programme)}&app_id=${encodeURIComponent(appId)}`);
-                const data = await res.json();
-                
-                if (data.success && data.redirect) {
-                    window.location.href = data.redirect;
-                    return;
-                }
-            } catch (e) {}
-
-            window.location.href = `success.php?reference=${encodeURIComponent(reference)}&name=${encodeURIComponent(userName)}&programme=${encodeURIComponent(programme)}`;
         }
 
         // Copy Account Helper with instant feedback

@@ -40,9 +40,9 @@ define('SMTP_USER', 'admissions@newtonacademy.co'); // cPanel email account
 define('SMTP_PASS', 'YOUR_CPANEL_EMAIL_PASSWORD');  // cPanel email password
 define('SMTP_FROM_NAME', 'Newton Academy Admissions');
 
-// Paystack Payment Integration (Get from paystack.com/dashboard/settings/api)
-define('PAYSTACK_PUBLIC_KEY', 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
-define('PAYSTACK_SECRET_KEY', 'sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+// Payment Mode: Manual Bank Transfer Only (Paystack Disabled)
+define('PAYSTACK_PUBLIC_KEY', '');
+define('PAYSTACK_SECRET_KEY', '');
 
 // Admin Dashboard Password (change to your preferred secure password)
 define('ADMIN_PASSWORD', 'Newton2026!');
