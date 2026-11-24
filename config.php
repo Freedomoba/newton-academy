@@ -19,7 +19,7 @@ define('WHATSAPP_WAITLIST_LINK', 'https://chat.whatsapp.com/IlBSRH766nc08kr2lsGa
 define('WHATSAPP_VIP_ENROLLED_LINK', 'https://chat.whatsapp.com/YOUR_VIP_ENROLLED_GROUP_LINK');
 
 // WhatsApp Direct Support Number (international format without +)
-define('WHATSAPP_SUPPORT_PHONE', '2348000000000');
+define('WHATSAPP_SUPPORT_PHONE', '2347019602639');
 
 // Pricing & Currency
 define('CURRENCY_SYMBOL', '₦');
